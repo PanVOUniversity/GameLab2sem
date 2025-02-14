@@ -15,15 +15,15 @@ jobs:
   install-gtests-and-gpp:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Update apt package list
-        run: sudo apt update
+   # steps:
+      #- name: Update apt package list
+        #run: sudo apt update
 
-      - name: Install g++-11
-        run: sudo apt install -y g++-11
+      #- name: Install g++-11
+        #run: sudo apt install -y g++-11
 
-      - name: Install google tests
-        run: sudo apt install gtest
+     # - name: Install google tests
+       # run: sudo apt install gtest
 
   testing:
     runs-on: ubuntu-latest
