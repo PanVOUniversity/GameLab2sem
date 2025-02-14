@@ -23,7 +23,7 @@ jobs:
         run: sudo apt install -y g++-11
 
       - name: Install google tests
-        
+        run: sudo apt install gtest
 
   testing:
     runs-on: ubuntu-latest
