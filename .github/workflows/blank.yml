@@ -12,8 +12,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  install-gtests-and-gpp:
-    runs-on: ubuntu-latest
+  #install-gtests-and-gpp:
+   # runs-on: ubuntu-latest
 
    # steps:
       #- name: Update apt package list
