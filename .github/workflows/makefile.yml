@@ -35,6 +35,8 @@ jobs:
       #     make
 
       
-      - name: Run tests
-        run: make run-tests
-          
+      - name: make
+        run: make
+
+      - name: check
+        run: ctest --output-on-failure
