@@ -30,15 +30,11 @@ jobs:
           sudo cp lib/*.a /usr/lib
 
       
-      - name: Configure and build project
-        run: |
-          mkdir build
-          cd build
-          cmake ..
-          make
+      # - name: Configure and build project
+      #   run: |
+      #     make
 
       
       - name: Run tests
-        run: |
-          cd build
-          ctest --output-on-failure
+        run: make run-tests
+          
