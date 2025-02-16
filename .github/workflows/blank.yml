@@ -1,37 +1,14 @@
-name: CI
+name: Test_Automation
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+on: push
 
 jobs:
-  #install-gtests-and-gpp:
-   # runs-on: ubuntu-latest
-
-   # steps:
-      #- name: Update apt package list
-        #run: sudo apt update
-
-      #- name: Install g++-11
-        #run: sudo apt install -y g++-11
-
-     # - name: Install google tests
-       # run: sudo apt install gtest
-
-  testing:
+  test_launch:
+    name: run_test
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: make
+        run: make
 
-      - name: Compile and run test.cpp
-        run: |
-          ./test
+      - name: run
+        run: make run-tests
