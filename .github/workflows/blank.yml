@@ -7,8 +7,5 @@ jobs:
     name: run_test
     runs-on: ubuntu-latest
     steps:
-      - name: make
-        run: make
-
       - name: run
         run: make run-tests
