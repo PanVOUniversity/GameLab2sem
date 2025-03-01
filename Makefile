@@ -1,59 +1,24 @@
-PROJECT = game
-
-LIBPROJECT = $(PROJECT).a
-
-TESTPROJECT = test
-
 CXX = g++
+CXXFLAGS = -std=c++17 -Wall -Wextra -g -pthread -I.
+LDFLAGS = -lgtest -lgtest_main -lpthread
 
-A = ar
+SRC = main.cpp player.cpp unit.cpp field.cpp
+OBJ = $(SRC:.cpp=.o)
+LIB = game.a
 
-AFLAGS = rsv
+TEST_SRC = tests.cpp
+TEST_OBJ = $(TEST_SRC:.cpp=.o)
 
-CCXFLAGS = -I. -std=c++17 -Wall -Wextra -g -pthread
+all: $(LIB) test
 
-LDXXFLAGS = $(CCXFLAGS) -L. -l:$(LIBPROJECT)
+$(LIB): $(OBJ)
+	ar rsv $@ $^
 
-LDGTESTFLAGS = $(LDXXFLAGS) -lgtest -lgtest_main -lpthread
+test: $(TEST_OBJ) $(LIB)
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
-DEPS = $(wildcard *.h)
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
-OBJ = main.o
-
-# Test object files (just the test file for now)
-TEST-OBJ = tests.o
-
-.PHONY: default
-
-default: all
-
-# Rule to compile .cpp files to .o files
-%.o: %.cpp $(DEPS)
-	$(CXX) -c -o $@ $< $(CCXFLAGS)
-
-# Create static library
-$(LIBPROJECT): $(OBJ)
-	$(A) $(AFLAGS) $@ $^
-
-# Build the test executable
-$(TESTPROJECT): $(LIBPROJECT) $(TEST-OBJ)
-	$(CXX) -o $@ $(TEST-OBJ) $(LDGTESTFLAGS)
-
-# Build the test executable without running it
-build-tests: $(TESTPROJECT)
-
-# Run the tests
-run-tests: $(TESTPROJECT)
-	./$(TESTPROJECT)
-
-# Build all targets (excluding running tests)
-all: $(LIBPROJECT) build-tests
-
-# Clean up object files
 clean:
-	rm -f *.o
-
-# Clean up all build artifacts
-cleanall: clean
-	rm -f $(LIBPROJECT)
-	rm -f $(TESTPROJECT)
+	rm -f *.o $(LIB) test
