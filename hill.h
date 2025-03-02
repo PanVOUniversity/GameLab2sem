@@ -5,11 +5,11 @@
 
 class Hill : public Field {
 private:
-    int _height; // Additional component for Hill
+    int _height;
 
 public:
     Hill(int x, int y, int height, Unit* unit = nullptr);
-    ~Hill();
+    ~Hill() override = default;
 
     int getHeight() const;
     void setHeight(int height);

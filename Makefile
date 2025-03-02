@@ -1,24 +1,16 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra -g -pthread -I.
+CXXFLAGS = -std=c++17 -Wall -Wextra -g -pthread
 LDFLAGS = -lgtest -lgtest_main -lpthread
 
-SRC = main.cpp player.cpp unit.cpp field.cpp
-OBJ = $(SRC:.cpp=.o)
-LIB = game.a
+OBJS = unit.o player.o field.o hill.o inicialisation.o
 
-TEST_SRC = tests.cpp
-TEST_OBJ = $(TEST_SRC:.cpp=.o)
+all: test
 
-all: $(LIB) test
-
-$(LIB): $(OBJ)
-	ar rsv $@ $^
-
-test: $(TEST_OBJ) $(LIB)
+test: tests.o $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c -o $@ $<
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f *.o $(LIB) test
+	rm -f *.o test

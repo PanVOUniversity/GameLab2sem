@@ -3,10 +3,6 @@
 
 #include <string>
 
-// Forward declarations instead of full includes
-class Player;
-class Field;
-
 class Unit {
 private:
     std::string _name;
@@ -19,16 +15,17 @@ private:
 
 public:
     Unit(
-        std::string name,
+        const std::string& name,
         int move_distance,
         int attack_distance,
         int health,
         int damage,
-        bool player = 0, // user
-        int will = 2 //number of actions
+        bool player = false,
+        int will = 2
     );
     ~Unit();
 
+    // Getters and setters
     int getMoveDistance() const;
     int getAttackDistance() const;
     void setAttackDistance(int attack_distance);
