@@ -1,6 +1,6 @@
-#include "main.h"
+#include "inicialisation.h"
 
-int main()
-{
-
-};
+int main() {
+    inicialisation();
+    return 0;
+}

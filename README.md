@@ -5,6 +5,6 @@
 ## Contacts
 st128934@student.spbu.ru
 ## Description
-Game lab
+Game
 ## Build
 make
