@@ -4,9 +4,10 @@
 #include "unit.h"
 #include "vector"
 
-class Canon : public Unit{
+class Canon : public Unit
+{
 private:
-    
+
 };
 
 

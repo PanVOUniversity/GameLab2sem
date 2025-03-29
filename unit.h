@@ -3,7 +3,8 @@
 
 #include <string>
 
-class Unit {
+class Unit
+{
 private:
     std::string _name;
     int _move_distance;

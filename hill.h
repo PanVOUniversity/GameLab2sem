@@ -3,7 +3,8 @@
 
 #include "field.h"
 
-class Hill : public Field {
+class Hill : public Field
+{
 private:
     int _height;
 

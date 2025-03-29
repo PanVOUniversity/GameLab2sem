@@ -3,7 +3,8 @@
 
 #include "hill.h"
 
-class Fortress : public Hill {
+class Fortress : public Hill
+{
 private:
     int _strength;
 

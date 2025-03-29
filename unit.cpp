@@ -19,19 +19,53 @@ Unit::Unit(
 Unit::~Unit() = default;
 
 // Getters
-int Unit::getMoveDistance() const { return _move_distance; }
-int Unit::getAttackDistance() const { return _attack_distance; }
-int Unit::getHealth() const { return _health; }
-int Unit::getDamage() const { return _damage; }
-bool Unit::getPlayer() const { return _player; }
-std::string Unit::getName() const { return _name; }
-int Unit::getWill() const { return _will;}
+int Unit::getMoveDistance() const
+{
+    return _move_distance;
+}
+int Unit::getAttackDistance() const
+{
+    return _attack_distance;
+}
+int Unit::getHealth() const
+{
+    return _health;
+}
+int Unit::getDamage() const
+{
+    return _damage;
+}
+bool Unit::getPlayer() const
+{
+    return _player;
+}
+std::string Unit::getName() const
+{
+    return _name;
+}
+int Unit::getWill() const
+{
+    return _will;
+}
 
 // Setters
-void Unit::setAttackDistance(int attack_distance) { _attack_distance = attack_distance; }
-void Unit::setHealth(int health) { _health = health; }
-void Unit::setDamage(int damage) { _damage = damage; }
-void Unit::setPlayer(bool player) { _player = player; }
-void Unit::setWill(int will) {
+void Unit::setAttackDistance(int attack_distance)
+{
+    _attack_distance = attack_distance;
+}
+void Unit::setHealth(int health)
+{
+    _health = health;
+}
+void Unit::setDamage(int damage)
+{
+    _damage = damage;
+}
+void Unit::setPlayer(bool player)
+{
+    _player = player;
+}
+void Unit::setWill(int will)
+{
     _will = will;
 }

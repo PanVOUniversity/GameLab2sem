@@ -4,7 +4,8 @@
 #include <vector>
 class Unit;
 
-class Player {
+class Player
+{
 private:
     bool _my_turn;
     std::vector<Unit*> _my_units;

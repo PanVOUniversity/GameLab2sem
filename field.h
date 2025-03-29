@@ -3,7 +3,8 @@
 
 class Unit;
 
-class Field {
+class Field
+{
 protected:
     int _x;
     int _y;
