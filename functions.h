@@ -4,9 +4,20 @@
 #include <vector>
 #include "field.h"
 #include "fortress.h"
+#include "hill.h"
 #include "unit.h"
-#include <cstddef>
+#include <iostream>
+#include <cmath>
 
+/**
+ * Updates the strength of a fortress at given coordinates
+ * If strength drops to 0 or below, replaces fortress with a plain field
+ * 
+ * @param board The game board
+ * @param x X coordinate of fortress
+ * @param y Y coordinate of fortress
+ * @param newStrength New strength value to set
+ */
 void updateFortressStrength(
     std::vector<std::vector<Field*>>& board,
     int x,
@@ -14,13 +25,38 @@ void updateFortressStrength(
     int newStrength
 );
 
-
+/**
+ * Handles attack between two units
+ * 
+ * @param board The game board
+ * @param attackerX X coordinate of attacking unit
+ * @param attackerY Y coordinate of attacking unit
+ * @param victimX X coordinate of victim unit
+ * @param victimY Y coordinate of victim unit
+ */
 void attack(
     std::vector<std::vector<Field*>>& board,
     int attackerX,
     int attackerY,
     int victimX,
     int victimY
+);
+
+/**
+ * Moves a unit from one position to another if valid
+ * 
+ * @param board The game board
+ * @param fromX Starting X coordinate
+ * @param fromY Starting Y coordinate
+ * @param toX Destination X coordinate
+ * @param toY Destination Y coordinate
+ */
+void move(
+    std::vector<std::vector<Field*>>& board,
+    int fromX,
+    int fromY,
+    int toX,
+    int toY
 );
 
 #endif

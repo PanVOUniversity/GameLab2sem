@@ -1,5 +1,7 @@
 #include "functions.h"
 
+
+
 void updateFortressStrength(
     std::vector<std::vector<Field*>>& board,
     int x,
@@ -63,8 +65,8 @@ void attack(
         return; // Cannot attack if Will is <= 0
     }
 
-    // Calculate Manhattan distance
-    int distance = abs(attackerX - victimX) + abs(attackerY - victimY);
+    // Calculate distance
+    int distance = sqrt(pow((attackerX - victimX), 2) + pow((attackerY - victimY), 2));
 
     // Check attack distance
     if (distance > attacker->getAttackDistance())
@@ -85,4 +87,69 @@ void attack(
         victimField->setUnit(nullptr);
         delete victim;
     }
+}
+
+void move(
+    std::vector<std::vector<Field*>>& board,
+    int fromX,
+    int fromY,
+    int toX,
+    int toY
+) {
+    // Check if coordinates are valid
+    if (fromX < 0 || fromX >= static_cast<int>(board.size()) ||
+        fromY < 0 || fromY >= static_cast<int>(board[0].size()) ||
+        toX < 0 || toX >= static_cast<int>(board.size()) ||
+        toY < 0 || toY >= static_cast<int>(board[0].size())) {
+        std::cout << "Invalid coordinates for movement!\n";
+        return;
+    }
+
+    Field* sourceField = board[fromX][fromY];
+    Field* targetField = board[toX][toY];
+    Unit* unit = sourceField->getUnit();
+
+    // Check if there's a unit to move
+    if (!unit) {
+        std::cout << "No unit to move at (" << fromX << "," << fromY << ")!\n";
+        return;
+    }
+
+    // Check if target is occupied
+    if (targetField->getUnit()) {
+        std::cout << "Target field (" << toX << "," << toY << ") is already occupied!\n";
+        return;
+    }
+
+    // Calculate Manhattan distance
+    int distance = abs(fromX - toX) + abs(fromY - toY);
+
+    // Check movement range
+    if (distance > unit->getMoveDistance()) {
+        std::cout << unit->getName() << " cannot move that far! (Max range: " 
+                  << unit->getMoveDistance() << ")\n";
+        return;
+    }
+
+    // Check Will points
+    if (unit->getWill() <= 0) {
+        std::cout << unit->getName() << " doesn't have enough Will points to move!\n";
+        return;
+    }
+
+    // Perform the move
+    targetField->setUnit(unit);
+    sourceField->setUnit(nullptr);
+    unit->setWill(unit->getWill() - 1);
+
+    // Prepare terrain information
+    std::string terrainType = "plain field";
+    if (dynamic_cast<Hill*>(targetField)) {
+        terrainType = "hill";
+    } else if (dynamic_cast<Fortress*>(targetField)) {
+        terrainType = "fortress";
+    }
+
+    std::cout << unit->getName() << " moved from (" << fromX << "," << fromY 
+              << ") to (" << toX << "," << toY << ") - now on " << terrainType << "\n";
 }
