@@ -7,7 +7,7 @@
 class Canon : public Unit{
 private:
     
-}
+};
 
 
 #endif
