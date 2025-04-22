@@ -1,0 +1,62 @@
+# Compiler settings
+CXX := g++
+CXXFLAGS := -std=c++17 -Wall -Wextra -I.
+LDFLAGS := 
+BUILD_DIR := build
+SRC_DIR := .
+
+# Source files (excluding main.cpp)
+SRCS := $(wildcard $(SRC_DIR)/*.cpp)
+SRCS := $(filter-out $(SRC_DIR)/main.cpp, $(SRCS))
+
+# Object files
+OBJS := $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(SRCS))
+
+# Targets
+TARGET := gamelib.a
+
+.PHONY: all clean
+
+all: $(BUILD_DIR) $(TARGET)
+
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+
+$(TARGET): $(OBJS)
+	ar rcs $@ $^
+
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+	rm -rf $(BUILD_DIR) $(TARGET)
+
+# Dependencies
+$(BUILD_DIR)/cannon.o: cannon.h unit.h
+$(BUILD_DIR)/field.o: field.h
+$(BUILD_DIR)/fortress.o: fortress.h hill.h field.h
+$(BUILD_DIR)/functions.o: functions.h field.h unit.h player.h
+$(BUILD_DIR)/getcommands.o: getcommands.h player.h field.h functions.h
+$(BUILD_DIR)/hill.o: hill.h field.h
+$(BUILD_DIR)/inicialisation.o: inicialisation.h field.h hill.h player.h
+$(BUILD_DIR)/player.o: player.h unit.h
+$(BUILD_DIR)/unit.o: unit.h
+
+# Add this to your existing Makefile
+
+# Test settings
+TEST_TARGET := run_tests
+TEST_SRC := tests.cpp
+TEST_OBJ := $(BUILD_DIR)/$(basename $(TEST_SRC)).o
+
+# Add this to your targets
+test: $(BUILD_DIR) $(TEST_TARGET)
+
+$(TEST_TARGET): $(OBJS) $(TEST_OBJ)
+	$(CXX) $(CXXFLAGS) $^ -o $@ -lgtest -lgtest_main -pthread
+
+$(BUILD_DIR)/tests.o: tests.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Add to your phony targets
+.PHONY: test

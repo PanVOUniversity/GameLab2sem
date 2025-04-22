@@ -1,8 +1,8 @@
 #include "player.h"
 #include "unit.h"
 
-Player::Player(bool my_turn, bool AI, bool defeated, int mana)
-    : _my_turn(my_turn), _AI(AI), _defeated(defeated), _mana(mana) {}
+Player::Player(std::string name, bool my_turn, bool AI, bool defeated, int mana)
+    : _name(name), _my_turn(my_turn), _AI(AI), _defeated(defeated), _mana(mana) {}
 
 bool Player::getMyTurn() const
 {
@@ -44,4 +44,8 @@ void Player::setMana(int mana)
 void Player::setMyUnits(const std::vector<Unit*>& my_units)
 {
     _my_units = my_units;
+}
+std::string Player::getName() const
+{
+    return _name;
 }

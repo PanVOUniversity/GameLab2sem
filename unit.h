@@ -24,7 +24,7 @@ public:
         bool player = false,
         int will = 2
     );
-    ~Unit();
+    virtual ~Unit();
 
     // Getters and setters
     int getMoveDistance() const;

@@ -16,7 +16,7 @@ Unit::Unit(
     _player(player),
     _will(will) {}
 
-Unit::~Unit() = default;
+Unit::~Unit() {};
 
 // Getters
 int Unit::getMoveDistance() const

@@ -56,8 +56,8 @@ GameData inicialisation(int width, int height, int numHills,
     placeHills(gameData.board, numHills);
 
     // Create players with specified mana and turn order
-    gameData.player1 = new Player(player1Starts, false, false, initialMana);
-    gameData.player2 = new Player(!player1Starts, true, false, initialMana);
+    gameData.player1 = new Player(name1, player1Starts, false, false, initialMana);
+    gameData.player2 = new Player(name2, !player1Starts, true, false, initialMana);
 
     return gameData;
 }

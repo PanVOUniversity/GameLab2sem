@@ -1,6 +1,8 @@
 #include "inicialisation.h"
 #include <iostream>
-#include <getcommands.h>
+#include "getcommands.h"
+#include "functions.h"
+#include "AI.cpp"
 
 int main()
 {
@@ -18,21 +20,26 @@ int main()
         std::cout << "your turn: " << game.player1->getMyTurn() << std::endl;
         std::cout << "your mana: " << game.player1->getMana() << std::endl;
 
-        while(game.player1->getDefeated()*game.player2->getDefeated() !=0)
+        while(!game.player1->getDefeated() && !game.player2->getDefeated())
         {
-            if(game.player1->getMyTurn() == 1)
+
+            if(game.player1->getMyTurn())
             {
                 getPlayerCommands(game.player1, game.board);
+                checkBombExplosions(game.board);
+                game.player2->setMyTurn(true);
             }
             else
             {
-                AIact();
+                AIact(game.player2, game.board);
+                checkBombExplosions(game.board);
+                game.player1->setMyTurn(true);
             }
         }
 
-        if(game.player1->getDefeated = 0)
+        checkVictory(game.player1, game.player2);
 
-        }
+    }
     catch (const std::exception& e)
     {
         std::cerr << "Initialization failed: " << e.what() << std::endl;
