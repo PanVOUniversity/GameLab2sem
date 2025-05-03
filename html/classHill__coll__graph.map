@@ -1,5 +1,0 @@
-<map id="Hill" name="Hill">
-<area shape="rect" id="node1" title="Represents a Hill field on the board, which provides a defense bonus." alt="" coords="7,741,170,877"/>
-<area shape="rect" id="node2" href="$classField.html" title="Represents a field (tile) on the game board. Base class for all field types." alt="" coords="7,409,170,692"/>
-<area shape="rect" id="node3" href="$classUnit.html" title="Represents a unit in the game (base class for all units)." alt="" coords="5,5,172,347"/>
-</map>

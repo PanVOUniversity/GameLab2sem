@@ -1,7 +1,0 @@
-digraph "Player"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{Player\n|- name\l- mana\l- isAI\l- myTurn\l- defeated\l- skippedTurns\l|+ Player()\l+ getName()\l+ getMana()\l+ setMana()\l+ getAI()\l+ getMyTurn()\l+ setMyTurn()\l+ getDefeated()\l+ setDefeated()\l+ getSkippedTurns()\l+ setSkippedTurns()\l+ addMana()\l+ subtractMana()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Represents a player in the game (human or AI)."];
-}

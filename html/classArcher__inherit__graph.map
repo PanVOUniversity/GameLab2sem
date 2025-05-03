@@ -1,4 +1,0 @@
-<map id="Archer" name="Archer">
-<area shape="rect" id="node1" title=" " alt="" coords="5,395,196,516"/>
-<area shape="rect" id="node2" href="$classUnit.html" title="Represents a unit in the game (base class for all units)." alt="" coords="17,5,184,347"/>
-</map>

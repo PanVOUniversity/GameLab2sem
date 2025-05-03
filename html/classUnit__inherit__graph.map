@@ -1,8 +1,0 @@
-<map id="Unit" name="Unit">
-<area shape="rect" id="node1" title="Represents a unit in the game (base class for all units)." alt="" coords="461,5,628,347"/>
-<area shape="rect" id="node2" href="$classArcher.html" title=" " alt="" coords="5,446,196,567"/>
-<area shape="rect" id="node3" href="$classCannon.html" title=" " alt="" coords="220,395,443,619"/>
-<area shape="rect" id="node4" href="$classEngineer.html" title=" " alt="" coords="467,431,623,582"/>
-<area shape="rect" id="node5" href="$classInfantry.html" title=" " alt="" coords="647,446,786,567"/>
-<area shape="rect" id="node6" href="$classPriest.html" title=" " alt="" coords="810,446,927,567"/>
-</map>

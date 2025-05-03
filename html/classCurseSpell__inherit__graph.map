@@ -1,4 +1,0 @@
-<map id="CurseSpell" name="CurseSpell">
-<area shape="rect" id="node1" title="Spell that reduces a unit&#39;s abilities (Curse). Damage to zero." alt="" coords="14,204,130,296"/>
-<area shape="rect" id="node2" href="$classSpell.html" title="Abstract base class for all spells in the game." alt="" coords="5,5,139,156"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="Spell" name="Spell">
-<area shape="rect" id="node1" title="Abstract base class for all spells in the game." alt="" coords="301,5,435,156"/>
-<area shape="rect" id="node2" href="$classBombSpell.html" title="Spell that creates a bombed field (trap) at a target location (Bomb)." alt="" coords="5,204,133,311"/>
-<area shape="rect" id="node3" href="$classCurseSpell.html" title="Spell that reduces a unit&#39;s abilities (Curse). Damage to zero." alt="" coords="158,211,274,303"/>
-<area shape="rect" id="node4" href="$classFireballSpell.html" title="Spell that deals damage to a target unit (Fireball)." alt="" coords="299,204,437,311"/>
-<area shape="rect" id="node5" href="$classMorogSpell.html" title="Spell that changes owner of unit on the field." alt="" coords="461,204,592,311"/>
-<area shape="rect" id="node6" href="$classTeleportSpell.html" title="Spell that teleports a unit to a new location (Teleport)." alt="" coords="617,204,759,311"/>
-</map>

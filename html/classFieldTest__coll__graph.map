@@ -1,6 +1,0 @@
-<map id="FieldTest" name="FieldTest">
-<area shape="rect" id="node1" title=" " alt="" coords="99,755,210,847"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,512,107,589"/>
-<area shape="rect" id="node3" href="$classUnit.html" title="Represents a unit in the game (base class for all units)." alt="" coords="118,5,285,347"/>
-<area shape="rect" id="node4" href="$classField.html" title="Represents a field (tile) on the game board. Base class for all field types." alt="" coords="220,409,383,692"/>
-</map>
