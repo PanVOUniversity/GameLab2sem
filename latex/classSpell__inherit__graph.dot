@@ -1,0 +1,17 @@
+digraph "Spell"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Spell\n|# name\l# manaCost\l|+ Spell()\l+ ~Spell()\l+ getName()\l+ getManaCost()\l+ cast()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Abstract base class for all spells in the game."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node2 [label="{BombSpell\n||+ BombSpell()\l+ ~BombSpell()\l+ cast()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBombSpell.html",tooltip="Spell that creates a bombed field (trap) at a target location (Bomb)."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node3 [label="{CurseSpell\n||+ CurseSpell()\l+ cast()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCurseSpell.html",tooltip="Spell that reduces a unit's abilities (Curse). Damage to zero."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node4 [label="{FireballSpell\n||+ FireballSpell()\l+ ~FireballSpell()\l+ cast()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classFireballSpell.html",tooltip="Spell that deals damage to a target unit (Fireball)."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node5 [label="{MorogSpell\n||+ MorogSpell()\l+ ~MorogSpell()\l+ cast()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMorogSpell.html",tooltip="Spell that changes owner of unit on the field."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node6 [label="{TeleportSpell\n||+ TeleportSpell()\l+ ~TeleportSpell()\l+ cast()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTeleportSpell.html",tooltip="Spell that teleports a unit to a new location (Teleport)."];
+}

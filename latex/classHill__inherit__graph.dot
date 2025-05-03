@@ -1,0 +1,9 @@
+digraph "Hill"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Hill\n||+ Hill()\l+ ~Hill()\l+ getDefenseBonus()\l+ canEnter()\l+ getSymbol()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Represents a Hill field on the board, which provides a defense bonus."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node2 [label="{Field\n|# unit\l# x\l# y\l# type\l|+ Field()\l+ ~Field()\l+ getUnit()\l+ setUnit()\l+ getX()\l+ getY()\l+ getType()\l+ applyEffect()\l+ getDefenseBonus()\l+ canEnter()\l+ onEnter()\l+ onLeave()\l+ getSymbol()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classField.html",tooltip="Represents a field (tile) on the game board. Base class for all field types."];
+}

@@ -1,0 +1,7 @@
+<map id="HillTest" name="HillTest">
+<area shape="rect" id="node1" title=" " alt="" coords="89,953,199,1045"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,784,107,861"/>
+<area shape="rect" id="node3" href="$classUnit.html" title="Represents a unit in the game (base class for all units)." alt="" coords="82,5,249,347"/>
+<area shape="rect" id="node5" href="$classField.html" title="Represents a field (tile) on the game board. Base class for all field types." alt="" coords="181,409,344,692"/>
+<area shape="rect" id="node4" href="$classHill.html" title="Represents a Hill field on the board, which provides a defense bonus." alt="" coords="181,755,344,891"/>
+</map>

@@ -1,0 +1,82 @@
+\hypertarget{classBombSpell}{}\doxysection{Bomb\+Spell Class Reference}
+\label{classBombSpell}\index{BombSpell@{BombSpell}}
+
+
+\mbox{\hyperlink{classSpell}{Spell}} that creates a bombed field (trap) at a target location (Bomb).  
+
+
+
+
+Inheritance diagram for Bomb\+Spell\+:
+% FIG 0
+
+
+Collaboration diagram for Bomb\+Spell\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBombSpell_a9f232b0b928a57598de407b2be4df264}{Bomb\+Spell}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classBombSpell}{Bomb\+Spell}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classBombSpell_a54b4c778b81d09a70d883da5b422a745}{$\sim$\+Bomb\+Spell}} ()=default
+\item 
+bool \mbox{\hyperlink{classBombSpell_adb3e35267bfb6164cc47d5c67746093c}{cast}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y) override
+\begin{DoxyCompactList}\small\item\em Casts the Bomb spell at the given coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classSpell}{Spell}} that creates a bombed field (trap) at a target location (Bomb). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBombSpell_a9f232b0b928a57598de407b2be4df264}\label{classBombSpell_a9f232b0b928a57598de407b2be4df264}} 
+\index{BombSpell@{BombSpell}!BombSpell@{BombSpell}}
+\index{BombSpell@{BombSpell}!BombSpell@{BombSpell}}
+\doxysubsubsection{\texorpdfstring{BombSpell()}{BombSpell()}}
+{\footnotesize\ttfamily Bomb\+Spell\+::\+Bomb\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classBombSpell}{Bomb\+Spell}}. 
+
+\mbox{\Hypertarget{classBombSpell_a54b4c778b81d09a70d883da5b422a745}\label{classBombSpell_a54b4c778b81d09a70d883da5b422a745}} 
+\index{BombSpell@{BombSpell}!````~BombSpell@{$\sim$BombSpell}}
+\index{````~BombSpell@{$\sim$BombSpell}!BombSpell@{BombSpell}}
+\doxysubsubsection{\texorpdfstring{$\sim$BombSpell()}{~BombSpell()}}
+{\footnotesize\ttfamily virtual Bomb\+Spell\+::$\sim$\+Bomb\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBombSpell_adb3e35267bfb6164cc47d5c67746093c}\label{classBombSpell_adb3e35267bfb6164cc47d5c67746093c}} 
+\index{BombSpell@{BombSpell}!cast@{cast}}
+\index{cast@{cast}!BombSpell@{BombSpell}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily bool Bomb\+Spell\+::cast (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Casts the Bomb spell at the given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+{\em x} & X coordinate of the target. \\
+\hline
+{\em y} & Y coordinate of the target. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the spell was cast successfully, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classSpell_adbff32f05577154a0db4606282d0151c}{Spell}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bombspell_8h}{bombspell.\+h}}\item 
+\mbox{\hyperlink{bombspell_8cpp}{bombspell.\+cpp}}\end{DoxyCompactItemize}

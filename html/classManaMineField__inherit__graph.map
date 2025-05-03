@@ -1,0 +1,4 @@
+<map id="ManaMineField" name="ManaMineField">
+<area shape="rect" id="node1" title="Field that generates mana for the owner each turn (Mana Mine Field)." alt="" coords="8,351,165,501"/>
+<area shape="rect" id="node2" href="$classField.html" title="Represents a field (tile) on the game board. Base class for all field types." alt="" coords="5,5,168,303"/>
+</map>

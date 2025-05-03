@@ -1,0 +1,145 @@
+\hypertarget{classHospitalField}{}\doxysection{Hospital\+Field Class Reference}
+\label{classHospitalField}\index{HospitalField@{HospitalField}}
+
+
+\mbox{\hyperlink{classField}{Field}} that heals units each turn (Hospital \mbox{\hyperlink{classField}{Field}}).  
+
+
+
+
+Inheritance diagram for Hospital\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for Hospital\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHospitalField_a3ebe6579499ba549bbc2858dfc736f51}{Hospital\+Field}} (int fieldX, int fieldY, \mbox{\hyperlink{classUnit}{Unit}} $\ast$initial\+Unit=nullptr, int heal\+Amount=3)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classHospitalField}{Hospital\+Field}} at the given coordinates. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classHospitalField_a8d66033daaab0ae37c2f7fd3dbf26c56}{$\sim$\+Hospital\+Field}} ()=default
+\item 
+void \mbox{\hyperlink{classHospitalField_a653ea196bbbdf6f788a88fd70406679d}{apply\+Effect}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$owner, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board) override
+\begin{DoxyCompactList}\small\item\em Applies the hospital field\textquotesingle{}s effect (heals unit). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHospitalField_a8f01ef46e2456b269ca993b74648b5bb}{can\+Enter}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}) const override
+\begin{DoxyCompactList}\small\item\em Checks if a unit can enter the hospital field. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classHospitalField_a699854aa98e115f2e7c5c16bb09993f4}{get\+Symbol}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the symbol representing the hospital field (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classHospitalField_a90651ccdfc651074577e89f6779008ec}{heal\+Per\+Turn}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classField}{Field}} that heals units each turn (Hospital \mbox{\hyperlink{classField}{Field}}). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHospitalField_a3ebe6579499ba549bbc2858dfc736f51}\label{classHospitalField_a3ebe6579499ba549bbc2858dfc736f51}} 
+\index{HospitalField@{HospitalField}!HospitalField@{HospitalField}}
+\index{HospitalField@{HospitalField}!HospitalField@{HospitalField}}
+\doxysubsubsection{\texorpdfstring{HospitalField()}{HospitalField()}}
+{\footnotesize\ttfamily Hospital\+Field\+::\+Hospital\+Field (\begin{DoxyParamCaption}\item[{int}]{fieldX,  }\item[{int}]{fieldY,  }\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{initial\+Unit = {\ttfamily nullptr},  }\item[{int}]{heal\+Amount = {\ttfamily 3} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classHospitalField}{Hospital\+Field}} at the given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fieldX} & X coordinate. \\
+\hline
+{\em fieldY} & Y coordinate. \\
+\hline
+{\em initial\+Unit} & Pointer to the initial unit on the field (default nullptr). \\
+\hline
+{\em heal\+Amount} & Amount of health healed per turn (default 3). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHospitalField_a8d66033daaab0ae37c2f7fd3dbf26c56}\label{classHospitalField_a8d66033daaab0ae37c2f7fd3dbf26c56}} 
+\index{HospitalField@{HospitalField}!````~HospitalField@{$\sim$HospitalField}}
+\index{````~HospitalField@{$\sim$HospitalField}!HospitalField@{HospitalField}}
+\doxysubsubsection{\texorpdfstring{$\sim$HospitalField()}{~HospitalField()}}
+{\footnotesize\ttfamily virtual Hospital\+Field\+::$\sim$\+Hospital\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHospitalField_a653ea196bbbdf6f788a88fd70406679d}\label{classHospitalField_a653ea196bbbdf6f788a88fd70406679d}} 
+\index{HospitalField@{HospitalField}!applyEffect@{applyEffect}}
+\index{applyEffect@{applyEffect}!HospitalField@{HospitalField}}
+\doxysubsubsection{\texorpdfstring{applyEffect()}{applyEffect()}}
+{\footnotesize\ttfamily void Hospital\+Field\+::apply\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{owner,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the hospital field\textquotesingle{}s effect (heals unit). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & The player whose turn it is. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classField_a454ca5b8269657dc01cd611eceb3d397}{Field}}.
+
+\mbox{\Hypertarget{classHospitalField_a8f01ef46e2456b269ca993b74648b5bb}\label{classHospitalField_a8f01ef46e2456b269ca993b74648b5bb}} 
+\index{HospitalField@{HospitalField}!canEnter@{canEnter}}
+\index{canEnter@{canEnter}!HospitalField@{HospitalField}}
+\doxysubsubsection{\texorpdfstring{canEnter()}{canEnter()}}
+{\footnotesize\ttfamily bool Hospital\+Field\+::can\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if a unit can enter the hospital field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit} & The unit to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the unit can enter, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField_aca250c9a0c031e21c7e7c609b3b3dec3}{Field}}.
+
+\mbox{\Hypertarget{classHospitalField_a699854aa98e115f2e7c5c16bb09993f4}\label{classHospitalField_a699854aa98e115f2e7c5c16bb09993f4}} 
+\index{HospitalField@{HospitalField}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!HospitalField@{HospitalField}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char Hospital\+Field\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the symbol representing the hospital field (for display). 
+
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}H\textquotesingle{} character. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField_a03e73113267195f2680dd028f8950ae5}{Field}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classHospitalField_a90651ccdfc651074577e89f6779008ec}\label{classHospitalField_a90651ccdfc651074577e89f6779008ec}} 
+\index{HospitalField@{HospitalField}!healPerTurn@{healPerTurn}}
+\index{healPerTurn@{healPerTurn}!HospitalField@{HospitalField}}
+\doxysubsubsection{\texorpdfstring{healPerTurn}{healPerTurn}}
+{\footnotesize\ttfamily int Hospital\+Field\+::heal\+Per\+Turn\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{hospitalfield_8h}{hospitalfield.\+h}}\item 
+\mbox{\hyperlink{hospitalfield_8cpp}{hospitalfield.\+cpp}}\end{DoxyCompactItemize}

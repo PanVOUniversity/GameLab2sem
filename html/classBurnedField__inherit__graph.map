@@ -1,0 +1,4 @@
+<map id="BurnedField" name="BurnedField">
+<area shape="rect" id="node1" title="Field that deals damage to units each turn for a limited duration (Burned Field)." alt="" coords="5,351,168,516"/>
+<area shape="rect" id="node2" href="$classField.html" title="Represents a field (tile) on the game board. Base class for all field types." alt="" coords="5,5,168,303"/>
+</map>

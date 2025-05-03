@@ -1,0 +1,262 @@
+@startuml
+abstract class Unit {
+    # string name
+    # int moveDistance
+    # int attackDistance
+    # int currentHealth
+    # int maxHealth
+    # int damage
+    # bool isPlayerUnit
+    # int currentWill
+    # int maxWill
+    + Unit(string, int, int, int, int, bool, int)
+    + virtual ~Unit()
+    + string getName() const
+    + int getMoveDistance() const
+    + int getAttackDistance() const
+    + int getCurrentHealth() const
+    + int getMaxHealth() const
+    + int getDamage() const
+    + bool getPlayer() const
+    + int getWill() const
+    + int getMaxWill() const
+    + void setCurrentHealth(int)
+    + void setWill(int)
+    + void setHealth(int)
+    + virtual void takeDamage(int, Unit* attacker = nullptr)
+    + void restoreHealth(int)
+    + void restoreWill(int)
+    + virtual bool useAbility(vector<vector<Field*>>&, int, int)
+    + virtual char getSymbol() const
+}
+
+Unit <|-- Infantry
+class Infantry {
+    + Infantry(bool player = false)
+    + ~Infantry()
+    + void counterAttack(Unit* attacker)
+    + char getSymbol() const
+}
+
+Unit <|-- Archer
+class Archer {
+    + Archer(bool player = false)
+    + ~Archer()
+    + void updateAttackDistance(bool inFortress)
+    + char getSymbol() const
+}
+
+Unit <|-- Priest
+class Priest {
+    + Priest(bool player = false)
+    + ~Priest()
+    + bool pray(vector<vector<Field*>>& board, int targetX, int targetY)
+    + char getSymbol() const
+}
+
+Unit <|-- Engineer
+class Engineer {
+    + Engineer(bool player = false)
+    + ~Engineer()
+    + Field* createFortress(int x, int y)
+    + Field* createManaMine(int x, int y)
+    + Field* createTrap(int x, int y)
+    + char getSymbol() const
+}
+
+Unit <|-- Cannon
+class Cannon {
+    - Direction _direction
+    - pair<int, int> _findFriendlyNearby(const vector<vector<Field*>>&, int, int) const
+    - pair<int, int> _findEnemyInRange(const vector<vector<Field*>>&, int, int) const
+    - pair<int, int> _findEmptyFieldInRange(const vector<vector<Field*>>&, int, int) const
+    - pair<int, int> _findFriendlyFortressNearby(const vector<vector<Field*>>&, int, int) const
+    + Cannon(string = "Cannon", int = 0, int = 4, int = 4, int = 5, bool = false, int = 1, Direction = Direction::FRONT)
+    + ~Cannon()
+    + void setDirection(Direction)
+    + Direction getDirection() const
+    + bool fire(vector<vector<Field*>>& board, int targetX, int targetY)
+    + bool useAbility(vector<vector<Field*>>& board, int targetX, int targetY) override
+    + char getSymbol() const
+}
+
+abstract class Field {
+    # Unit* unit
+    # int x
+    # int y
+    # string type
+    + Field(int, int, const string& type = "plain")
+    + virtual ~Field()
+    + Unit* getUnit() const
+    + void setUnit(Unit* u)
+    + int getX() const
+    + int getY() const
+    + string getType() const
+    + virtual void applyEffect(Player* owner, vector<vector<Field*>>& board)
+    + virtual int getDefenseBonus() const
+    + virtual bool canEnter(Unit* unit) const
+    + virtual void onEnter(Unit* unit)
+    + virtual void onLeave(Unit* unit)
+    + virtual char getSymbol() const
+}
+
+Field <|-- Hill
+class Hill {
+    + Hill(int fieldX, int fieldY, Unit* initialUnit = nullptr)
+    + ~Hill()
+    + int getDefenseBonus() const override
+    + bool canEnter(Unit* unit) const override
+    + char getSymbol() const
+}
+
+Field <|-- Fortress
+class Fortress {
+    - int strength
+    - int maxStrength
+    - Player* owner
+    + Fortress(int, int, int, int, Player* owner = nullptr)
+    + ~Fortress()
+    + int getStrength() const
+    + bool setStrength(int s)
+    + int getMaxStrength() const
+    + void applyEffect(Player* owner, vector<vector<Field*>>& board) override
+    + int getDefenseBonus() const override
+    + bool canEnter(Unit* unit) const override
+    + void onEnter(Unit* unit) override
+    + void onLeave(Unit* unit) override
+    + Player* getOwner() const
+    + void setOwner(Player* p)
+    + char getSymbol() const
+}
+
+Field <|-- ManaMineField
+class ManaMineField {
+    - int manaPerTurn
+    + ManaMineField(int fieldX, int fieldY, Unit* initialUnit = nullptr)
+    + ~ManaMineField()
+    + void applyEffect(Player* owner, vector<vector<Field*>>& board) override
+    + bool canEnter(Unit* unit) const override
+    + void generateMana(Player* player)
+    + char getSymbol() const
+}
+
+Field <|-- BombedField
+class BombedField {
+    - int timer
+    - int explosionDamage
+    + BombedField(int fieldX, int fieldY, Unit* initialUnit = nullptr, int initialTimer = 3, int damage = 10)
+    + ~BombedField()
+    + void applyEffect(Player* owner, vector<vector<Field*>>& board) override
+    + bool canEnter(Unit* unit) const override
+    + void onEnter(Unit* unit) override
+    + bool shouldExplode() const
+    + void explode(vector<vector<Field*>>& board)
+    + char getSymbol() const
+}
+
+Field <|-- BurnedField
+class BurnedField {
+    - int duration
+    - int damagePerTurn
+    + BurnedField(int fieldX, int fieldY, Unit* initialUnit = nullptr, int initialDuration = 2, int damage = 2)
+    + ~BurnedField()
+    + void applyEffect(Player* owner, vector<vector<Field*>>& board) override
+    + int getDefenseBonus() const override
+    + bool canEnter(Unit* unit) const override
+    + char getSymbol() const
+}
+
+Field <|-- HospitalField
+class HospitalField {
+    - int healPerTurn
+    + HospitalField(int fieldX, int fieldY, Unit* initialUnit = nullptr, int healAmount = 3)
+    + ~HospitalField()
+    + void applyEffect(Player* owner, vector<vector<Field*>>& board) override
+    + bool canEnter(Unit* unit) const override
+    + char getSymbol() const
+}
+
+Field <|-- ShieldedField
+class ShieldedField {
+    - int duration
+    + ShieldedField(int fieldX, int fieldY, Unit* initialUnit = nullptr, int initialDuration = 3)
+    + ~ShieldedField()
+    + void applyEffect(Player* owner, vector<vector<Field*>>& board) override
+    + int getDefenseBonus() const override
+    + bool canEnter(Unit* unit) const override
+    + char getSymbol() const
+}
+
+
+abstract class Spell {
+    # string name
+    # int manaCost
+    + Spell(const string& spellName, int cost)
+    + virtual ~Spell()
+    + string getName() const
+    + int getManaCost() const
+    + virtual bool cast(vector<vector<Field*>>& board, int x, int y) = 0
+}
+
+Spell <|-- MorogSpell
+class MorogSpell {
+    + MorogSpell()
+    + ~MorogSpell()
+    + bool cast(vector<vector<Field*>>& board, int x, int y) override
+}
+
+Spell <|-- FireballSpell
+class FireballSpell {
+    + FireballSpell()
+    + ~FireballSpell()
+    + bool cast(vector<vector<Field*>>& board, int x, int y) override
+}
+
+Spell <|-- CurseSpell
+class CurseSpell {
+    + CurseSpell()
+    + ~CurseSpell()
+    + bool cast(vector<vector<Field*>>& board, int x, int y) override
+}
+
+Spell <|-- BombSpell
+class BombSpell {
+    + BombSpell()
+    + ~BombSpell()
+    + bool cast(vector<vector<Field*>>& board, int x, int y) override
+}
+
+Spell <|-- TeleportSpell
+class TeleportSpell {
+    + TeleportSpell()
+    + ~TeleportSpell()
+    + bool cast(vector<vector<Field*>>& board, int x, int y) override
+}
+
+class Player {
+    - string name
+    - int mana
+    - bool isAI
+    - bool myTurn
+    - bool defeated
+    - int skippedTurns
+    + Player(string n, bool myTurn = false, bool ai = false, bool defeated = false, int initialMana = 0)
+    + string getName() const
+    + int getMana() const
+    + void setMana(int m)
+    + bool getAI() const
+    + bool getMyTurn() const
+    + void setMyTurn(bool turn)
+    + bool getDefeated() const
+    + void setDefeated(bool d)
+    + int getSkippedTurns() const
+    + void setSkippedTurns(int turns)
+    + void addMana(int amount)
+    + bool subtractMana(int amount)
+}
+
+Field "1" -- "0..1" Unit : has
+Fortress "1" -- "0..1" Player : owned by
+Player "1" -- "*" Unit : owns (Implicitly via board)
+
+@enduml

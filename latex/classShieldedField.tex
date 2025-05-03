@@ -1,0 +1,164 @@
+\hypertarget{classShieldedField}{}\doxysection{Shielded\+Field Class Reference}
+\label{classShieldedField}\index{ShieldedField@{ShieldedField}}
+
+
+\mbox{\hyperlink{classField}{Field}} that provides a temporary shield to units (Shielded \mbox{\hyperlink{classField}{Field}}).  
+
+
+
+
+Inheritance diagram for Shielded\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for Shielded\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classShieldedField_a74501e892d542268eb16def7254f6bae}{Shielded\+Field}} (int fieldX, int fieldY, \mbox{\hyperlink{classUnit}{Unit}} $\ast$initial\+Unit=nullptr, int initial\+Duration=3)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classShieldedField}{Shielded\+Field}} at the given coordinates. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classShieldedField_a0649243b1d2792e36e3d544893244fe2}{$\sim$\+Shielded\+Field}} ()=default
+\item 
+void \mbox{\hyperlink{classShieldedField_a06a7d981e2f14acf56f98c9c2c3f6d78}{apply\+Effect}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$owner, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board) override
+\begin{DoxyCompactList}\small\item\em Applies the shielded field\textquotesingle{}s effect (ticks duration, provides shield). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classShieldedField_a95b93296f68d0383c45767a1c203126c}{get\+Defense\+Bonus}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the defense bonus provided by the shielded field. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classShieldedField_a2b42f9d856dd98d6bffaf975bd3bd268}{can\+Enter}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}) const override
+\begin{DoxyCompactList}\small\item\em Checks if a unit can enter the shielded field. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classShieldedField_a239178b926b3c4420eadc00002590cc8}{get\+Symbol}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the symbol representing the shielded field (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classShieldedField_a650e57c8257d7824df0454afa16b2c68}{duration}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classField}{Field}} that provides a temporary shield to units (Shielded \mbox{\hyperlink{classField}{Field}}). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classShieldedField_a74501e892d542268eb16def7254f6bae}\label{classShieldedField_a74501e892d542268eb16def7254f6bae}} 
+\index{ShieldedField@{ShieldedField}!ShieldedField@{ShieldedField}}
+\index{ShieldedField@{ShieldedField}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{ShieldedField()}{ShieldedField()}}
+{\footnotesize\ttfamily Shielded\+Field\+::\+Shielded\+Field (\begin{DoxyParamCaption}\item[{int}]{fieldX,  }\item[{int}]{fieldY,  }\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{initial\+Unit = {\ttfamily nullptr},  }\item[{int}]{initial\+Duration = {\ttfamily 3} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classShieldedField}{Shielded\+Field}} at the given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fieldX} & X coordinate. \\
+\hline
+{\em fieldY} & Y coordinate. \\
+\hline
+{\em initial\+Unit} & Pointer to the initial unit on the field (default nullptr). \\
+\hline
+{\em initial\+Duration} & Number of turns the shield lasts (default 3). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classShieldedField_a0649243b1d2792e36e3d544893244fe2}\label{classShieldedField_a0649243b1d2792e36e3d544893244fe2}} 
+\index{ShieldedField@{ShieldedField}!````~ShieldedField@{$\sim$ShieldedField}}
+\index{````~ShieldedField@{$\sim$ShieldedField}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{$\sim$ShieldedField()}{~ShieldedField()}}
+{\footnotesize\ttfamily virtual Shielded\+Field\+::$\sim$\+Shielded\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classShieldedField_a06a7d981e2f14acf56f98c9c2c3f6d78}\label{classShieldedField_a06a7d981e2f14acf56f98c9c2c3f6d78}} 
+\index{ShieldedField@{ShieldedField}!applyEffect@{applyEffect}}
+\index{applyEffect@{applyEffect}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{applyEffect()}{applyEffect()}}
+{\footnotesize\ttfamily void Shielded\+Field\+::apply\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{owner,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the shielded field\textquotesingle{}s effect (ticks duration, provides shield). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & The player whose turn it is. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classField_a454ca5b8269657dc01cd611eceb3d397}{Field}}.
+
+\mbox{\Hypertarget{classShieldedField_a2b42f9d856dd98d6bffaf975bd3bd268}\label{classShieldedField_a2b42f9d856dd98d6bffaf975bd3bd268}} 
+\index{ShieldedField@{ShieldedField}!canEnter@{canEnter}}
+\index{canEnter@{canEnter}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{canEnter()}{canEnter()}}
+{\footnotesize\ttfamily bool Shielded\+Field\+::can\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if a unit can enter the shielded field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit} & The unit to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the unit can enter, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField_aca250c9a0c031e21c7e7c609b3b3dec3}{Field}}.
+
+\mbox{\Hypertarget{classShieldedField_a95b93296f68d0383c45767a1c203126c}\label{classShieldedField_a95b93296f68d0383c45767a1c203126c}} 
+\index{ShieldedField@{ShieldedField}!getDefenseBonus@{getDefenseBonus}}
+\index{getDefenseBonus@{getDefenseBonus}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{getDefenseBonus()}{getDefenseBonus()}}
+{\footnotesize\ttfamily int Shielded\+Field\+::get\+Defense\+Bonus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the defense bonus provided by the shielded field. 
+
+\begin{DoxyReturn}{Returns}
+The defense bonus value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField_a718edf661e92a18a81c1a434b8e9ba40}{Field}}.
+
+\mbox{\Hypertarget{classShieldedField_a239178b926b3c4420eadc00002590cc8}\label{classShieldedField_a239178b926b3c4420eadc00002590cc8}} 
+\index{ShieldedField@{ShieldedField}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char Shielded\+Field\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the symbol representing the shielded field (for display). 
+
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}S\textquotesingle{} character. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField_a03e73113267195f2680dd028f8950ae5}{Field}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classShieldedField_a650e57c8257d7824df0454afa16b2c68}\label{classShieldedField_a650e57c8257d7824df0454afa16b2c68}} 
+\index{ShieldedField@{ShieldedField}!duration@{duration}}
+\index{duration@{duration}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily int Shielded\+Field\+::duration\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{shieldedfield_8h}{shieldedfield.\+h}}\item 
+\mbox{\hyperlink{shieldedfield_8cpp}{shieldedfield.\+cpp}}\end{DoxyCompactItemize}

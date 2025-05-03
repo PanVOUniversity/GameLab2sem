@@ -1,0 +1,4 @@
+<map id="TeleportSpell" name="TeleportSpell">
+<area shape="rect" id="node1" title="Spell that teleports a unit to a new location (Teleport)." alt="" coords="5,204,148,311"/>
+<area shape="rect" id="node2" href="$classSpell.html" title="Abstract base class for all spells in the game." alt="" coords="10,5,143,156"/>
+</map>

@@ -1,0 +1,58 @@
+\hypertarget{inicialisation_8cpp}{}\doxysection{inicialisation.\+cpp File Reference}
+\label{inicialisation_8cpp}\index{inicialisation.cpp@{inicialisation.cpp}}
+Include dependency graph for inicialisation.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$ $>$ \mbox{\hyperlink{inicialisation_8cpp_a9ae889de92b70715e095b0cbbbf290b0}{create\+Board}} (int width, int height)
+\item 
+void \mbox{\hyperlink{inicialisation_8cpp_a91ca1465d8213810c75621ec83695f3b}{place\+Hills}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int num\+Hills)
+\item 
+\mbox{\hyperlink{structGameData}{Game\+Data}} \mbox{\hyperlink{inicialisation_8cpp_ae87b658cf20897b09a0f27da810b8069}{inicialisation}} (int width, int height, int num\+Hills, const std\+::string \&name1, const std\+::string \&name2, int initial\+Mana, bool player1\+Starts)
+\begin{DoxyCompactList}\small\item\em Initializes the game board and players. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{inicialisation_8cpp_a9ae889de92b70715e095b0cbbbf290b0}\label{inicialisation_8cpp_a9ae889de92b70715e095b0cbbbf290b0}} 
+\index{inicialisation.cpp@{inicialisation.cpp}!createBoard@{createBoard}}
+\index{createBoard@{createBoard}!inicialisation.cpp@{inicialisation.cpp}}
+\doxysubsubsection{\texorpdfstring{createBoard()}{createBoard()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{classField}{Field}}$\ast$$>$ $>$ create\+Board (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inicialisation_8cpp_ae87b658cf20897b09a0f27da810b8069}\label{inicialisation_8cpp_ae87b658cf20897b09a0f27da810b8069}} 
+\index{inicialisation.cpp@{inicialisation.cpp}!inicialisation@{inicialisation}}
+\index{inicialisation@{inicialisation}!inicialisation.cpp@{inicialisation.cpp}}
+\doxysubsubsection{\texorpdfstring{inicialisation()}{inicialisation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGameData}{Game\+Data}} inicialisation (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{num\+Hills,  }\item[{const std\+::string \&}]{name1,  }\item[{const std\+::string \&}]{name2,  }\item[{int}]{initial\+Mana,  }\item[{bool}]{player1\+Starts }\end{DoxyParamCaption})}
+
+
+
+Initializes the game board and players. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Board width. \\
+\hline
+{\em height} & Board height. \\
+\hline
+{\em num\+Hills} & Number of hills to place on the board. \\
+\hline
+{\em name1} & Name of player 1. \\
+\hline
+{\em name2} & Name of player 2. \\
+\hline
+{\em initial\+Mana} & Starting mana for each player. \\
+\hline
+{\em player1\+Starts} & True if player 1 starts the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structGameData}{Game\+Data}} struct containing the initialized board and players. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inicialisation_8cpp_a91ca1465d8213810c75621ec83695f3b}\label{inicialisation_8cpp_a91ca1465d8213810c75621ec83695f3b}} 
+\index{inicialisation.cpp@{inicialisation.cpp}!placeHills@{placeHills}}
+\index{placeHills@{placeHills}!inicialisation.cpp@{inicialisation.cpp}}
+\doxysubsubsection{\texorpdfstring{placeHills()}{placeHills()}}
+{\footnotesize\ttfamily void place\+Hills (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{num\+Hills }\end{DoxyParamCaption})}
+

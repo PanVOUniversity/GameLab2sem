@@ -1,0 +1,8 @@
+<map id="bombedfield.h" name="bombedfield.h">
+<area shape="rect" id="node1" title=" " alt="" coords="82,5,196,32"/>
+<area shape="rect" id="node2" href="$field_8h.html" title=" " alt="" coords="38,80,101,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="14,304,72,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="188,304,250,331"/>
+<area shape="rect" id="node5" href="$player_8h.html" title=" " alt="" coords="78,155,152,181"/>
+<area shape="rect" id="node6" href="$unit_8h.html" title=" " alt="" coords="156,229,215,256"/>
+</map>

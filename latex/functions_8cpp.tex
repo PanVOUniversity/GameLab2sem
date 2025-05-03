@@ -1,0 +1,185 @@
+\hypertarget{functions_8cpp}{}\doxysection{functions.\+cpp File Reference}
+\label{functions_8cpp}\index{functions.cpp@{functions.cpp}}
+Include dependency graph for functions.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{functions_8cpp_ac73084856ed468780afc9a2af9671f40}{get\+Effective\+Defense}} (const \mbox{\hyperlink{classField}{Field}} $\ast$field, const \mbox{\hyperlink{classUnit}{Unit}} $\ast$unit)
+\item 
+void \mbox{\hyperlink{functions_8cpp_ae92c15badcbeac5edc544eec40902bac}{update\+Fortress\+Strength}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y, int new\+Strength)
+\item 
+void \mbox{\hyperlink{functions_8cpp_ab211df54e293cd58fc266b4e02886762}{check\+Bomb\+Explosions}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\item 
+void \mbox{\hyperlink{functions_8cpp_a43f0126154376c48e09ec7497e5af839}{apply\+Damage}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y, int damage, \mbox{\hyperlink{classUnit}{Unit}} $\ast$attacking\+Unit)
+\item 
+void \mbox{\hyperlink{functions_8cpp_acfc6ab57758c3db7e635b17b396796ba}{attack}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int attackerX, int attackerY, int targetX, int targetY)
+\item 
+void \mbox{\hyperlink{functions_8cpp_a03cfd94cc59ef09a8b66ccbe9d885b19}{move}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int startX, int startY, int endX, int endY)
+\item 
+void \mbox{\hyperlink{functions_8cpp_a0a1837ac6ac69139b25732bf3114f375}{create\+Shielded\+Field}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y, \mbox{\hyperlink{classUnit}{Unit}} $\ast$unit\+On\+Field)
+\item 
+void \mbox{\hyperlink{functions_8cpp_a4d595ebe4dbc3507f414dc8b5ceba8f8}{create\+Hospital\+Field}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y, \mbox{\hyperlink{classUnit}{Unit}} $\ast$unit\+On\+Field)
+\item 
+void \mbox{\hyperlink{functions_8cpp_a4a7c1ee6c2df7047bb09850189ff520a}{check\+Victory}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$player1, \mbox{\hyperlink{classPlayer}{Player}} $\ast$player2, const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\item 
+void \mbox{\hyperlink{functions_8cpp_a672b582df9302c976bb24f13c14e1c43}{display\+Rules}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{functions_8cpp_a43f0126154376c48e09ec7497e5af839}\label{functions_8cpp_a43f0126154376c48e09ec7497e5af839}} 
+\index{functions.cpp@{functions.cpp}!applyDamage@{applyDamage}}
+\index{applyDamage@{applyDamage}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{applyDamage()}{applyDamage()}}
+{\footnotesize\ttfamily void apply\+Damage (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{damage,  }\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{attacking\+Unit }\end{DoxyParamCaption})}
+
+Applies damage to a unit and handles unit removal if health drops to 0 or below.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board \\
+\hline
+{\em x} & X coordinate of the unit\textquotesingle{}s field \\
+\hline
+{\em y} & Y coordinate of the unit\textquotesingle{}s field \\
+\hline
+{\em damage} & The amount of damage to apply \\
+\hline
+{\em attacking\+Unit} & The unit performing the attack (can be null) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8cpp_acfc6ab57758c3db7e635b17b396796ba}\label{functions_8cpp_acfc6ab57758c3db7e635b17b396796ba}} 
+\index{functions.cpp@{functions.cpp}!attack@{attack}}
+\index{attack@{attack}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily void attack (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{attackerX,  }\item[{int}]{attackerY,  }\item[{int}]{targetX,  }\item[{int}]{targetY }\end{DoxyParamCaption})}
+
+Handles the attack logic between two units.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board \\
+\hline
+{\em attackerX} & X coordinate of the attacking unit \\
+\hline
+{\em attackerY} & Y coordinate of the attacking unit \\
+\hline
+{\em targetX} & X coordinate of the target unit \\
+\hline
+{\em targetY} & Y coordinate of the target unit \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8cpp_ab211df54e293cd58fc266b4e02886762}\label{functions_8cpp_ab211df54e293cd58fc266b4e02886762}} 
+\index{functions.cpp@{functions.cpp}!checkBombExplosions@{checkBombExplosions}}
+\index{checkBombExplosions@{checkBombExplosions}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{checkBombExplosions()}{checkBombExplosions()}}
+{\footnotesize\ttfamily void check\+Bomb\+Explosions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+Checks all bombed fields on the board and explodes them if\+:
+\begin{DoxyEnumerate}
+\item They have a unit standing on them, OR
+\item Their timer has expired
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8cpp_a4a7c1ee6c2df7047bb09850189ff520a}\label{functions_8cpp_a4a7c1ee6c2df7047bb09850189ff520a}} 
+\index{functions.cpp@{functions.cpp}!checkVictory@{checkVictory}}
+\index{checkVictory@{checkVictory}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{checkVictory()}{checkVictory()}}
+{\footnotesize\ttfamily void check\+Victory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{player1,  }\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{player2,  }\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{functions_8cpp_a4d595ebe4dbc3507f414dc8b5ceba8f8}\label{functions_8cpp_a4d595ebe4dbc3507f414dc8b5ceba8f8}} 
+\index{functions.cpp@{functions.cpp}!createHospitalField@{createHospitalField}}
+\index{createHospitalField@{createHospitalField}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{createHospitalField()}{createHospitalField()}}
+{\footnotesize\ttfamily void create\+Hospital\+Field (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit\+On\+Field }\end{DoxyParamCaption})}
+
+Creates a \mbox{\hyperlink{classHospitalField}{Hospital\+Field}} at the specified coordinates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+{\em x} & The x-\/coordinate for the new field. \\
+\hline
+{\em y} & The y-\/coordinate for the new field. \\
+\hline
+{\em unit\+On\+Field} & The unit currently on the field (can be null). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8cpp_a0a1837ac6ac69139b25732bf3114f375}\label{functions_8cpp_a0a1837ac6ac69139b25732bf3114f375}} 
+\index{functions.cpp@{functions.cpp}!createShieldedField@{createShieldedField}}
+\index{createShieldedField@{createShieldedField}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{createShieldedField()}{createShieldedField()}}
+{\footnotesize\ttfamily void create\+Shielded\+Field (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit\+On\+Field }\end{DoxyParamCaption})}
+
+Creates a \mbox{\hyperlink{classShieldedField}{Shielded\+Field}} at the specified coordinates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+{\em x} & The x-\/coordinate for the new field. \\
+\hline
+{\em y} & The y-\/coordinate for the new field. \\
+\hline
+{\em unit\+On\+Field} & The unit currently on the field (can be null). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8cpp_a672b582df9302c976bb24f13c14e1c43}\label{functions_8cpp_a672b582df9302c976bb24f13c14e1c43}} 
+\index{functions.cpp@{functions.cpp}!displayRules@{displayRules}}
+\index{displayRules@{displayRules}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{displayRules()}{displayRules()}}
+{\footnotesize\ttfamily void display\+Rules (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{functions_8cpp_ac73084856ed468780afc9a2af9671f40}\label{functions_8cpp_ac73084856ed468780afc9a2af9671f40}} 
+\index{functions.cpp@{functions.cpp}!getEffectiveDefense@{getEffectiveDefense}}
+\index{getEffectiveDefense@{getEffectiveDefense}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{getEffectiveDefense()}{getEffectiveDefense()}}
+{\footnotesize\ttfamily int get\+Effective\+Defense (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{const \mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{functions_8cpp_a03cfd94cc59ef09a8b66ccbe9d885b19}\label{functions_8cpp_a03cfd94cc59ef09a8b66ccbe9d885b19}} 
+\index{functions.cpp@{functions.cpp}!move@{move}}
+\index{move@{move}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void move (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{startX,  }\item[{int}]{startY,  }\item[{int}]{endX,  }\item[{int}]{endY }\end{DoxyParamCaption})}
+
+Handles the movement logic for a unit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board \\
+\hline
+{\em startX} & X coordinate of the starting field \\
+\hline
+{\em startY} & Y coordinate of the starting field \\
+\hline
+{\em endX} & X coordinate of the destination field \\
+\hline
+{\em endY} & Y coordinate of the destination field \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8cpp_ae92c15badcbeac5edc544eec40902bac}\label{functions_8cpp_ae92c15badcbeac5edc544eec40902bac}} 
+\index{functions.cpp@{functions.cpp}!updateFortressStrength@{updateFortressStrength}}
+\index{updateFortressStrength@{updateFortressStrength}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{updateFortressStrength()}{updateFortressStrength()}}
+{\footnotesize\ttfamily void update\+Fortress\+Strength (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{new\+Strength }\end{DoxyParamCaption})}
+
+Updates the strength of a fortress at given coordinates If strength drops to 0 or below, replaces fortress with a plain field
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board \\
+\hline
+{\em x} & X coordinate of fortress \\
+\hline
+{\em y} & Y coordinate of fortress \\
+\hline
+{\em new\+Strength} & New strength value to set \\
+\hline
+\end{DoxyParams}

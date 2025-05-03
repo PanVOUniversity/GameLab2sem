@@ -1,0 +1,226 @@
+\hypertarget{getcommands_8h}{}\doxysection{getcommands.\+h File Reference}
+\label{getcommands_8h}\index{getcommands.h@{getcommands.h}}
+Include dependency graph for getcommands.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{getcommands_8h_a4ffff192321e79e17d14dc4a1af609a7}{get\+Player\+Commands}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$current\+Player, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Handles player commands during their turn. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{getcommands_8h_ad90f841d71e5bae7186823d947a92551}{get\+AICommands}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$current\+Player, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Handles AI commands during its turn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_a5a918c926be360a684c63f4c368a162c}{hill\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing the locations of hills. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_abb0225b6a78d3d158b2671440d7f4692}{burned\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing burned fields. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_aae1a95124f03cd22dba9500e5cd2b154}{bomb\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing bombed fields. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_a2ed49a60b13be1e4632d9681d24856d7}{hospital\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing hospital fields. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_ad879e678fb470228e81db77c63a90381}{fortress\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing fortresses. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_a13c8ecae8ea8ed72b6b586f00007fc9b}{shield\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing shielded fields. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_a8d755658a24617058a3b7dbd0ea59417}{manamine\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing mana mine positions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_a1a9d211a16e23e03d7bf73ddd055e636}{trap\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing trap positions (bombed fields). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_a942be8cf7926326d52493f26a13b070b}{display\+Board}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\item 
+void \mbox{\hyperlink{getcommands_8h_add5d2eade35143ea61cfb9bf44f5a1b2}{unit\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\item 
+void \mbox{\hyperlink{getcommands_8h_a5169c33ec08531429e9eddf9cdb2b802}{field\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{getcommands_8h_aae1a95124f03cd22dba9500e5cd2b154}\label{getcommands_8h_aae1a95124f03cd22dba9500e5cd2b154}} 
+\index{getcommands.h@{getcommands.h}!bomb\_map@{bomb\_map}}
+\index{bomb\_map@{bomb\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{bomb\_map()}{bomb\_map()}}
+{\footnotesize\ttfamily void bomb\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing bombed fields. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_abb0225b6a78d3d158b2671440d7f4692}\label{getcommands_8h_abb0225b6a78d3d158b2671440d7f4692}} 
+\index{getcommands.h@{getcommands.h}!burned\_map@{burned\_map}}
+\index{burned\_map@{burned\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{burned\_map()}{burned\_map()}}
+{\footnotesize\ttfamily void burned\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing burned fields. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_a942be8cf7926326d52493f26a13b070b}\label{getcommands_8h_a942be8cf7926326d52493f26a13b070b}} 
+\index{getcommands.h@{getcommands.h}!displayBoard@{displayBoard}}
+\index{displayBoard@{displayBoard}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{displayBoard()}{displayBoard()}}
+{\footnotesize\ttfamily void display\+Board (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{getcommands_8h_a5169c33ec08531429e9eddf9cdb2b802}\label{getcommands_8h_a5169c33ec08531429e9eddf9cdb2b802}} 
+\index{getcommands.h@{getcommands.h}!field\_map@{field\_map}}
+\index{field\_map@{field\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{field\_map()}{field\_map()}}
+{\footnotesize\ttfamily void field\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{getcommands_8h_ad879e678fb470228e81db77c63a90381}\label{getcommands_8h_ad879e678fb470228e81db77c63a90381}} 
+\index{getcommands.h@{getcommands.h}!fortress\_map@{fortress\_map}}
+\index{fortress\_map@{fortress\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{fortress\_map()}{fortress\_map()}}
+{\footnotesize\ttfamily void fortress\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing fortresses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_ad90f841d71e5bae7186823d947a92551}\label{getcommands_8h_ad90f841d71e5bae7186823d947a92551}} 
+\index{getcommands.h@{getcommands.h}!getAICommands@{getAICommands}}
+\index{getAICommands@{getAICommands}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{getAICommands()}{getAICommands()}}
+{\footnotesize\ttfamily bool get\+AICommands (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{current\+Player,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Handles AI commands during its turn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Player} & The current AI player. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a resource-\/consuming action was taken, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Player} & The current AI player. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a resource-\/consuming action was taken, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{getcommands_8h_a4ffff192321e79e17d14dc4a1af609a7}\label{getcommands_8h_a4ffff192321e79e17d14dc4a1af609a7}} 
+\index{getcommands.h@{getcommands.h}!getPlayerCommands@{getPlayerCommands}}
+\index{getPlayerCommands@{getPlayerCommands}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{getPlayerCommands()}{getPlayerCommands()}}
+{\footnotesize\ttfamily bool get\+Player\+Commands (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{current\+Player,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Handles player commands during their turn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Player} & The current player. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a resource-\/consuming action was taken, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{getcommands_8h_a5a918c926be360a684c63f4c368a162c}\label{getcommands_8h_a5a918c926be360a684c63f4c368a162c}} 
+\index{getcommands.h@{getcommands.h}!hill\_map@{hill\_map}}
+\index{hill\_map@{hill\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{hill\_map()}{hill\_map()}}
+{\footnotesize\ttfamily void hill\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing the locations of hills. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_a2ed49a60b13be1e4632d9681d24856d7}\label{getcommands_8h_a2ed49a60b13be1e4632d9681d24856d7}} 
+\index{getcommands.h@{getcommands.h}!hospital\_map@{hospital\_map}}
+\index{hospital\_map@{hospital\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{hospital\_map()}{hospital\_map()}}
+{\footnotesize\ttfamily void hospital\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing hospital fields. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_a8d755658a24617058a3b7dbd0ea59417}\label{getcommands_8h_a8d755658a24617058a3b7dbd0ea59417}} 
+\index{getcommands.h@{getcommands.h}!manamine\_map@{manamine\_map}}
+\index{manamine\_map@{manamine\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{manamine\_map()}{manamine\_map()}}
+{\footnotesize\ttfamily void manamine\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing mana mine positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_a13c8ecae8ea8ed72b6b586f00007fc9b}\label{getcommands_8h_a13c8ecae8ea8ed72b6b586f00007fc9b}} 
+\index{getcommands.h@{getcommands.h}!shield\_map@{shield\_map}}
+\index{shield\_map@{shield\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{shield\_map()}{shield\_map()}}
+{\footnotesize\ttfamily void shield\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing shielded fields. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_a1a9d211a16e23e03d7bf73ddd055e636}\label{getcommands_8h_a1a9d211a16e23e03d7bf73ddd055e636}} 
+\index{getcommands.h@{getcommands.h}!trap\_map@{trap\_map}}
+\index{trap\_map@{trap\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{trap\_map()}{trap\_map()}}
+{\footnotesize\ttfamily void trap\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing trap positions (bombed fields). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_add5d2eade35143ea61cfb9bf44f5a1b2}\label{getcommands_8h_add5d2eade35143ea61cfb9bf44f5a1b2}} 
+\index{getcommands.h@{getcommands.h}!unit\_map@{unit\_map}}
+\index{unit\_map@{unit\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{unit\_map()}{unit\_map()}}
+{\footnotesize\ttfamily void unit\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+

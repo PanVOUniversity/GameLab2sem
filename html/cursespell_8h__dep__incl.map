@@ -1,0 +1,11 @@
+<map id="cursespell.h" name="cursespell.h">
+<area shape="rect" id="node1" title=" " alt="" coords="28,5,128,32"/>
+<area shape="rect" id="node2" href="$AI_8cpp.html" title=" " alt="" coords="26,155,88,181"/>
+<area shape="rect" id="node3" href="$cursespell_8cpp.html" title=" " alt="" coords="21,80,136,107"/>
+<area shape="rect" id="node4" href="$spells_8h.html" title="Includes all spell types used in the game for easy access and registration." alt="" coords="160,80,232,107"/>
+<area shape="rect" id="node5" href="$getcommands_8cpp.html" title=" " alt="" coords="67,229,210,256"/>
+<area shape="rect" id="node6" href="$getcommands_8h.html" title=" " alt="" coords="184,155,311,181"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title=" " alt="" coords="241,304,324,331"/>
+<area shape="rect" id="node8" href="$main_8h.html" title=" " alt="" coords="285,229,352,256"/>
+<area shape="rect" id="node9" href="$tests_8cpp.html" title=" " alt="" coords="376,229,458,256"/>
+</map>

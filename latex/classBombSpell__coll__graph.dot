@@ -1,0 +1,9 @@
+digraph "BombSpell"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{BombSpell\n||+ BombSpell()\l+ ~BombSpell()\l+ cast()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Spell that creates a bombed field (trap) at a target location (Bomb)."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node2 [label="{Spell\n|# name\l# manaCost\l|+ Spell()\l+ ~Spell()\l+ getName()\l+ getManaCost()\l+ cast()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSpell.html",tooltip="Abstract base class for all spells in the game."];
+}
