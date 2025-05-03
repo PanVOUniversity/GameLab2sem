@@ -1,0 +1,12 @@
+#include "player.h"
+#include "functions.h"
+#include "archer.h"
+#include "infantry.h"
+#include "priest.h"
+#include "engeneer.h"
+#include "cannon.h"
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <ctime>
+#include <cstdlib>

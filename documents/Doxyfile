@@ -1,0 +1,16 @@
+# Enable Graphviz/DOT diagrams
+HAVE_DOT               = YES
+CLASS_DIAGRAMS         = YES
+CLASS_GRAPH            = YES  # Shows inheritance
+COLLABORATION_GRAPH    = YES  # Shows class relationships
+UML_LOOK               = YES  # Uses UML-style arrows
+
+# Include all members (public/private/protected)
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# Show detailed member documentation in diagrams
+SHOW_INCLUDE_FILES     = NO   # Reduces clutter
+HIDE_UNDOC_MEMBERS     = NO   # Shows undocumented methods
+HIDE_UNDOC_CLASSES     = NO   # Shows undocumented classes

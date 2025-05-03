@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['getai_41',['getAI',['../classPlayer.html#a0cb5b17db27a2af6492e270aab8f7870',1,'Player']]],
+  ['getattackdistance_42',['getAttackDistance',['../classUnit.html#a8856896cc73b342fec2cd3e8079e8e6a',1,'Unit']]],
+  ['getdamage_43',['getDamage',['../classUnit.html#a0062c5fab5677c6b47e1d881b4dcc53c',1,'Unit']]],
+  ['getdefeated_44',['getDefeated',['../classPlayer.html#ac70458faf69bfd5d8131b1b9b6b8c5d5',1,'Player']]],
+  ['gethealth_45',['getHealth',['../classUnit.html#ab0196a14bd3a7403d87a5db4b1e69bc7',1,'Unit']]],
+  ['getheight_46',['getHeight',['../classHill.html#a32764a73254184b94133f3ee38577e0d',1,'Hill']]],
+  ['getmana_47',['getMana',['../classPlayer.html#aba42f377d067adc41cbc43e679b6349c',1,'Player']]],
+  ['getmovedistance_48',['getMoveDistance',['../classUnit.html#aba0432bdab275a064c23bc87b12a5d66',1,'Unit']]],
+  ['getmyturn_49',['getMyTurn',['../classPlayer.html#acc717b90437ca3574a900ea736c4cfec',1,'Player']]],
+  ['getmyunits_50',['getMyUnits',['../classPlayer.html#affe4e5c442a813ded870051d42ef17f2',1,'Player']]],
+  ['getname_51',['getName',['../classUnit.html#a0497994e384db5c080ec78e9b645fa40',1,'Unit']]],
+  ['getplayer_52',['getPlayer',['../classUnit.html#a72e700f28797f2c1709e03b2b7828814',1,'Unit']]],
+  ['getstrength_53',['getStrength',['../classFortress.html#a910fc391be59542b1ead1c96e997cd8a',1,'Fortress']]],
+  ['getunit_54',['getUnit',['../classField.html#a726868d72ad77d531e0dcf0969b81091',1,'Field']]],
+  ['getwill_55',['getWill',['../classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998',1,'Unit']]],
+  ['getx_56',['getX',['../classField.html#af4b70c294dd34070bcae38b5b518f6d3',1,'Field']]],
+  ['gety_57',['getY',['../classField.html#a86673ee820c9cfed15b603c9dae6853e',1,'Field']]]
+];

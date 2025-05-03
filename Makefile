@@ -1,59 +1,68 @@
-PROJECT = game
+# Compiler settings
+CXX := g++
+CXXFLAGS := -std=c++17 -Wall -Wextra -I.
+LDFLAGS := -lgtest -lgtest_main -pthread
+BUILD_DIR := build
+SRC_DIR := .
 
-LIBPROJECT = $(PROJECT).a
+# Targets
+MAIN_TARGET := game_executable
+LIB_TARGET := libgame.a
+TEST_TARGET := run_tests
 
-TESTPROJECT = test
+# Source files
+SRCS := $(wildcard $(SRC_DIR)/*.cpp)
+SRCS := $(filter-out $(SRC_DIR)/test.cpp $(SRC_DIR)/tests.cpp $(SRC_DIR)/main.cpp, $(SRCS))
+TEST_SRC := $(SRC_DIR)/tests.cpp
+MAIN_SRC := main.cpp
 
-CXX = g++
+# Object files
+OBJS := $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(SRCS))
+TEST_OBJ := $(BUILD_DIR)/tests.o
+MAIN_OBJ := $(BUILD_DIR)/main.o
 
-A = ar
+.PHONY: all clean test run
 
-AFLAGS = rsv
+all: $(BUILD_DIR) $(LIB_TARGET) $(MAIN_TARGET)
 
-CCXFLAGS = -I. -std=c++17 -Wall -Wextra -g -pthread
+test: $(BUILD_DIR) $(TEST_TARGET)
+	./$(TEST_TARGET)
 
-LDXXFLAGS = $(CCXFLAGS) -L. -l:$(LIBPROJECT)
+run: $(MAIN_TARGET)
+	./$(MAIN_TARGET)
 
-LDGTESTFLAGS = $(LDXXFLAGS) -lgtest -lgtest_main -lpthread
+# Ensure build directory exists before compiling
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
 
-DEPS = $(wildcard *.h)
+# Create object files in build directory
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp | $(BUILD_DIR)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-OBJ = main.o
+# Main library target
+$(LIB_TARGET): $(OBJS)
+	ar rcs $@ $^
 
-# Test object files (just the test file for now)
-TEST-OBJ = tests.o
+# Test executable
+$(TEST_TARGET): $(TEST_OBJ) $(LIB_TARGET)
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 
-.PHONY: default
+# Main executable
+$(MAIN_TARGET): $(MAIN_OBJ) $(LIB_TARGET)
+	$(CXX) $(CXXFLAGS) $^ -o $@
 
-default: all
-
-# Rule to compile .cpp files to .o files
-%.o: %.cpp $(DEPS)
-	$(CXX) -c -o $@ $< $(CCXFLAGS)
-
-# Create static library
-$(LIBPROJECT): $(OBJ)
-	$(A) $(AFLAGS) $@ $^
-
-# Build the test executable
-$(TESTPROJECT): $(LIBPROJECT) $(TEST-OBJ)
-	$(CXX) -o $@ $(TEST-OBJ) $(LDGTESTFLAGS)
-
-# Build the test executable without running it
-build-tests: $(TESTPROJECT)
-
-# Run the tests
-run-tests: $(TESTPROJECT)
-	./$(TESTPROJECT)
-
-# Build all targets (excluding running tests)
-all: $(LIBPROJECT) build-tests
-
-# Clean up object files
 clean:
-	rm -f *.o
+	rm -rf $(BUILD_DIR) $(LIB_TARGET) $(TEST_TARGET) $(MAIN_TARGET)
 
-# Clean up all build artifacts
-cleanall: clean
-	rm -f $(LIBPROJECT)
-	rm -f $(TESTPROJECT)
+# Explicit dependencies
+$(BUILD_DIR)/cannon.o: cannon.h unit.h
+$(BUILD_DIR)/field.o: field.h
+$(BUILD_DIR)/fortress.o: fortress.h hill.h field.h
+$(BUILD_DIR)/functions.o: functions.h field.h unit.h player.h
+$(BUILD_DIR)/getcommands.o: getcommands.h player.h field.h functions.h
+$(BUILD_DIR)/hill.o: hill.h field.h
+$(BUILD_DIR)/inicialisation.o: inicialisation.h field.h hill.h player.h
+$(BUILD_DIR)/player.o: player.h unit.h
+$(BUILD_DIR)/unit.o: unit.h
+$(BUILD_DIR)/tests.o: $(wildcard *.h)
+$(BUILD_DIR)/AI.o: AI.h
