@@ -1,0 +1,4 @@
+<map id="Cannon::fire" name="Cannon::fire">
+<area shape="rect" id="node1" title="Fires at the specified target coordinates." alt="" coords="197,5,297,32"/>
+<area shape="rect" id="node2" href="$db/dc3/classCannon.html#a1d7f5eea1d4dbc32c152762c97b90f43" title="Uses the cannon&#39;s special ability (fire)." alt="" coords="5,5,149,32"/>
+</map>

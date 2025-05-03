@@ -1,0 +1,6 @@
+<map id="Player::getName" name="Player::getName">
+<area shape="rect" id="node1" title="Gets the player&#39;s name." alt="" coords="379,56,509,83"/>
+<area shape="rect" id="node2" href="$db/d5c/classManaMineField.html#a58740f41f2ae6d0fe66cbe83116bd755" title="Applies the mana mine field&#39;s effect (generates mana)." alt="" coords="118,5,321,32"/>
+<area shape="rect" id="node3" href="$db/d5c/classManaMineField.html#a23ebe7f7eefc6123c2e11e59af6a4972" title="Generates mana for the given player." alt="" coords="108,56,331,83"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,60,108"/>
+</map>

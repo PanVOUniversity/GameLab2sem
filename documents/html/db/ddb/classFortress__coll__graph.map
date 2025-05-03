@@ -1,0 +1,6 @@
+<map id="Fortress" name="Fortress">
+<area shape="rect" id="node1" title="Represents a Fortress field on the board, which provides defense and can be captured or destroyed." alt="" coords="143,799,306,1067"/>
+<area shape="rect" id="node2" href="$d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types." alt="" coords="7,431,170,714"/>
+<area shape="rect" id="node3" href="$df/dd9/classUnit.html" title="Represents a unit in the game (base class for all units)." alt="" coords="5,5,172,347"/>
+<area shape="rect" id="node4" href="$d2/d4b/classPlayer.html" title="Represents a player in the game (human or AI)." alt="" coords="194,409,349,736"/>
+</map>

@@ -1,0 +1,301 @@
+\hypertarget{classManaMineField}{}\doxysection{Класс Mana\+Mine\+Field}
+\label{classManaMineField}\index{ManaMineField@{ManaMineField}}
+
+
+\mbox{\hyperlink{classField}{Field}} that generates mana for the owner each turn (Mana Mine \mbox{\hyperlink{classField}{Field}}).  
+
+
+
+
+{\ttfamily \#include $<$manaminefield.\+h$>$}
+
+
+
+Граф наследования\+:Mana\+Mine\+Field\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d2/dac/classManaMineField__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Mana\+Mine\+Field\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d6/d23/classManaMineField__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classManaMineField_a88d0b1b172bd7bfb541822b7ab953691}{Mana\+Mine\+Field}} (int fieldX, int fieldY, \mbox{\hyperlink{classUnit}{Unit}} $\ast$initial\+Unit=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classManaMineField}{Mana\+Mine\+Field}} at the given coordinates. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classManaMineField_a9cc0707f4eb048c90b44ce62049aebde}{$\sim$\+Mana\+Mine\+Field}} ()=default
+\item 
+void \mbox{\hyperlink{classManaMineField_a58740f41f2ae6d0fe66cbe83116bd755}{apply\+Effect}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$owner, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board) override
+\begin{DoxyCompactList}\small\item\em Applies the mana mine field\textquotesingle{}s effect (generates mana). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classManaMineField_a22ab0221bc04d653ec9288b2e00c8d34}{can\+Enter}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}) const override
+\begin{DoxyCompactList}\small\item\em Checks if a unit can enter the mana mine field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classManaMineField_a23ebe7f7eefc6123c2e11e59af6a4972}{generate\+Mana}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Generates mana for the given player. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classManaMineField_aca33a1fb8aa80deeeb5123aa738fd40c}{get\+Symbol}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the symbol representing the mana mine field (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classManaMineField_aba3c65e642fc431a6300db59f669840e}{mana\+Per\+Turn}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+\mbox{\hyperlink{classField}{Field}} that generates mana for the owner each turn (Mana Mine \mbox{\hyperlink{classField}{Field}}). 
+
+См. определение в файле manaminefield.\+h строка 16
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classManaMineField_a88d0b1b172bd7bfb541822b7ab953691}\label{classManaMineField_a88d0b1b172bd7bfb541822b7ab953691}} 
+\index{ManaMineField@{ManaMineField}!ManaMineField@{ManaMineField}}
+\index{ManaMineField@{ManaMineField}!ManaMineField@{ManaMineField}}
+\doxysubsubsection{\texorpdfstring{ManaMineField()}{ManaMineField()}}
+{\footnotesize\ttfamily Mana\+Mine\+Field\+::\+Mana\+Mine\+Field (\begin{DoxyParamCaption}\item[{int}]{fieldX,  }\item[{int}]{fieldY,  }\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{initial\+Unit = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classManaMineField}{Mana\+Mine\+Field}} at the given coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em fieldX} & X coordinate. \\
+\hline
+{\em fieldY} & Y coordinate. \\
+\hline
+{\em initial\+Unit} & Pointer to the initial unit on the field (default nullptr). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле manaminefield.\+cpp строка 9
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10     : \mbox{\hyperlink{classField_ad8556c0f47d0dc949f11480c4c6e4521}{Field}}(fieldX, fieldY, \textcolor{stringliteral}{"{}mana\_mine"{}}), \mbox{\hyperlink{classManaMineField_aba3c65e642fc431a6300db59f669840e}{manaPerTurn}}(2) \textcolor{comment}{// Example mana per turn}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{comment}{// Set the initial unit if there is one}}
+\DoxyCodeLine{13     \mbox{\hyperlink{classField_aac940692dbfe1437aba7efc3a8903ea8}{setUnit}}(initialUnit);}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Field\+::set\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d5c/classManaMineField_a88d0b1b172bd7bfb541822b7ab953691_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classManaMineField_a9cc0707f4eb048c90b44ce62049aebde}\label{classManaMineField_a9cc0707f4eb048c90b44ce62049aebde}} 
+\index{ManaMineField@{ManaMineField}!````~ManaMineField@{$\sim$ManaMineField}}
+\index{````~ManaMineField@{$\sim$ManaMineField}!ManaMineField@{ManaMineField}}
+\doxysubsubsection{\texorpdfstring{$\sim$ManaMineField()}{~ManaMineField()}}
+{\footnotesize\ttfamily virtual Mana\+Mine\+Field\+::$\sim$\+Mana\+Mine\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classManaMineField_a58740f41f2ae6d0fe66cbe83116bd755}\label{classManaMineField_a58740f41f2ae6d0fe66cbe83116bd755}} 
+\index{ManaMineField@{ManaMineField}!applyEffect@{applyEffect}}
+\index{applyEffect@{applyEffect}!ManaMineField@{ManaMineField}}
+\doxysubsubsection{\texorpdfstring{applyEffect()}{applyEffect()}}
+{\footnotesize\ttfamily void Mana\+Mine\+Field\+::apply\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{owner,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the mana mine field\textquotesingle{}s effect (generates mana). 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em owner} & The player whose turn it is. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_a454ca5b8269657dc01cd611eceb3d397}{Field}}.
+
+
+
+См. определение в файле manaminefield.\+cpp строка 24
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26     \textcolor{comment}{// Generate mana for the owner of the mana mine (the player who controls the unit on it, or the player who built it)}}
+\DoxyCodeLine{27     \textcolor{comment}{// Assuming the mana is generated for the player whose turn it is, if they control the unit on the mine}}
+\DoxyCodeLine{28     \textcolor{keywordflow}{if} (owner \&\& \mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}} \&\& \mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() == !owner-\/>\mbox{\hyperlink{classPlayer_a0cb5b17db27a2af6492e270aab8f7870}{getAI}}()) \textcolor{comment}{// Assuming human player is !getAI() for human player control}}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         std::cout << \textcolor{stringliteral}{"{}Mana mine at ("{}} << \mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}() << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}() << \textcolor{stringliteral}{"{}) generates "{}} << \mbox{\hyperlink{classManaMineField_aba3c65e642fc431a6300db59f669840e}{manaPerTurn}} << \textcolor{stringliteral}{"{} mana for "{}} << owner-\/>\mbox{\hyperlink{classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{getName}}() << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{31         owner-\/>\mbox{\hyperlink{classPlayer_addff1c790965ad1b6ca5745a0fc849e0}{addMana}}(\mbox{\hyperlink{classManaMineField_aba3c65e642fc431a6300db59f669840e}{manaPerTurn}});}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33     \textcolor{comment}{// Note: Mana mines don't have a duration based on the header,}}
+\DoxyCodeLine{34     \textcolor{comment}{// so they persist unless replaced by another field.}}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Player\+::add\+Mana(), Player\+::get\+AI(), Player\+::get\+Name(), Unit\+::get\+Player(), Field\+::get\+X(), Field\+::get\+Y(), mana\+Per\+Turn и Field\+::unit.
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d5c/classManaMineField_a58740f41f2ae6d0fe66cbe83116bd755_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classManaMineField_a22ab0221bc04d653ec9288b2e00c8d34}\label{classManaMineField_a22ab0221bc04d653ec9288b2e00c8d34}} 
+\index{ManaMineField@{ManaMineField}!canEnter@{canEnter}}
+\index{canEnter@{canEnter}!ManaMineField@{ManaMineField}}
+\doxysubsubsection{\texorpdfstring{canEnter()}{canEnter()}}
+{\footnotesize\ttfamily bool Mana\+Mine\+Field\+::can\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if a unit can enter the mana mine field. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit} & The unit to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the unit can enter, false otherwise. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_aca250c9a0c031e21c7e7c609b3b3dec3}{Field}}.
+
+
+
+См. определение в файле manaminefield.\+cpp строка 38
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40     \textcolor{comment}{// Units can enter mana mine fields}}
+\DoxyCodeLine{41     \textcolor{keywordflow}{return} this-\/>unit == \textcolor{keyword}{nullptr}; \textcolor{comment}{// Can enter if empty}}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Field\+::unit.
+
+\mbox{\Hypertarget{classManaMineField_a23ebe7f7eefc6123c2e11e59af6a4972}\label{classManaMineField_a23ebe7f7eefc6123c2e11e59af6a4972}} 
+\index{ManaMineField@{ManaMineField}!generateMana@{generateMana}}
+\index{generateMana@{generateMana}!ManaMineField@{ManaMineField}}
+\doxysubsubsection{\texorpdfstring{generateMana()}{generateMana()}}
+{\footnotesize\ttfamily void Mana\+Mine\+Field\+::generate\+Mana (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Generates mana for the given player. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em player} & The player to receive mana. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле manaminefield.\+cpp строка 45
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                                \{}
+\DoxyCodeLine{46     \textcolor{keywordflow}{if} (player) \{}
+\DoxyCodeLine{47          std::cout << \textcolor{stringliteral}{"{}Mana mine at ("{}} << \mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}() << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}() << \textcolor{stringliteral}{"{}) generates "{}} << \mbox{\hyperlink{classManaMineField_aba3c65e642fc431a6300db59f669840e}{manaPerTurn}} << \textcolor{stringliteral}{"{} mana for "{}} << player-\/>\mbox{\hyperlink{classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{getName}}() << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{48          player-\/>\mbox{\hyperlink{classPlayer_addff1c790965ad1b6ca5745a0fc849e0}{addMana}}(\mbox{\hyperlink{classManaMineField_aba3c65e642fc431a6300db59f669840e}{manaPerTurn}});}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Player\+::add\+Mana(), Player\+::get\+Name(), Field\+::get\+X(), Field\+::get\+Y() и mana\+Per\+Turn.
+
+
+
+Используется в main().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d5c/classManaMineField_a23ebe7f7eefc6123c2e11e59af6a4972_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{db/d5c/classManaMineField_a23ebe7f7eefc6123c2e11e59af6a4972_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classManaMineField_aca33a1fb8aa80deeeb5123aa738fd40c}\label{classManaMineField_aca33a1fb8aa80deeeb5123aa738fd40c}} 
+\index{ManaMineField@{ManaMineField}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!ManaMineField@{ManaMineField}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char Mana\+Mine\+Field\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the symbol representing the mana mine field (for display). 
+
+\begin{DoxyReturn}{Возвращает}
+\textquotesingle{}M\textquotesingle{} character. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_a03e73113267195f2680dd028f8950ae5}{Field}}.
+
+
+
+См. определение в файле manaminefield.\+h строка 55
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55 \{ \textcolor{keywordflow}{return} \textcolor{charliteral}{'M'}; \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classManaMineField_aba3c65e642fc431a6300db59f669840e}\label{classManaMineField_aba3c65e642fc431a6300db59f669840e}} 
+\index{ManaMineField@{ManaMineField}!manaPerTurn@{manaPerTurn}}
+\index{manaPerTurn@{manaPerTurn}!ManaMineField@{ManaMineField}}
+\doxysubsubsection{\texorpdfstring{manaPerTurn}{manaPerTurn}}
+{\footnotesize\ttfamily int Mana\+Mine\+Field\+::mana\+Per\+Turn\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле manaminefield.\+h строка 19
+
+
+
+Используется в apply\+Effect() и generate\+Mana().
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{manaminefield_8h}{manaminefield.\+h}}\item 
+\mbox{\hyperlink{manaminefield_8cpp}{manaminefield.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,8 @@
+<map id="Unit" name="Unit">
+<area shape="rect" id="node1" title="Represents a unit in the game (base class for all units)." alt="" coords="461,5,628,347"/>
+<area shape="rect" id="node2" href="$d3/dea/classArcher.html" title="Ranged unit with variable attack distance (Archer)." alt="" coords="5,446,196,567"/>
+<area shape="rect" id="node3" href="$db/dc3/classCannon.html" title="Stationary ranged unit with directional fire ability (Cannon)." alt="" coords="220,395,443,619"/>
+<area shape="rect" id="node4" href="$dc/d9b/classEngineer.html" title="Utility unit that can build special fields (Engineer)." alt="" coords="467,431,623,582"/>
+<area shape="rect" id="node5" href="$da/def/classInfantry.html" title="Melee unit with counter&#45;attack ability (Infantry)." alt="" coords="647,446,786,567"/>
+<area shape="rect" id="node6" href="$de/db7/classPriest.html" title="Support unit that can create shielded fields (Priest)." alt="" coords="810,446,927,567"/>
+</map>

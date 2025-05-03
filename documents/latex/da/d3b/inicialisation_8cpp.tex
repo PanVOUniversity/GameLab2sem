@@ -1,0 +1,209 @@
+\hypertarget{inicialisation_8cpp}{}\doxysection{Файл inicialisation.\+cpp}
+\label{inicialisation_8cpp}\index{inicialisation.cpp@{inicialisation.cpp}}
+{\ttfamily \#include \char`\"{}inicialisation.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Граф включаемых заголовочных файлов для inicialisation.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dec/inicialisation_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$ $>$ \mbox{\hyperlink{inicialisation_8cpp_a9ae889de92b70715e095b0cbbbf290b0}{create\+Board}} (int width, int height)
+\item 
+void \mbox{\hyperlink{inicialisation_8cpp_a91ca1465d8213810c75621ec83695f3b}{place\+Hills}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int num\+Hills)
+\item 
+\mbox{\hyperlink{structGameData}{Game\+Data}} \mbox{\hyperlink{inicialisation_8cpp_ae87b658cf20897b09a0f27da810b8069}{inicialisation}} (int width, int height, int num\+Hills, const std\+::string \&name1, const std\+::string \&name2, int initial\+Mana, bool player1\+Starts)
+\begin{DoxyCompactList}\small\item\em Initializes the game board and players. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{inicialisation_8cpp_a9ae889de92b70715e095b0cbbbf290b0}\label{inicialisation_8cpp_a9ae889de92b70715e095b0cbbbf290b0}} 
+\index{inicialisation.cpp@{inicialisation.cpp}!createBoard@{createBoard}}
+\index{createBoard@{createBoard}!inicialisation.cpp@{inicialisation.cpp}}
+\doxysubsubsection{\texorpdfstring{createBoard()}{createBoard()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{classField}{Field}}$\ast$$>$ $>$ create\+Board (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле inicialisation.\+cpp строка 7
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{keywordflow}{if} (width <= 0 || height <= 0)}
+\DoxyCodeLine{10     \{}
+\DoxyCodeLine{11         \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}Board dimensions must be positive"{}});}
+\DoxyCodeLine{12     \}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     std::vector<std::vector<Field*>> board(}
+\DoxyCodeLine{15                                       \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(width),}
+\DoxyCodeLine{16                                       std::vector<Field*>(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(height))}
+\DoxyCodeLine{17                                   );}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < board.size(); ++x)}
+\DoxyCodeLine{20     \{}
+\DoxyCodeLine{21         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < board[0].size(); ++y)}
+\DoxyCodeLine{22         \{}
+\DoxyCodeLine{23             board[x][y] = \textcolor{keyword}{new} \mbox{\hyperlink{classField}{Field}}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(x), \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(y));}
+\DoxyCodeLine{24         \}}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26     \textcolor{keywordflow}{return} board;}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+
+
+Используется в inicialisation().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{da/d3b/inicialisation_8cpp_a9ae889de92b70715e095b0cbbbf290b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inicialisation_8cpp_ae87b658cf20897b09a0f27da810b8069}\label{inicialisation_8cpp_ae87b658cf20897b09a0f27da810b8069}} 
+\index{inicialisation.cpp@{inicialisation.cpp}!inicialisation@{inicialisation}}
+\index{inicialisation@{inicialisation}!inicialisation.cpp@{inicialisation.cpp}}
+\doxysubsubsection{\texorpdfstring{inicialisation()}{inicialisation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGameData}{Game\+Data}} inicialisation (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{num\+Hills,  }\item[{const std\+::string \&}]{name1,  }\item[{const std\+::string \&}]{name2,  }\item[{int}]{initial\+Mana,  }\item[{bool}]{player1\+Starts }\end{DoxyParamCaption})}
+
+
+
+Initializes the game board and players. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em width} & Board width. \\
+\hline
+{\em height} & Board height. \\
+\hline
+{\em num\+Hills} & Number of hills to place on the board. \\
+\hline
+{\em name1} & Name of player 1. \\
+\hline
+{\em name2} & Name of player 2. \\
+\hline
+{\em initial\+Mana} & Starting mana for each player. \\
+\hline
+{\em player1\+Starts} & True if player 1 starts the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\mbox{\hyperlink{structGameData}{Game\+Data}} struct containing the initialized board and players. 
+\end{DoxyReturn}
+
+
+См. определение в файле inicialisation.\+cpp строка 68
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71 \{}
+\DoxyCodeLine{72     \mbox{\hyperlink{structGameData}{GameData}} gameData;}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{comment}{// Create game board}}
+\DoxyCodeLine{75     gameData.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}} = \mbox{\hyperlink{inicialisation_8cpp_a9ae889de92b70715e095b0cbbbf290b0}{createBoard}}(width, height);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     \textcolor{comment}{// Place hills on the board}}
+\DoxyCodeLine{78     \mbox{\hyperlink{inicialisation_8cpp_a91ca1465d8213810c75621ec83695f3b}{placeHills}}(gameData.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}, numHills);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \textcolor{comment}{// Create players with specified mana and turn order}}
+\DoxyCodeLine{81     \textcolor{comment}{// The Player constructor now takes initialMana as the last parameter}}
+\DoxyCodeLine{82     gameData.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}} = \textcolor{keyword}{new} \mbox{\hyperlink{classPlayer}{Player}}(name1, player1Starts, \textcolor{keyword}{false}, \textcolor{keyword}{false}, initialMana);}
+\DoxyCodeLine{83     gameData.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}} = \textcolor{keyword}{new} \mbox{\hyperlink{classPlayer}{Player}}(name2, !player1Starts, \textcolor{keyword}{true}, \textcolor{keyword}{false}, initialMana);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{keywordflow}{return} gameData;}
+\DoxyCodeLine{86 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Game\+Data\+::board, create\+Board(), place\+Hills(), Game\+Data\+::player1 и Game\+Data\+::player2.
+
+
+
+Используется в main().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{da/d3b/inicialisation_8cpp_ae87b658cf20897b09a0f27da810b8069_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{da/d3b/inicialisation_8cpp_ae87b658cf20897b09a0f27da810b8069_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inicialisation_8cpp_a91ca1465d8213810c75621ec83695f3b}\label{inicialisation_8cpp_a91ca1465d8213810c75621ec83695f3b}} 
+\index{inicialisation.cpp@{inicialisation.cpp}!placeHills@{placeHills}}
+\index{placeHills@{placeHills}!inicialisation.cpp@{inicialisation.cpp}}
+\doxysubsubsection{\texorpdfstring{placeHills()}{placeHills()}}
+{\footnotesize\ttfamily void place\+Hills (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{num\+Hills }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле inicialisation.\+cpp строка 29
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30 \{}
+\DoxyCodeLine{31     \textcolor{keywordflow}{if} (numHills <= 0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{32     \textcolor{keywordflow}{if} (board.empty() || board[0].empty()) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{comment}{// Seed the random number generator if not already seeded}}
+\DoxyCodeLine{35     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} seeded = \textcolor{keyword}{false};}
+\DoxyCodeLine{36     \textcolor{keywordflow}{if} (!seeded) \{}
+\DoxyCodeLine{37         srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{38         seeded = \textcolor{keyword}{true};}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{int} hillsPlaced = 0;}
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} attempts = 0;}
+\DoxyCodeLine{44     \textcolor{keywordtype}{int} maxAttempts = numHills * 10; \textcolor{comment}{// Prevent infinite loops on small boards}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordflow}{while} (hillsPlaced < numHills \&\& attempts < maxAttempts)}
+\DoxyCodeLine{47     \{}
+\DoxyCodeLine{48         \textcolor{keywordtype}{size\_t} x = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(rand() \% board.size());}
+\DoxyCodeLine{49         \textcolor{keywordtype}{size\_t} y = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(rand() \% board[0].size());}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \textcolor{comment}{// Check if the field is currently a plain field before replacing it}}
+\DoxyCodeLine{52         \textcolor{comment}{// This prevents replacing existing special fields or units}}
+\DoxyCodeLine{53         \textcolor{keywordflow}{if} (board[x][y]-\/>getType() == \textcolor{stringliteral}{"{}plain"{}} \&\& board[x][y]-\/>getUnit() == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{54         \{}
+\DoxyCodeLine{55             \textcolor{keyword}{delete} board[x][y];}
+\DoxyCodeLine{56             \textcolor{comment}{// Corrected: Pass nullptr as the third argument to the Hill constructor}}
+\DoxyCodeLine{57             board[x][y] = \textcolor{keyword}{new} \mbox{\hyperlink{classHill}{Hill}}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(x), \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(y), \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{58             hillsPlaced++;}
+\DoxyCodeLine{59         \}}
+\DoxyCodeLine{60         attempts++;}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{keywordflow}{if} (hillsPlaced < numHills) \{}
+\DoxyCodeLine{64         std::cerr << \textcolor{stringliteral}{"{}Warning: Could only place "{}} << hillsPlaced << \textcolor{stringliteral}{"{} out of "{}} << numHills << \textcolor{stringliteral}{"{} hills after "{}} << maxAttempts << \textcolor{stringliteral}{"{} attempts.\(\backslash\)n"{}};}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+
+
+Используется в inicialisation().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{da/d3b/inicialisation_8cpp_a91ca1465d8213810c75621ec83695f3b_icgraph}
+\end{center}
+\end{figure}

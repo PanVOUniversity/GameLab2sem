@@ -1,0 +1,186 @@
+\hypertarget{main_8cpp}{}\doxysection{Файл main.\+cpp}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}getcommands.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dce/main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле main.\+cpp строка 5
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     \mbox{\hyperlink{structGameData}{GameData}} game; \textcolor{comment}{// Declare game outside the try block}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9     \textcolor{keywordflow}{try}}
+\DoxyCodeLine{10     \{}
+\DoxyCodeLine{11         \textcolor{comment}{// Initialize game with:}}
+\DoxyCodeLine{12         \textcolor{comment}{// -\/ 10x10 board}}
+\DoxyCodeLine{13         \textcolor{comment}{// -\/ 5 hills}}
+\DoxyCodeLine{14         \textcolor{comment}{// -\/ Player names "{}Human"{} and "{}AI"{}}}
+\DoxyCodeLine{15         \textcolor{comment}{// -\/ Starting mana: 50}}
+\DoxyCodeLine{16         \textcolor{comment}{// -\/ Player 1 starts first}}
+\DoxyCodeLine{17         game = \mbox{\hyperlink{inicialisation_8cpp_ae87b658cf20897b09a0f27da810b8069}{inicialisation}}(10, 10, 5, \textcolor{stringliteral}{"{}Human"{}}, \textcolor{stringliteral}{"{}AI"{}}, 50, \textcolor{keyword}{true});}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19         \textcolor{keywordtype}{int} turnCount = 0; \textcolor{comment}{// Add turn counter}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         \textcolor{comment}{// Access game state}}
+\DoxyCodeLine{22         std::cout << \textcolor{stringliteral}{"{}your turn: "{}} << game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_acc717b90437ca3574a900ea736c4cfec}{getMyTurn}}() << std::endl;}
+\DoxyCodeLine{23         std::cout << \textcolor{stringliteral}{"{}your mana: "{}} << game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_aba42f377d067adc41cbc43e679b6349c}{getMana}}() << std::endl;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25         \textcolor{comment}{// Game loop continues as long as neither player is defeated}}
+\DoxyCodeLine{26         \textcolor{keywordflow}{while}(!game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_ac70458faf69bfd5d8131b1b9b6b8c5d5}{getDefeated}}() \&\& !game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}-\/>\mbox{\hyperlink{classPlayer_ac70458faf69bfd5d8131b1b9b6b8c5d5}{getDefeated}}())}
+\DoxyCodeLine{27         \{}
+\DoxyCodeLine{28             \textcolor{keywordtype}{bool} actionTakenThisTurn = \textcolor{keyword}{false}; \textcolor{comment}{// Flag to track if the current player took an action}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30             \textcolor{keywordflow}{if}(game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_acc717b90437ca3574a900ea736c4cfec}{getMyTurn}}())}
+\DoxyCodeLine{31             \{}
+\DoxyCodeLine{32                 \textcolor{comment}{// Human player's turn}}
+\DoxyCodeLine{33                 actionTakenThisTurn = \mbox{\hyperlink{getcommands_8cpp_a4ffff192321e79e17d14dc4a1af609a7}{getPlayerCommands}}(game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}, game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}});}
+\DoxyCodeLine{34                 \mbox{\hyperlink{functions_8cpp_ab211df54e293cd58fc266b4e02886762}{checkBombExplosions}}(game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}); \textcolor{comment}{// Check for bomb explosions after player actions}}
+\DoxyCodeLine{35                 game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_a702ab07a0927d565734c50f7ed231fac}{setMyTurn}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{36                 game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}-\/>\mbox{\hyperlink{classPlayer_a702ab07a0927d565734c50f7ed231fac}{setMyTurn}}(\textcolor{keyword}{true}); \textcolor{comment}{// Pass turn to AI}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38                 \textcolor{comment}{// Update skipped turns for Player 1}}
+\DoxyCodeLine{39                 \textcolor{keywordflow}{if} (actionTakenThisTurn) \{}
+\DoxyCodeLine{40                     game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_a5995eaa758f0b796e2d625fa87610278}{setSkippedTurns}}(0); \textcolor{comment}{// Reset skipped turns if action was taken}}
+\DoxyCodeLine{41                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{42                     game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_a5995eaa758f0b796e2d625fa87610278}{setSkippedTurns}}(game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_a6f8a2dd8ea91473a3d800d3c4d74057c}{getSkippedTurns}}() + 1); \textcolor{comment}{// Increment skipped turns}}
+\DoxyCodeLine{43                     std::cout << game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{getName}}() << \textcolor{stringliteral}{"{} skipped a turn. Consecutive skipped turns: "{}} << game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_a6f8a2dd8ea91473a3d800d3c4d74057c}{getSkippedTurns}}() << std::endl;}
+\DoxyCodeLine{44                 \}}
+\DoxyCodeLine{45             \}}
+\DoxyCodeLine{46             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{47             \{}
+\DoxyCodeLine{48                 std::cout << \textcolor{stringliteral}{"{}AI turn\(\backslash\)n"{}};}
+\DoxyCodeLine{49                 std::cout << \textcolor{stringliteral}{"{}[DEBUG] AI mana: "{}} << game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}-\/>\mbox{\hyperlink{classPlayer_aba42f377d067adc41cbc43e679b6349c}{getMana}}() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{50                 \textcolor{comment}{// Print if AI has any units}}
+\DoxyCodeLine{51                 \textcolor{keywordtype}{int} aiUnitCount = 0;}
+\DoxyCodeLine{52                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}.size(); ++x) \{}
+\DoxyCodeLine{53                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}[x].size(); ++y) \{}
+\DoxyCodeLine{54                         \mbox{\hyperlink{classField}{Field}}* f = game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}[x][y];}
+\DoxyCodeLine{55                         \textcolor{keywordflow}{if} (f \&\& f-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() \&\& !f-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}()) aiUnitCount++;}
+\DoxyCodeLine{56                     \}}
+\DoxyCodeLine{57                 \}}
+\DoxyCodeLine{58                 std::cout << \textcolor{stringliteral}{"{}[DEBUG] AI units on board: "{}} << aiUnitCount << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{59                 \textcolor{comment}{// Print if AI has any valid creation spots}}
+\DoxyCodeLine{60                 \textcolor{keywordtype}{int} aiCreateSpots = 0;}
+\DoxyCodeLine{61                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y <= 4 \&\& y < game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}[0].size(); ++y) \{}
+\DoxyCodeLine{62                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}.size(); ++x) \{}
+\DoxyCodeLine{63                         \mbox{\hyperlink{classField}{Field}}* f = game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}[x][y];}
+\DoxyCodeLine{64                         \textcolor{keywordflow}{if} (f \&\& !f-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() \&\& !\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classFortress}{Fortress}}*\textcolor{keyword}{>}(f) \&\& !\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHill}{Hill}}*\textcolor{keyword}{>}(f) \&\& !\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classManaMineField}{ManaMineField}}*\textcolor{keyword}{>}(f) \&\& !\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBombedField}{BombedField}}*\textcolor{keyword}{>}(f) \&\& !\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classShieldedField}{ShieldedField}}*\textcolor{keyword}{>}(f) \&\& !\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBurnedField}{BurnedField}}*\textcolor{keyword}{>}(f) \&\& !\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHospitalField}{HospitalField}}*\textcolor{keyword}{>}(f)) aiCreateSpots++;}
+\DoxyCodeLine{65                     \}}
+\DoxyCodeLine{66                 \}}
+\DoxyCodeLine{67                 std::cout << \textcolor{stringliteral}{"{}[DEBUG] AI valid creation spots: "{}} << aiCreateSpots << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{68                 actionTakenThisTurn = \mbox{\hyperlink{AI_8cpp_ad90f841d71e5bae7186823d947a92551}{getAICommands}}(game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}, game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}});}
+\DoxyCodeLine{69                 \textcolor{keywordflow}{if} (!actionTakenThisTurn) \{}
+\DoxyCodeLine{70                     std::cout << \textcolor{stringliteral}{"{}AI skipped its turn (no possible actions).\(\backslash\)n"{}};}
+\DoxyCodeLine{71                 \}}
+\DoxyCodeLine{72                 \mbox{\hyperlink{functions_8cpp_ab211df54e293cd58fc266b4e02886762}{checkBombExplosions}}(game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}});}
+\DoxyCodeLine{73                 game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_a702ab07a0927d565734c50f7ed231fac}{setMyTurn}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75                 \textcolor{comment}{// Update skipped turns for Player 2}}
+\DoxyCodeLine{76                 \textcolor{keywordflow}{if} (actionTakenThisTurn) \{}
+\DoxyCodeLine{77                     game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}-\/>\mbox{\hyperlink{classPlayer_a5995eaa758f0b796e2d625fa87610278}{setSkippedTurns}}(0); \textcolor{comment}{// Reset skipped turns if action was taken}}
+\DoxyCodeLine{78                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{79                     game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}-\/>\mbox{\hyperlink{classPlayer_a5995eaa758f0b796e2d625fa87610278}{setSkippedTurns}}(game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}-\/>\mbox{\hyperlink{classPlayer_a6f8a2dd8ea91473a3d800d3c4d74057c}{getSkippedTurns}}() + 1); \textcolor{comment}{// Increment skipped turns}}
+\DoxyCodeLine{80                     std::cout << game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}-\/>\mbox{\hyperlink{classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{getName}}() << \textcolor{stringliteral}{"{} skipped a turn. Consecutive skipped turns: "{}} << game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}-\/>\mbox{\hyperlink{classPlayer_a6f8a2dd8ea91473a3d800d3c4d74057c}{getSkippedTurns}}() << std::endl;}
+\DoxyCodeLine{81                 \}}
+\DoxyCodeLine{82             \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84             }
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86             \textcolor{comment}{// Check for victory/defeat/draw conditions after each turn}}
+\DoxyCodeLine{87             \mbox{\hyperlink{functions_8cpp_a4a7c1ee6c2df7047bb09850189ff520a}{checkVictory}}(game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}, game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}, game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}});}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89             \textcolor{comment}{// Add end-\/of-\/turn effects here if any (e.g., mana generation from manamines)}}
+\DoxyCodeLine{90             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}.size(); ++x) \{}
+\DoxyCodeLine{91                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}[x].size(); ++y) \{}
+\DoxyCodeLine{92                     \mbox{\hyperlink{classManaMineField}{ManaMineField}}* manaMine = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classManaMineField}{ManaMineField}}*\textcolor{keyword}{>}(game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}[x][y]);}
+\DoxyCodeLine{93                     \textcolor{keywordflow}{if} (manaMine) \{}
+\DoxyCodeLine{94                         \textcolor{keywordflow}{if} (!game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_acc717b90437ca3574a900ea736c4cfec}{getMyTurn}}()) \{}
+\DoxyCodeLine{95                              manaMine-\/>\mbox{\hyperlink{classManaMineField_a23ebe7f7eefc6123c2e11e59af6a4972}{generateMana}}(game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}});}
+\DoxyCodeLine{96                              std::cout << game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{getName}}() << \textcolor{stringliteral}{"{} gained 1 mana from a Mana Mine.\(\backslash\)n"{}};}
+\DoxyCodeLine{97                         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{98                              manaMine-\/>\mbox{\hyperlink{classManaMineField_a23ebe7f7eefc6123c2e11e59af6a4972}{generateMana}}(game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}});}
+\DoxyCodeLine{99                              std::cout << game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}-\/>\mbox{\hyperlink{classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{getName}}() << \textcolor{stringliteral}{"{} gained 1 mana from a Mana Mine.\(\backslash\)n"{}};}
+\DoxyCodeLine{100                         \}}
+\DoxyCodeLine{101                     \}}
+\DoxyCodeLine{102                 \}}
+\DoxyCodeLine{103             \}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105             \textcolor{comment}{// Increment turn counter after both players have played}}
+\DoxyCodeLine{106             ++turnCount;}
+\DoxyCodeLine{107             \textcolor{keywordflow}{if} (game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_a6f8a2dd8ea91473a3d800d3c4d74057c}{getSkippedTurns}}() >= 2) \{}
+\DoxyCodeLine{108                 std::cout << game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}}-\/>\mbox{\hyperlink{classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{getName}}() << \textcolor{stringliteral}{"{} skipped 2 turns in a row. Game over!\(\backslash\)n"{}};}
+\DoxyCodeLine{109                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{110             \}}
+\DoxyCodeLine{111             \textcolor{keywordflow}{if} (game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}-\/>\mbox{\hyperlink{classPlayer_a6f8a2dd8ea91473a3d800d3c4d74057c}{getSkippedTurns}}() >= 2) \{}
+\DoxyCodeLine{112                 std::cout << game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}}-\/>\mbox{\hyperlink{classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{getName}}() << \textcolor{stringliteral}{"{} skipped 2 turns in a row. Game over!\(\backslash\)n"{}};}
+\DoxyCodeLine{113                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{114             \}}
+\DoxyCodeLine{115             \textcolor{keywordflow}{if} (turnCount >= 16) \{}
+\DoxyCodeLine{116                 std::cout << \textcolor{stringliteral}{"{}16 turns have passed. Game over!\(\backslash\)n"{}};}
+\DoxyCodeLine{117                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{118             \}}
+\DoxyCodeLine{119         \}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121         \textcolor{comment}{// Removed the redundant checkVictory call here.}}
+\DoxyCodeLine{122         \textcolor{comment}{// The game outcome is already determined and printed inside the loop.}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     \}}
+\DoxyCodeLine{125     \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::exception\& e)}
+\DoxyCodeLine{126     \{}
+\DoxyCodeLine{127         std::cerr << \textcolor{stringliteral}{"{}Initialization failed: "{}} << e.what() << std::endl;}
+\DoxyCodeLine{128         \textcolor{comment}{// No return here, proceed to cleanup if game was partially initialized}}
+\DoxyCodeLine{129     \}}
+\DoxyCodeLine{130      \textcolor{comment}{// Clean up allocated memory for the board and players}}
+\DoxyCodeLine{131      \textcolor{comment}{// Check if the board was successfully created before attempting to delete}}
+\DoxyCodeLine{132     \textcolor{keywordflow}{if} (!game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}.empty()) \{}
+\DoxyCodeLine{133         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}.size(); ++x) \{}
+\DoxyCodeLine{134             \textcolor{comment}{// Check if the inner vector is not empty before accessing elements}}
+\DoxyCodeLine{135             \textcolor{keywordflow}{if} (!game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}[x].empty()) \{}
+\DoxyCodeLine{136                  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}[x].size(); ++y) \{}
+\DoxyCodeLine{137                     \textcolor{keyword}{delete} game.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}[x][y]; \textcolor{comment}{// Deletes the field and the unit on it (if any)}}
+\DoxyCodeLine{138                  \}}
+\DoxyCodeLine{139             \}}
+\DoxyCodeLine{140         \}}
+\DoxyCodeLine{141     \}}
+\DoxyCodeLine{142     \textcolor{keyword}{delete} game.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}};}
+\DoxyCodeLine{143     \textcolor{keyword}{delete} game.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}};}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{146 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Game\+Data\+::board, check\+Bomb\+Explosions(), check\+Victory(), Mana\+Mine\+Field\+::generate\+Mana(), get\+AICommands(), Player\+::get\+Defeated(), Player\+::get\+Mana(), Player\+::get\+My\+Turn(), Player\+::get\+Name(), Unit\+::get\+Player(), get\+Player\+Commands(), Player\+::get\+Skipped\+Turns(), Field\+::get\+Unit(), inicialisation(), Game\+Data\+::player1, Game\+Data\+::player2, Player\+::set\+My\+Turn() и Player\+::set\+Skipped\+Turns().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0a/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

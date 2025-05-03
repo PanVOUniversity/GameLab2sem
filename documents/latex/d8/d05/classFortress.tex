@@ -1,0 +1,599 @@
+\hypertarget{classFortress}{}\doxysection{Класс Fortress}
+\label{classFortress}\index{Fortress@{Fortress}}
+
+
+Represents a \mbox{\hyperlink{classFortress}{Fortress}} field on the board, which provides defense and can be captured or destroyed.  
+
+
+
+
+{\ttfamily \#include $<$fortress.\+h$>$}
+
+
+
+Граф наследования\+:Fortress\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{df/d50/classFortress__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Fortress\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{db/ddb/classFortress__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFortress_a92944f05f74802d6faa4fd3441291a76}{Fortress}} (int fieldX, int fieldY, int initial\+Strength, int \mbox{\hyperlink{classFortress_a2225df475b421d8c557f581ab3209002}{max\+Strength}}, \mbox{\hyperlink{classPlayer}{Player}} $\ast$\mbox{\hyperlink{classFortress_a6d0d01ed550a728e177cab80e0d2408b}{owner}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classFortress}{Fortress}} at the given coordinates. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classFortress_a2d6725410a7155f3257113a26dff1fbd}{$\sim$\+Fortress}} ()=default
+\item 
+int \mbox{\hyperlink{classFortress_a910fc391be59542b1ead1c96e997cd8a}{get\+Strength}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current strength of the fortress. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFortress_a921a0af7f93cd89a395ab8f053382a2e}{set\+Strength}} (int s)
+\begin{DoxyCompactList}\small\item\em Sets the strength of the fortress. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFortress_add91c2e8c192fb57bad9507934df2802}{get\+Max\+Strength}} () const
+\begin{DoxyCompactList}\small\item\em Gets the maximum strength of the fortress. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFortress_a29d63386bdfb5769839506b137877b68}{apply\+Effect}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$\mbox{\hyperlink{classFortress_a6d0d01ed550a728e177cab80e0d2408b}{owner}}, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board) override
+\begin{DoxyCompactList}\small\item\em Applies the fortress\textquotesingle{}s effect (e.\+g., healing, defense) to the board. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFortress_ada80de06eab758febec3af099bc21fba}{get\+Defense\+Bonus}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the defense bonus provided by the fortress. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFortress_a6cb9778963a2a807e36c4ef8eb8c40e6}{can\+Enter}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}) const override
+\begin{DoxyCompactList}\small\item\em Checks if a unit can enter the fortress. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFortress_a59036b76372351a496f86c0813862082}{on\+Enter}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}) override
+\begin{DoxyCompactList}\small\item\em Handles a unit entering the fortress. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFortress_a33bd8cb24eab2488b5a21d17ca60a861}{on\+Leave}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}) override
+\begin{DoxyCompactList}\small\item\em Handles a unit leaving the fortress. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer}{Player}} $\ast$ \mbox{\hyperlink{classFortress_ad7937ba8e96ff5251972400eff0b73b5}{get\+Owner}} () const
+\begin{DoxyCompactList}\small\item\em Gets the owner of the fortress. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFortress_a6f9636ea613603c0552331f916bd7146}{set\+Owner}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Sets the owner of the fortress. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classFortress_affe6600fca0229e8d582bd364e8216d9}{get\+Symbol}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the symbol representing the fortress (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classFortress_aca68a046715e8e6a2a4f2e3fadc6dbe7}{strength}}
+\item 
+int \mbox{\hyperlink{classFortress_a2225df475b421d8c557f581ab3209002}{max\+Strength}}
+\item 
+\mbox{\hyperlink{classPlayer}{Player}} $\ast$ \mbox{\hyperlink{classFortress_a6d0d01ed550a728e177cab80e0d2408b}{owner}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+Represents a \mbox{\hyperlink{classFortress}{Fortress}} field on the board, which provides defense and can be captured or destroyed. 
+
+См. определение в файле fortress.\+h строка 15
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classFortress_a92944f05f74802d6faa4fd3441291a76}\label{classFortress_a92944f05f74802d6faa4fd3441291a76}} 
+\index{Fortress@{Fortress}!Fortress@{Fortress}}
+\index{Fortress@{Fortress}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{Fortress()}{Fortress()}}
+{\footnotesize\ttfamily Fortress\+::\+Fortress (\begin{DoxyParamCaption}\item[{int}]{fieldX,  }\item[{int}]{fieldY,  }\item[{int}]{initial\+Strength,  }\item[{int}]{max\+Strength,  }\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{owner = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classFortress}{Fortress}} at the given coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em fieldX} & X coordinate. \\
+\hline
+{\em fieldY} & Y coordinate. \\
+\hline
+{\em initial\+Strength} & Initial strength value. \\
+\hline
+{\em max\+Strength} & Maximum strength value. \\
+\hline
+{\em owner} & Pointer to the owning player (default nullptr). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле fortress.\+cpp строка 9
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10     : \mbox{\hyperlink{classField_ad8556c0f47d0dc949f11480c4c6e4521}{Field}}(fieldX, fieldY, \textcolor{stringliteral}{"{}fortress"{}}), \mbox{\hyperlink{classFortress_aca68a046715e8e6a2a4f2e3fadc6dbe7}{strength}}(initialStrength), \mbox{\hyperlink{classFortress_a2225df475b421d8c557f581ab3209002}{maxStrength}}(\mbox{\hyperlink{classFortress_a2225df475b421d8c557f581ab3209002}{maxStrength}}), \mbox{\hyperlink{classFortress_a6d0d01ed550a728e177cab80e0d2408b}{owner}}(\mbox{\hyperlink{classFortress_a6d0d01ed550a728e177cab80e0d2408b}{owner}})}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{comment}{// Ensure strength doesn't exceed max strength on creation}}
+\DoxyCodeLine{13     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classFortress_aca68a046715e8e6a2a4f2e3fadc6dbe7}{strength}} > \mbox{\hyperlink{classFortress_a2225df475b421d8c557f581ab3209002}{maxStrength}}) \{}
+\DoxyCodeLine{14         \mbox{\hyperlink{classFortress_aca68a046715e8e6a2a4f2e3fadc6dbe7}{strength}} = \mbox{\hyperlink{classFortress_a2225df475b421d8c557f581ab3209002}{maxStrength}};}
+\DoxyCodeLine{15     \}}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки max\+Strength и strength.
+
+\mbox{\Hypertarget{classFortress_a2d6725410a7155f3257113a26dff1fbd}\label{classFortress_a2d6725410a7155f3257113a26dff1fbd}} 
+\index{Fortress@{Fortress}!````~Fortress@{$\sim$Fortress}}
+\index{````~Fortress@{$\sim$Fortress}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{$\sim$Fortress()}{~Fortress()}}
+{\footnotesize\ttfamily virtual Fortress\+::$\sim$\+Fortress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classFortress_a29d63386bdfb5769839506b137877b68}\label{classFortress_a29d63386bdfb5769839506b137877b68}} 
+\index{Fortress@{Fortress}!applyEffect@{applyEffect}}
+\index{applyEffect@{applyEffect}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{applyEffect()}{applyEffect()}}
+{\footnotesize\ttfamily void Fortress\+::apply\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{owner,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the fortress\textquotesingle{}s effect (e.\+g., healing, defense) to the board. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em owner} & The owning player. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_a454ca5b8269657dc01cd611eceb3d397}{Field}}.
+
+
+
+См. определение в файле fortress.\+cpp строка 40
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42     \textcolor{comment}{// Fortresses could potentially heal units on them each turn}}
+\DoxyCodeLine{43     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}})}
+\DoxyCodeLine{44     \{}
+\DoxyCodeLine{45         \textcolor{comment}{// Assuming the unit on the fortress belongs to the owner whose turn it is}}
+\DoxyCodeLine{46         \textcolor{comment}{// This logic might need refinement based on actual game rules for fortress ownership}}
+\DoxyCodeLine{47         \textcolor{comment}{// For now, let's assume it heals the unit if it's a player unit (human or AI)}}
+\DoxyCodeLine{48         \textcolor{comment}{// Check if the unit belongs to the current player before healing}}
+\DoxyCodeLine{49         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classFortress_a6d0d01ed550a728e177cab80e0d2408b}{owner}} \&\& ((\mbox{\hyperlink{classFortress_a6d0d01ed550a728e177cab80e0d2408b}{owner}}-\/>\mbox{\hyperlink{classPlayer_a0cb5b17db27a2af6492e270aab8f7870}{getAI}}() \&\& !\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}()) || (!\mbox{\hyperlink{classFortress_a6d0d01ed550a728e177cab80e0d2408b}{owner}}-\/>\mbox{\hyperlink{classPlayer_a0cb5b17db27a2af6492e270aab8f7870}{getAI}}() \&\& \mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}()))) \{}
+\DoxyCodeLine{50              \textcolor{keywordtype}{int} healAmount = 2; \textcolor{comment}{// Example heal amount per turn}}
+\DoxyCodeLine{51              std::cout << \textcolor{stringliteral}{"{}Fortress at ("{}} << \mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}() << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}() << \textcolor{stringliteral}{"{}) heals "{}} << \mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}-\/>\mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} for "{}} << healAmount << \textcolor{stringliteral}{"{} health.\(\backslash\)n"{}};}
+\DoxyCodeLine{52              \mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}-\/>\mbox{\hyperlink{classUnit_a9fe18bf6d2917c59c35df6d56c6cbdc2}{restoreHealth}}(healAmount);}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Player\+::get\+AI(), Unit\+::get\+Name(), Unit\+::get\+Player(), Field\+::get\+X(), Field\+::get\+Y(), owner, Unit\+::restore\+Health() и Field\+::unit.
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d05/classFortress_a29d63386bdfb5769839506b137877b68_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFortress_a6cb9778963a2a807e36c4ef8eb8c40e6}\label{classFortress_a6cb9778963a2a807e36c4ef8eb8c40e6}} 
+\index{Fortress@{Fortress}!canEnter@{canEnter}}
+\index{canEnter@{canEnter}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{canEnter()}{canEnter()}}
+{\footnotesize\ttfamily bool Fortress\+::can\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if a unit can enter the fortress. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit} & The unit to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the unit can enter, false otherwise. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_aca250c9a0c031e21c7e7c609b3b3dec3}{Field}}.
+
+
+
+См. определение в файле fortress.\+cpp строка 64
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65 \{}
+\DoxyCodeLine{66     \textcolor{comment}{// Units can enter a fortress, but typically only one unit can occupy a fortress field.}}
+\DoxyCodeLine{67     \textcolor{comment}{// Also, check if the unit belongs to the player who controls the fortress (if applicable).}}
+\DoxyCodeLine{68     \textcolor{comment}{// For simplicity, let's assume any unit can enter if the fortress is empty.}}
+\DoxyCodeLine{69      \textcolor{keywordflow}{return} this-\/>unit == \textcolor{keyword}{nullptr}; \textcolor{comment}{// Can enter if empty}}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Field\+::unit.
+
+\mbox{\Hypertarget{classFortress_ada80de06eab758febec3af099bc21fba}\label{classFortress_ada80de06eab758febec3af099bc21fba}} 
+\index{Fortress@{Fortress}!getDefenseBonus@{getDefenseBonus}}
+\index{getDefenseBonus@{getDefenseBonus}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{getDefenseBonus()}{getDefenseBonus()}}
+{\footnotesize\ttfamily int Fortress\+::get\+Defense\+Bonus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the defense bonus provided by the fortress. 
+
+\begin{DoxyReturn}{Возвращает}
+The defense bonus value. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_a718edf661e92a18a81c1a434b8e9ba40}{Field}}.
+
+
+
+См. определение в файле fortress.\+cpp строка 57
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59     \textcolor{comment}{// Fortresses provide a significant defense bonus}}
+\DoxyCodeLine{60     \textcolor{keywordflow}{return} 10; \textcolor{comment}{// Example defense bonus}}
+\DoxyCodeLine{61 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFortress_add91c2e8c192fb57bad9507934df2802}\label{classFortress_add91c2e8c192fb57bad9507934df2802}} 
+\index{Fortress@{Fortress}!getMaxStrength@{getMaxStrength}}
+\index{getMaxStrength@{getMaxStrength}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{getMaxStrength()}{getMaxStrength()}}
+{\footnotesize\ttfamily int Fortress\+::get\+Max\+Strength (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the maximum strength of the fortress. 
+
+
+
+См. определение в файле fortress.\+cpp строка 34
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36     \textcolor{keywordflow}{return} \mbox{\hyperlink{classFortress_a2225df475b421d8c557f581ab3209002}{maxStrength}};}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки max\+Strength.
+
+\mbox{\Hypertarget{classFortress_ad7937ba8e96ff5251972400eff0b73b5}\label{classFortress_ad7937ba8e96ff5251972400eff0b73b5}} 
+\index{Fortress@{Fortress}!getOwner@{getOwner}}
+\index{getOwner@{getOwner}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{getOwner()}{getOwner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{Player}}$\ast$ Fortress\+::get\+Owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the owner of the fortress. 
+
+
+
+См. определение в файле fortress.\+h строка 78
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classFortress_a6d0d01ed550a728e177cab80e0d2408b}{owner}}; \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки owner.
+
+
+
+Используется в check\+Victory().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d05/classFortress_ad7937ba8e96ff5251972400eff0b73b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFortress_a910fc391be59542b1ead1c96e997cd8a}\label{classFortress_a910fc391be59542b1ead1c96e997cd8a}} 
+\index{Fortress@{Fortress}!getStrength@{getStrength}}
+\index{getStrength@{getStrength}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{getStrength()}{getStrength()}}
+{\footnotesize\ttfamily int Fortress\+::get\+Strength (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current strength of the fortress. 
+
+
+
+См. определение в файле fortress.\+cpp строка 20
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     \textcolor{keywordflow}{return} \mbox{\hyperlink{classFortress_aca68a046715e8e6a2a4f2e3fadc6dbe7}{strength}};}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки strength.
+
+
+
+Используется в apply\+Damage(), attack() и update\+Fortress\+Strength().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d05/classFortress_a910fc391be59542b1ead1c96e997cd8a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFortress_affe6600fca0229e8d582bd364e8216d9}\label{classFortress_affe6600fca0229e8d582bd364e8216d9}} 
+\index{Fortress@{Fortress}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char Fortress\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the symbol representing the fortress (for display). 
+
+\begin{DoxyReturn}{Возвращает}
+\textquotesingle{}F\textquotesingle{} character. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_a03e73113267195f2680dd028f8950ae5}{Field}}.
+
+
+
+См. определение в файле fortress.\+h строка 86
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86 \{ \textcolor{keywordflow}{return} \textcolor{charliteral}{'F'}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFortress_a59036b76372351a496f86c0813862082}\label{classFortress_a59036b76372351a496f86c0813862082}} 
+\index{Fortress@{Fortress}!onEnter@{onEnter}}
+\index{onEnter@{onEnter}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{onEnter()}{onEnter()}}
+{\footnotesize\ttfamily void Fortress\+::on\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a unit entering the fortress. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit} & The unit entering. \\
+\hline
+\end{DoxyParams}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_af7bbcc952313d63e39ac2915ef92bbde}{Field}}.
+
+
+
+См. определение в файле fortress.\+cpp строка 72
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73 \{}
+\DoxyCodeLine{74     \textcolor{comment}{// Handle actions when a unit enters the fortress (e.g., update unit stats)}}
+\DoxyCodeLine{75     std::cout << \mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}-\/>\mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} entered the Fortress at ("{}} << \mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}() << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}() << \textcolor{stringliteral}{"{}).\(\backslash\)n"{}};}
+\DoxyCodeLine{76     \textcolor{comment}{// Example: If the unit is an Archer, update its attack distance}}
+\DoxyCodeLine{77     \mbox{\hyperlink{classArcher}{Archer}}* archer = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classArcher}{Archer}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}});}
+\DoxyCodeLine{78     \textcolor{keywordflow}{if} (archer) \{}
+\DoxyCodeLine{79         archer-\/>\mbox{\hyperlink{classArcher_a9e1c27bf39fb2a49e00f0d0e26f79c29}{updateAttackDistance}}(\textcolor{keyword}{true}); \textcolor{comment}{// Indicate it's in a fortress}}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Name(), Field\+::get\+X(), Field\+::get\+Y(), Field\+::unit и Archer\+::update\+Attack\+Distance().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d05/classFortress_a59036b76372351a496f86c0813862082_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFortress_a33bd8cb24eab2488b5a21d17ca60a861}\label{classFortress_a33bd8cb24eab2488b5a21d17ca60a861}} 
+\index{Fortress@{Fortress}!onLeave@{onLeave}}
+\index{onLeave@{onLeave}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{onLeave()}{onLeave()}}
+{\footnotesize\ttfamily void Fortress\+::on\+Leave (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a unit leaving the fortress. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit} & The unit leaving. \\
+\hline
+\end{DoxyParams}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_af7cbfac5b4571fde18c48884bc7059b8}{Field}}.
+
+
+
+См. определение в файле fortress.\+cpp строка 83
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84 \{}
+\DoxyCodeLine{85     \textcolor{comment}{// Handle actions when a unit leaves the fortress (e.g., revert unit stats)}}
+\DoxyCodeLine{86     std::cout << \mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}-\/>\mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} left the Fortress at ("{}} << \mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}() << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}() << \textcolor{stringliteral}{"{}).\(\backslash\)n"{}};}
+\DoxyCodeLine{87     \textcolor{comment}{// Example: If the unit is an Archer, revert its attack distance}}
+\DoxyCodeLine{88     \mbox{\hyperlink{classArcher}{Archer}}* archer = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classArcher}{Archer}}*\textcolor{keyword}{>}(\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}});}
+\DoxyCodeLine{89     \textcolor{keywordflow}{if} (archer) \{}
+\DoxyCodeLine{90         archer-\/>\mbox{\hyperlink{classArcher_a9e1c27bf39fb2a49e00f0d0e26f79c29}{updateAttackDistance}}(\textcolor{keyword}{false}); \textcolor{comment}{// Indicate it left the fortress}}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Name(), Field\+::get\+X(), Field\+::get\+Y(), Field\+::unit и Archer\+::update\+Attack\+Distance().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d05/classFortress_a33bd8cb24eab2488b5a21d17ca60a861_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFortress_a6f9636ea613603c0552331f916bd7146}\label{classFortress_a6f9636ea613603c0552331f916bd7146}} 
+\index{Fortress@{Fortress}!setOwner@{setOwner}}
+\index{setOwner@{setOwner}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{setOwner()}{setOwner()}}
+{\footnotesize\ttfamily void Fortress\+::set\+Owner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the owner of the fortress. 
+
+
+
+См. определение в файле fortress.\+h строка 80
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80 \{ \mbox{\hyperlink{classFortress_a6d0d01ed550a728e177cab80e0d2408b}{owner}} = p; \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки owner.
+
+
+
+Используется в Engineer\+::create\+Fortress().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d05/classFortress_a6f9636ea613603c0552331f916bd7146_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFortress_a921a0af7f93cd89a395ab8f053382a2e}\label{classFortress_a921a0af7f93cd89a395ab8f053382a2e}} 
+\index{Fortress@{Fortress}!setStrength@{setStrength}}
+\index{setStrength@{setStrength}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{setStrength()}{setStrength()}}
+{\footnotesize\ttfamily bool Fortress\+::set\+Strength (\begin{DoxyParamCaption}\item[{int}]{s }\end{DoxyParamCaption})}
+
+
+
+Sets the strength of the fortress. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em s} & The new strength value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the fortress is destroyed (strength $<$= 0), false otherwise. 
+\end{DoxyReturn}
+
+
+См. определение в файле fortress.\+cpp строка 27
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29     \mbox{\hyperlink{classFortress_aca68a046715e8e6a2a4f2e3fadc6dbe7}{strength}} = s;}
+\DoxyCodeLine{30     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classFortress_aca68a046715e8e6a2a4f2e3fadc6dbe7}{strength}} < 0) \mbox{\hyperlink{classFortress_aca68a046715e8e6a2a4f2e3fadc6dbe7}{strength}} = 0; \textcolor{comment}{// Strength cannot go below 0}}
+\DoxyCodeLine{31     \textcolor{keywordflow}{return} \mbox{\hyperlink{classFortress_aca68a046715e8e6a2a4f2e3fadc6dbe7}{strength}} <= 0; \textcolor{comment}{// Return true if strength is 0 or less}}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки strength.
+
+
+
+Используется в update\+Fortress\+Strength().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d05/classFortress_a921a0af7f93cd89a395ab8f053382a2e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classFortress_a2225df475b421d8c557f581ab3209002}\label{classFortress_a2225df475b421d8c557f581ab3209002}} 
+\index{Fortress@{Fortress}!maxStrength@{maxStrength}}
+\index{maxStrength@{maxStrength}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{maxStrength}{maxStrength}}
+{\footnotesize\ttfamily int Fortress\+::max\+Strength\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле fortress.\+h строка 19
+
+
+
+Используется в Fortress() и get\+Max\+Strength().
+
+\mbox{\Hypertarget{classFortress_a6d0d01ed550a728e177cab80e0d2408b}\label{classFortress_a6d0d01ed550a728e177cab80e0d2408b}} 
+\index{Fortress@{Fortress}!owner@{owner}}
+\index{owner@{owner}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{owner}{owner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{Player}}$\ast$ Fortress\+::owner\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле fortress.\+h строка 20
+
+
+
+Используется в apply\+Effect(), get\+Owner() и set\+Owner().
+
+\mbox{\Hypertarget{classFortress_aca68a046715e8e6a2a4f2e3fadc6dbe7}\label{classFortress_aca68a046715e8e6a2a4f2e3fadc6dbe7}} 
+\index{Fortress@{Fortress}!strength@{strength}}
+\index{strength@{strength}!Fortress@{Fortress}}
+\doxysubsubsection{\texorpdfstring{strength}{strength}}
+{\footnotesize\ttfamily int Fortress\+::strength\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле fortress.\+h строка 18
+
+
+
+Используется в Fortress(), get\+Strength() и set\+Strength().
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{fortress_8h}{fortress.\+h}}\item 
+\mbox{\hyperlink{fortress_8cpp}{fortress.\+cpp}}\end{DoxyCompactItemize}

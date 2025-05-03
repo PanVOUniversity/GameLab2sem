@@ -1,0 +1,4 @@
+<map id="MorogSpell" name="MorogSpell">
+<area shape="rect" id="node1" title="Spell that changes owner of unit on the field." alt="" coords="7,204,137,311"/>
+<area shape="rect" id="node2" href="$d1/d16/classSpell.html" title="Abstract base class for all spells in the game." alt="" coords="5,5,139,156"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="FireballSpell::cast" name="FireballSpell::cast">
+<area shape="rect" id="node1" title="Casts the Fireball spell at the given coordinates." alt="" coords="5,284,143,311"/>
+<area shape="rect" id="node2" href="$d3/d36/functions_8cpp.html#a43f0126154376c48e09ec7497e5af839" title=" " alt="" coords="191,183,304,209"/>
+<area shape="rect" id="node6" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="599,259,709,285"/>
+<area shape="rect" id="node3" href="$df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23" title="Gets the unit&#39;s current health." alt="" coords="355,5,524,32"/>
+<area shape="rect" id="node4" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="595,81,713,108"/>
+<area shape="rect" id="node5" href="$d8/d05/classFortress.html#a910fc391be59542b1ead1c96e997cd8a" title="Gets the current strength of the fortress." alt="" coords="575,157,733,184"/>
+<area shape="rect" id="node7" href="$d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8" title="Set the unit on this field." alt="" coords="385,309,493,336"/>
+<area shape="rect" id="node8" href="$df/dd9/classUnit.html#a43a426d4d87aebf07e2737e122bea210" title="Applies damage to the unit." alt="" coords="369,107,509,133"/>
+<area shape="rect" id="node9" href="$d3/d36/functions_8cpp.html#ae92c15badcbeac5edc544eec40902bac" title=" " alt="" coords="352,208,527,235"/>
+<area shape="rect" id="node10" href="$d8/d05/classFortress.html#a921a0af7f93cd89a395ab8f053382a2e" title="Sets the strength of the fortress." alt="" coords="575,208,733,235"/>
+</map>

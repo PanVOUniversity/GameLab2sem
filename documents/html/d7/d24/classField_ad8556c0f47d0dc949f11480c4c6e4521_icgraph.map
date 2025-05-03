@@ -1,0 +1,9 @@
+<map id="Field::Field" name="Field::Field">
+<area shape="rect" id="node1" title="Constructs a Field at the given coordinates and type." alt="" coords="583,56,675,83"/>
+<area shape="rect" id="node2" href="$d6/ded/classBurnedField.html#a8f5789ec0273283d79911bf6bed5936e" title="Applies the burned field&#39;s effect (ticks duration, deals damage)." alt="" coords="349,5,529,32"/>
+<area shape="rect" id="node3" href="$d1/dd1/classShieldedField.html#a06a7d981e2f14acf56f98c9c2c3f6d78" title="Applies the shielded field&#39;s effect (ticks duration, provides shield)." alt="" coords="344,56,535,83"/>
+<area shape="rect" id="node4" href="$da/d43/classBombedField.html#a090802fffedf5da9d68580b172a937e1" title="Triggers the explosion effect." alt="" coords="356,107,523,133"/>
+<area shape="rect" id="node5" href="$da/d43/classBombedField.html#a48a282d1c5a11b9970228a59b52f6efc" title="Applies the bombed field&#39;s effect (ticks timer, may explode)." alt="" coords="108,81,296,108"/>
+<area shape="rect" id="node6" href="$d3/d36/functions_8cpp.html#ab211df54e293cd58fc266b4e02886762" title=" " alt="" coords="118,132,286,159"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,132,60,159"/>
+</map>

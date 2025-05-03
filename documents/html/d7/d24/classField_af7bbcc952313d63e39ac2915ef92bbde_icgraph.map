@@ -1,0 +1,10 @@
+<map id="Field::onEnter" name="Field::onEnter">
+<area shape="rect" id="node1" title="Handle a unit entering this field." alt="" coords="820,31,931,57"/>
+<area shape="rect" id="node2" href="$d7/d0e/classTeleportSpell.html#ab1f9f7b9abbbd244adeebdef3310d85c" title="Casts the Teleport spell at the given coordinates." alt="" coords="631,5,772,32"/>
+<area shape="rect" id="node3" href="$d3/d36/functions_8cpp.html#a03cfd94cc59ef09a8b66ccbe9d885b19" title=" " alt="" coords="672,56,731,83"/>
+<area shape="rect" id="node4" href="$d9/deb/getcommands_8cpp.html#a4ffff192321e79e17d14dc4a1af609a7" title="Handles player commands during their turn." alt="" coords="287,31,445,57"/>
+<area shape="rect" id="node6" href="$d0/d77/AI_8cpp.html#a9b86a4e2150c537c1cf7a3a6a2b01e7b" title="Attempts to move the given AI unit." alt="" coords="493,81,583,108"/>
+<area shape="rect" id="node5" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node7" href="$d0/d77/AI_8cpp.html#a977b9434bdf2f1cb57f540e4098d1a57" title="Performs the main AI logic for the AI player&#39;s turn." alt="" coords="339,81,393,108"/>
+<area shape="rect" id="node8" href="$d0/d77/AI_8cpp.html#ad90f841d71e5bae7186823d947a92551" title="Handles AI commands during its turn." alt="" coords="108,81,239,108"/>
+</map>

@@ -1,0 +1,290 @@
+\hypertarget{classShieldedField}{}\doxysection{Класс Shielded\+Field}
+\label{classShieldedField}\index{ShieldedField@{ShieldedField}}
+
+
+\mbox{\hyperlink{classField}{Field}} that provides a temporary shield to units (Shielded \mbox{\hyperlink{classField}{Field}}).  
+
+
+
+
+{\ttfamily \#include $<$shieldedfield.\+h$>$}
+
+
+
+Граф наследования\+:Shielded\+Field\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d9/d9d/classShieldedField__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Shielded\+Field\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d1/d58/classShieldedField__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classShieldedField_a74501e892d542268eb16def7254f6bae}{Shielded\+Field}} (int fieldX, int fieldY, \mbox{\hyperlink{classUnit}{Unit}} $\ast$initial\+Unit=nullptr, int initial\+Duration=3)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classShieldedField}{Shielded\+Field}} at the given coordinates. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classShieldedField_a0649243b1d2792e36e3d544893244fe2}{$\sim$\+Shielded\+Field}} ()=default
+\item 
+void \mbox{\hyperlink{classShieldedField_a06a7d981e2f14acf56f98c9c2c3f6d78}{apply\+Effect}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$owner, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board) override
+\begin{DoxyCompactList}\small\item\em Applies the shielded field\textquotesingle{}s effect (ticks duration, provides shield). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classShieldedField_a95b93296f68d0383c45767a1c203126c}{get\+Defense\+Bonus}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the defense bonus provided by the shielded field. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classShieldedField_a2b42f9d856dd98d6bffaf975bd3bd268}{can\+Enter}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}) const override
+\begin{DoxyCompactList}\small\item\em Checks if a unit can enter the shielded field. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classShieldedField_a239178b926b3c4420eadc00002590cc8}{get\+Symbol}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the symbol representing the shielded field (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classShieldedField_a650e57c8257d7824df0454afa16b2c68}{duration}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+\mbox{\hyperlink{classField}{Field}} that provides a temporary shield to units (Shielded \mbox{\hyperlink{classField}{Field}}). 
+
+См. определение в файле shieldedfield.\+h строка 16
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classShieldedField_a74501e892d542268eb16def7254f6bae}\label{classShieldedField_a74501e892d542268eb16def7254f6bae}} 
+\index{ShieldedField@{ShieldedField}!ShieldedField@{ShieldedField}}
+\index{ShieldedField@{ShieldedField}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{ShieldedField()}{ShieldedField()}}
+{\footnotesize\ttfamily Shielded\+Field\+::\+Shielded\+Field (\begin{DoxyParamCaption}\item[{int}]{fieldX,  }\item[{int}]{fieldY,  }\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{initial\+Unit = {\ttfamily nullptr},  }\item[{int}]{initial\+Duration = {\ttfamily 3} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classShieldedField}{Shielded\+Field}} at the given coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em fieldX} & X coordinate. \\
+\hline
+{\em fieldY} & Y coordinate. \\
+\hline
+{\em initial\+Unit} & Pointer to the initial unit on the field (default nullptr). \\
+\hline
+{\em initial\+Duration} & Number of turns the shield lasts (default 3). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле shieldedfield.\+cpp строка 9
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10     : \mbox{\hyperlink{classField_ad8556c0f47d0dc949f11480c4c6e4521}{Field}}(fieldX, fieldY, \textcolor{stringliteral}{"{}shielded"{}}), \mbox{\hyperlink{classShieldedField_a650e57c8257d7824df0454afa16b2c68}{duration}}(initialDuration)}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{comment}{// Set the initial unit if there is one}}
+\DoxyCodeLine{13     \mbox{\hyperlink{classField_aac940692dbfe1437aba7efc3a8903ea8}{setUnit}}(initialUnit);}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Field\+::set\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dd1/classShieldedField_a74501e892d542268eb16def7254f6bae_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShieldedField_a0649243b1d2792e36e3d544893244fe2}\label{classShieldedField_a0649243b1d2792e36e3d544893244fe2}} 
+\index{ShieldedField@{ShieldedField}!````~ShieldedField@{$\sim$ShieldedField}}
+\index{````~ShieldedField@{$\sim$ShieldedField}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{$\sim$ShieldedField()}{~ShieldedField()}}
+{\footnotesize\ttfamily virtual Shielded\+Field\+::$\sim$\+Shielded\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classShieldedField_a06a7d981e2f14acf56f98c9c2c3f6d78}\label{classShieldedField_a06a7d981e2f14acf56f98c9c2c3f6d78}} 
+\index{ShieldedField@{ShieldedField}!applyEffect@{applyEffect}}
+\index{applyEffect@{applyEffect}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{applyEffect()}{applyEffect()}}
+{\footnotesize\ttfamily void Shielded\+Field\+::apply\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{owner,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the shielded field\textquotesingle{}s effect (ticks duration, provides shield). 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em owner} & The player whose turn it is. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_a454ca5b8269657dc01cd611eceb3d397}{Field}}.
+
+
+
+См. определение в файле shieldedfield.\+cpp строка 24
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26     \textcolor{comment}{// Decrease the duration}}
+\DoxyCodeLine{27     \mbox{\hyperlink{classShieldedField_a650e57c8257d7824df0454afa16b2c68}{duration}}-\/-\/;}
+\DoxyCodeLine{28     std::cout << \textcolor{stringliteral}{"{}Shielded field at ("{}} << \mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}() << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}() << \textcolor{stringliteral}{"{}) duration: "{}} << \mbox{\hyperlink{classShieldedField_a650e57c8257d7824df0454afa16b2c68}{duration}} << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{comment}{// If duration reaches 0, revert to a plain field}}
+\DoxyCodeLine{31     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classShieldedField_a650e57c8257d7824df0454afa16b2c68}{duration}} <= 0)}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         std::cout << \textcolor{stringliteral}{"{}Shielded field at ("{}} << \mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}() << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}() << \textcolor{stringliteral}{"{}) fades away.\(\backslash\)n"{}};}
+\DoxyCodeLine{34         \mbox{\hyperlink{classUnit}{Unit}}* unitOnField = \mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}(); \textcolor{comment}{// Get unit before deleting the field}}
+\DoxyCodeLine{35         \textcolor{comment}{// Create a new plain field at the same coordinates}}
+\DoxyCodeLine{36         \mbox{\hyperlink{classField}{Field}}* plainField = \textcolor{keyword}{new} \mbox{\hyperlink{classField_ad8556c0f47d0dc949f11480c4c6e4521}{Field}}(\mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}(), \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}(), \textcolor{stringliteral}{"{}plain"{}});}
+\DoxyCodeLine{37         plainField-\/>\mbox{\hyperlink{classField_aac940692dbfe1437aba7efc3a8903ea8}{setUnit}}(unitOnField); \textcolor{comment}{// Place the unit on the new plain field}}
+\DoxyCodeLine{38         \textcolor{keyword}{delete} \textcolor{keyword}{this}; \textcolor{comment}{// Delete the shielded field object}}
+\DoxyCodeLine{39         board[\mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}()][\mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}()] = plainField; \textcolor{comment}{// Replace the pointer in the board}}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41     \textcolor{comment}{// Note: ShieldedField itself doesn't directly interact with the board in applyEffect}}
+\DoxyCodeLine{42     \textcolor{comment}{// beyond potentially deleting itself and replacing the field pointer.}}
+\DoxyCodeLine{43     \textcolor{comment}{// The board parameter is kept to match the base class signature.}}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки duration, Field\+::\+Field(), Field\+::get\+Unit(), Field\+::get\+X(), Field\+::get\+Y() и Field\+::set\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{d1/dd1/classShieldedField_a06a7d981e2f14acf56f98c9c2c3f6d78_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classShieldedField_a2b42f9d856dd98d6bffaf975bd3bd268}\label{classShieldedField_a2b42f9d856dd98d6bffaf975bd3bd268}} 
+\index{ShieldedField@{ShieldedField}!canEnter@{canEnter}}
+\index{canEnter@{canEnter}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{canEnter()}{canEnter()}}
+{\footnotesize\ttfamily bool Shielded\+Field\+::can\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if a unit can enter the shielded field. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit} & The unit to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the unit can enter, false otherwise. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_aca250c9a0c031e21c7e7c609b3b3dec3}{Field}}.
+
+
+
+См. определение в файле shieldedfield.\+cpp строка 53
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55     \textcolor{comment}{// Units can enter shielded fields}}
+\DoxyCodeLine{56     \textcolor{keywordflow}{return} this-\/>unit == \textcolor{keyword}{nullptr}; \textcolor{comment}{// Can enter if empty}}
+\DoxyCodeLine{57 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Field\+::unit.
+
+\mbox{\Hypertarget{classShieldedField_a95b93296f68d0383c45767a1c203126c}\label{classShieldedField_a95b93296f68d0383c45767a1c203126c}} 
+\index{ShieldedField@{ShieldedField}!getDefenseBonus@{getDefenseBonus}}
+\index{getDefenseBonus@{getDefenseBonus}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{getDefenseBonus()}{getDefenseBonus()}}
+{\footnotesize\ttfamily int Shielded\+Field\+::get\+Defense\+Bonus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the defense bonus provided by the shielded field. 
+
+\begin{DoxyReturn}{Возвращает}
+The defense bonus value. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_a718edf661e92a18a81c1a434b8e9ba40}{Field}}.
+
+
+
+См. определение в файле shieldedfield.\+cpp строка 46
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48     \textcolor{comment}{// Shielded fields provide a significant defense bonus}}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} 5; \textcolor{comment}{// Example defense bonus}}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classShieldedField_a239178b926b3c4420eadc00002590cc8}\label{classShieldedField_a239178b926b3c4420eadc00002590cc8}} 
+\index{ShieldedField@{ShieldedField}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char Shielded\+Field\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the symbol representing the shielded field (for display). 
+
+\begin{DoxyReturn}{Возвращает}
+\textquotesingle{}S\textquotesingle{} character. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_a03e73113267195f2680dd028f8950ae5}{Field}}.
+
+
+
+См. определение в файле shieldedfield.\+h строка 56
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56 \{ \textcolor{keywordflow}{return} \textcolor{charliteral}{'S'}; \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classShieldedField_a650e57c8257d7824df0454afa16b2c68}\label{classShieldedField_a650e57c8257d7824df0454afa16b2c68}} 
+\index{ShieldedField@{ShieldedField}!duration@{duration}}
+\index{duration@{duration}!ShieldedField@{ShieldedField}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily int Shielded\+Field\+::duration\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле shieldedfield.\+h строка 19
+
+
+
+Используется в apply\+Effect().
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{shieldedfield_8h}{shieldedfield.\+h}}\item 
+\mbox{\hyperlink{shieldedfield_8cpp}{shieldedfield.\+cpp}}\end{DoxyCompactItemize}

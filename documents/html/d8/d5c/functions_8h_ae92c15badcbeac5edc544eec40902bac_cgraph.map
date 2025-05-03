@@ -1,0 +1,6 @@
+<map id="updateFortressStrength" name="updateFortressStrength">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,180,83"/>
+<area shape="rect" id="node2" href="$d8/d05/classFortress.html#a910fc391be59542b1ead1c96e997cd8a" title="Gets the current strength of the fortress." alt="" coords="228,5,387,32"/>
+<area shape="rect" id="node3" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="253,56,362,83"/>
+<area shape="rect" id="node4" href="$d8/d05/classFortress.html#a921a0af7f93cd89a395ab8f053382a2e" title="Sets the strength of the fortress." alt="" coords="229,107,386,133"/>
+</map>

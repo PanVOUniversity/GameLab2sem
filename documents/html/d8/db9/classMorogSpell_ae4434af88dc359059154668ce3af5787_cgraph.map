@@ -1,0 +1,12 @@
+<map id="MorogSpell::cast" name="MorogSpell::cast">
+<area shape="rect" id="node1" title="Casts the Morog spell at the given coordinates." alt="" coords="5,284,136,311"/>
+<area shape="rect" id="node2" href="$d3/d36/functions_8cpp.html#a43f0126154376c48e09ec7497e5af839" title=" " alt="" coords="184,183,297,209"/>
+<area shape="rect" id="node6" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="593,259,702,285"/>
+<area shape="rect" id="node3" href="$df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23" title="Gets the unit&#39;s current health." alt="" coords="348,5,517,32"/>
+<area shape="rect" id="node4" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="589,81,706,108"/>
+<area shape="rect" id="node5" href="$d8/d05/classFortress.html#a910fc391be59542b1ead1c96e997cd8a" title="Gets the current strength of the fortress." alt="" coords="568,157,727,184"/>
+<area shape="rect" id="node7" href="$d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8" title="Set the unit on this field." alt="" coords="379,309,487,336"/>
+<area shape="rect" id="node8" href="$df/dd9/classUnit.html#a43a426d4d87aebf07e2737e122bea210" title="Applies damage to the unit." alt="" coords="363,107,503,133"/>
+<area shape="rect" id="node9" href="$d3/d36/functions_8cpp.html#ae92c15badcbeac5edc544eec40902bac" title=" " alt="" coords="345,208,520,235"/>
+<area shape="rect" id="node10" href="$d8/d05/classFortress.html#a921a0af7f93cd89a395ab8f053382a2e" title="Sets the strength of the fortress." alt="" coords="569,208,726,235"/>
+</map>

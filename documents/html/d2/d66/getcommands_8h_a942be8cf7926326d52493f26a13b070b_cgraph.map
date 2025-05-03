@@ -1,0 +1,6 @@
+<map id="displayBoard" name="displayBoard">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,112,83"/>
+<area shape="rect" id="node2" href="$d7/d24/classField.html#a03e73113267195f2680dd028f8950ae5" title="Get the symbol representing this field (for display)." alt="" coords="160,5,291,32"/>
+<area shape="rect" id="node3" href="$df/dd9/classUnit.html#afd6bcf5adaadb97b1378512344bd642b" title="Gets the symbol representing the unit (for display)." alt="" coords="162,56,289,83"/>
+<area shape="rect" id="node4" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="171,107,280,133"/>
+</map>
