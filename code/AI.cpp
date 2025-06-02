@@ -145,7 +145,6 @@ bool tryAICreateSpecificUnit(Player* aiPlayer, std::vector<std::vector<Field*>>&
     else if (unitType == "infantry") unitCost = 2;
     else if (unitType == "priest") unitCost = 5;
     else if (unitType == "engineer") unitCost = 5;
-    else if (unitType == "cannon") unitCost = 0; // Cannon cost
     else return false; // Unknown unit type
 
     if (manaRemaining < unitCost || aiPlayer->getMana() < unitCost) return false; // Not enough allocated or total mana
@@ -210,6 +209,7 @@ bool tryAIEngineerBuildSpecific(Engineer* engineer, Player* aiPlayer, int engX, 
     if (buildType == "Fortress") buildCost = 3;
     else if (buildType == "Mana Mine") buildCost = 4;
     else if (buildType == "Trap") buildCost = 2;
+    else if (buildType == "Cannon") buildCost = 0;
     else return false; // Unknown build type
 
     if (manaRemaining < buildCost || aiPlayer->getMana() < buildCost) return false; // Not enough allocated or total mana
@@ -300,7 +300,7 @@ bool AIact(Player* aiPlayer, std::vector<std::vector<Field*>>& board) {
     bool actionTakenThisTurn = false; // Flag to track if any action was taken during the entire turn
 
     // 2. Create units until spend 1st number amount of mana
-    std::vector<std::string> creatableUnits = {"infantry", "archer", "priest", "engineer", "cannon"};
+    std::vector<std::string> creatableUnits = {"infantry", "archer", "priest", "engineer"};
     int manaSpentOnUnits = 0;
     while (manaSpentOnUnits < manaForUnits && aiPlayer->getMana() > 0) {
         std::vector<std::string> shuffledUnits = creatableUnits;
@@ -314,7 +314,7 @@ bool AIact(Player* aiPlayer, std::vector<std::vector<Field*>>& board) {
             else if (unitTypeToCreate == "infantry") unitCost = 2;
             else if (unitTypeToCreate == "priest") unitCost = 5;
             else if (unitTypeToCreate == "engineer") unitCost = 5;
-            else if (unitTypeToCreate == "cannon") unitCost = 0;
+            
 
             if (aiPlayer->getMana() >= unitCost && manaSpentOnUnits + unitCost <= manaForUnits) {
                  std::pair<int, int> spawnSpot = findRandomAICreateSpot(board);
@@ -360,7 +360,7 @@ bool AIact(Player* aiPlayer, std::vector<std::vector<Field*>>& board) {
     }
 
     if (engineerUnit) {
-         std::vector<std::string> creatableBuildings = {"Fortress", "Mana Mine", "Trap"};
+         std::vector<std::string> creatableBuildings = {"Fortress", "Mana Mine", "Trap", "cannon"};
          while (manaSpentOnBuild < manaForBuild && aiPlayer->getMana() > 0 && engineerUnit->getWill() > 0) {
              bool buildingAttemptedThisRound = false;
              std::vector<std::string> shuffledBuildings = creatableBuildings;
@@ -370,6 +370,7 @@ bool AIact(Player* aiPlayer, std::vector<std::vector<Field*>>& board) {
                  if (buildType == "Fortress") buildCost = 3;
                  else if (buildType == "Mana Mine") buildCost = 4;
                  else if (buildType == "Trap") buildCost = 2;
+                 else if (buildType == "cannon") buildCost = 2;
 
                  if (aiPlayer->getMana() >= buildCost && manaSpentOnBuild + buildCost <= manaForBuild && engineerUnit->getWill() > 0) {
                       // Re-find engineer position in case it moved (unlikely for engineer)

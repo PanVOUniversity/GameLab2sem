@@ -301,7 +301,7 @@ bool getPlayerCommands(Player* currentPlayer, std::vector<std::vector<Field*>>& 
                     else if (unitType == "archer") { newUnit = new Archer(true); cost = 3; }
                     else if (unitType == "priest") { newUnit = new Priest(true); cost = 5; }
                     else if (unitType == "engineer") { newUnit = new Engineer(true); cost = 5; }
-                    else if (unitType == "cannon") { newUnit = new Cannon("Cannon", 0, 4, 4, 5, true); cost = 0; } // Cannon cost is 0
+                    
 
                     if (newUnit)
                     {
@@ -525,7 +525,7 @@ bool getPlayerCommands(Player* currentPlayer, std::vector<std::vector<Field*>>& 
                                 std::cout << "Not enough mana to build Fortress.\n";
                             }
                         } else if (buildType == "cannon") {
-                            cost = 0; // Cannon build cost is 0
+                            cost = 2; // Cannon build cost is 2
                             // Cannons are units, created directly.
                             // Check if the target field is valid for placing a unit.
                             if (targetField->getUnit() == nullptr && !isSpecialField) { // Re-check validity for unit placement
