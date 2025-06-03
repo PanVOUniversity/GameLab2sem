@@ -1,0 +1,7 @@
+<map id="Player::addMana" name="Player::addMana">
+<area shape="rect" id="node1" title="Adds mana to the player." alt="" coords="379,56,509,83"/>
+<area shape="rect" id="node2" href="$db/d5c/classManaMineField.html#a58740f41f2ae6d0fe66cbe83116bd755" title="Applies the mana mine field&#39;s effect (generates mana)." alt="" coords="118,5,321,32"/>
+<area shape="rect" id="node3" href="$db/d5c/classManaMineField.html#a23ebe7f7eefc6123c2e11e59af6a4972" title="Generates mana for the given player." alt="" coords="108,56,331,83"/>
+<area shape="rect" id="node5" href="$d9/deb/getcommands_8cpp.html#a4ffff192321e79e17d14dc4a1af609a7" title="Handles player commands during their turn." alt="" coords="140,107,299,133"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,60,108"/>
+</map>

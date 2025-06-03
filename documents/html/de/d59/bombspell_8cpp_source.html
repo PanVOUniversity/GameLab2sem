@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameLab2sem: Исходный файл bombspell.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameLab2sem
+   </div>
+   <div id="projectbrief">A turn-based strategy game with AI and CLI interface.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/d59/bombspell_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">bombspell.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d59/bombspell_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// bombspell.cpp</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d01/bombspell_8h.html">bombspell.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/de3/spell_8h.html">spell.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d83/bombedfield_8h.html">bombedfield.h</a>&quot;</span> <span class="comment">// Include for BombedField</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d5a/field_8h.html">field.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d0/dd8/classBombSpell.html#a9f232b0b928a57598de407b2be4df264">    9</a></span>&#160;<a class="code" href="../../d0/dd8/classBombSpell.html#a9f232b0b928a57598de407b2be4df264">BombSpell::BombSpell</a>()</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    : <a class="code" href="../../d1/d16/classSpell.html">Spell</a>(<span class="stringliteral">&quot;Bomb Spell&quot;</span>, 4) <span class="comment">// Name, Mana Cost</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Removed the explicit definition of the destructor.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// The &quot;= default&quot; in the header is sufficient.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// BombSpell::~BombSpell()</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// {</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//     // Destructor for BombSpell.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//     // No dynamic memory allocated within this class that needs explicit deletion here.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// }</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d0/dd8/classBombSpell.html#adb3e35267bfb6164cc47d5c67746093c">   22</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d0/dd8/classBombSpell.html#adb3e35267bfb6164cc47d5c67746093c">BombSpell::cast</a>(std::vector&lt;std::vector&lt;Field*&gt;&gt;&amp; board, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// Check if coordinates are within board bounds</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (x &lt; 0 || <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(x) &gt;= board.size() || y &lt; 0 || <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(y) &gt;= board[0].size())</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Invalid target coordinates for Bomb Spell.\n&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Invalid coordinates</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../d7/d24/classField.html">Field</a>* targetField = board[x][y];</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// Bomb spell replaces the target field with a BombedField</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Need to handle the unit on the field before replacing it</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html">Unit</a>* unitOnField = targetField-&gt;<a class="code" href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">getUnit</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// Create a new BombedField at the target coordinates</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// The BombedField constructor will handle setting the initial unit if it exists</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../da/d43/classBombedField.html">BombedField</a>* bombedField = <span class="keyword">new</span> <a class="code" href="../../da/d43/classBombedField.html">BombedField</a>(x, y, unitOnField);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// Replace the old field with the new BombedField</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// Ensure to delete the old field object to prevent memory leaks</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">delete</span> targetField;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    board[x][y] = bombedField;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Bomb Spell cast at (&quot;</span> &lt;&lt; x &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; y &lt;&lt; <span class="stringliteral">&quot;). The field is now unstable!\n&quot;</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="comment">// Spell cast successfully</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="ttc" id="abombedfield_8h_html"><div class="ttname"><a href="../../d6/d83/bombedfield_8h.html">bombedfield.h</a></div></div>
+<div class="ttc" id="abombspell_8h_html"><div class="ttname"><a href="../../d3/d01/bombspell_8h.html">bombspell.h</a></div></div>
+<div class="ttc" id="aclassBombSpell_html_a9f232b0b928a57598de407b2be4df264"><div class="ttname"><a href="../../d0/dd8/classBombSpell.html#a9f232b0b928a57598de407b2be4df264">BombSpell::BombSpell</a></div><div class="ttdeci">BombSpell()</div><div class="ttdoc">Constructs a BombSpell.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d59/bombspell_8cpp_source.html#l00009">bombspell.cpp:9</a></div></div>
+<div class="ttc" id="aclassBombSpell_html_adb3e35267bfb6164cc47d5c67746093c"><div class="ttname"><a href="../../d0/dd8/classBombSpell.html#adb3e35267bfb6164cc47d5c67746093c">BombSpell::cast</a></div><div class="ttdeci">bool cast(std::vector&lt; std::vector&lt; Field * &gt;&gt; &amp;board, int x, int y) override</div><div class="ttdoc">Casts the Bomb spell at the given coordinates.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d59/bombspell_8cpp_source.html#l00022">bombspell.cpp:22</a></div></div>
+<div class="ttc" id="aclassBombedField_html"><div class="ttname"><a href="../../da/d43/classBombedField.html">BombedField</a></div><div class="ttdoc">Field that acts as a trap and explodes after a timer or when triggered by a unit (Bombed Field).</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d83/bombedfield_8h_source.html#l00017">bombedfield.h:18</a></div></div>
+<div class="ttc" id="aclassField_html"><div class="ttname"><a href="../../d7/d24/classField.html">Field</a></div><div class="ttdoc">Represents a field (tile) on the game board. Base class for all field types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/field_8h_source.html#l00015">field.h:16</a></div></div>
+<div class="ttc" id="aclassField_html_a726868d72ad77d531e0dcf0969b81091"><div class="ttname"><a href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">Field::getUnit</a></div><div class="ttdeci">Unit * getUnit() const</div><div class="ttdoc">Get the unit on this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00020">field.cpp:20</a></div></div>
+<div class="ttc" id="aclassSpell_html"><div class="ttname"><a href="../../d1/d16/classSpell.html">Spell</a></div><div class="ttdoc">Abstract base class for all spells in the game.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/de3/spell_8h_source.html#l00014">spell.h:15</a></div></div>
+<div class="ttc" id="aclassUnit_html"><div class="ttname"><a href="../../df/dd9/classUnit.html">Unit</a></div><div class="ttdoc">Represents a unit in the game (base class for all units).</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00015">unit.h:16</a></div></div>
+<div class="ttc" id="afield_8h_html"><div class="ttname"><a href="../../d5/d5a/field_8h.html">field.h</a></div></div>
+<div class="ttc" id="aspell_8h_html"><div class="ttname"><a href="../../d4/de3/spell_8h.html">spell.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../de/d59/bombspell_8cpp.html">bombspell.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

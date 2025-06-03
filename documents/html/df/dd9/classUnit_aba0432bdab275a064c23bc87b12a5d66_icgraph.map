@@ -1,0 +1,10 @@
+<map id="Unit::getMoveDistance" name="Unit::getMoveDistance">
+<area shape="rect" id="node1" title="Gets the unit&#39;s move distance." alt="" coords="839,97,1009,123"/>
+<area shape="rect" id="node2" href="$db/dc3/classCannon.html#afd42a8112bc244ed69a45291da55eff6" title=" " alt="" coords="596,5,791,47"/>
+<area shape="rect" id="node3" href="$d9/deb/getcommands_8cpp.html#a4ffff192321e79e17d14dc4a1af609a7" title="Handles player commands during their turn." alt="" coords="389,97,548,123"/>
+<area shape="rect" id="node5" href="$d3/d36/functions_8cpp.html#a03cfd94cc59ef09a8b66ccbe9d885b19" title=" " alt="" coords="664,122,723,149"/>
+<area shape="rect" id="node6" href="$d0/d77/AI_8cpp.html#a9b86a4e2150c537c1cf7a3a6a2b01e7b" title="Attempts to move the given AI unit." alt="" coords="424,147,513,174"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,122,60,149"/>
+<area shape="rect" id="node7" href="$d0/d77/AI_8cpp.html#a977b9434bdf2f1cb57f540e4098d1a57" title="Performs the main AI logic for the AI player&#39;s turn." alt="" coords="287,147,341,174"/>
+<area shape="rect" id="node8" href="$d0/d77/AI_8cpp.html#ad90f841d71e5bae7186823d947a92551" title="Handles AI commands during its turn." alt="" coords="108,147,239,174"/>
+</map>

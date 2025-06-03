@@ -1,0 +1,12 @@
+<map id="Unit::getAttackDistance" name="Unit::getAttackDistance">
+<area shape="rect" id="node1" title="Gets the unit&#39;s attack distance." alt="" coords="852,107,1029,133"/>
+<area shape="rect" id="node2" href="$db/dc3/classCannon.html#ab939994ff92120f50fe84affb96fb550" title=" " alt="" coords="596,5,804,32"/>
+<area shape="rect" id="node3" href="$d3/d36/functions_8cpp.html#acfc6ab57758c3db7e635b17b396796ba" title=" " alt="" coords="669,107,731,133"/>
+<area shape="rect" id="node4" href="$d9/deb/getcommands_8cpp.html#a4ffff192321e79e17d14dc4a1af609a7" title="Handles player commands during their turn." alt="" coords="389,81,548,108"/>
+<area shape="rect" id="node6" href="$d0/d77/AI_8cpp.html#a4ee9cecc823bd9a64a65152b5d5ff307" title="Attempts to make the AI attack with the given unit." alt="" coords="421,132,516,159"/>
+<area shape="rect" id="node9" href="$db/dc3/classCannon.html#a98c5782f0e545c9ddbf4c4829af63800" title="Fires at the specified target coordinates." alt="" coords="650,208,750,235"/>
+<area shape="rect" id="node5" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,107,60,133"/>
+<area shape="rect" id="node7" href="$d0/d77/AI_8cpp.html#a977b9434bdf2f1cb57f540e4098d1a57" title="Performs the main AI logic for the AI player&#39;s turn." alt="" coords="287,132,341,159"/>
+<area shape="rect" id="node8" href="$d0/d77/AI_8cpp.html#ad90f841d71e5bae7186823d947a92551" title="Handles AI commands during its turn." alt="" coords="108,132,239,159"/>
+<area shape="rect" id="node10" href="$db/dc3/classCannon.html#a1d7f5eea1d4dbc32c152762c97b90f43" title="Uses the cannon&#39;s special ability (fire)." alt="" coords="397,208,541,235"/>
+</map>

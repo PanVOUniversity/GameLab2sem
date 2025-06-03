@@ -1,0 +1,4 @@
+<map id="Cannon" name="Cannon">
+<area shape="rect" id="node1" title="Stationary ranged unit with directional fire ability (Cannon)." alt="" coords="5,395,228,619"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html" title="Represents a unit in the game (base class for all units)." alt="" coords="33,5,200,347"/>
+</map>

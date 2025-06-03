@@ -1,0 +1,5 @@
+<map id="Engineer::createFortress" name="Engineer::createFortress">
+<area shape="rect" id="node1" title="Builds a fortress at the specified coordinates." alt="" coords="5,31,185,57"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814" title="Returns true if the unit is controlled by the player." alt="" coords="246,5,365,32"/>
+<area shape="rect" id="node3" href="$d8/d05/classFortress.html#a6f9636ea613603c0552331f916bd7146" title="Sets the owner of the fortress." alt="" coords="233,56,377,83"/>
+</map>

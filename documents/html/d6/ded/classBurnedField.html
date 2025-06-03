@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameLab2sem: Класс BurnedField</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameLab2sem
+   </div>
+   <div id="projectbrief">A turn-based strategy game with AI and CLI interface.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d6/ded/classBurnedField.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="../../d5/d50/classBurnedField-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс BurnedField</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a> that deals damage to units each turn for a limited duration (Burned <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a>).  
+ <a href="../../d6/ded/classBurnedField.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../db/d5d/burnedfield_8h_source.html">burnedfield.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:BurnedField:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/d82/classBurnedField__inherit__graph.svg" width="174" height="522"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Граф связей класса BurnedField:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/dca/classBurnedField__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aac00bdda0a3ea75a0319a2331a5a8d38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/ded/classBurnedField.html#aac00bdda0a3ea75a0319a2331a5a8d38">BurnedField</a> (int fieldX, int fieldY, <a class="el" href="../../df/dd9/classUnit.html">Unit</a> *initialUnit=nullptr, int initialDuration=2, int damage=2)</td></tr>
+<tr class="memdesc:aac00bdda0a3ea75a0319a2331a5a8d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="../../d6/ded/classBurnedField.html" title="Field that deals damage to units each turn for a limited duration (Burned Field).">BurnedField</a> at the given coordinates.  <a href="../../d6/ded/classBurnedField.html#aac00bdda0a3ea75a0319a2331a5a8d38">Подробнее...</a><br /></td></tr>
+<tr class="separator:aac00bdda0a3ea75a0319a2331a5a8d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5321a37fdaafdc0f73127b225a5ca303"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/ded/classBurnedField.html#a5321a37fdaafdc0f73127b225a5ca303">~BurnedField</a> ()=default</td></tr>
+<tr class="separator:a5321a37fdaafdc0f73127b225a5ca303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f5789ec0273283d79911bf6bed5936e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/ded/classBurnedField.html#a8f5789ec0273283d79911bf6bed5936e">applyEffect</a> (<a class="el" href="../../d2/d4b/classPlayer.html">Player</a> *owner, std::vector&lt; std::vector&lt; <a class="el" href="../../d7/d24/classField.html">Field</a> * &gt;&gt; &amp;board) override</td></tr>
+<tr class="memdesc:a8f5789ec0273283d79911bf6bed5936e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the burned field's effect (ticks duration, deals damage).  <a href="../../d6/ded/classBurnedField.html#a8f5789ec0273283d79911bf6bed5936e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8f5789ec0273283d79911bf6bed5936e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd590a0712a8e49f83d0b75882f9cb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/ded/classBurnedField.html#aadd590a0712a8e49f83d0b75882f9cb0">getDefenseBonus</a> () const override</td></tr>
+<tr class="memdesc:aadd590a0712a8e49f83d0b75882f9cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the defense bonus provided by the burned field.  <a href="../../d6/ded/classBurnedField.html#aadd590a0712a8e49f83d0b75882f9cb0">Подробнее...</a><br /></td></tr>
+<tr class="separator:aadd590a0712a8e49f83d0b75882f9cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82887e288b4f87ef932186270408a7ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/ded/classBurnedField.html#a82887e288b4f87ef932186270408a7ba">canEnter</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *<a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>) const override</td></tr>
+<tr class="memdesc:a82887e288b4f87ef932186270408a7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a unit can enter the burned field.  <a href="../../d6/ded/classBurnedField.html#a82887e288b4f87ef932186270408a7ba">Подробнее...</a><br /></td></tr>
+<tr class="separator:a82887e288b4f87ef932186270408a7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e7c0d7ea920806724075c22157e27a7"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/ded/classBurnedField.html#a3e7c0d7ea920806724075c22157e27a7">getSymbol</a> () const override</td></tr>
+<tr class="memdesc:a3e7c0d7ea920806724075c22157e27a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the symbol representing the burned field (for display).  <a href="../../d6/ded/classBurnedField.html#a3e7c0d7ea920806724075c22157e27a7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3e7c0d7ea920806724075c22157e27a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classField"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classField')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../d7/d24/classField.html">Field</a></td></tr>
+<tr class="memitem:ad8556c0f47d0dc949f11480c4c6e4521 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Field</a> (int fieldX, int fieldY, const std::string &amp;fieldType=&quot;plain&quot;)</td></tr>
+<tr class="memdesc:ad8556c0f47d0dc949f11480c4c6e4521 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a> at the given coordinates and type.  <a href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad8556c0f47d0dc949f11480c4c6e4521 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d6e6d09b8f8e46de62b40119d62c60 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a45d6e6d09b8f8e46de62b40119d62c60">~Field</a> ()</td></tr>
+<tr class="memdesc:a45d6e6d09b8f8e46de62b40119d62c60 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a>.  <a href="../../d7/d24/classField.html#a45d6e6d09b8f8e46de62b40119d62c60">Подробнее...</a><br /></td></tr>
+<tr class="separator:a45d6e6d09b8f8e46de62b40119d62c60 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726868d72ad77d531e0dcf0969b81091 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">getUnit</a> () const</td></tr>
+<tr class="memdesc:a726868d72ad77d531e0dcf0969b81091 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the unit on this field.  <a href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">Подробнее...</a><br /></td></tr>
+<tr class="separator:a726868d72ad77d531e0dcf0969b81091 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac940692dbfe1437aba7efc3a8903ea8 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">setUnit</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *u)</td></tr>
+<tr class="memdesc:aac940692dbfe1437aba7efc3a8903ea8 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the unit on this field.  <a href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">Подробнее...</a><br /></td></tr>
+<tr class="separator:aac940692dbfe1437aba7efc3a8903ea8 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b70c294dd34070bcae38b5b518f6d3 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a> () const</td></tr>
+<tr class="memdesc:af4b70c294dd34070bcae38b5b518f6d3 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the X coordinate of this field.  <a href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">Подробнее...</a><br /></td></tr>
+<tr class="separator:af4b70c294dd34070bcae38b5b518f6d3 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86673ee820c9cfed15b603c9dae6853e inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a> () const</td></tr>
+<tr class="memdesc:a86673ee820c9cfed15b603c9dae6853e inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Y coordinate of this field.  <a href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a86673ee820c9cfed15b603c9dae6853e inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9a69868e0480528ccaf9dd309862ef inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a8d9a69868e0480528ccaf9dd309862ef">getType</a> () const</td></tr>
+<tr class="memdesc:a8d9a69868e0480528ccaf9dd309862ef inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of this field.  <a href="../../d7/d24/classField.html#a8d9a69868e0480528ccaf9dd309862ef">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8d9a69868e0480528ccaf9dd309862ef inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7bbcc952313d63e39ac2915ef92bbde inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#af7bbcc952313d63e39ac2915ef92bbde">onEnter</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *<a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>)</td></tr>
+<tr class="memdesc:af7bbcc952313d63e39ac2915ef92bbde inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a unit entering this field.  <a href="../../d7/d24/classField.html#af7bbcc952313d63e39ac2915ef92bbde">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7bbcc952313d63e39ac2915ef92bbde inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cbfac5b4571fde18c48884bc7059b8 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#af7cbfac5b4571fde18c48884bc7059b8">onLeave</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *<a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>)</td></tr>
+<tr class="memdesc:af7cbfac5b4571fde18c48884bc7059b8 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a unit leaving this field.  <a href="../../d7/d24/classField.html#af7cbfac5b4571fde18c48884bc7059b8">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7cbfac5b4571fde18c48884bc7059b8 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:af8ecc8111db6762950b91d267bcdc511"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/ded/classBurnedField.html#af8ecc8111db6762950b91d267bcdc511">duration</a></td></tr>
+<tr class="separator:af8ecc8111db6762950b91d267bcdc511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f66b53dd4345a1df3e9e827960d9c64"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/ded/classBurnedField.html#a7f66b53dd4345a1df3e9e827960d9c64">damagePerTurn</a></td></tr>
+<tr class="separator:a7f66b53dd4345a1df3e9e827960d9c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_attribs_classField"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classField')"><img src="../../closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="../../d7/d24/classField.html">Field</a></td></tr>
+<tr class="memitem:a363d83248e8f66bf865e514432072afb inherit pro_attribs_classField"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a></td></tr>
+<tr class="memdesc:a363d83248e8f66bf865e514432072afb inherit pro_attribs_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the unit on this field (if any)  <a href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a363d83248e8f66bf865e514432072afb inherit pro_attribs_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60bf7589f33fee524f8cdc980c51a979 inherit pro_attribs_classField"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a60bf7589f33fee524f8cdc980c51a979">x</a></td></tr>
+<tr class="separator:a60bf7589f33fee524f8cdc980c51a979 inherit pro_attribs_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038186563fbee686e206425cc39946d9 inherit pro_attribs_classField"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a038186563fbee686e206425cc39946d9">y</a></td></tr>
+<tr class="memdesc:a038186563fbee686e206425cc39946d9 inherit pro_attribs_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinates of the field.  <a href="../../d7/d24/classField.html#a038186563fbee686e206425cc39946d9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a038186563fbee686e206425cc39946d9 inherit pro_attribs_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842a105b475478a01fefe89821f19a9a inherit pro_attribs_classField"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a842a105b475478a01fefe89821f19a9a">type</a></td></tr>
+<tr class="memdesc:a842a105b475478a01fefe89821f19a9a inherit pro_attribs_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the field (e.g., "plain", "fortress", "hill")  <a href="../../d7/d24/classField.html#a842a105b475478a01fefe89821f19a9a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a842a105b475478a01fefe89821f19a9a inherit pro_attribs_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p><a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a> that deals damage to units each turn for a limited duration (Burned <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a>). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d5d/burnedfield_8h_source.html">burnedfield.h</a> строка <a class="el" href="../../db/d5d/burnedfield_8h_source.html#l00017">17</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aac00bdda0a3ea75a0319a2331a5a8d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac00bdda0a3ea75a0319a2331a5a8d38">&#9670;&nbsp;</a></span>BurnedField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BurnedField::BurnedField </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fieldX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fieldY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td>
+          <td class="paramname"><em>initialUnit</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>initialDuration</em> = <code>2</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>damage</em> = <code>2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="../../d6/ded/classBurnedField.html" title="Field that deals damage to units each turn for a limited duration (Burned Field).">BurnedField</a> at the given coordinates. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fieldX</td><td>X coordinate. </td></tr>
+    <tr><td class="paramname">fieldY</td><td>Y coordinate. </td></tr>
+    <tr><td class="paramname">initialUnit</td><td>Pointer to the initial unit on the field (default nullptr). </td></tr>
+    <tr><td class="paramname">initialDuration</td><td>Number of turns the field remains burned (default 2). </td></tr>
+    <tr><td class="paramname">damage</td><td>Damage dealt per turn (default 2). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dca/burnedfield_8cpp_source.html">burnedfield.cpp</a> строка <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00010">10</a></p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    : <a class="code" href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Field</a>(fieldX, fieldY, <span class="stringliteral">&quot;burned&quot;</span>), <a class="code" href="../../d6/ded/classBurnedField.html#af8ecc8111db6762950b91d267bcdc511">duration</a>(initialDuration), <a class="code" href="../../d6/ded/classBurnedField.html#a7f66b53dd4345a1df3e9e827960d9c64">damagePerTurn</a>(damage)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// Set the initial unit if there is one</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">setUnit</a>(initialUnit);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="ttc" id="aclassBurnedField_html_a7f66b53dd4345a1df3e9e827960d9c64"><div class="ttname"><a href="../../d6/ded/classBurnedField.html#a7f66b53dd4345a1df3e9e827960d9c64">BurnedField::damagePerTurn</a></div><div class="ttdeci">int damagePerTurn</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d5d/burnedfield_8h_source.html#l00021">burnedfield.h:21</a></div></div>
+<div class="ttc" id="aclassBurnedField_html_af8ecc8111db6762950b91d267bcdc511"><div class="ttname"><a href="../../d6/ded/classBurnedField.html#af8ecc8111db6762950b91d267bcdc511">BurnedField::duration</a></div><div class="ttdeci">int duration</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d5d/burnedfield_8h_source.html#l00020">burnedfield.h:20</a></div></div>
+<div class="ttc" id="aclassField_html_aac940692dbfe1437aba7efc3a8903ea8"><div class="ttname"><a href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">Field::setUnit</a></div><div class="ttdeci">void setUnit(Unit *u)</div><div class="ttdoc">Set the unit on this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00025">field.cpp:25</a></div></div>
+<div class="ttc" id="aclassField_html_ad8556c0f47d0dc949f11480c4c6e4521"><div class="ttname"><a href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Field::Field</a></div><div class="ttdeci">Field(int fieldX, int fieldY, const std::string &amp;fieldType=&quot;plain&quot;)</div><div class="ttdoc">Constructs a Field at the given coordinates and type.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00008">field.cpp:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00025">Field::setUnit()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/ded/classBurnedField_aac00bdda0a3ea75a0319a2331a5a8d38_cgraph.svg" width="351" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a5321a37fdaafdc0f73127b225a5ca303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5321a37fdaafdc0f73127b225a5ca303">&#9670;&nbsp;</a></span>~BurnedField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual BurnedField::~BurnedField </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a8f5789ec0273283d79911bf6bed5936e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f5789ec0273283d79911bf6bed5936e">&#9670;&nbsp;</a></span>applyEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BurnedField::applyEffect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d4b/classPlayer.html">Player</a> *&#160;</td>
+          <td class="paramname"><em>owner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="../../d7/d24/classField.html">Field</a> * &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>board</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies the burned field's effect (ticks duration, deals damage). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">owner</td><td>The player whose turn it is. </td></tr>
+    <tr><td class="paramname">board</td><td>The game board. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Переопределяет метод предка <a class="el" href="../../d7/d24/classField.html#a454ca5b8269657dc01cd611eceb3d397">Field</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dca/burnedfield_8cpp_source.html">burnedfield.cpp</a> строка <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00025">25</a></p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// Apply damage to the unit on the field if there is one</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Burned field at (&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>() &lt;&lt; <span class="stringliteral">&quot;) deals &quot;</span> &lt;&lt; <a class="code" href="../../d6/ded/classBurnedField.html#a7f66b53dd4345a1df3e9e827960d9c64">damagePerTurn</a> &lt;&lt; <span class="stringliteral">&quot; damage to &quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>-&gt;<a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot;.\n&quot;</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="../../d3/d36/functions_8cpp.html#a43f0126154376c48e09ec7497e5af839">applyDamage</a>(board, <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>(), <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>(), <a class="code" href="../../d6/ded/classBurnedField.html#a7f66b53dd4345a1df3e9e827960d9c64">damagePerTurn</a>, <span class="keyword">nullptr</span>); <span class="comment">// Use applyDamage, no attacking unit for field effect</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Decrease the duration</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../d6/ded/classBurnedField.html#af8ecc8111db6762950b91d267bcdc511">duration</a>--;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Burned field at (&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>() &lt;&lt; <span class="stringliteral">&quot;) duration: &quot;</span> &lt;&lt; <a class="code" href="../../d6/ded/classBurnedField.html#af8ecc8111db6762950b91d267bcdc511">duration</a> &lt;&lt; <span class="stringliteral">&quot;.\n&quot;</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// If duration reaches 0, revert to a plain field</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d6/ded/classBurnedField.html#af8ecc8111db6762950b91d267bcdc511">duration</a> &lt;= 0)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Burned field at (&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>() &lt;&lt; <span class="stringliteral">&quot;) fades away.\n&quot;</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../df/dd9/classUnit.html">Unit</a>* unitOnField = <a class="code" href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">getUnit</a>(); <span class="comment">// Get unit before deleting the field</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// Create a new plain field at the same coordinates</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="../../d7/d24/classField.html">Field</a>* plainField = <span class="keyword">new</span> <a class="code" href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Field</a>(<a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>(), <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>(), <span class="stringliteral">&quot;plain&quot;</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        plainField-&gt;<a class="code" href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">setUnit</a>(unitOnField); <span class="comment">// Place the unit on the new plain field</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">delete</span> <span class="keyword">this</span>; <span class="comment">// Delete the burned field object</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        board[<a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>()][<a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>()] = plainField; <span class="comment">// Replace the pointer in the board</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="ttc" id="aclassField_html"><div class="ttname"><a href="../../d7/d24/classField.html">Field</a></div><div class="ttdoc">Represents a field (tile) on the game board. Base class for all field types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/field_8h_source.html#l00015">field.h:16</a></div></div>
+<div class="ttc" id="aclassField_html_a363d83248e8f66bf865e514432072afb"><div class="ttname"><a href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">Field::unit</a></div><div class="ttdeci">Unit * unit</div><div class="ttdoc">Pointer to the unit on this field (if any)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/field_8h_source.html#l00018">field.h:18</a></div></div>
+<div class="ttc" id="aclassField_html_a726868d72ad77d531e0dcf0969b81091"><div class="ttname"><a href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">Field::getUnit</a></div><div class="ttdeci">Unit * getUnit() const</div><div class="ttdoc">Get the unit on this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00020">field.cpp:20</a></div></div>
+<div class="ttc" id="aclassField_html_a86673ee820c9cfed15b603c9dae6853e"><div class="ttname"><a href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">Field::getY</a></div><div class="ttdeci">int getY() const</div><div class="ttdoc">Get the Y coordinate of this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00035">field.cpp:35</a></div></div>
+<div class="ttc" id="aclassField_html_af4b70c294dd34070bcae38b5b518f6d3"><div class="ttname"><a href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">Field::getX</a></div><div class="ttdeci">int getX() const</div><div class="ttdoc">Get the X coordinate of this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00030">field.cpp:30</a></div></div>
+<div class="ttc" id="aclassUnit_html"><div class="ttname"><a href="../../df/dd9/classUnit.html">Unit</a></div><div class="ttdoc">Represents a unit in the game (base class for all units).</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00015">unit.h:16</a></div></div>
+<div class="ttc" id="aclassUnit_html_a0497994e384db5c080ec78e9b645fa40"><div class="ttname"><a href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">Unit::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdoc">Gets the unit's name.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00022">unit.cpp:22</a></div></div>
+<div class="ttc" id="afunctions_8cpp_html_a43f0126154376c48e09ec7497e5af839"><div class="ttname"><a href="../../d3/d36/functions_8cpp.html#a43f0126154376c48e09ec7497e5af839">applyDamage</a></div><div class="ttdeci">void applyDamage(std::vector&lt; std::vector&lt; Field * &gt;&gt; &amp;board, int x, int y, int damage, Unit *attackingUnit)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d36/functions_8cpp_source.html#l00085">functions.cpp:85</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00085">applyDamage()</a>, <a class="el" href="../../db/d5d/burnedfield_8h_source.html#l00021">damagePerTurn</a>, <a class="el" href="../../db/d5d/burnedfield_8h_source.html#l00020">duration</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00008">Field::Field()</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00022">Unit::getName()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00020">Field::getUnit()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00030">Field::getX()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00035">Field::getY()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00025">Field::setUnit()</a> и <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">Field::unit</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/ded/classBurnedField_a8f5789ec0273283d79911bf6bed5936e_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a82887e288b4f87ef932186270408a7ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82887e288b4f87ef932186270408a7ba">&#9670;&nbsp;</a></span>canEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BurnedField::canEnter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td>
+          <td class="paramname"><em>unit</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if a unit can enter the burned field. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>The unit to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True if the unit can enter, false otherwise. </dd></dl>
+
+<p>Переопределяет метод предка <a class="el" href="../../d7/d24/classField.html#aca250c9a0c031e21c7e7c609b3b3dec3">Field</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dca/burnedfield_8cpp_source.html">burnedfield.cpp</a> строка <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00057">57</a></p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// Units can enter burned fields, but will take damage</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> this-&gt;unit == <span class="keyword">nullptr</span>; <span class="comment">// Can enter if empty</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">Field::unit</a>.</p>
+
+</div>
+</div>
+<a id="aadd590a0712a8e49f83d0b75882f9cb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadd590a0712a8e49f83d0b75882f9cb0">&#9670;&nbsp;</a></span>getDefenseBonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BurnedField::getDefenseBonus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the defense bonus provided by the burned field. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>The defense bonus value. </dd></dl>
+
+<p>Переопределяет метод предка <a class="el" href="../../d7/d24/classField.html#a718edf661e92a18a81c1a434b8e9ba40">Field</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/dca/burnedfield_8cpp_source.html">burnedfield.cpp</a> строка <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00051">51</a></p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// Burned fields might offer no defense bonus or even a penalty</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> 0; <span class="comment">// Or return a negative value for penalty</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3e7c0d7ea920806724075c22157e27a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e7c0d7ea920806724075c22157e27a7">&#9670;&nbsp;</a></span>getSymbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char BurnedField::getSymbol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the symbol representing the burned field (for display). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>'*' character. </dd></dl>
+
+<p>Переопределяет метод предка <a class="el" href="../../d7/d24/classField.html#a03e73113267195f2680dd028f8950ae5">Field</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d5d/burnedfield_8h_source.html">burnedfield.h</a> строка <a class="el" href="../../db/d5d/burnedfield_8h_source.html#l00059">59</a></p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{ <span class="keywordflow">return</span> <span class="charliteral">&#39;*&#39;</span>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a7f66b53dd4345a1df3e9e827960d9c64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f66b53dd4345a1df3e9e827960d9c64">&#9670;&nbsp;</a></span>damagePerTurn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BurnedField::damagePerTurn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d5d/burnedfield_8h_source.html">burnedfield.h</a> строка <a class="el" href="../../db/d5d/burnedfield_8h_source.html#l00021">21</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00025">applyEffect()</a>.</p>
+
+</div>
+</div>
+<a id="af8ecc8111db6762950b91d267bcdc511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ecc8111db6762950b91d267bcdc511">&#9670;&nbsp;</a></span>duration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BurnedField::duration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d5d/burnedfield_8h_source.html">burnedfield.h</a> строка <a class="el" href="../../db/d5d/burnedfield_8h_source.html#l00020">20</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00025">applyEffect()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="../../db/d5d/burnedfield_8h_source.html">burnedfield.h</a></li>
+<li><a class="el" href="../../da/dca/burnedfield_8cpp_source.html">burnedfield.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d6/ded/classBurnedField.html">BurnedField</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="HospitalField" name="HospitalField">
+<area shape="rect" id="node1" title="Field that heals units each turn (Hospital Field)." alt="" coords="15,351,158,487"/>
+<area shape="rect" id="node2" href="$d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types." alt="" coords="5,5,168,303"/>
+</map>

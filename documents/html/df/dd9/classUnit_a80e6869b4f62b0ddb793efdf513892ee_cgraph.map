@@ -1,0 +1,4 @@
+<map id="Unit::useAbility" name="Unit::useAbility">
+<area shape="rect" id="node1" title="Virtual method for special unit abilities (to be overridden by derived classes)." alt="" coords="5,5,128,32"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="176,5,293,32"/>
+</map>

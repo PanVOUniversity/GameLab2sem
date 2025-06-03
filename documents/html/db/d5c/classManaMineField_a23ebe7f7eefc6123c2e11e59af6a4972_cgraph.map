@@ -1,0 +1,7 @@
+<map id="ManaMineField::generateMana" name="ManaMineField::generateMana">
+<area shape="rect" id="node1" title="Generates mana for the given player." alt="" coords="5,81,228,108"/>
+<area shape="rect" id="node2" href="$d2/d4b/classPlayer.html#addff1c790965ad1b6ca5745a0fc849e0" title="Adds mana to the player." alt="" coords="276,5,407,32"/>
+<area shape="rect" id="node3" href="$d2/d4b/classPlayer.html#a73e4ff2d70e62ca7e3be1d9b4ad9de85" title="Gets the player&#39;s name." alt="" coords="276,56,407,83"/>
+<area shape="rect" id="node4" href="$d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3" title="Get the X coordinate of this field." alt="" coords="296,107,387,133"/>
+<area shape="rect" id="node5" href="$d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e" title="Get the Y coordinate of this field." alt="" coords="296,157,387,184"/>
+</map>

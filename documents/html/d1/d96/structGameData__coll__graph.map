@@ -1,0 +1,4 @@
+<map id="GameData" name="GameData">
+<area shape="rect" id="node1" title="Holds the main game data: board and players." alt="" coords="37,409,129,487"/>
+<area shape="rect" id="node2" href="$d2/d4b/classPlayer.html" title="Represents a player in the game (human or AI)." alt="" coords="5,5,160,332"/>
+</map>

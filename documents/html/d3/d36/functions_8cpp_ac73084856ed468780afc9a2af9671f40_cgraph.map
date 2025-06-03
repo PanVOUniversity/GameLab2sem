@@ -1,0 +1,5 @@
+<map id="getEffectiveDefense" name="getEffectiveDefense">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,160,57"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23" title="Gets the unit&#39;s current health." alt="" coords="211,5,381,32"/>
+<area shape="rect" id="node3" href="$d7/d24/classField.html#a718edf661e92a18a81c1a434b8e9ba40" title="Get the defense bonus provided by this field." alt="" coords="208,56,384,83"/>
+</map>

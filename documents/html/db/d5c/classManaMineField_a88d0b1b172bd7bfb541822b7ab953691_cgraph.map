@@ -1,0 +1,4 @@
+<map id="ManaMineField::ManaMineField" name="ManaMineField::ManaMineField">
+<area shape="rect" id="node1" title="Constructs a ManaMineField at the given coordinates." alt="" coords="5,5,233,32"/>
+<area shape="rect" id="node2" href="$d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8" title="Set the unit on this field." alt="" coords="281,5,389,32"/>
+</map>

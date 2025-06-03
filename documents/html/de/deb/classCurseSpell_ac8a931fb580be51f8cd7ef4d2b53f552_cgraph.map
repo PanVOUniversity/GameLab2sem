@@ -1,0 +1,7 @@
+<map id="CurseSpell::cast" name="CurseSpell::cast">
+<area shape="rect" id="node1" title="Casts the Curse spell at the given coordinates." alt="" coords="5,81,132,108"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="180,5,297,32"/>
+<area shape="rect" id="node3" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="184,56,293,83"/>
+<area shape="rect" id="node4" href="$df/dd9/classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998" title="Gets the unit&#39;s current will points." alt="" coords="187,107,290,133"/>
+<area shape="rect" id="node5" href="$df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22" title="Sets the unit&#39;s will points." alt="" coords="187,157,290,184"/>
+</map>

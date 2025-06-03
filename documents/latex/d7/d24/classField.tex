@@ -1,0 +1,659 @@
+\hypertarget{classField}{}\doxysection{Класс Field}
+\label{classField}\index{Field@{Field}}
+
+
+Represents a field (tile) on the game board. Base class for all field types.  
+
+
+
+
+{\ttfamily \#include $<$field.\+h$>$}
+
+
+
+Граф наследования\+:Field\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/de6/classField__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Field\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d3/d0e/classField__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classField_ad8556c0f47d0dc949f11480c4c6e4521}{Field}} (int fieldX, int fieldY, const std\+::string \&field\+Type=\char`\"{}plain\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classField}{Field}} at the given coordinates and type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classField_a45d6e6d09b8f8e46de62b40119d62c60}{$\sim$\+Field}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \mbox{\hyperlink{classField}{Field}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUnit}{Unit}} $\ast$ \mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{get\+Unit}} () const
+\begin{DoxyCompactList}\small\item\em Get the unit on this field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classField_aac940692dbfe1437aba7efc3a8903ea8}{set\+Unit}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$u)
+\begin{DoxyCompactList}\small\item\em Set the unit on this field. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}} () const
+\begin{DoxyCompactList}\small\item\em Get the X coordinate of this field. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}} () const
+\begin{DoxyCompactList}\small\item\em Get the Y coordinate of this field. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classField_a8d9a69868e0480528ccaf9dd309862ef}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get the type of this field. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classField_a454ca5b8269657dc01cd611eceb3d397}{apply\+Effect}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$owner, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Apply the field\textquotesingle{}s effect (e.\+g., mana generation, damage) to the board. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classField_a718edf661e92a18a81c1a434b8e9ba40}{get\+Defense\+Bonus}} () const
+\begin{DoxyCompactList}\small\item\em Get the defense bonus provided by this field. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classField_aca250c9a0c031e21c7e7c609b3b3dec3}{can\+Enter}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}) const
+\begin{DoxyCompactList}\small\item\em Check if a unit can enter this field. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classField_af7bbcc952313d63e39ac2915ef92bbde}{on\+Enter}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}})
+\begin{DoxyCompactList}\small\item\em Handle a unit entering this field. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classField_af7cbfac5b4571fde18c48884bc7059b8}{on\+Leave}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}})
+\begin{DoxyCompactList}\small\item\em Handle a unit leaving this field. \end{DoxyCompactList}\item 
+virtual char \mbox{\hyperlink{classField_a03e73113267195f2680dd028f8950ae5}{get\+Symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get the symbol representing this field (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUnit}{Unit}} $\ast$ \mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}
+\begin{DoxyCompactList}\small\item\em Pointer to the unit on this field (if any) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classField_a60bf7589f33fee524f8cdc980c51a979}{x}}
+\item 
+int \mbox{\hyperlink{classField_a038186563fbee686e206425cc39946d9}{y}}
+\begin{DoxyCompactList}\small\item\em Coordinates of the field. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classField_a842a105b475478a01fefe89821f19a9a}{type}}
+\begin{DoxyCompactList}\small\item\em Type of the field (e.\+g., \char`\"{}plain\char`\"{}, \char`\"{}fortress\char`\"{}, \char`\"{}hill\char`\"{}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Represents a field (tile) on the game board. Base class for all field types. 
+
+См. определение в файле field.\+h строка 15
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classField_ad8556c0f47d0dc949f11480c4c6e4521}\label{classField_ad8556c0f47d0dc949f11480c4c6e4521}} 
+\index{Field@{Field}!Field@{Field}}
+\index{Field@{Field}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{Field()}{Field()}}
+{\footnotesize\ttfamily Field\+::\+Field (\begin{DoxyParamCaption}\item[{int}]{fieldX,  }\item[{int}]{fieldY,  }\item[{const std\+::string \&}]{field\+Type = {\ttfamily \char`\"{}plain\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classField}{Field}} at the given coordinates and type. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em fieldX} & X coordinate. \\
+\hline
+{\em fieldY} & Y coordinate. \\
+\hline
+{\em field\+Type} & Type of the field (default\+: \char`\"{}plain\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле field.\+cpp строка 8
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9     : \mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}(\textcolor{keyword}{nullptr}), \mbox{\hyperlink{classField_a60bf7589f33fee524f8cdc980c51a979}{x}}(fieldX), \mbox{\hyperlink{classField_a038186563fbee686e206425cc39946d9}{y}}(fieldY), \mbox{\hyperlink{classField_a842a105b475478a01fefe89821f19a9a}{type}}(fieldType)}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \}}
+
+\end{DoxyCode}
+
+
+Используется в Burned\+Field\+::apply\+Effect(), Shielded\+Field\+::apply\+Effect() и Bombed\+Field\+::explode().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/classField_ad8556c0f47d0dc949f11480c4c6e4521_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classField_a45d6e6d09b8f8e46de62b40119d62c60}\label{classField_a45d6e6d09b8f8e46de62b40119d62c60}} 
+\index{Field@{Field}!````~Field@{$\sim$Field}}
+\index{````~Field@{$\sim$Field}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{$\sim$Field()}{~Field()}}
+{\footnotesize\ttfamily Field\+::$\sim$\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for \mbox{\hyperlink{classField}{Field}}. 
+
+
+
+См. определение в файле field.\+cpp строка 13
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     \textcolor{comment}{// The unit on the field is owned by the player, not the field.}}
+\DoxyCodeLine{16     \textcolor{comment}{// So, the field should not delete the unit here.}}
+\DoxyCodeLine{17     \textcolor{comment}{// The player's destructor or game logic should handle unit deletion.}}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classField_a454ca5b8269657dc01cd611eceb3d397}\label{classField_a454ca5b8269657dc01cd611eceb3d397}} 
+\index{Field@{Field}!applyEffect@{applyEffect}}
+\index{applyEffect@{applyEffect}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{applyEffect()}{applyEffect()}}
+{\footnotesize\ttfamily void Field\+::apply\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{owner,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Apply the field\textquotesingle{}s effect (e.\+g., mana generation, damage) to the board. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em owner} & The player whose turn it is. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+
+
+Переопределяется в \mbox{\hyperlink{classShieldedField_a06a7d981e2f14acf56f98c9c2c3f6d78}{Shielded\+Field}}, \mbox{\hyperlink{classManaMineField_a58740f41f2ae6d0fe66cbe83116bd755}{Mana\+Mine\+Field}}, \mbox{\hyperlink{classHospitalField_a653ea196bbbdf6f788a88fd70406679d}{Hospital\+Field}}, \mbox{\hyperlink{classFortress_a29d63386bdfb5769839506b137877b68}{Fortress}}, \mbox{\hyperlink{classBurnedField_a8f5789ec0273283d79911bf6bed5936e}{Burned\+Field}} и \mbox{\hyperlink{classBombedField_a48a282d1c5a11b9970228a59b52f6efc}{Bombed\+Field}}.
+
+
+
+См. определение в файле field.\+cpp строка 47
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49     \textcolor{comment}{// Default fields have no special effects}}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+
+
+Используется в attack() и move().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/classField_a454ca5b8269657dc01cd611eceb3d397_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classField_aca250c9a0c031e21c7e7c609b3b3dec3}\label{classField_aca250c9a0c031e21c7e7c609b3b3dec3}} 
+\index{Field@{Field}!canEnter@{canEnter}}
+\index{canEnter@{canEnter}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{canEnter()}{canEnter()}}
+{\footnotesize\ttfamily bool Field\+::can\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if a unit can enter this field. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit} & The unit to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the unit can enter, false otherwise. 
+\end{DoxyReturn}
+
+
+Переопределяется в \mbox{\hyperlink{classShieldedField_a2b42f9d856dd98d6bffaf975bd3bd268}{Shielded\+Field}}, \mbox{\hyperlink{classManaMineField_a22ab0221bc04d653ec9288b2e00c8d34}{Mana\+Mine\+Field}}, \mbox{\hyperlink{classHospitalField_a8f01ef46e2456b269ca993b74648b5bb}{Hospital\+Field}}, \mbox{\hyperlink{classHill_af19572621a6a70c8a2f765e335f45970}{Hill}}, \mbox{\hyperlink{classFortress_a6cb9778963a2a807e36c4ef8eb8c40e6}{Fortress}}, \mbox{\hyperlink{classBurnedField_a82887e288b4f87ef932186270408a7ba}{Burned\+Field}} и \mbox{\hyperlink{classBombedField_aff9afc2bda8fdb918c29cf04371c5d4e}{Bombed\+Field}}.
+
+
+
+См. определение в файле field.\+cpp строка 60
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61 \{}
+\DoxyCodeLine{62     \textcolor{comment}{// Plain fields can be entered if they are empty}}
+\DoxyCodeLine{63     \textcolor{keywordflow}{return} this-\/>unit == \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{64 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки unit.
+
+
+
+Используется в get\+Player\+Commands() и move().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/classField_aca250c9a0c031e21c7e7c609b3b3dec3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classField_a718edf661e92a18a81c1a434b8e9ba40}\label{classField_a718edf661e92a18a81c1a434b8e9ba40}} 
+\index{Field@{Field}!getDefenseBonus@{getDefenseBonus}}
+\index{getDefenseBonus@{getDefenseBonus}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{getDefenseBonus()}{getDefenseBonus()}}
+{\footnotesize\ttfamily int Field\+::get\+Defense\+Bonus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the defense bonus provided by this field. 
+
+\begin{DoxyReturn}{Возвращает}
+The defense bonus value (default\+: 0). 
+\end{DoxyReturn}
+
+
+Переопределяется в \mbox{\hyperlink{classShieldedField_a95b93296f68d0383c45767a1c203126c}{Shielded\+Field}}, \mbox{\hyperlink{classHill_acf7cc1d58f7d29bf8d84ea2cc8ada242}{Hill}}, \mbox{\hyperlink{classFortress_ada80de06eab758febec3af099bc21fba}{Fortress}} и \mbox{\hyperlink{classBurnedField_aadd590a0712a8e49f83d0b75882f9cb0}{Burned\+Field}}.
+
+
+
+См. определение в файле field.\+cpp строка 53
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+
+
+Используется в attack() и get\+Effective\+Defense().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/classField_a718edf661e92a18a81c1a434b8e9ba40_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classField_a03e73113267195f2680dd028f8950ae5}\label{classField_a03e73113267195f2680dd028f8950ae5}} 
+\index{Field@{Field}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily virtual char Field\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the symbol representing this field (for display). 
+
+\begin{DoxyReturn}{Возвращает}
+Character symbol (default\+: \textquotesingle{}+\textquotesingle{}). 
+\end{DoxyReturn}
+
+
+Переопределяется в \mbox{\hyperlink{classShieldedField_a239178b926b3c4420eadc00002590cc8}{Shielded\+Field}}, \mbox{\hyperlink{classManaMineField_aca33a1fb8aa80deeeb5123aa738fd40c}{Mana\+Mine\+Field}}, \mbox{\hyperlink{classHospitalField_a699854aa98e115f2e7c5c16bb09993f4}{Hospital\+Field}}, \mbox{\hyperlink{classHill_ad1e5e44888944a73d9c33f261c33132a}{Hill}}, \mbox{\hyperlink{classFortress_affe6600fca0229e8d582bd364e8216d9}{Fortress}}, \mbox{\hyperlink{classBurnedField_a3e7c0d7ea920806724075c22157e27a7}{Burned\+Field}} и \mbox{\hyperlink{classBombedField_af11d142cae00e419ae8edd821f00cbc7}{Bombed\+Field}}.
+
+
+
+См. определение в файле field.\+h строка 100
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100 \{ \textcolor{keywordflow}{return} \textcolor{charliteral}{'+'}; \}}
+
+\end{DoxyCode}
+
+
+Используется в display\+Board().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{d7/d24/classField_a03e73113267195f2680dd028f8950ae5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classField_a8d9a69868e0480528ccaf9dd309862ef}\label{classField_a8d9a69868e0480528ccaf9dd309862ef}} 
+\index{Field@{Field}!getType@{getType}}
+\index{getType@{getType}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Field\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the type of this field. 
+
+\begin{DoxyReturn}{Возвращает}
+String representing the field type. 
+\end{DoxyReturn}
+
+
+См. определение в файле field.\+cpp строка 40
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42     \textcolor{keywordflow}{return} \mbox{\hyperlink{classField_a842a105b475478a01fefe89821f19a9a}{type}};}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки type.
+
+\mbox{\Hypertarget{classField_a726868d72ad77d531e0dcf0969b81091}\label{classField_a726868d72ad77d531e0dcf0969b81091}} 
+\index{Field@{Field}!getUnit@{getUnit}}
+\index{getUnit@{getUnit}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{getUnit()}{getUnit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUnit}{Unit}} $\ast$ Field\+::get\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the unit on this field. 
+
+\begin{DoxyReturn}{Возвращает}
+Pointer to the unit, or nullptr if none. 
+\end{DoxyReturn}
+
+
+См. определение в файле field.\+cpp строка 20
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     \textcolor{keywordflow}{return} \mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}};}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки unit.
+
+
+
+Используется в Cannon\+::\+\_\+find\+Empty\+Field\+In\+Range(), Cannon\+::\+\_\+find\+Enemy\+In\+Range(), Cannon\+::\+\_\+find\+Friendly\+Fortress\+Nearby(), Cannon\+::\+\_\+find\+Friendly\+Nearby(), AIact(), apply\+Damage(), Burned\+Field\+::apply\+Effect(), Shielded\+Field\+::apply\+Effect(), attack(), Bomb\+Spell\+::cast(), Curse\+Spell\+::cast(), Fireball\+Spell\+::cast(), Morog\+Spell\+::cast(), Teleport\+Spell\+::cast(), display\+Board(), Bombed\+Field\+::explode(), find\+Random\+Adjacent\+Empty\+Field(), find\+Random\+AICreate\+Spot(), find\+Random\+Enemy\+Unit\+Coords(), Cannon\+::fire(), get\+Player\+Commands(), main(), move(), Priest\+::pray(), try\+AIAttack(), try\+AIEngineer\+Build\+Specific(), try\+AIMove(), unit\+\_\+map() и update\+Fortress\+Strength().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/classField_a726868d72ad77d531e0dcf0969b81091_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classField_af4b70c294dd34070bcae38b5b518f6d3}\label{classField_af4b70c294dd34070bcae38b5b518f6d3}} 
+\index{Field@{Field}!getX@{getX}}
+\index{getX@{getX}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily int Field\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the X coordinate of this field. 
+
+\begin{DoxyReturn}{Возвращает}
+X coordinate. 
+\end{DoxyReturn}
+
+
+См. определение в файле field.\+cpp строка 30
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32     \textcolor{keywordflow}{return} \mbox{\hyperlink{classField_a60bf7589f33fee524f8cdc980c51a979}{x}};}
+\DoxyCodeLine{33 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки x.
+
+
+
+Используется в Bombed\+Field\+::apply\+Effect(), Burned\+Field\+::apply\+Effect(), Fortress\+::apply\+Effect(), Hospital\+Field\+::apply\+Effect(), Mana\+Mine\+Field\+::apply\+Effect(), Shielded\+Field\+::apply\+Effect(), Bombed\+Field\+::explode(), Mana\+Mine\+Field\+::generate\+Mana(), Bombed\+Field\+::on\+Enter(), Fortress\+::on\+Enter() и Fortress\+::on\+Leave().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/classField_af4b70c294dd34070bcae38b5b518f6d3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classField_a86673ee820c9cfed15b603c9dae6853e}\label{classField_a86673ee820c9cfed15b603c9dae6853e}} 
+\index{Field@{Field}!getY@{getY}}
+\index{getY@{getY}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily int Field\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the Y coordinate of this field. 
+
+\begin{DoxyReturn}{Возвращает}
+Y coordinate. 
+\end{DoxyReturn}
+
+
+См. определение в файле field.\+cpp строка 35
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} \mbox{\hyperlink{classField_a038186563fbee686e206425cc39946d9}{y}};}
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки y.
+
+
+
+Используется в Bombed\+Field\+::apply\+Effect(), Burned\+Field\+::apply\+Effect(), Fortress\+::apply\+Effect(), Hospital\+Field\+::apply\+Effect(), Mana\+Mine\+Field\+::apply\+Effect(), Shielded\+Field\+::apply\+Effect(), Bombed\+Field\+::explode(), Mana\+Mine\+Field\+::generate\+Mana(), Bombed\+Field\+::on\+Enter(), Fortress\+::on\+Enter() и Fortress\+::on\+Leave().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/classField_a86673ee820c9cfed15b603c9dae6853e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classField_af7bbcc952313d63e39ac2915ef92bbde}\label{classField_af7bbcc952313d63e39ac2915ef92bbde}} 
+\index{Field@{Field}!onEnter@{onEnter}}
+\index{onEnter@{onEnter}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{onEnter()}{onEnter()}}
+{\footnotesize\ttfamily void Field\+::on\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handle a unit entering this field. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit} & The unit entering. \\
+\hline
+\end{DoxyParams}
+
+
+Переопределяется в \mbox{\hyperlink{classFortress_a59036b76372351a496f86c0813862082}{Fortress}} и \mbox{\hyperlink{classBombedField_a50bc4ead59e96a08eb5f905c9051c010}{Bombed\+Field}}.
+
+
+
+См. определение в файле field.\+cpp строка 68
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70     \textcolor{comment}{// No special action when a unit enters a plain field}}
+\DoxyCodeLine{71 \}}
+
+\end{DoxyCode}
+
+
+Используется в Teleport\+Spell\+::cast() и move().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/classField_af7bbcc952313d63e39ac2915ef92bbde_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classField_af7cbfac5b4571fde18c48884bc7059b8}\label{classField_af7cbfac5b4571fde18c48884bc7059b8}} 
+\index{Field@{Field}!onLeave@{onLeave}}
+\index{onLeave@{onLeave}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{onLeave()}{onLeave()}}
+{\footnotesize\ttfamily void Field\+::on\+Leave (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handle a unit leaving this field. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit} & The unit leaving. \\
+\hline
+\end{DoxyParams}
+
+
+Переопределяется в \mbox{\hyperlink{classFortress_a33bd8cb24eab2488b5a21d17ca60a861}{Fortress}}.
+
+
+
+См. определение в файле field.\+cpp строка 75
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76 \{}
+\DoxyCodeLine{77     \textcolor{comment}{// No special action when a unit leaves a plain field}}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+
+
+Используется в move().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/classField_af7cbfac5b4571fde18c48884bc7059b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classField_aac940692dbfe1437aba7efc3a8903ea8}\label{classField_aac940692dbfe1437aba7efc3a8903ea8}} 
+\index{Field@{Field}!setUnit@{setUnit}}
+\index{setUnit@{setUnit}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{setUnit()}{setUnit()}}
+{\footnotesize\ttfamily void Field\+::set\+Unit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{u }\end{DoxyParamCaption})}
+
+
+
+Set the unit on this field. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em u} & Pointer to the unit to place. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле field.\+cpp строка 25
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}} = u;}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки unit.
+
+
+
+Используется в apply\+Damage(), Burned\+Field\+::apply\+Effect(), Shielded\+Field\+::apply\+Effect(), Bombed\+Field\+::\+Bombed\+Field(), Burned\+Field\+::\+Burned\+Field(), Teleport\+Spell\+::cast(), Bombed\+Field\+::explode(), Cannon\+::fire(), get\+Player\+Commands(), Hill\+::\+Hill(), Hospital\+Field\+::\+Hospital\+Field(), Mana\+Mine\+Field\+::\+Mana\+Mine\+Field(), move(), Shielded\+Field\+::\+Shielded\+Field() и try\+AIEngineer\+Build\+Specific().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/classField_aac940692dbfe1437aba7efc3a8903ea8_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classField_a842a105b475478a01fefe89821f19a9a}\label{classField_a842a105b475478a01fefe89821f19a9a}} 
+\index{Field@{Field}!type@{type}}
+\index{type@{type}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily std\+::string Field\+::type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Type of the field (e.\+g., \char`\"{}plain\char`\"{}, \char`\"{}fortress\char`\"{}, \char`\"{}hill\char`\"{}) 
+
+
+
+См. определение в файле field.\+h строка 20
+
+
+
+Используется в get\+Type().
+
+\mbox{\Hypertarget{classField_a363d83248e8f66bf865e514432072afb}\label{classField_a363d83248e8f66bf865e514432072afb}} 
+\index{Field@{Field}!unit@{unit}}
+\index{unit@{unit}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{unit}{unit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUnit}{Unit}}$\ast$ Field\+::unit\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Pointer to the unit on this field (if any) 
+
+
+
+См. определение в файле field.\+h строка 18
+
+
+
+Используется в Burned\+Field\+::apply\+Effect(), Fortress\+::apply\+Effect(), Hospital\+Field\+::apply\+Effect(), Mana\+Mine\+Field\+::apply\+Effect(), can\+Enter(), Bombed\+Field\+::can\+Enter(), Burned\+Field\+::can\+Enter(), Fortress\+::can\+Enter(), Hill\+::can\+Enter(), Hospital\+Field\+::can\+Enter(), Mana\+Mine\+Field\+::can\+Enter(), Shielded\+Field\+::can\+Enter(), Bombed\+Field\+::explode(), get\+Unit(), Bombed\+Field\+::on\+Enter(), Fortress\+::on\+Enter(), Fortress\+::on\+Leave(), set\+Unit() и Bombed\+Field\+::should\+Explode().
+
+\mbox{\Hypertarget{classField_a60bf7589f33fee524f8cdc980c51a979}\label{classField_a60bf7589f33fee524f8cdc980c51a979}} 
+\index{Field@{Field}!x@{x}}
+\index{x@{x}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int Field\+::x\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле field.\+h строка 19
+
+
+
+Используется в get\+X().
+
+\mbox{\Hypertarget{classField_a038186563fbee686e206425cc39946d9}\label{classField_a038186563fbee686e206425cc39946d9}} 
+\index{Field@{Field}!y@{y}}
+\index{y@{y}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int Field\+::y\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Coordinates of the field. 
+
+
+
+См. определение в файле field.\+h строка 19
+
+
+
+Используется в get\+Y().
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{field_8h}{field.\+h}}\item 
+\mbox{\hyperlink{field_8cpp}{field.\+cpp}}\end{DoxyCompactItemize}

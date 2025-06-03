@@ -1,0 +1,4 @@
+<map id="Priest" name="Priest">
+<area shape="rect" id="node1" title="Support unit that can create shielded fields (Priest)." alt="" coords="30,395,147,516"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html" title="Represents a unit in the game (base class for all units)." alt="" coords="5,5,172,347"/>
+</map>

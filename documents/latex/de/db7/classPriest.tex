@@ -1,0 +1,249 @@
+\hypertarget{classPriest}{}\doxysection{Класс Priest}
+\label{classPriest}\index{Priest@{Priest}}
+
+
+Support unit that can create shielded fields (\mbox{\hyperlink{classPriest}{Priest}}).  
+
+
+
+
+{\ttfamily \#include $<$priest.\+h$>$}
+
+
+
+Граф наследования\+:Priest\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{d3/db1/classPriest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Priest\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{da/db4/classPriest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPriest_a23a258d5e70283578d49fb358e1e6f1a}{Priest}} (bool player=false)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classPriest}{Priest}} unit. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classPriest_aaf82f2ad6e79a64aa80eb3a7db89ed81}{$\sim$\+Priest}} ()=default
+\item 
+bool \mbox{\hyperlink{classPriest_a071c64e9c9ef7e3cb87669a14f54b268}{pray}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int targetX, int targetY)
+\begin{DoxyCompactList}\small\item\em Uses the pray ability to create a \mbox{\hyperlink{classShieldedField}{Shielded\+Field}} at the target location. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classPriest_a743cec8dc0cf919d42b677a2a3d7ddac}{get\+Symbol}} () const
+\begin{DoxyCompactList}\small\item\em Gets the symbol representing the priest (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+Support unit that can create shielded fields (\mbox{\hyperlink{classPriest}{Priest}}). 
+
+См. определение в файле priest.\+h строка 20
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classPriest_a23a258d5e70283578d49fb358e1e6f1a}\label{classPriest_a23a258d5e70283578d49fb358e1e6f1a}} 
+\index{Priest@{Priest}!Priest@{Priest}}
+\index{Priest@{Priest}!Priest@{Priest}}
+\doxysubsubsection{\texorpdfstring{Priest()}{Priest()}}
+{\footnotesize\ttfamily Priest\+::\+Priest (\begin{DoxyParamCaption}\item[{bool}]{player = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classPriest}{Priest}} unit. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em player} & True if controlled by player, false if AI (default\+: false). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле priest.\+cpp строка 11
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12     : \mbox{\hyperlink{classUnit_a889a37b2a427c6c220b45057511c0d05}{Unit}}(\textcolor{stringliteral}{"{}Priest"{}}, 2, 0, 5, 0, player, 1) \textcolor{comment}{// Name, Move, Attack, Health, Damage, isPlayer, Will}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \textcolor{comment}{// Priest: Move 2, Attack 0, Health 5, Damage 0, Will 1, Symbol 'P'}}
+\DoxyCodeLine{15 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPriest_aaf82f2ad6e79a64aa80eb3a7db89ed81}\label{classPriest_aaf82f2ad6e79a64aa80eb3a7db89ed81}} 
+\index{Priest@{Priest}!````~Priest@{$\sim$Priest}}
+\index{````~Priest@{$\sim$Priest}!Priest@{Priest}}
+\doxysubsubsection{\texorpdfstring{$\sim$Priest()}{~Priest()}}
+{\footnotesize\ttfamily virtual Priest\+::$\sim$\+Priest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classPriest_a743cec8dc0cf919d42b677a2a3d7ddac}\label{classPriest_a743cec8dc0cf919d42b677a2a3d7ddac}} 
+\index{Priest@{Priest}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!Priest@{Priest}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char Priest\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the symbol representing the priest (for display). 
+
+\begin{DoxyReturn}{Возвращает}
+\textquotesingle{}P\textquotesingle{} character. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classUnit_afd6bcf5adaadb97b1378512344bd642b}{Unit}}.
+
+
+
+См. определение в файле priest.\+h строка 46
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46 \{ \textcolor{keywordflow}{return} \textcolor{charliteral}{'P'}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPriest_a071c64e9c9ef7e3cb87669a14f54b268}\label{classPriest_a071c64e9c9ef7e3cb87669a14f54b268}} 
+\index{Priest@{Priest}!pray@{pray}}
+\index{pray@{pray}!Priest@{Priest}}
+\doxysubsubsection{\texorpdfstring{pray()}{pray()}}
+{\footnotesize\ttfamily bool Priest\+::pray (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{targetX,  }\item[{int}]{targetY }\end{DoxyParamCaption})}
+
+
+
+Uses the pray ability to create a \mbox{\hyperlink{classShieldedField}{Shielded\+Field}} at the target location. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+{\em targetX} & X coordinate of the target. \\
+\hline
+{\em targetY} & Y coordinate of the target. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the ability was used successfully. 
+\end{DoxyReturn}
+
+
+См. определение в файле priest.\+cpp строка 20
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     \textcolor{comment}{// Check if the priest has enough will and mana to pray}}
+\DoxyCodeLine{23     \textcolor{comment}{// Assuming pray costs 1 Will and some mana (e.g., 3 mana, matching CurseSpell for now)}}
+\DoxyCodeLine{24     \textcolor{comment}{// Corrected: Commented out unused variable}}
+\DoxyCodeLine{25     \textcolor{comment}{// int prayManaCost = 3; // Example mana cost for Pray}}
+\DoxyCodeLine{26     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() > 0) \{}
+\DoxyCodeLine{27         \textcolor{comment}{// Need access to the player's mana. This requires the board or player pointer.}}
+\DoxyCodeLine{28         \textcolor{comment}{// Since this method is called from getPlayerCommands/AIact which have the board,}}
+\DoxyCodeLine{29         \textcolor{comment}{// we need to find the player associated with this unit.}}
+\DoxyCodeLine{30         \textcolor{comment}{// A more robust design might pass the player pointer to pray,}}
+\DoxyCodeLine{31         \textcolor{comment}{// or the unit could have a direct pointer to its owning player.}}
+\DoxyCodeLine{32         \textcolor{comment}{// For now, we'll assume the calling function handles mana deduction.}}
+\DoxyCodeLine{33         \textcolor{comment}{// The mana deduction logic is handled in getPlayerCommands/AIact before calling pray.}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \textcolor{comment}{// Check if target coordinates are valid}}
+\DoxyCodeLine{36         \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{37         \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{38         \textcolor{keywordflow}{if} (targetX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetX) < boardWidth \&\&}
+\DoxyCodeLine{39             targetY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetY) < boardHeight)}
+\DoxyCodeLine{40         \{}
+\DoxyCodeLine{41             \mbox{\hyperlink{classField}{Field}}* targetField = board[targetX][targetY];}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43             \textcolor{comment}{// Check if the target field is not already a special field that cannot be shielded}}
+\DoxyCodeLine{44             \textcolor{keywordtype}{bool} isSpecialField = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classShieldedField}{ShieldedField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{45                                   \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classFortress}{Fortress}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{46                                   \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHill}{Hill}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{47                                   \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBurnedField}{BurnedField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{48                                   \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBombedField}{BombedField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{49                                   \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHospitalField}{HospitalField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{50                                   \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classManaMineField}{ManaMineField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52             \textcolor{keywordflow}{if} (!isSpecialField) \textcolor{comment}{// Can pray on non-\/special fields}}
+\DoxyCodeLine{53             \{}
+\DoxyCodeLine{54                  \textcolor{comment}{// Find the priest's current position to check distance}}
+\DoxyCodeLine{55                  \textcolor{keywordtype}{int} priestX = -\/1, priestY = -\/1;}
+\DoxyCodeLine{56                  \textcolor{keywordtype}{bool} priestFound = \textcolor{keyword}{false};}
+\DoxyCodeLine{57                  \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < boardWidth; ++i) \{}
+\DoxyCodeLine{58                      \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} j = 0; j < boardHeight; ++j) \{}
+\DoxyCodeLine{59                          \mbox{\hyperlink{classField}{Field}}* currentField = board[i][j];}
+\DoxyCodeLine{60                          \mbox{\hyperlink{classUnit}{Unit}}* unit = currentField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{61                          \textcolor{comment}{// Human player units have getPlayer() == true}}
+\DoxyCodeLine{62                          \textcolor{keywordflow}{if} (unit \&\& unit-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() \&\& \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classPriest}{Priest}}*\textcolor{keyword}{>}(unit) == \textcolor{keyword}{this}) \{ \textcolor{comment}{// Check if the unit pointer matches 'this' priest}}
+\DoxyCodeLine{63                              priestX = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(i);}
+\DoxyCodeLine{64                              priestY = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(j);}
+\DoxyCodeLine{65                              priestFound = \textcolor{keyword}{true};}
+\DoxyCodeLine{66                              \textcolor{keywordflow}{break};}
+\DoxyCodeLine{67                          \}}
+\DoxyCodeLine{68                      \}}
+\DoxyCodeLine{69                      \textcolor{keywordflow}{if}(priestFound) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{70                  \}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72                  \textcolor{keywordflow}{if} (priestFound) \{}
+\DoxyCodeLine{73                      \textcolor{comment}{// Check if target is within praying range (e.g., Manhattan distance <= 2)}}
+\DoxyCodeLine{74                      \textcolor{keywordtype}{int} prayRange = 2; \textcolor{comment}{// Example praying range}}
+\DoxyCodeLine{75                      \textcolor{keywordflow}{if} (std::abs(priestX -\/ targetX) + std::abs(priestY -\/ targetY) <= prayRange) \{}
+\DoxyCodeLine{76                          \textcolor{comment}{// Create a ShieldedField at the target location}}
+\DoxyCodeLine{77                          \mbox{\hyperlink{classUnit}{Unit}}* unitOnTarget = targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}(); \textcolor{comment}{// Get unit before replacing field}}
+\DoxyCodeLine{78                          \mbox{\hyperlink{functions_8cpp_a0a1837ac6ac69139b25732bf3114f375}{createShieldedField}}(board, targetX, targetY, unitOnTarget); \textcolor{comment}{// Use helper function}}
+\DoxyCodeLine{79                          \mbox{\hyperlink{classUnit_a207c7fe4b9d30af2446bb8af0a127c22}{setWill}}(\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() -\/ 1); \textcolor{comment}{// Consume priest's will}}
+\DoxyCodeLine{80                          std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} prayed at ("{}} << targetX << \textcolor{stringliteral}{"{},"{}} << targetY << \textcolor{stringliteral}{"{}).\(\backslash\)n"{}};}
+\DoxyCodeLine{81                          \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \textcolor{comment}{// Pray successful}}
+\DoxyCodeLine{82                      \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{83                          std::cout << \textcolor{stringliteral}{"{}Pray failed: Target is outside praying range.\(\backslash\)n"{}};}
+\DoxyCodeLine{84                      \}}
+\DoxyCodeLine{85                  \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{86                      std::cout << \textcolor{stringliteral}{"{}Pray failed: Priest unit not found on board.\(\backslash\)n"{}};}
+\DoxyCodeLine{87                  \}}
+\DoxyCodeLine{88             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{89                 std::cout << \textcolor{stringliteral}{"{}Pray failed: Cannot pray on this special field.\(\backslash\)n"{}};}
+\DoxyCodeLine{90             \}}
+\DoxyCodeLine{91         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{92              std::cout << \textcolor{stringliteral}{"{}Pray failed: Target coordinates out of bounds.\(\backslash\)n"{}};}
+\DoxyCodeLine{93         \}}
+\DoxyCodeLine{94     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{95         std::cout << \textcolor{stringliteral}{"{}Pray failed: Priest has no will left.\(\backslash\)n"{}};}
+\DoxyCodeLine{96     \}}
+\DoxyCodeLine{97     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Pray failed}}
+\DoxyCodeLine{98 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки create\+Shielded\+Field(), Unit\+::get\+Name(), Unit\+::get\+Player(), Field\+::get\+Unit(), Unit\+::get\+Will() и Unit\+::set\+Will().
+
+
+
+Используется в get\+Player\+Commands().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{de/db7/classPriest_a071c64e9c9ef7e3cb87669a14f54b268_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db7/classPriest_a071c64e9c9ef7e3cb87669a14f54b268_icgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{priest_8h}{priest.\+h}}\item 
+\mbox{\hyperlink{priest_8cpp}{priest.\+cpp}}\end{DoxyCompactItemize}

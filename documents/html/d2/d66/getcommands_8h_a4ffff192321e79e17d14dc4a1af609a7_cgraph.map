@@ -1,0 +1,39 @@
+<map id="getPlayerCommands" name="getPlayerCommands">
+<area shape="rect" id="node1" title="Handles player commands during their turn." alt="" coords="5,1354,164,1381"/>
+<area shape="rect" id="node2" href="$d2/d4b/classPlayer.html#addff1c790965ad1b6ca5745a0fc849e0" title="Adds mana to the player." alt="" coords="245,366,375,393"/>
+<area shape="rect" id="node3" href="$d3/d36/functions_8cpp.html#acfc6ab57758c3db7e635b17b396796ba" title=" " alt="" coords="279,417,341,443"/>
+<area shape="rect" id="node8" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="929,695,1038,722"/>
+<area shape="rect" id="node9" href="$d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8" title="Set the unit on this field." alt="" coords="715,1303,823,1330"/>
+<area shape="rect" id="node16" href="$df/dd9/classUnit.html#a8856896cc73b342fec2cd3e8079e8e6a" title="Gets the unit&#39;s attack distance." alt="" coords="456,493,633,519"/>
+<area shape="rect" id="node18" href="$df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814" title="Returns true if the unit is controlled by the player." alt="" coords="485,695,604,722"/>
+<area shape="rect" id="node19" href="$df/dd9/classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998" title="Gets the unit&#39;s current will points." alt="" coords="493,949,596,975"/>
+<area shape="rect" id="node20" href="$df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22" title="Sets the unit&#39;s will points." alt="" coords="493,999,596,1026"/>
+<area shape="rect" id="node21" href="$d7/d24/classField.html#aca250c9a0c031e21c7e7c609b3b3dec3" title="Check if a unit can enter this field." alt="" coords="485,1405,604,1431"/>
+<area shape="rect" id="node22" href="$d1/d16/classSpell.html#adbff32f05577154a0db4606282d0151c" title="Casts the spell on the board at the given coordinates." alt="" coords="265,1557,355,1583"/>
+<area shape="rect" id="node23" href="$dc/d9b/classEngineer.html#ad4076b7f94e65fd55c68fc1cbd740533" title="Builds a fortress at the specified coordinates." alt="" coords="220,746,400,773"/>
+<area shape="rect" id="node25" href="$dc/d9b/classEngineer.html#a4259ec02bdc511cb22ebb20ab73354c7" title="Builds a mana mine at the specified coordinates." alt="" coords="212,1607,408,1634"/>
+<area shape="rect" id="node26" href="$dc/d9b/classEngineer.html#a4f9b54503e8a0fd99ed35f6c78710c56" title="Builds a trap (bombed field) at the specified coordinates." alt="" coords="233,1658,387,1685"/>
+<area shape="rect" id="node27" href="$d9/deb/getcommands_8cpp.html#a5169c33ec08531429e9eddf9cdb2b802" title=" " alt="" coords="267,1709,353,1735"/>
+<area shape="rect" id="node28" href="$d2/d4b/classPlayer.html#a0cb5b17db27a2af6492e270aab8f7870" title="Returns true if the player is AI&#45;controlled." alt="" coords="257,1759,363,1786"/>
+<area shape="rect" id="node29" href="$d2/d4b/classPlayer.html#aba42f377d067adc41cbc43e679b6349c" title="Gets the player&#39;s current mana." alt="" coords="246,1810,374,1837"/>
+<area shape="rect" id="node30" href="$df/dd9/classUnit.html#aba0432bdab275a064c23bc87b12a5d66" title="Gets the unit&#39;s move distance." alt="" coords="459,1455,630,1482"/>
+<area shape="rect" id="node31" href="$d3/d36/functions_8cpp.html#a03cfd94cc59ef09a8b66ccbe9d885b19" title=" " alt="" coords="281,1227,339,1254"/>
+<area shape="rect" id="node34" href="$de/db7/classPriest.html#a071c64e9c9ef7e3cb87669a14f54b268" title="Uses the pray ability to create a ShieldedField at the target location." alt="" coords="262,898,358,925"/>
+<area shape="rect" id="node36" href="$d2/d4b/classPlayer.html#a99236b47c18af320bea2e42ac1c7b2fe" title="Subtracts mana from the player if possible." alt="" coords="230,1861,390,1887"/>
+<area shape="rect" id="node37" href="$d9/deb/getcommands_8cpp.html#add5d2eade35143ea61cfb9bf44f5a1b2" title=" " alt="" coords="269,645,351,671"/>
+<area shape="rect" id="node4" href="$d3/d36/functions_8cpp.html#a43f0126154376c48e09ec7497e5af839" title=" " alt="" coords="488,239,601,266"/>
+<area shape="rect" id="node5" href="$df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23" title="Gets the unit&#39;s current health." alt="" coords="684,493,853,519"/>
+<area shape="rect" id="node6" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="925,391,1042,418"/>
+<area shape="rect" id="node7" href="$d8/d05/classFortress.html#a910fc391be59542b1ead1c96e997cd8a" title="Gets the current strength of the fortress." alt="" coords="904,163,1063,190"/>
+<area shape="rect" id="node11" href="$d3/d36/functions_8cpp.html#ae92c15badcbeac5edc544eec40902bac" title=" " alt="" coords="681,138,856,165"/>
+<area shape="rect" id="node13" href="$d7/d24/classField.html#a454ca5b8269657dc01cd611eceb3d397" title="Apply the field&#39;s effect (e.g., mana generation, damage) to the board." alt="" coords="477,1050,612,1077"/>
+<area shape="rect" id="node14" href="$da/def/classInfantry.html#a05b6abbf09ed604fda5c276588ccf0a8" title="Performs a counter&#45;attack against an attacker." alt="" coords="459,189,630,215"/>
+<area shape="rect" id="node15" href="$df/dd9/classUnit.html#a0062c5fab5677c6b47e1d881b4dcc53c" title="Gets the unit&#39;s damage value." alt="" coords="702,87,835,114"/>
+<area shape="rect" id="node17" href="$d7/d24/classField.html#a718edf661e92a18a81c1a434b8e9ba40" title="Get the defense bonus provided by this field." alt="" coords="457,391,633,418"/>
+<area shape="rect" id="node10" href="$df/dd9/classUnit.html#a43a426d4d87aebf07e2737e122bea210" title="Applies damage to the unit." alt="" coords="699,290,839,317"/>
+<area shape="rect" id="node12" href="$d8/d05/classFortress.html#a921a0af7f93cd89a395ab8f053382a2e" title="Sets the strength of the fortress." alt="" coords="905,113,1062,139"/>
+<area shape="rect" id="node24" href="$d8/d05/classFortress.html#a6f9636ea613603c0552331f916bd7146" title="Sets the owner of the fortress." alt="" coords="473,746,617,773"/>
+<area shape="rect" id="node32" href="$d7/d24/classField.html#af7bbcc952313d63e39ac2915ef92bbde" title="Handle a unit entering this field." alt="" coords="489,1354,600,1381"/>
+<area shape="rect" id="node33" href="$d7/d24/classField.html#af7cbfac5b4571fde18c48884bc7059b8" title="Handle a unit leaving this field." alt="" coords="487,1253,603,1279"/>
+<area shape="rect" id="node35" href="$d3/d36/functions_8cpp.html#a0a1837ac6ac69139b25732bf3114f375" title=" " alt="" coords="469,797,620,823"/>
+</map>

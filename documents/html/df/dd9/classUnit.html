@@ -1,0 +1,1213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameLab2sem: Класс Unit</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameLab2sem
+   </div>
+   <div id="projectbrief">A turn-based strategy game with AI and CLI interface.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('df/dd9/classUnit.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="../../d1/da3/classUnit-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Unit</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Represents a unit in the game (base class for all units).  
+ <a href="../../df/dd9/classUnit.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:Unit:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d5/d58/classUnit__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Граф связей класса Unit:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d5/dc8/classUnit__coll__graph.svg" width="178" height="352"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a889a37b2a427c6c220b45057511c0d05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a889a37b2a427c6c220b45057511c0d05">Unit</a> (const std::string &amp;unitName, int moveD, int attackD, int health, int dmg, bool isPlayer, int will)</td></tr>
+<tr class="memdesc:a889a37b2a427c6c220b45057511c0d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="../../df/dd9/classUnit.html" title="Represents a unit in the game (base class for all units).">Unit</a> with the given parameters.  <a href="../../df/dd9/classUnit.html#a889a37b2a427c6c220b45057511c0d05">Подробнее...</a><br /></td></tr>
+<tr class="separator:a889a37b2a427c6c220b45057511c0d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6353fc4c0a329997ad4abcf0dcb4eb27"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a6353fc4c0a329997ad4abcf0dcb4eb27">~Unit</a> ()</td></tr>
+<tr class="memdesc:a6353fc4c0a329997ad4abcf0dcb4eb27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for <a class="el" href="../../df/dd9/classUnit.html" title="Represents a unit in the game (base class for all units).">Unit</a>.  <a href="../../df/dd9/classUnit.html#a6353fc4c0a329997ad4abcf0dcb4eb27">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6353fc4c0a329997ad4abcf0dcb4eb27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0497994e384db5c080ec78e9b645fa40"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a> () const</td></tr>
+<tr class="memdesc:a0497994e384db5c080ec78e9b645fa40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unit's name.  <a href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0497994e384db5c080ec78e9b645fa40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba0432bdab275a064c23bc87b12a5d66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#aba0432bdab275a064c23bc87b12a5d66">getMoveDistance</a> () const</td></tr>
+<tr class="memdesc:aba0432bdab275a064c23bc87b12a5d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unit's move distance.  <a href="../../df/dd9/classUnit.html#aba0432bdab275a064c23bc87b12a5d66">Подробнее...</a><br /></td></tr>
+<tr class="separator:aba0432bdab275a064c23bc87b12a5d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8856896cc73b342fec2cd3e8079e8e6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a8856896cc73b342fec2cd3e8079e8e6a">getAttackDistance</a> () const</td></tr>
+<tr class="memdesc:a8856896cc73b342fec2cd3e8079e8e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unit's attack distance.  <a href="../../df/dd9/classUnit.html#a8856896cc73b342fec2cd3e8079e8e6a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8856896cc73b342fec2cd3e8079e8e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e44c4741b8ce52687715dc82fdfaf23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23">getCurrentHealth</a> () const</td></tr>
+<tr class="memdesc:a0e44c4741b8ce52687715dc82fdfaf23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unit's current health.  <a href="../../df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0e44c4741b8ce52687715dc82fdfaf23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892f3d3a4dd89188750cdfba57d2e5ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a892f3d3a4dd89188750cdfba57d2e5ae">getMaxHealth</a> () const</td></tr>
+<tr class="memdesc:a892f3d3a4dd89188750cdfba57d2e5ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unit's max health.  <a href="../../df/dd9/classUnit.html#a892f3d3a4dd89188750cdfba57d2e5ae">Подробнее...</a><br /></td></tr>
+<tr class="separator:a892f3d3a4dd89188750cdfba57d2e5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0062c5fab5677c6b47e1d881b4dcc53c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a0062c5fab5677c6b47e1d881b4dcc53c">getDamage</a> () const</td></tr>
+<tr class="memdesc:a0062c5fab5677c6b47e1d881b4dcc53c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unit's damage value.  <a href="../../df/dd9/classUnit.html#a0062c5fab5677c6b47e1d881b4dcc53c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0062c5fab5677c6b47e1d881b4dcc53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e700f28797f2c1709e03b2b7828814"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814">getPlayer</a> () const</td></tr>
+<tr class="memdesc:a72e700f28797f2c1709e03b2b7828814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the unit is controlled by the player.  <a href="../../df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814">Подробнее...</a><br /></td></tr>
+<tr class="separator:a72e700f28797f2c1709e03b2b7828814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3fd62e52d7c275c5a4b416b03e2998"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998">getWill</a> () const</td></tr>
+<tr class="memdesc:a4d3fd62e52d7c275c5a4b416b03e2998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unit's current will points.  <a href="../../df/dd9/classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4d3fd62e52d7c275c5a4b416b03e2998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae149ab0037a9e0c45e68d93dadfdd83f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#ae149ab0037a9e0c45e68d93dadfdd83f">getMaxWill</a> () const</td></tr>
+<tr class="memdesc:ae149ab0037a9e0c45e68d93dadfdd83f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unit's max will points.  <a href="../../df/dd9/classUnit.html#ae149ab0037a9e0c45e68d93dadfdd83f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae149ab0037a9e0c45e68d93dadfdd83f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2564f2e55a6aafded781d5796d3a6629"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a2564f2e55a6aafded781d5796d3a6629">setCurrentHealth</a> (int health)</td></tr>
+<tr class="memdesc:a2564f2e55a6aafded781d5796d3a6629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the unit's current health.  <a href="../../df/dd9/classUnit.html#a2564f2e55a6aafded781d5796d3a6629">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2564f2e55a6aafded781d5796d3a6629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207c7fe4b9d30af2446bb8af0a127c22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22">setWill</a> (int will)</td></tr>
+<tr class="memdesc:a207c7fe4b9d30af2446bb8af0a127c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the unit's will points.  <a href="../../df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22">Подробнее...</a><br /></td></tr>
+<tr class="separator:a207c7fe4b9d30af2446bb8af0a127c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaec88b40541cf3eed9e3ab4780fe937e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#aaec88b40541cf3eed9e3ab4780fe937e">setHealth</a> (int health)</td></tr>
+<tr class="memdesc:aaec88b40541cf3eed9e3ab4780fe937e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the unit's health (alias for setCurrentHealth).  <a href="../../df/dd9/classUnit.html#aaec88b40541cf3eed9e3ab4780fe937e">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaec88b40541cf3eed9e3ab4780fe937e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43a426d4d87aebf07e2737e122bea210"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a43a426d4d87aebf07e2737e122bea210">takeDamage</a> (int <a class="el" href="../../df/dd9/classUnit.html#a92bfb1430ab13e69d4c703a7fc8bafdb">damage</a>, <a class="el" href="../../df/dd9/classUnit.html">Unit</a> *attacker=nullptr)</td></tr>
+<tr class="memdesc:a43a426d4d87aebf07e2737e122bea210"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies damage to the unit.  <a href="../../df/dd9/classUnit.html#a43a426d4d87aebf07e2737e122bea210">Подробнее...</a><br /></td></tr>
+<tr class="separator:a43a426d4d87aebf07e2737e122bea210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fe18bf6d2917c59c35df6d56c6cbdc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a9fe18bf6d2917c59c35df6d56c6cbdc2">restoreHealth</a> (int amount)</td></tr>
+<tr class="memdesc:a9fe18bf6d2917c59c35df6d56c6cbdc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores health to the unit.  <a href="../../df/dd9/classUnit.html#a9fe18bf6d2917c59c35df6d56c6cbdc2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9fe18bf6d2917c59c35df6d56c6cbdc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec8e04d487cf005cd75ae9bdf62525e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#aec8e04d487cf005cd75ae9bdf62525e6">restoreWill</a> (int amount)</td></tr>
+<tr class="memdesc:aec8e04d487cf005cd75ae9bdf62525e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores will points to the unit.  <a href="../../df/dd9/classUnit.html#aec8e04d487cf005cd75ae9bdf62525e6">Подробнее...</a><br /></td></tr>
+<tr class="separator:aec8e04d487cf005cd75ae9bdf62525e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e6869b4f62b0ddb793efdf513892ee"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a80e6869b4f62b0ddb793efdf513892ee">useAbility</a> (std::vector&lt; std::vector&lt; <a class="el" href="../../d7/d24/classField.html">Field</a> * &gt;&gt; &amp;board, int targetX, int targetY)</td></tr>
+<tr class="memdesc:a80e6869b4f62b0ddb793efdf513892ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual method for special unit abilities (to be overridden by derived classes).  <a href="../../df/dd9/classUnit.html#a80e6869b4f62b0ddb793efdf513892ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:a80e6869b4f62b0ddb793efdf513892ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6bcf5adaadb97b1378512344bd642b"><td class="memItemLeft" align="right" valign="top">virtual char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#afd6bcf5adaadb97b1378512344bd642b">getSymbol</a> () const</td></tr>
+<tr class="memdesc:afd6bcf5adaadb97b1378512344bd642b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the symbol representing the unit (for display).  <a href="../../df/dd9/classUnit.html#afd6bcf5adaadb97b1378512344bd642b">Подробнее...</a><br /></td></tr>
+<tr class="separator:afd6bcf5adaadb97b1378512344bd642b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a03a2344fa6977a2ce44b320e44bc9caa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a03a2344fa6977a2ce44b320e44bc9caa">name</a></td></tr>
+<tr class="separator:a03a2344fa6977a2ce44b320e44bc9caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53580e05154faa2108a772c694399bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#aa53580e05154faa2108a772c694399bb">moveDistance</a></td></tr>
+<tr class="separator:aa53580e05154faa2108a772c694399bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0b4b3d2dcd3cc1b25581180b4282cee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#ad0b4b3d2dcd3cc1b25581180b4282cee">attackDistance</a></td></tr>
+<tr class="separator:ad0b4b3d2dcd3cc1b25581180b4282cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6784baaf16aa725b0873d95f9e455b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a></td></tr>
+<tr class="separator:ab6784baaf16aa725b0873d95f9e455b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae356d6dff417f52a1ccf7133807314"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a></td></tr>
+<tr class="separator:a3ae356d6dff417f52a1ccf7133807314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92bfb1430ab13e69d4c703a7fc8bafdb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a92bfb1430ab13e69d4c703a7fc8bafdb">damage</a></td></tr>
+<tr class="separator:a92bfb1430ab13e69d4c703a7fc8bafdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa16bddcdb423ca124b6b44a4d27afea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#aaa16bddcdb423ca124b6b44a4d27afea">isPlayerUnit</a></td></tr>
+<tr class="separator:aaa16bddcdb423ca124b6b44a4d27afea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcaeef974ce724af04978a375f5a46ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a></td></tr>
+<tr class="separator:afcaeef974ce724af04978a375f5a46ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ea56944962c9007c255a0224f744be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd9/classUnit.html#a93ea56944962c9007c255a0224f744be">maxWill</a></td></tr>
+<tr class="separator:a93ea56944962c9007c255a0224f744be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Represents a unit in the game (base class for all units). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a> строка <a class="el" href="../../d1/da2/unit_8h_source.html#l00015">15</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a889a37b2a427c6c220b45057511c0d05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a889a37b2a427c6c220b45057511c0d05">&#9670;&nbsp;</a></span>Unit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Unit::Unit </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>unitName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>moveD</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>attackD</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>health</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dmg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isPlayer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>will</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="../../df/dd9/classUnit.html" title="Represents a unit in the game (base class for all units).">Unit</a> with the given parameters. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unitName</td><td>Name of the unit. </td></tr>
+    <tr><td class="paramname">moveD</td><td>Move distance. </td></tr>
+    <tr><td class="paramname">attackD</td><td>Attack distance. </td></tr>
+    <tr><td class="paramname">health</td><td>Initial and max health. </td></tr>
+    <tr><td class="paramname">dmg</td><td>Damage value. </td></tr>
+    <tr><td class="paramname">isPlayer</td><td>True if controlled by player, false if AI. </td></tr>
+    <tr><td class="paramname">will</td><td>Initial and max will points. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00008">8</a></p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    : <a class="code" href="../../df/dd9/classUnit.html#a03a2344fa6977a2ce44b320e44bc9caa">name</a>(unitName), <a class="code" href="../../df/dd9/classUnit.html#aa53580e05154faa2108a772c694399bb">moveDistance</a>(moveD), <a class="code" href="../../df/dd9/classUnit.html#ad0b4b3d2dcd3cc1b25581180b4282cee">attackDistance</a>(attackD),</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a>(health), <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a>(health), <a class="code" href="../../df/dd9/classUnit.html#a92bfb1430ab13e69d4c703a7fc8bafdb">damage</a>(dmg), <a class="code" href="../../df/dd9/classUnit.html#aaa16bddcdb423ca124b6b44a4d27afea">isPlayerUnit</a>(isPlayer),</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      <a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a>(will), <a class="code" href="../../df/dd9/classUnit.html#a93ea56944962c9007c255a0224f744be">maxWill</a>(will)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="ttc" id="aclassUnit_html_a03a2344fa6977a2ce44b320e44bc9caa"><div class="ttname"><a href="../../df/dd9/classUnit.html#a03a2344fa6977a2ce44b320e44bc9caa">Unit::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00018">unit.h:18</a></div></div>
+<div class="ttc" id="aclassUnit_html_a3ae356d6dff417f52a1ccf7133807314"><div class="ttname"><a href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">Unit::maxHealth</a></div><div class="ttdeci">int maxHealth</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00022">unit.h:22</a></div></div>
+<div class="ttc" id="aclassUnit_html_a92bfb1430ab13e69d4c703a7fc8bafdb"><div class="ttname"><a href="../../df/dd9/classUnit.html#a92bfb1430ab13e69d4c703a7fc8bafdb">Unit::damage</a></div><div class="ttdeci">int damage</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00023">unit.h:23</a></div></div>
+<div class="ttc" id="aclassUnit_html_a93ea56944962c9007c255a0224f744be"><div class="ttname"><a href="../../df/dd9/classUnit.html#a93ea56944962c9007c255a0224f744be">Unit::maxWill</a></div><div class="ttdeci">int maxWill</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00026">unit.h:26</a></div></div>
+<div class="ttc" id="aclassUnit_html_aa53580e05154faa2108a772c694399bb"><div class="ttname"><a href="../../df/dd9/classUnit.html#aa53580e05154faa2108a772c694399bb">Unit::moveDistance</a></div><div class="ttdeci">int moveDistance</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00019">unit.h:19</a></div></div>
+<div class="ttc" id="aclassUnit_html_aaa16bddcdb423ca124b6b44a4d27afea"><div class="ttname"><a href="../../df/dd9/classUnit.html#aaa16bddcdb423ca124b6b44a4d27afea">Unit::isPlayerUnit</a></div><div class="ttdeci">bool isPlayerUnit</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00024">unit.h:24</a></div></div>
+<div class="ttc" id="aclassUnit_html_ab6784baaf16aa725b0873d95f9e455b5"><div class="ttname"><a href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">Unit::currentHealth</a></div><div class="ttdeci">int currentHealth</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00021">unit.h:21</a></div></div>
+<div class="ttc" id="aclassUnit_html_ad0b4b3d2dcd3cc1b25581180b4282cee"><div class="ttname"><a href="../../df/dd9/classUnit.html#ad0b4b3d2dcd3cc1b25581180b4282cee">Unit::attackDistance</a></div><div class="ttdeci">int attackDistance</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00020">unit.h:20</a></div></div>
+<div class="ttc" id="aclassUnit_html_afcaeef974ce724af04978a375f5a46ea"><div class="ttname"><a href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">Unit::currentWill</a></div><div class="ttdeci">int currentWill</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00025">unit.h:25</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6353fc4c0a329997ad4abcf0dcb4eb27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6353fc4c0a329997ad4abcf0dcb4eb27">&#9670;&nbsp;</a></span>~Unit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Unit::~Unit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Virtual destructor for <a class="el" href="../../df/dd9/classUnit.html" title="Represents a unit in the game (base class for all units).">Unit</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00015">15</a></p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Destructor for Unit.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// No dynamic memory allocated within the base Unit class that needs explicit deletion here.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// Derived classes might need to implement their own destructors if they allocate memory.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a8856896cc73b342fec2cd3e8079e8e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8856896cc73b342fec2cd3e8079e8e6a">&#9670;&nbsp;</a></span>getAttackDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::getAttackDistance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the unit's attack distance. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00032">32</a></p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#ad0b4b3d2dcd3cc1b25581180b4282cee">attackDistance</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00020">attackDistance</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00162">Cannon::_findEnemyInRange()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00112">attack()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00047">Cannon::fire()</a>, <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00037">getPlayerCommands()</a> и <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00582">tryAIAttack()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_a8856896cc73b342fec2cd3e8079e8e6a_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a0e44c4741b8ce52687715dc82fdfaf23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e44c4741b8ce52687715dc82fdfaf23">&#9670;&nbsp;</a></span>getCurrentHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::getCurrentHealth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the unit's current health. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00037">37</a></p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00021">currentHealth</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00085">applyDamage()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00112">attack()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00047">Cannon::fire()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00022">getEffectiveDefense()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00220">move()</a> и <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00623">unit_map()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_a0e44c4741b8ce52687715dc82fdfaf23_icgraph.svg" width="100%" height="594"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a0062c5fab5677c6b47e1d881b4dcc53c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0062c5fab5677c6b47e1d881b4dcc53c">&#9670;&nbsp;</a></span>getDamage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::getDamage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the unit's damage value. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00047">47</a></p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#a92bfb1430ab13e69d4c703a7fc8bafdb">damage</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00023">damage</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00112">attack()</a>, <a class="el" href="../../da/d6a/infantry_8cpp_source.html#l00012">Infantry::counterAttack()</a> и <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00047">Cannon::fire()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_a0062c5fab5677c6b47e1d881b4dcc53c_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a892f3d3a4dd89188750cdfba57d2e5ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a892f3d3a4dd89188750cdfba57d2e5ae">&#9670;&nbsp;</a></span>getMaxHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::getMaxHealth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the unit's max health. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00042">42</a></p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00022">maxHealth</a>.</p>
+
+</div>
+</div>
+<a id="ae149ab0037a9e0c45e68d93dadfdd83f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae149ab0037a9e0c45e68d93dadfdd83f">&#9670;&nbsp;</a></span>getMaxWill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::getMaxWill </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the unit's max will points. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00062">62</a></p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#a93ea56944962c9007c255a0224f744be">maxWill</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00026">maxWill</a>.</p>
+
+</div>
+</div>
+<a id="aba0432bdab275a064c23bc87b12a5d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba0432bdab275a064c23bc87b12a5d66">&#9670;&nbsp;</a></span>getMoveDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::getMoveDistance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the unit's move distance. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00027">27</a></p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#aa53580e05154faa2108a772c694399bb">moveDistance</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00019">moveDistance</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00189">Cannon::_findEmptyFieldInRange()</a>, <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00037">getPlayerCommands()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00220">move()</a> и <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00627">tryAIMove()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_aba0432bdab275a064c23bc87b12a5d66_icgraph.svg" width="100%" height="435"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a0497994e384db5c080ec78e9b645fa40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0497994e384db5c080ec78e9b645fa40">&#9670;&nbsp;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Unit::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the unit's name. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00022">22</a></p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#a03a2344fa6977a2ce44b320e44bc9caa">name</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00018">name</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00085">applyDamage()</a>, <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00025">BurnedField::applyEffect()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00040">Fortress::applyEffect()</a>, <a class="el" href="../../d3/d97/hospitalfield_8cpp_source.html#l00023">HospitalField::applyEffect()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00112">attack()</a>, <a class="el" href="../../d4/d21/cursespell_8cpp_source.html#l00014">CurseSpell::cast()</a>, <a class="el" href="../../d6/d16/teleportspell_8cpp_source.html#l00021">TeleportSpell::cast()</a>, <a class="el" href="../../da/d6a/infantry_8cpp_source.html#l00012">Infantry::counterAttack()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00058">BombedField::explode()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00047">Cannon::fire()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00220">move()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00041">BombedField::onEnter()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00072">Fortress::onEnter()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00083">Fortress::onLeave()</a>, <a class="el" href="../../db/d26/priest_8cpp_source.html#l00020">Priest::pray()</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00089">restoreHealth()</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00096">restoreWill()</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00078">takeDamage()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00582">tryAIAttack()</a>, <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00623">unit_map()</a>, <a class="el" href="../../d0/d4e/archer_8cpp_source.html#l00012">Archer::updateAttackDistance()</a> и <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00109">useAbility()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_a0497994e384db5c080ec78e9b645fa40_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a72e700f28797f2c1709e03b2b7828814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e700f28797f2c1709e03b2b7828814">&#9670;&nbsp;</a></span>getPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Unit::getPlayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the unit is controlled by the player. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00052">52</a></p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#aaa16bddcdb423ca124b6b44a4d27afea">isPlayerUnit</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00024">isPlayerUnit</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00162">Cannon::_findEnemyInRange()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00226">Cannon::_findFriendlyFortressNearby()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00138">Cannon::_findFriendlyNearby()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00255">AIact()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00040">Fortress::applyEffect()</a>, <a class="el" href="../../d3/d97/hospitalfield_8cpp_source.html#l00023">HospitalField::applyEffect()</a>, <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00024">ManaMineField::applyEffect()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00112">attack()</a>, <a class="el" href="../../d6/d16/teleportspell_8cpp_source.html#l00021">TeleportSpell::cast()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00326">checkVictory()</a>, <a class="el" href="../../d4/ddb/engineer_8cpp_source.html#l00012">Engineer::createFortress()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00113">findRandomEnemyUnitCoords()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00047">Cannon::fire()</a>, <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00037">getPlayerCommands()</a>, <a class="el" href="../../df/d0a/main_8cpp_source.html#l00005">main()</a>, <a class="el" href="../../db/d26/priest_8cpp_source.html#l00020">Priest::pray()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00582">tryAIAttack()</a> и <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00623">unit_map()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_a72e700f28797f2c1709e03b2b7828814_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="afd6bcf5adaadb97b1378512344bd642b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6bcf5adaadb97b1378512344bd642b">&#9670;&nbsp;</a></span>getSymbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual char Unit::getSymbol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the symbol representing the unit (for display). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Character symbol. </dd></dl>
+
+<p>Переопределяется в <a class="el" href="../../de/db7/classPriest.html#a743cec8dc0cf919d42b677a2a3d7ddac">Priest</a>, <a class="el" href="../../da/def/classInfantry.html#aef29ebf2c72cb8f110ca98c1ff2029e6">Infantry</a>, <a class="el" href="../../dc/d9b/classEngineer.html#aa7fb1c7fca9ac7c9c4e44d93bd5e89a1">Engineer</a>, <a class="el" href="../../db/dc3/classCannon.html#af6d2765b54c29a5d5221880722258270">Cannon</a> и <a class="el" href="../../d3/dea/classArcher.html#a00963678481911b6c27d2b2f81754b0f">Archer</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a> строка <a class="el" href="../../d1/da2/unit_8h_source.html#l00103">103</a></p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{ <span class="keywordflow">return</span> <span class="charliteral">&#39;?&#39;</span>; }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00701">displayBoard()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_afd6bcf5adaadb97b1378512344bd642b_icgraph.svg" width="292" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a4d3fd62e52d7c275c5a4b416b03e2998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3fd62e52d7c275c5a4b416b03e2998">&#9670;&nbsp;</a></span>getWill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::getWill </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the unit's current will points. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00057">57</a></p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00025">currentWill</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00255">AIact()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00112">attack()</a>, <a class="el" href="../../d4/d21/cursespell_8cpp_source.html#l00014">CurseSpell::cast()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00047">Cannon::fire()</a>, <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00037">getPlayerCommands()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00220">move()</a>, <a class="el" href="../../db/d26/priest_8cpp_source.html#l00020">Priest::pray()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00582">tryAIAttack()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00204">tryAIEngineerBuildSpecific()</a> и <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00627">tryAIMove()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_a4d3fd62e52d7c275c5a4b416b03e2998_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a9fe18bf6d2917c59c35df6d56c6cbdc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fe18bf6d2917c59c35df6d56c6cbdc2">&#9670;&nbsp;</a></span>restoreHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Unit::restoreHealth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Restores health to the unit. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>Amount of health to restore. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00089">89</a></p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> += amount;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> &gt; <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a>) <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> = <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a>; <span class="comment">// Health cannot exceed max</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; health restored by &quot;</span> &lt;&lt; amount &lt;&lt; <span class="stringliteral">&quot;. Current health: &quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a> &lt;&lt; <span class="stringliteral">&quot;.\n&quot;</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="ttc" id="aclassUnit_html_a0497994e384db5c080ec78e9b645fa40"><div class="ttname"><a href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">Unit::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdoc">Gets the unit's name.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00022">unit.cpp:22</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00021">currentHealth</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00022">getName()</a> и <a class="el" href="../../d1/da2/unit_8h_source.html#l00022">maxHealth</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00040">Fortress::applyEffect()</a> и <a class="el" href="../../d3/d97/hospitalfield_8cpp_source.html#l00023">HospitalField::applyEffect()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_a9fe18bf6d2917c59c35df6d56c6cbdc2_cgraph.svg" width="323" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_a9fe18bf6d2917c59c35df6d56c6cbdc2_icgraph.svg" width="394" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aec8e04d487cf005cd75ae9bdf62525e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec8e04d487cf005cd75ae9bdf62525e6">&#9670;&nbsp;</a></span>restoreWill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Unit::restoreWill </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Restores will points to the unit. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>Amount of will to restore. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00096">96</a></p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a> += amount;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a> &gt; <a class="code" href="../../df/dd9/classUnit.html#a93ea56944962c9007c255a0224f744be">maxWill</a>) <a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a> = <a class="code" href="../../df/dd9/classUnit.html#a93ea56944962c9007c255a0224f744be">maxWill</a>; <span class="comment">// Will cannot exceed max</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; will restored by &quot;</span> &lt;&lt; amount &lt;&lt; <span class="stringliteral">&quot;. Current will: &quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a> &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a93ea56944962c9007c255a0224f744be">maxWill</a> &lt;&lt; <span class="stringliteral">&quot;.\n&quot;</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00025">currentWill</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00022">getName()</a> и <a class="el" href="../../d1/da2/unit_8h_source.html#l00026">maxWill</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_aec8e04d487cf005cd75ae9bdf62525e6_cgraph.svg" width="304" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2564f2e55a6aafded781d5796d3a6629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2564f2e55a6aafded781d5796d3a6629">&#9670;&nbsp;</a></span>setCurrentHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Unit::setCurrentHealth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>health</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the unit's current health. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00068">68</a></p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> = health;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00021">currentHealth</a>.</p>
+
+</div>
+</div>
+<a id="aaec88b40541cf3eed9e3ab4780fe937e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaec88b40541cf3eed9e3ab4780fe937e">&#9670;&nbsp;</a></span>setHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Unit::setHealth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>health</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the unit's health (alias for setCurrentHealth). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00103">103</a></p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> = std::max(0, std::min(health, <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a>));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00021">currentHealth</a> и <a class="el" href="../../d1/da2/unit_8h_source.html#l00022">maxHealth</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00047">Cannon::fire()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_aaec88b40541cf3eed9e3ab4780fe937e_icgraph.svg" width="471" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a207c7fe4b9d30af2446bb8af0a127c22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a207c7fe4b9d30af2446bb8af0a127c22">&#9670;&nbsp;</a></span>setWill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Unit::setWill </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>will</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the unit's will points. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00073">73</a></p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a> = will;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00025">currentWill</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00112">attack()</a>, <a class="el" href="../../d4/d21/cursespell_8cpp_source.html#l00014">CurseSpell::cast()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00047">Cannon::fire()</a>, <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00037">getPlayerCommands()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00220">move()</a>, <a class="el" href="../../db/d26/priest_8cpp_source.html#l00020">Priest::pray()</a> и <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00204">tryAIEngineerBuildSpecific()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_a207c7fe4b9d30af2446bb8af0a127c22_icgraph.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a43a426d4d87aebf07e2737e122bea210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43a426d4d87aebf07e2737e122bea210">&#9670;&nbsp;</a></span>takeDamage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Unit::takeDamage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>damage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td>
+          <td class="paramname"><em>attacker</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies damage to the unit. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">damage</td><td>Amount of damage to apply. </td></tr>
+    <tr><td class="paramname">attacker</td><td>The attacking unit (optional). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00078">78</a></p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    (void)attacker; <span class="comment">// Suppress unused parameter warning</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; takes &quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a92bfb1430ab13e69d4c703a7fc8bafdb">damage</a> &lt;&lt; <span class="stringliteral">&quot; damage.\n&quot;</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> -= <a class="code" href="../../df/dd9/classUnit.html#a92bfb1430ab13e69d4c703a7fc8bafdb">damage</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> &lt; 0) <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> = 0; <span class="comment">// Health cannot go below 0</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; health: &quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a> &lt;&lt; <span class="stringliteral">&quot;.\n&quot;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// Note: Unit removal logic is handled in the applyDamage function, not here.</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d1/da2/unit_8h_source.html#l00021">currentHealth</a>, <a class="el" href="../../d1/da2/unit_8h_source.html#l00023">damage</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00022">getName()</a> и <a class="el" href="../../d1/da2/unit_8h_source.html#l00022">maxHealth</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00085">applyDamage()</a> и <a class="el" href="../../da/d6a/infantry_8cpp_source.html#l00012">Infantry::counterAttack()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_a43a426d4d87aebf07e2737e122bea210_cgraph.svg" width="316" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_a43a426d4d87aebf07e2737e122bea210_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a80e6869b4f62b0ddb793efdf513892ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e6869b4f62b0ddb793efdf513892ee">&#9670;&nbsp;</a></span>useAbility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Unit::useAbility </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="../../d7/d24/classField.html">Field</a> * &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>board</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>targetX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>targetY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Virtual method for special unit abilities (to be overridden by derived classes). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">board</td><td>The game board. </td></tr>
+    <tr><td class="paramname">targetX</td><td>X coordinate of the target. </td></tr>
+    <tr><td class="paramname">targetY</td><td>Y coordinate of the target. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True if the ability was used successfully. </dd></dl>
+
+<p>Переопределяется в <a class="el" href="../../db/dc3/classCannon.html#a1d7f5eea1d4dbc32c152762c97b90f43">Cannon</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a> строка <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00109">109</a></p>
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    (void)board; (void)targetX; (void)targetY; <span class="comment">// Suppress unused parameter warnings</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">// Base units have no special abilities</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; has no special ability.\n&quot;</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Ability not used</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00022">getName()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dd9/classUnit_a80e6869b4f62b0ddb793efdf513892ee_cgraph.svg" width="299" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ad0b4b3d2dcd3cc1b25581180b4282cee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0b4b3d2dcd3cc1b25581180b4282cee">&#9670;&nbsp;</a></span>attackDistance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::attackDistance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a> строка <a class="el" href="../../d1/da2/unit_8h_source.html#l00020">20</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00032">getAttackDistance()</a> и <a class="el" href="../../d0/d4e/archer_8cpp_source.html#l00012">Archer::updateAttackDistance()</a>.</p>
+
+</div>
+</div>
+<a id="ab6784baaf16aa725b0873d95f9e455b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6784baaf16aa725b0873d95f9e455b5">&#9670;&nbsp;</a></span>currentHealth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::currentHealth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a> строка <a class="el" href="../../d1/da2/unit_8h_source.html#l00021">21</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00037">getCurrentHealth()</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00089">restoreHealth()</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00068">setCurrentHealth()</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00103">setHealth()</a> и <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00078">takeDamage()</a>.</p>
+
+</div>
+</div>
+<a id="afcaeef974ce724af04978a375f5a46ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcaeef974ce724af04978a375f5a46ea">&#9670;&nbsp;</a></span>currentWill</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::currentWill</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a> строка <a class="el" href="../../d1/da2/unit_8h_source.html#l00025">25</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00057">getWill()</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00096">restoreWill()</a> и <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00073">setWill()</a>.</p>
+
+</div>
+</div>
+<a id="a92bfb1430ab13e69d4c703a7fc8bafdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92bfb1430ab13e69d4c703a7fc8bafdb">&#9670;&nbsp;</a></span>damage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::damage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a> строка <a class="el" href="../../d1/da2/unit_8h_source.html#l00023">23</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00047">getDamage()</a> и <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00078">takeDamage()</a>.</p>
+
+</div>
+</div>
+<a id="aaa16bddcdb423ca124b6b44a4d27afea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa16bddcdb423ca124b6b44a4d27afea">&#9670;&nbsp;</a></span>isPlayerUnit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Unit::isPlayerUnit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a> строка <a class="el" href="../../d1/da2/unit_8h_source.html#l00024">24</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00052">getPlayer()</a>.</p>
+
+</div>
+</div>
+<a id="a3ae356d6dff417f52a1ccf7133807314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae356d6dff417f52a1ccf7133807314">&#9670;&nbsp;</a></span>maxHealth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::maxHealth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a> строка <a class="el" href="../../d1/da2/unit_8h_source.html#l00022">22</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00042">getMaxHealth()</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00089">restoreHealth()</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00103">setHealth()</a> и <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00078">takeDamage()</a>.</p>
+
+</div>
+</div>
+<a id="a93ea56944962c9007c255a0224f744be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ea56944962c9007c255a0224f744be">&#9670;&nbsp;</a></span>maxWill</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::maxWill</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a> строка <a class="el" href="../../d1/da2/unit_8h_source.html#l00026">26</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00062">getMaxWill()</a> и <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00096">restoreWill()</a>.</p>
+
+</div>
+</div>
+<a id="aa53580e05154faa2108a772c694399bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa53580e05154faa2108a772c694399bb">&#9670;&nbsp;</a></span>moveDistance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::moveDistance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a> строка <a class="el" href="../../d1/da2/unit_8h_source.html#l00019">19</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00027">getMoveDistance()</a>.</p>
+
+</div>
+</div>
+<a id="a03a2344fa6977a2ce44b320e44bc9caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03a2344fa6977a2ce44b320e44bc9caa">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Unit::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a> строка <a class="el" href="../../d1/da2/unit_8h_source.html#l00018">18</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00022">getName()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="../../d1/da2/unit_8h_source.html">unit.h</a></li>
+<li><a class="el" href="../../d7/d49/unit_8cpp_source.html">unit.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../df/dd9/classUnit.html">Unit</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="AIact" name="AIact">
+<area shape="rect" id="node1" title="Performs the main AI logic for the AI player&#39;s turn." alt="" coords="287,5,341,32"/>
+<area shape="rect" id="node2" href="$d0/d77/AI_8cpp.html#ad90f841d71e5bae7186823d947a92551" title="Handles AI commands during its turn." alt="" coords="108,5,239,32"/>
+<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>

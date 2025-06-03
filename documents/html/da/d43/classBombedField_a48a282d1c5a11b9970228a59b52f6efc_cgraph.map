@@ -1,0 +1,17 @@
+<map id="BombedField::applyEffect" name="BombedField::applyEffect">
+<area shape="rect" id="node1" title="Applies the bombed field&#39;s effect (ticks timer, may explode)." alt="" coords="5,456,193,482"/>
+<area shape="rect" id="node2" href="$da/d43/classBombedField.html#a090802fffedf5da9d68580b172a937e1" title="Triggers the explosion effect." alt="" coords="263,354,430,381"/>
+<area shape="rect" id="node13" href="$d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3" title="Get the X coordinate of this field." alt="" coords="511,430,602,457"/>
+<area shape="rect" id="node14" href="$d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e" title="Get the Y coordinate of this field." alt="" coords="511,481,602,508"/>
+<area shape="rect" id="node15" href="$da/d43/classBombedField.html#af5a1d14775633f750b51ebd59d45e04f" title="Checks if the bomb should explode." alt="" coords="241,532,452,558"/>
+<area shape="rect" id="node3" href="$d3/d36/functions_8cpp.html#a43f0126154376c48e09ec7497e5af839" title=" " alt="" coords="500,228,613,254"/>
+<area shape="rect" id="node5" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="905,278,1022,305"/>
+<area shape="rect" id="node7" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="909,25,1018,52"/>
+<area shape="rect" id="node8" href="$d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8" title="Set the unit on this field." alt="" coords="695,329,803,356"/>
+<area shape="rect" id="node12" href="$d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521" title="Constructs a Field at the given coordinates and type." alt="" coords="511,177,603,204"/>
+<area shape="rect" id="node4" href="$df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23" title="Gets the unit&#39;s current health." alt="" coords="664,126,833,153"/>
+<area shape="rect" id="node6" href="$d8/d05/classFortress.html#a910fc391be59542b1ead1c96e997cd8a" title="Gets the current strength of the fortress." alt="" coords="884,152,1043,178"/>
+<area shape="rect" id="node9" href="$df/dd9/classUnit.html#a43a426d4d87aebf07e2737e122bea210" title="Applies damage to the unit." alt="" coords="679,278,819,305"/>
+<area shape="rect" id="node10" href="$d3/d36/functions_8cpp.html#ae92c15badcbeac5edc544eec40902bac" title=" " alt="" coords="661,76,836,102"/>
+<area shape="rect" id="node11" href="$d8/d05/classFortress.html#a921a0af7f93cd89a395ab8f053382a2e" title="Sets the strength of the fortress." alt="" coords="885,76,1042,102"/>
+</map>

@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameLab2sem: Класс ManaMineField</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameLab2sem
+   </div>
+   <div id="projectbrief">A turn-based strategy game with AI and CLI interface.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/d5c/classManaMineField.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="../../db/d23/classManaMineField-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс ManaMineField</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a> that generates mana for the owner each turn (Mana Mine <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a>).  
+ <a href="../../db/d5c/classManaMineField.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../de/df6/manaminefield_8h_source.html">manaminefield.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:ManaMineField:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/dac/classManaMineField__inherit__graph.svg" width="174" height="507"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Граф связей класса ManaMineField:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/d23/classManaMineField__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a88d0b1b172bd7bfb541822b7ab953691"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5c/classManaMineField.html#a88d0b1b172bd7bfb541822b7ab953691">ManaMineField</a> (int fieldX, int fieldY, <a class="el" href="../../df/dd9/classUnit.html">Unit</a> *initialUnit=nullptr)</td></tr>
+<tr class="memdesc:a88d0b1b172bd7bfb541822b7ab953691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="../../db/d5c/classManaMineField.html" title="Field that generates mana for the owner each turn (Mana Mine Field).">ManaMineField</a> at the given coordinates.  <a href="../../db/d5c/classManaMineField.html#a88d0b1b172bd7bfb541822b7ab953691">Подробнее...</a><br /></td></tr>
+<tr class="separator:a88d0b1b172bd7bfb541822b7ab953691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cc0707f4eb048c90b44ce62049aebde"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5c/classManaMineField.html#a9cc0707f4eb048c90b44ce62049aebde">~ManaMineField</a> ()=default</td></tr>
+<tr class="separator:a9cc0707f4eb048c90b44ce62049aebde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58740f41f2ae6d0fe66cbe83116bd755"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5c/classManaMineField.html#a58740f41f2ae6d0fe66cbe83116bd755">applyEffect</a> (<a class="el" href="../../d2/d4b/classPlayer.html">Player</a> *owner, std::vector&lt; std::vector&lt; <a class="el" href="../../d7/d24/classField.html">Field</a> * &gt;&gt; &amp;board) override</td></tr>
+<tr class="memdesc:a58740f41f2ae6d0fe66cbe83116bd755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the mana mine field's effect (generates mana).  <a href="../../db/d5c/classManaMineField.html#a58740f41f2ae6d0fe66cbe83116bd755">Подробнее...</a><br /></td></tr>
+<tr class="separator:a58740f41f2ae6d0fe66cbe83116bd755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ab0221bc04d653ec9288b2e00c8d34"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5c/classManaMineField.html#a22ab0221bc04d653ec9288b2e00c8d34">canEnter</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *<a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>) const override</td></tr>
+<tr class="memdesc:a22ab0221bc04d653ec9288b2e00c8d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a unit can enter the mana mine field.  <a href="../../db/d5c/classManaMineField.html#a22ab0221bc04d653ec9288b2e00c8d34">Подробнее...</a><br /></td></tr>
+<tr class="separator:a22ab0221bc04d653ec9288b2e00c8d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ebe7f7eefc6123c2e11e59af6a4972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5c/classManaMineField.html#a23ebe7f7eefc6123c2e11e59af6a4972">generateMana</a> (<a class="el" href="../../d2/d4b/classPlayer.html">Player</a> *player)</td></tr>
+<tr class="memdesc:a23ebe7f7eefc6123c2e11e59af6a4972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates mana for the given player.  <a href="../../db/d5c/classManaMineField.html#a23ebe7f7eefc6123c2e11e59af6a4972">Подробнее...</a><br /></td></tr>
+<tr class="separator:a23ebe7f7eefc6123c2e11e59af6a4972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca33a1fb8aa80deeeb5123aa738fd40c"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5c/classManaMineField.html#aca33a1fb8aa80deeeb5123aa738fd40c">getSymbol</a> () const override</td></tr>
+<tr class="memdesc:aca33a1fb8aa80deeeb5123aa738fd40c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the symbol representing the mana mine field (for display).  <a href="../../db/d5c/classManaMineField.html#aca33a1fb8aa80deeeb5123aa738fd40c">Подробнее...</a><br /></td></tr>
+<tr class="separator:aca33a1fb8aa80deeeb5123aa738fd40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classField"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classField')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../d7/d24/classField.html">Field</a></td></tr>
+<tr class="memitem:ad8556c0f47d0dc949f11480c4c6e4521 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Field</a> (int fieldX, int fieldY, const std::string &amp;fieldType=&quot;plain&quot;)</td></tr>
+<tr class="memdesc:ad8556c0f47d0dc949f11480c4c6e4521 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a> at the given coordinates and type.  <a href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad8556c0f47d0dc949f11480c4c6e4521 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d6e6d09b8f8e46de62b40119d62c60 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a45d6e6d09b8f8e46de62b40119d62c60">~Field</a> ()</td></tr>
+<tr class="memdesc:a45d6e6d09b8f8e46de62b40119d62c60 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a>.  <a href="../../d7/d24/classField.html#a45d6e6d09b8f8e46de62b40119d62c60">Подробнее...</a><br /></td></tr>
+<tr class="separator:a45d6e6d09b8f8e46de62b40119d62c60 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726868d72ad77d531e0dcf0969b81091 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">getUnit</a> () const</td></tr>
+<tr class="memdesc:a726868d72ad77d531e0dcf0969b81091 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the unit on this field.  <a href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">Подробнее...</a><br /></td></tr>
+<tr class="separator:a726868d72ad77d531e0dcf0969b81091 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac940692dbfe1437aba7efc3a8903ea8 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">setUnit</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *u)</td></tr>
+<tr class="memdesc:aac940692dbfe1437aba7efc3a8903ea8 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the unit on this field.  <a href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">Подробнее...</a><br /></td></tr>
+<tr class="separator:aac940692dbfe1437aba7efc3a8903ea8 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b70c294dd34070bcae38b5b518f6d3 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a> () const</td></tr>
+<tr class="memdesc:af4b70c294dd34070bcae38b5b518f6d3 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the X coordinate of this field.  <a href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">Подробнее...</a><br /></td></tr>
+<tr class="separator:af4b70c294dd34070bcae38b5b518f6d3 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86673ee820c9cfed15b603c9dae6853e inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a> () const</td></tr>
+<tr class="memdesc:a86673ee820c9cfed15b603c9dae6853e inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Y coordinate of this field.  <a href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a86673ee820c9cfed15b603c9dae6853e inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9a69868e0480528ccaf9dd309862ef inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a8d9a69868e0480528ccaf9dd309862ef">getType</a> () const</td></tr>
+<tr class="memdesc:a8d9a69868e0480528ccaf9dd309862ef inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of this field.  <a href="../../d7/d24/classField.html#a8d9a69868e0480528ccaf9dd309862ef">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8d9a69868e0480528ccaf9dd309862ef inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718edf661e92a18a81c1a434b8e9ba40 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a718edf661e92a18a81c1a434b8e9ba40">getDefenseBonus</a> () const</td></tr>
+<tr class="memdesc:a718edf661e92a18a81c1a434b8e9ba40 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the defense bonus provided by this field.  <a href="../../d7/d24/classField.html#a718edf661e92a18a81c1a434b8e9ba40">Подробнее...</a><br /></td></tr>
+<tr class="separator:a718edf661e92a18a81c1a434b8e9ba40 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7bbcc952313d63e39ac2915ef92bbde inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#af7bbcc952313d63e39ac2915ef92bbde">onEnter</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *<a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>)</td></tr>
+<tr class="memdesc:af7bbcc952313d63e39ac2915ef92bbde inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a unit entering this field.  <a href="../../d7/d24/classField.html#af7bbcc952313d63e39ac2915ef92bbde">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7bbcc952313d63e39ac2915ef92bbde inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cbfac5b4571fde18c48884bc7059b8 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#af7cbfac5b4571fde18c48884bc7059b8">onLeave</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *<a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>)</td></tr>
+<tr class="memdesc:af7cbfac5b4571fde18c48884bc7059b8 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a unit leaving this field.  <a href="../../d7/d24/classField.html#af7cbfac5b4571fde18c48884bc7059b8">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7cbfac5b4571fde18c48884bc7059b8 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:aba3c65e642fc431a6300db59f669840e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5c/classManaMineField.html#aba3c65e642fc431a6300db59f669840e">manaPerTurn</a></td></tr>
+<tr class="separator:aba3c65e642fc431a6300db59f669840e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_attribs_classField"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classField')"><img src="../../closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="../../d7/d24/classField.html">Field</a></td></tr>
+<tr class="memitem:a363d83248e8f66bf865e514432072afb inherit pro_attribs_classField"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a></td></tr>
+<tr class="memdesc:a363d83248e8f66bf865e514432072afb inherit pro_attribs_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the unit on this field (if any)  <a href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a363d83248e8f66bf865e514432072afb inherit pro_attribs_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60bf7589f33fee524f8cdc980c51a979 inherit pro_attribs_classField"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a60bf7589f33fee524f8cdc980c51a979">x</a></td></tr>
+<tr class="separator:a60bf7589f33fee524f8cdc980c51a979 inherit pro_attribs_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038186563fbee686e206425cc39946d9 inherit pro_attribs_classField"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a038186563fbee686e206425cc39946d9">y</a></td></tr>
+<tr class="memdesc:a038186563fbee686e206425cc39946d9 inherit pro_attribs_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinates of the field.  <a href="../../d7/d24/classField.html#a038186563fbee686e206425cc39946d9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a038186563fbee686e206425cc39946d9 inherit pro_attribs_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842a105b475478a01fefe89821f19a9a inherit pro_attribs_classField"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a842a105b475478a01fefe89821f19a9a">type</a></td></tr>
+<tr class="memdesc:a842a105b475478a01fefe89821f19a9a inherit pro_attribs_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the field (e.g., "plain", "fortress", "hill")  <a href="../../d7/d24/classField.html#a842a105b475478a01fefe89821f19a9a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a842a105b475478a01fefe89821f19a9a inherit pro_attribs_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p><a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a> that generates mana for the owner each turn (Mana Mine <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a>). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df6/manaminefield_8h_source.html">manaminefield.h</a> строка <a class="el" href="../../de/df6/manaminefield_8h_source.html#l00016">16</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a88d0b1b172bd7bfb541822b7ab953691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d0b1b172bd7bfb541822b7ab953691">&#9670;&nbsp;</a></span>ManaMineField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ManaMineField::ManaMineField </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fieldX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fieldY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td>
+          <td class="paramname"><em>initialUnit</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="../../db/d5c/classManaMineField.html" title="Field that generates mana for the owner each turn (Mana Mine Field).">ManaMineField</a> at the given coordinates. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fieldX</td><td>X coordinate. </td></tr>
+    <tr><td class="paramname">fieldY</td><td>Y coordinate. </td></tr>
+    <tr><td class="paramname">initialUnit</td><td>Pointer to the initial unit on the field (default nullptr). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html">manaminefield.cpp</a> строка <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00009">9</a></p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    : <a class="code" href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Field</a>(fieldX, fieldY, <span class="stringliteral">&quot;mana_mine&quot;</span>), <a class="code" href="../../db/d5c/classManaMineField.html#aba3c65e642fc431a6300db59f669840e">manaPerTurn</a>(2) <span class="comment">// Example mana per turn</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">// Set the initial unit if there is one</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">setUnit</a>(initialUnit);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="ttc" id="aclassField_html_aac940692dbfe1437aba7efc3a8903ea8"><div class="ttname"><a href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">Field::setUnit</a></div><div class="ttdeci">void setUnit(Unit *u)</div><div class="ttdoc">Set the unit on this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00025">field.cpp:25</a></div></div>
+<div class="ttc" id="aclassField_html_ad8556c0f47d0dc949f11480c4c6e4521"><div class="ttname"><a href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Field::Field</a></div><div class="ttdeci">Field(int fieldX, int fieldY, const std::string &amp;fieldType=&quot;plain&quot;)</div><div class="ttdoc">Constructs a Field at the given coordinates and type.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00008">field.cpp:8</a></div></div>
+<div class="ttc" id="aclassManaMineField_html_aba3c65e642fc431a6300db59f669840e"><div class="ttname"><a href="../../db/d5c/classManaMineField.html#aba3c65e642fc431a6300db59f669840e">ManaMineField::manaPerTurn</a></div><div class="ttdeci">int manaPerTurn</div><div class="ttdef"><b>Definition:</b> <a href="../../de/df6/manaminefield_8h_source.html#l00019">manaminefield.h:19</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00025">Field::setUnit()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d5c/classManaMineField_a88d0b1b172bd7bfb541822b7ab953691_cgraph.svg" width="395" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9cc0707f4eb048c90b44ce62049aebde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cc0707f4eb048c90b44ce62049aebde">&#9670;&nbsp;</a></span>~ManaMineField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ManaMineField::~ManaMineField </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a58740f41f2ae6d0fe66cbe83116bd755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58740f41f2ae6d0fe66cbe83116bd755">&#9670;&nbsp;</a></span>applyEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ManaMineField::applyEffect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d4b/classPlayer.html">Player</a> *&#160;</td>
+          <td class="paramname"><em>owner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="../../d7/d24/classField.html">Field</a> * &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>board</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies the mana mine field's effect (generates mana). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">owner</td><td>The player whose turn it is. </td></tr>
+    <tr><td class="paramname">board</td><td>The game board. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Переопределяет метод предка <a class="el" href="../../d7/d24/classField.html#a454ca5b8269657dc01cd611eceb3d397">Field</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html">manaminefield.cpp</a> строка <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00024">24</a></p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// Generate mana for the owner of the mana mine (the player who controls the unit on it, or the player who built it)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// Assuming the mana is generated for the player whose turn it is, if they control the unit on the mine</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (owner &amp;&amp; <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a> &amp;&amp; <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>-&gt;<a class="code" href="../../df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814">getPlayer</a>() == !owner-&gt;<a class="code" href="../../d2/d4b/classPlayer.html#a0cb5b17db27a2af6492e270aab8f7870">getAI</a>()) <span class="comment">// Assuming human player is !getAI() for human player control</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Mana mine at (&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>() &lt;&lt; <span class="stringliteral">&quot;) generates &quot;</span> &lt;&lt; <a class="code" href="../../db/d5c/classManaMineField.html#aba3c65e642fc431a6300db59f669840e">manaPerTurn</a> &lt;&lt; <span class="stringliteral">&quot; mana for &quot;</span> &lt;&lt; owner-&gt;<a class="code" href="../../d2/d4b/classPlayer.html#a73e4ff2d70e62ca7e3be1d9b4ad9de85">getName</a>() &lt;&lt; <span class="stringliteral">&quot;.\n&quot;</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        owner-&gt;<a class="code" href="../../d2/d4b/classPlayer.html#addff1c790965ad1b6ca5745a0fc849e0">addMana</a>(<a class="code" href="../../db/d5c/classManaMineField.html#aba3c65e642fc431a6300db59f669840e">manaPerTurn</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// Note: Mana mines don&#39;t have a duration based on the header,</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// so they persist unless replaced by another field.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="ttc" id="aclassField_html_a363d83248e8f66bf865e514432072afb"><div class="ttname"><a href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">Field::unit</a></div><div class="ttdeci">Unit * unit</div><div class="ttdoc">Pointer to the unit on this field (if any)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/field_8h_source.html#l00018">field.h:18</a></div></div>
+<div class="ttc" id="aclassField_html_a86673ee820c9cfed15b603c9dae6853e"><div class="ttname"><a href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">Field::getY</a></div><div class="ttdeci">int getY() const</div><div class="ttdoc">Get the Y coordinate of this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00035">field.cpp:35</a></div></div>
+<div class="ttc" id="aclassField_html_af4b70c294dd34070bcae38b5b518f6d3"><div class="ttname"><a href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">Field::getX</a></div><div class="ttdeci">int getX() const</div><div class="ttdoc">Get the X coordinate of this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00030">field.cpp:30</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a0cb5b17db27a2af6492e270aab8f7870"><div class="ttname"><a href="../../d2/d4b/classPlayer.html#a0cb5b17db27a2af6492e270aab8f7870">Player::getAI</a></div><div class="ttdeci">bool getAI() const</div><div class="ttdoc">Returns true if the player is AI-controlled.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d80/player_8cpp_source.html#l00033">player.cpp:33</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a73e4ff2d70e62ca7e3be1d9b4ad9de85"><div class="ttname"><a href="../../d2/d4b/classPlayer.html#a73e4ff2d70e62ca7e3be1d9b4ad9de85">Player::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdoc">Gets the player's name.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d80/player_8cpp_source.html#l00018">player.cpp:18</a></div></div>
+<div class="ttc" id="aclassPlayer_html_addff1c790965ad1b6ca5745a0fc849e0"><div class="ttname"><a href="../../d2/d4b/classPlayer.html#addff1c790965ad1b6ca5745a0fc849e0">Player::addMana</a></div><div class="ttdeci">void addMana(int amount)</div><div class="ttdoc">Adds mana to the player.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d80/player_8cpp_source.html#l00073">player.cpp:73</a></div></div>
+<div class="ttc" id="aclassUnit_html_a72e700f28797f2c1709e03b2b7828814"><div class="ttname"><a href="../../df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814">Unit::getPlayer</a></div><div class="ttdeci">bool getPlayer() const</div><div class="ttdoc">Returns true if the unit is controlled by the player.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00052">unit.cpp:52</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../db/d80/player_8cpp_source.html#l00073">Player::addMana()</a>, <a class="el" href="../../db/d80/player_8cpp_source.html#l00033">Player::getAI()</a>, <a class="el" href="../../db/d80/player_8cpp_source.html#l00018">Player::getName()</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00052">Unit::getPlayer()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00030">Field::getX()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00035">Field::getY()</a>, <a class="el" href="../../de/df6/manaminefield_8h_source.html#l00019">manaPerTurn</a> и <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">Field::unit</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d5c/classManaMineField_a58740f41f2ae6d0fe66cbe83116bd755_cgraph.svg" width="392" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a22ab0221bc04d653ec9288b2e00c8d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ab0221bc04d653ec9288b2e00c8d34">&#9670;&nbsp;</a></span>canEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ManaMineField::canEnter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td>
+          <td class="paramname"><em>unit</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if a unit can enter the mana mine field. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>The unit to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True if the unit can enter, false otherwise. </dd></dl>
+
+<p>Переопределяет метод предка <a class="el" href="../../d7/d24/classField.html#aca250c9a0c031e21c7e7c609b3b3dec3">Field</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html">manaminefield.cpp</a> строка <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00038">38</a></p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// Units can enter mana mine fields</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> this-&gt;unit == <span class="keyword">nullptr</span>; <span class="comment">// Can enter if empty</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">Field::unit</a>.</p>
+
+</div>
+</div>
+<a id="a23ebe7f7eefc6123c2e11e59af6a4972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ebe7f7eefc6123c2e11e59af6a4972">&#9670;&nbsp;</a></span>generateMana()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ManaMineField::generateMana </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d4b/classPlayer.html">Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates mana for the given player. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>The player to receive mana. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html">manaminefield.cpp</a> строка <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00045">45</a></p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                               {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (player) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;         std::cout &lt;&lt; <span class="stringliteral">&quot;Mana mine at (&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>() &lt;&lt; <span class="stringliteral">&quot;) generates &quot;</span> &lt;&lt; <a class="code" href="../../db/d5c/classManaMineField.html#aba3c65e642fc431a6300db59f669840e">manaPerTurn</a> &lt;&lt; <span class="stringliteral">&quot; mana for &quot;</span> &lt;&lt; player-&gt;<a class="code" href="../../d2/d4b/classPlayer.html#a73e4ff2d70e62ca7e3be1d9b4ad9de85">getName</a>() &lt;&lt; <span class="stringliteral">&quot;.\n&quot;</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;         player-&gt;<a class="code" href="../../d2/d4b/classPlayer.html#addff1c790965ad1b6ca5745a0fc849e0">addMana</a>(<a class="code" href="../../db/d5c/classManaMineField.html#aba3c65e642fc431a6300db59f669840e">manaPerTurn</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../db/d80/player_8cpp_source.html#l00073">Player::addMana()</a>, <a class="el" href="../../db/d80/player_8cpp_source.html#l00018">Player::getName()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00030">Field::getX()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00035">Field::getY()</a> и <a class="el" href="../../de/df6/manaminefield_8h_source.html#l00019">manaPerTurn</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../df/d0a/main_8cpp_source.html#l00005">main()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d5c/classManaMineField_a23ebe7f7eefc6123c2e11e59af6a4972_cgraph.svg" width="412" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d5c/classManaMineField_a23ebe7f7eefc6123c2e11e59af6a4972_icgraph.svg" width="336" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aca33a1fb8aa80deeeb5123aa738fd40c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca33a1fb8aa80deeeb5123aa738fd40c">&#9670;&nbsp;</a></span>getSymbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ManaMineField::getSymbol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the symbol representing the mana mine field (for display). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>'M' character. </dd></dl>
+
+<p>Переопределяет метод предка <a class="el" href="../../d7/d24/classField.html#a03e73113267195f2680dd028f8950ae5">Field</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df6/manaminefield_8h_source.html">manaminefield.h</a> строка <a class="el" href="../../de/df6/manaminefield_8h_source.html#l00055">55</a></p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{ <span class="keywordflow">return</span> <span class="charliteral">&#39;M&#39;</span>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aba3c65e642fc431a6300db59f669840e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba3c65e642fc431a6300db59f669840e">&#9670;&nbsp;</a></span>manaPerTurn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ManaMineField::manaPerTurn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/df6/manaminefield_8h_source.html">manaminefield.h</a> строка <a class="el" href="../../de/df6/manaminefield_8h_source.html#l00019">19</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00024">applyEffect()</a> и <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00045">generateMana()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="../../de/df6/manaminefield_8h_source.html">manaminefield.h</a></li>
+<li><a class="el" href="../../db/d7c/manaminefield_8cpp_source.html">manaminefield.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../db/d5c/classManaMineField.html">ManaMineField</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

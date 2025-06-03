@@ -1,0 +1,13 @@
+<map id="Cannon::fire" name="Cannon::fire">
+<area shape="rect" id="node1" title="Fires at the specified target coordinates." alt="" coords="5,233,105,260"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html#a8856896cc73b342fec2cd3e8079e8e6a" title="Gets the unit&#39;s attack distance." alt="" coords="153,5,331,32"/>
+<area shape="rect" id="node3" href="$df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23" title="Gets the unit&#39;s current health." alt="" coords="157,56,327,83"/>
+<area shape="rect" id="node4" href="$df/dd9/classUnit.html#a0062c5fab5677c6b47e1d881b4dcc53c" title="Gets the unit&#39;s damage value." alt="" coords="175,107,309,133"/>
+<area shape="rect" id="node5" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="183,157,301,184"/>
+<area shape="rect" id="node6" href="$df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814" title="Returns true if the unit is controlled by the player." alt="" coords="183,208,301,235"/>
+<area shape="rect" id="node7" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="187,259,297,285"/>
+<area shape="rect" id="node8" href="$df/dd9/classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998" title="Gets the unit&#39;s current will points." alt="" coords="191,309,293,336"/>
+<area shape="rect" id="node9" href="$df/dd9/classUnit.html#aaec88b40541cf3eed9e3ab4780fe937e" title="Sets the unit&#39;s health (alias for setCurrentHealth)." alt="" coords="182,360,302,387"/>
+<area shape="rect" id="node10" href="$d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8" title="Set the unit on this field." alt="" coords="188,411,296,437"/>
+<area shape="rect" id="node11" href="$df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22" title="Sets the unit&#39;s will points." alt="" coords="191,461,293,488"/>
+</map>

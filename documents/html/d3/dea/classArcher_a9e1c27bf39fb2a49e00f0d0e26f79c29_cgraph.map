@@ -1,0 +1,4 @@
+<map id="Archer::updateAttackDistance" name="Archer::updateAttackDistance">
+<area shape="rect" id="node1" title="Updates the attack distance based on whether the archer is in a fortress." alt="" coords="5,5,221,32"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="269,5,387,32"/>
+</map>

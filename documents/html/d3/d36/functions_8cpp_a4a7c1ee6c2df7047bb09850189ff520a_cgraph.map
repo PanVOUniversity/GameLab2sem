@@ -1,0 +1,6 @@
+<map id="checkVictory" name="checkVictory">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,112,83"/>
+<area shape="rect" id="node2" href="$d2/d4b/classPlayer.html#aba42f377d067adc41cbc43e679b6349c" title="Gets the player&#39;s current mana." alt="" coords="169,5,297,32"/>
+<area shape="rect" id="node3" href="$d8/d05/classFortress.html#ad7937ba8e96ff5251972400eff0b73b5" title="Gets the owner of the fortress." alt="" coords="160,56,305,83"/>
+<area shape="rect" id="node4" href="$df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814" title="Returns true if the unit is controlled by the player." alt="" coords="173,107,292,133"/>
+</map>
