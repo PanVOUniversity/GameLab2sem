@@ -1,0 +1,5 @@
+<map id="Cannon::_findFriendlyFortressNearby" name="Cannon::_findFriendlyFortressNearby">
+<area shape="rect" id="node1" title=" " alt="" coords="5,23,220,65"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814" title="Returns true if the unit is controlled by the player." alt="" coords="268,5,387,32"/>
+<area shape="rect" id="node3" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="273,56,382,83"/>
+</map>

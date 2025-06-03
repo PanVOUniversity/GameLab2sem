@@ -1,0 +1,9 @@
+<map id="Player::setMana" name="Player::setMana">
+<area shape="rect" id="node1" title="Sets the player&#39;s mana." alt="" coords="631,55,757,82"/>
+<area shape="rect" id="node2" href="$d0/d77/AI_8cpp.html#a977b9434bdf2f1cb57f540e4098d1a57" title="Performs the main AI logic for the AI player&#39;s turn." alt="" coords="287,30,341,56"/>
+<area shape="rect" id="node5" href="$d0/d77/AI_8cpp.html#aef67bf16c2c1822aa23d45df5472b29a" title=" " alt="" coords="404,30,568,56"/>
+<area shape="rect" id="node6" href="$d0/d77/AI_8cpp.html#af5788354c87611552d0b0e2ef36ab38f" title=" " alt="" coords="399,80,573,107"/>
+<area shape="rect" id="node7" href="$d0/d77/AI_8cpp.html#aa85b51ecb98c4e8ed799b67e297c30f9" title=" " alt="" coords="389,131,583,158"/>
+<area shape="rect" id="node3" href="$d0/d77/AI_8cpp.html#ad90f841d71e5bae7186823d947a92551" title="Handles AI commands during its turn." alt="" coords="108,30,239,56"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,30,60,56"/>
+</map>

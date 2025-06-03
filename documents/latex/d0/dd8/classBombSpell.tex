@@ -1,0 +1,156 @@
+\hypertarget{classBombSpell}{}\doxysection{Класс Bomb\+Spell}
+\label{classBombSpell}\index{BombSpell@{BombSpell}}
+
+
+\mbox{\hyperlink{classSpell}{Spell}} that creates a bombed field (trap) at a target location (Bomb).  
+
+
+
+
+{\ttfamily \#include $<$bombspell.\+h$>$}
+
+
+
+Граф наследования\+:Bomb\+Spell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{dc/dee/classBombSpell__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Bomb\+Spell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{d3/d01/classBombSpell__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBombSpell_a9f232b0b928a57598de407b2be4df264}{Bomb\+Spell}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classBombSpell}{Bomb\+Spell}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classBombSpell_a54b4c778b81d09a70d883da5b422a745}{$\sim$\+Bomb\+Spell}} ()=default
+\item 
+bool \mbox{\hyperlink{classBombSpell_adb3e35267bfb6164cc47d5c67746093c}{cast}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y) override
+\begin{DoxyCompactList}\small\item\em Casts the Bomb spell at the given coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+\mbox{\hyperlink{classSpell}{Spell}} that creates a bombed field (trap) at a target location (Bomb). 
+
+См. определение в файле bombspell.\+h строка 13
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classBombSpell_a9f232b0b928a57598de407b2be4df264}\label{classBombSpell_a9f232b0b928a57598de407b2be4df264}} 
+\index{BombSpell@{BombSpell}!BombSpell@{BombSpell}}
+\index{BombSpell@{BombSpell}!BombSpell@{BombSpell}}
+\doxysubsubsection{\texorpdfstring{BombSpell()}{BombSpell()}}
+{\footnotesize\ttfamily Bomb\+Spell\+::\+Bomb\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classBombSpell}{Bomb\+Spell}}. 
+
+
+
+См. определение в файле bombspell.\+cpp строка 9
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10     : \mbox{\hyperlink{classSpell_a198d0b0f123fcd8cd0b2d5c7efd98b5d}{Spell}}(\textcolor{stringliteral}{"{}Bomb Spell"{}}, 4) \textcolor{comment}{// Name, Mana Cost}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBombSpell_a54b4c778b81d09a70d883da5b422a745}\label{classBombSpell_a54b4c778b81d09a70d883da5b422a745}} 
+\index{BombSpell@{BombSpell}!````~BombSpell@{$\sim$BombSpell}}
+\index{````~BombSpell@{$\sim$BombSpell}!BombSpell@{BombSpell}}
+\doxysubsubsection{\texorpdfstring{$\sim$BombSpell()}{~BombSpell()}}
+{\footnotesize\ttfamily virtual Bomb\+Spell\+::$\sim$\+Bomb\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classBombSpell_adb3e35267bfb6164cc47d5c67746093c}\label{classBombSpell_adb3e35267bfb6164cc47d5c67746093c}} 
+\index{BombSpell@{BombSpell}!cast@{cast}}
+\index{cast@{cast}!BombSpell@{BombSpell}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily bool Bomb\+Spell\+::cast (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Casts the Bomb spell at the given coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+{\em x} & X coordinate of the target. \\
+\hline
+{\em y} & Y coordinate of the target. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the spell was cast successfully, false otherwise. 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classSpell_adbff32f05577154a0db4606282d0151c}{Spell}}.
+
+
+
+См. определение в файле bombspell.\+cpp строка 22
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24     \textcolor{comment}{// Check if coordinates are within board bounds}}
+\DoxyCodeLine{25     \textcolor{keywordflow}{if} (x < 0 || \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(x) >= board.size() || y < 0 || \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(y) >= board[0].size())}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         std::cout << \textcolor{stringliteral}{"{}Invalid target coordinates for Bomb Spell.\(\backslash\)n"{}};}
+\DoxyCodeLine{28         \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Invalid coordinates}}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \mbox{\hyperlink{classField}{Field}}* targetField = board[x][y];}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{comment}{// Bomb spell replaces the target field with a BombedField}}
+\DoxyCodeLine{34     \textcolor{comment}{// Need to handle the unit on the field before replacing it}}
+\DoxyCodeLine{35     \mbox{\hyperlink{classUnit}{Unit}}* unitOnField = targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{comment}{// Create a new BombedField at the target coordinates}}
+\DoxyCodeLine{38     \textcolor{comment}{// The BombedField constructor will handle setting the initial unit if it exists}}
+\DoxyCodeLine{39     \mbox{\hyperlink{classBombedField}{BombedField}}* bombedField = \textcolor{keyword}{new} \mbox{\hyperlink{classBombedField}{BombedField}}(x, y, unitOnField);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{comment}{// Replace the old field with the new BombedField}}
+\DoxyCodeLine{42     \textcolor{comment}{// Ensure to delete the old field object to prevent memory leaks}}
+\DoxyCodeLine{43     \textcolor{keyword}{delete} targetField;}
+\DoxyCodeLine{44     board[x][y] = bombedField;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     std::cout << \textcolor{stringliteral}{"{}Bomb Spell cast at ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}). The field is now unstable!\(\backslash\)n"{}};}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \textcolor{comment}{// Spell cast successfully}}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Field\+::get\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{d0/dd8/classBombSpell_adb3e35267bfb6164cc47d5c67746093c_cgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bombspell_8h}{bombspell.\+h}}\item 
+\mbox{\hyperlink{bombspell_8cpp}{bombspell.\+cpp}}\end{DoxyCompactItemize}

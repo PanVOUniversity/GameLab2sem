@@ -1,0 +1,9 @@
+<map id="Priest::pray" name="Priest::pray">
+<area shape="rect" id="node1" title="Uses the pray ability to create a ShieldedField at the target location." alt="" coords="5,132,101,159"/>
+<area shape="rect" id="node2" href="$d3/d36/functions_8cpp.html#a0a1837ac6ac69139b25732bf3114f375" title=" " alt="" coords="149,5,300,32"/>
+<area shape="rect" id="node3" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="166,56,283,83"/>
+<area shape="rect" id="node4" href="$df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814" title="Returns true if the unit is controlled by the player." alt="" coords="165,107,284,133"/>
+<area shape="rect" id="node5" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="170,157,279,184"/>
+<area shape="rect" id="node6" href="$df/dd9/classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998" title="Gets the unit&#39;s current will points." alt="" coords="173,208,276,235"/>
+<area shape="rect" id="node7" href="$df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22" title="Sets the unit&#39;s will points." alt="" coords="173,259,276,285"/>
+</map>

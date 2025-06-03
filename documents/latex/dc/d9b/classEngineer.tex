@@ -1,0 +1,263 @@
+\hypertarget{classEngineer}{}\doxysection{Класс Engineer}
+\label{classEngineer}\index{Engineer@{Engineer}}
+
+
+Utility unit that can build special fields (\mbox{\hyperlink{classEngineer}{Engineer}}).  
+
+
+
+
+{\ttfamily \#include $<$engineer.\+h$>$}
+
+
+
+Граф наследования\+:Engineer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{d3/d95/classEngineer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Engineer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{dc/d22/classEngineer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngineer_a73d5b59e5d6f78f468218fe00cafa872}{Engineer}} (bool player=false)
+\begin{DoxyCompactList}\small\item\em Constructs an \mbox{\hyperlink{classEngineer}{Engineer}} unit. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classEngineer_a039414106c9c3f8791ab5cd47296486b}{$\sim$\+Engineer}} ()=default
+\item 
+\mbox{\hyperlink{classField}{Field}} $\ast$ \mbox{\hyperlink{classEngineer_ad4076b7f94e65fd55c68fc1cbd740533}{create\+Fortress}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Builds a fortress at the specified coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classField}{Field}} $\ast$ \mbox{\hyperlink{classEngineer_a4259ec02bdc511cb22ebb20ab73354c7}{create\+Mana\+Mine}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Builds a mana mine at the specified coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classField}{Field}} $\ast$ \mbox{\hyperlink{classEngineer_a4f9b54503e8a0fd99ed35f6c78710c56}{create\+Trap}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Builds a trap (bombed field) at the specified coordinates. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classEngineer_aa7fb1c7fca9ac7c9c4e44d93bd5e89a1}{get\+Symbol}} () const
+\begin{DoxyCompactList}\small\item\em Gets the symbol representing the engineer (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+Utility unit that can build special fields (\mbox{\hyperlink{classEngineer}{Engineer}}). 
+
+См. определение в файле engineer.\+h строка 11
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classEngineer_a73d5b59e5d6f78f468218fe00cafa872}\label{classEngineer_a73d5b59e5d6f78f468218fe00cafa872}} 
+\index{Engineer@{Engineer}!Engineer@{Engineer}}
+\index{Engineer@{Engineer}!Engineer@{Engineer}}
+\doxysubsubsection{\texorpdfstring{Engineer()}{Engineer()}}
+{\footnotesize\ttfamily Engineer\+::\+Engineer (\begin{DoxyParamCaption}\item[{bool}]{player = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructs an \mbox{\hyperlink{classEngineer}{Engineer}} unit. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em player} & True if controlled by player, false if AI (default\+: false). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле engineer.\+cpp строка 6
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7     : \mbox{\hyperlink{classUnit_a889a37b2a427c6c220b45057511c0d05}{Unit}}(\textcolor{stringliteral}{"{}Engineer"{}}, 1, 1, 6, 1, player, 3) \textcolor{comment}{// Name, Move, Attack, Health, Damage, isPlayer, Will}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{comment}{// Engineer: Move 1, Attack 1, Health 6, Damage 1, Will 3, Symbol 'E'}}
+\DoxyCodeLine{10 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngineer_a039414106c9c3f8791ab5cd47296486b}\label{classEngineer_a039414106c9c3f8791ab5cd47296486b}} 
+\index{Engineer@{Engineer}!````~Engineer@{$\sim$Engineer}}
+\index{````~Engineer@{$\sim$Engineer}!Engineer@{Engineer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Engineer()}{~Engineer()}}
+{\footnotesize\ttfamily virtual Engineer\+::$\sim$\+Engineer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classEngineer_ad4076b7f94e65fd55c68fc1cbd740533}\label{classEngineer_ad4076b7f94e65fd55c68fc1cbd740533}} 
+\index{Engineer@{Engineer}!createFortress@{createFortress}}
+\index{createFortress@{createFortress}!Engineer@{Engineer}}
+\doxysubsubsection{\texorpdfstring{createFortress()}{createFortress()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField}{Field}} $\ast$ Engineer\+::create\+Fortress (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Builds a fortress at the specified coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Pointer to the new \mbox{\hyperlink{classFortress}{Fortress}} field. 
+\end{DoxyReturn}
+
+
+См. определение в файле engineer.\+cpp строка 12
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \textcolor{comment}{// Create fortress with owner set based on engineer's player status}}
+\DoxyCodeLine{15     \mbox{\hyperlink{classFortress}{Fortress}}* fortress = \textcolor{keyword}{new} \mbox{\hyperlink{classFortress}{Fortress}}(x, y, 3, 5, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{16     fortress-\/>\mbox{\hyperlink{classFortress_a6f9636ea613603c0552331f916bd7146}{setOwner}}(this-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() ? \textcolor{keyword}{nullptr} : \textcolor{keyword}{nullptr}); \textcolor{comment}{// Set owner based on player status}}
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} fortress;}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Player() и Fortress\+::set\+Owner().
+
+
+
+Используется в get\+Player\+Commands() и try\+AIEngineer\+Build\+Specific().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d9b/classEngineer_ad4076b7f94e65fd55c68fc1cbd740533_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d9b/classEngineer_ad4076b7f94e65fd55c68fc1cbd740533_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngineer_a4259ec02bdc511cb22ebb20ab73354c7}\label{classEngineer_a4259ec02bdc511cb22ebb20ab73354c7}} 
+\index{Engineer@{Engineer}!createManaMine@{createManaMine}}
+\index{createManaMine@{createManaMine}!Engineer@{Engineer}}
+\doxysubsubsection{\texorpdfstring{createManaMine()}{createManaMine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField}{Field}} $\ast$ Engineer\+::create\+Mana\+Mine (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Builds a mana mine at the specified coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Pointer to the new \mbox{\hyperlink{classManaMineField}{Mana\+Mine\+Field}}. 
+\end{DoxyReturn}
+
+
+См. определение в файле engineer.\+cpp строка 20
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classManaMineField}{ManaMineField}}(x, y);}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+
+
+Используется в get\+Player\+Commands() и try\+AIEngineer\+Build\+Specific().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d9b/classEngineer_a4259ec02bdc511cb22ebb20ab73354c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngineer_a4f9b54503e8a0fd99ed35f6c78710c56}\label{classEngineer_a4f9b54503e8a0fd99ed35f6c78710c56}} 
+\index{Engineer@{Engineer}!createTrap@{createTrap}}
+\index{createTrap@{createTrap}!Engineer@{Engineer}}
+\doxysubsubsection{\texorpdfstring{createTrap()}{createTrap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField}{Field}} $\ast$ Engineer\+::create\+Trap (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Builds a trap (bombed field) at the specified coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Pointer to the new \mbox{\hyperlink{classBombedField}{Bombed\+Field}}. 
+\end{DoxyReturn}
+
+
+См. определение в файле engineer.\+cpp строка 25
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classBombedField}{BombedField}}(x, y);}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+
+
+Используется в get\+Player\+Commands() и try\+AIEngineer\+Build\+Specific().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d9b/classEngineer_a4f9b54503e8a0fd99ed35f6c78710c56_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngineer_aa7fb1c7fca9ac7c9c4e44d93bd5e89a1}\label{classEngineer_aa7fb1c7fca9ac7c9c4e44d93bd5e89a1}} 
+\index{Engineer@{Engineer}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!Engineer@{Engineer}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char Engineer\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the symbol representing the engineer (for display). 
+
+\begin{DoxyReturn}{Возвращает}
+\textquotesingle{}E\textquotesingle{} character. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classUnit_afd6bcf5adaadb97b1378512344bd642b}{Unit}}.
+
+
+
+См. определение в файле engineer.\+h строка 47
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47 \{ \textcolor{keywordflow}{return} \textcolor{charliteral}{'E'}; \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{engineer_8h}{engineer.\+h}}\item 
+\mbox{\hyperlink{engineer_8cpp}{engineer.\+cpp}}\end{DoxyCompactItemize}

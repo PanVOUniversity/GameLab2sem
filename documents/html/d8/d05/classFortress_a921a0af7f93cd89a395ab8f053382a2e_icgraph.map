@@ -1,0 +1,17 @@
+<map id="Fortress::setStrength" name="Fortress::setStrength">
+<area shape="rect" id="node1" title="Sets the strength of the fortress." alt="" coords="1379,57,1536,84"/>
+<area shape="rect" id="node2" href="$d3/d36/functions_8cpp.html#ae92c15badcbeac5edc544eec40902bac" title=" " alt="" coords="1156,57,1331,84"/>
+<area shape="rect" id="node3" href="$d3/d36/functions_8cpp.html#a43f0126154376c48e09ec7497e5af839" title=" " alt="" coords="995,95,1108,121"/>
+<area shape="rect" id="node5" href="$d3/d36/functions_8cpp.html#acfc6ab57758c3db7e635b17b396796ba" title=" " alt="" coords="825,5,888,32"/>
+<area shape="rect" id="node4" href="$d6/ded/classBurnedField.html#a8f5789ec0273283d79911bf6bed5936e" title="Applies the burned field&#39;s effect (ticks duration, deals damage)." alt="" coords="767,56,947,83"/>
+<area shape="rect" id="node11" href="$d9/dbb/classFireballSpell.html#af74e7fda9c1770dc17a5eec298c1be3c" title="Casts the Fireball spell at the given coordinates." alt="" coords="788,107,925,133"/>
+<area shape="rect" id="node12" href="$d8/db9/classMorogSpell.html#ae4434af88dc359059154668ce3af5787" title="Casts the Morog spell at the given coordinates." alt="" coords="791,157,922,184"/>
+<area shape="rect" id="node13" href="$da/d43/classBombedField.html#a090802fffedf5da9d68580b172a937e1" title="Triggers the explosion effect." alt="" coords="773,208,940,235"/>
+<area shape="rect" id="node6" href="$d9/deb/getcommands_8cpp.html#a4ffff192321e79e17d14dc4a1af609a7" title="Handles player commands during their turn." alt="" coords="324,5,483,32"/>
+<area shape="rect" id="node8" href="$d0/d77/AI_8cpp.html#a4ee9cecc823bd9a64a65152b5d5ff307" title="Attempts to make the AI attack with the given unit." alt="" coords="577,56,672,83"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node9" href="$d0/d77/AI_8cpp.html#a977b9434bdf2f1cb57f540e4098d1a57" title="Performs the main AI logic for the AI player&#39;s turn." alt="" coords="376,56,431,83"/>
+<area shape="rect" id="node10" href="$d0/d77/AI_8cpp.html#ad90f841d71e5bae7186823d947a92551" title="Handles AI commands during its turn." alt="" coords="127,56,257,83"/>
+<area shape="rect" id="node14" href="$da/d43/classBombedField.html#a48a282d1c5a11b9970228a59b52f6efc" title="Applies the bombed field&#39;s effect (ticks timer, may explode)." alt="" coords="531,157,719,184"/>
+<area shape="rect" id="node15" href="$d3/d36/functions_8cpp.html#ab211df54e293cd58fc266b4e02886762" title=" " alt="" coords="108,157,276,184"/>
+</map>

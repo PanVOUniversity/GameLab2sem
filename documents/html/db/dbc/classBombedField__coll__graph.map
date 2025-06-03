@@ -1,0 +1,5 @@
+<map id="BombedField" name="BombedField">
+<area shape="rect" id="node1" title="Field that acts as a trap and explodes after a timer or when triggered by a unit (Bombed Field)." alt="" coords="14,741,163,936"/>
+<area shape="rect" id="node2" href="$d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types." alt="" coords="7,409,170,692"/>
+<area shape="rect" id="node3" href="$df/dd9/classUnit.html" title="Represents a unit in the game (base class for all units)." alt="" coords="5,5,172,347"/>
+</map>

@@ -1,0 +1,152 @@
+\hypertarget{classCurseSpell}{}\doxysection{Класс Curse\+Spell}
+\label{classCurseSpell}\index{CurseSpell@{CurseSpell}}
+
+
+\mbox{\hyperlink{classSpell}{Spell}} that reduces a unit\textquotesingle{}s abilities (Curse). Damage to zero.  
+
+
+
+
+{\ttfamily \#include $<$cursespell.\+h$>$}
+
+
+
+Граф наследования\+:Curse\+Spell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{d0/d3a/classCurseSpell__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Curse\+Spell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{d9/d41/classCurseSpell__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCurseSpell_a1d08ccc382cb5255de2019074d789891}{Curse\+Spell}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classCurseSpell}{Curse\+Spell}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCurseSpell_ac8a931fb580be51f8cd7ef4d2b53f552}{cast}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y) override
+\begin{DoxyCompactList}\small\item\em Casts the Curse spell at the given coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+\mbox{\hyperlink{classSpell}{Spell}} that reduces a unit\textquotesingle{}s abilities (Curse). Damage to zero. 
+
+См. определение в файле cursespell.\+h строка 10
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classCurseSpell_a1d08ccc382cb5255de2019074d789891}\label{classCurseSpell_a1d08ccc382cb5255de2019074d789891}} 
+\index{CurseSpell@{CurseSpell}!CurseSpell@{CurseSpell}}
+\index{CurseSpell@{CurseSpell}!CurseSpell@{CurseSpell}}
+\doxysubsubsection{\texorpdfstring{CurseSpell()}{CurseSpell()}}
+{\footnotesize\ttfamily Curse\+Spell\+::\+Curse\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classCurseSpell}{Curse\+Spell}}. 
+
+
+
+См. определение в файле cursespell.\+cpp строка 9
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10     : \mbox{\hyperlink{classSpell_a198d0b0f123fcd8cd0b2d5c7efd98b5d}{Spell}}(\textcolor{stringliteral}{"{}Curse"{}}, 3) \textcolor{comment}{// Name, Mana Cost}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classCurseSpell_ac8a931fb580be51f8cd7ef4d2b53f552}\label{classCurseSpell_ac8a931fb580be51f8cd7ef4d2b53f552}} 
+\index{CurseSpell@{CurseSpell}!cast@{cast}}
+\index{cast@{cast}!CurseSpell@{CurseSpell}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily bool Curse\+Spell\+::cast (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Casts the Curse spell at the given coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+{\em x} & X coordinate of the target. \\
+\hline
+{\em y} & Y coordinate of the target. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the spell was cast successfully, false otherwise. 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classSpell_adbff32f05577154a0db4606282d0151c}{Spell}}.
+
+
+
+См. определение в файле cursespell.\+cpp строка 14
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     \textcolor{comment}{// Check if target coordinates are valid}}
+\DoxyCodeLine{17     \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{19     \textcolor{keywordflow}{if} (x >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(x) < boardWidth \&\&}
+\DoxyCodeLine{20         y >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(y) < boardHeight)}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         \mbox{\hyperlink{classField}{Field}}* targetField = board[x][y];}
+\DoxyCodeLine{23         \mbox{\hyperlink{classUnit}{Unit}}* targetUnit = targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25         \textcolor{comment}{// Curse spell reduces a unit's will}}
+\DoxyCodeLine{26         \textcolor{keywordflow}{if} (targetUnit)}
+\DoxyCodeLine{27         \{}
+\DoxyCodeLine{28             std::cout << \textcolor{stringliteral}{"{}Casting Curse on unit at ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}).\(\backslash\)n"{}};}
+\DoxyCodeLine{29             \textcolor{keywordtype}{int} currentWill = targetUnit-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}();}
+\DoxyCodeLine{30             targetUnit-\/>\mbox{\hyperlink{classUnit_a207c7fe4b9d30af2446bb8af0a127c22}{setWill}}(std::max(0, currentWill -\/ 1)); \textcolor{comment}{// Reduce will by 1, minimum 0}}
+\DoxyCodeLine{31             std::cout << targetUnit-\/>\mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{}'s will reduced to "{}} << targetUnit-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{32             \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \textcolor{comment}{// Spell cast successfully}}
+\DoxyCodeLine{33         \}}
+\DoxyCodeLine{34         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{35         \{}
+\DoxyCodeLine{36             std::cout << \textcolor{stringliteral}{"{}Curse spell failed: No unit at target location.\(\backslash\)n"{}};}
+\DoxyCodeLine{37         \}}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         std::cout << \textcolor{stringliteral}{"{}Curse spell failed: Target coordinates out of bounds.\(\backslash\)n"{}};}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Spell cast failed}}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Name(), Field\+::get\+Unit(), Unit\+::get\+Will() и Unit\+::set\+Will().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{de/deb/classCurseSpell_ac8a931fb580be51f8cd7ef4d2b53f552_cgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cursespell_8h}{cursespell.\+h}}\item 
+\mbox{\hyperlink{cursespell_8cpp}{cursespell.\+cpp}}\end{DoxyCompactItemize}

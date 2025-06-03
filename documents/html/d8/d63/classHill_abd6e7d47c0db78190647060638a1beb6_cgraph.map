@@ -1,0 +1,4 @@
+<map id="Hill::Hill" name="Hill::Hill">
+<area shape="rect" id="node1" title="Constructs a Hill at the given coordinates, optionally with a unit." alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node2" href="$d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8" title="Set the unit on this field." alt="" coords="128,5,236,32"/>
+</map>

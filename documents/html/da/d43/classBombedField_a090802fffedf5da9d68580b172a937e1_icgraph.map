@@ -1,0 +1,6 @@
+<map id="BombedField::explode" name="BombedField::explode">
+<area shape="rect" id="node1" title="Triggers the explosion effect." alt="" coords="344,31,511,57"/>
+<area shape="rect" id="node2" href="$da/d43/classBombedField.html#a48a282d1c5a11b9970228a59b52f6efc" title="Applies the bombed field&#39;s effect (ticks timer, may explode)." alt="" coords="108,5,296,32"/>
+<area shape="rect" id="node3" href="$d3/d36/functions_8cpp.html#ab211df54e293cd58fc266b4e02886762" title=" " alt="" coords="118,56,286,83"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,60,83"/>
+</map>

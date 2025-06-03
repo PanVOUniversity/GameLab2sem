@@ -1,0 +1,5 @@
+<map id="Unit::restoreHealth" name="Unit::restoreHealth">
+<area shape="rect" id="node1" title="Restores health to the unit." alt="" coords="241,31,388,57"/>
+<area shape="rect" id="node2" href="$d8/d05/classFortress.html#a29d63386bdfb5769839506b137877b68" title="Applies the fortress&#39;s effect (e.g., healing, defense) to the board." alt="" coords="22,5,177,32"/>
+<area shape="rect" id="node3" href="$dd/db4/classHospitalField.html#a653ea196bbbdf6f788a88fd70406679d" title="Applies the hospital field&#39;s effect (heals unit)." alt="" coords="5,56,193,83"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types." alt="" coords="5,157,59,184"/>
+<area shape="rect" id="node2" href="$da/d43/classBombedField.html" title="Field that acts as a trap and explodes after a timer or when triggered by a unit (Bombed Field)." alt="" coords="114,5,221,32"/>
+<area shape="rect" id="node3" href="$d6/ded/classBurnedField.html" title="Field that deals damage to units each turn for a limited duration (Burned Field)." alt="" coords="118,56,217,83"/>
+<area shape="rect" id="node4" href="$d8/d05/classFortress.html" title="Represents a Fortress field on the board, which provides defense and can be captured or destroyed." alt="" coords="130,107,205,133"/>
+<area shape="rect" id="node5" href="$d8/d63/classHill.html" title="Represents a Hill field on the board, which provides a defense bonus." alt="" coords="145,157,189,184"/>
+<area shape="rect" id="node6" href="$dd/db4/classHospitalField.html" title="Field that heals units each turn (Hospital Field)." alt="" coords="114,208,221,235"/>
+<area shape="rect" id="node7" href="$db/d5c/classManaMineField.html" title="Field that generates mana for the owner each turn (Mana Mine Field)." alt="" coords="107,259,228,285"/>
+<area shape="rect" id="node8" href="$d1/dd1/classShieldedField.html" title="Field that provides a temporary shield to units (Shielded Field)." alt="" coords="113,309,222,336"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="ShieldedField::applyEffect" name="ShieldedField::applyEffect">
+<area shape="rect" id="node1" title="Applies the shielded field&#39;s effect (ticks duration, provides shield)." alt="" coords="5,107,196,133"/>
+<area shape="rect" id="node2" href="$d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521" title="Constructs a Field at the given coordinates and type." alt="" coords="253,5,345,32"/>
+<area shape="rect" id="node3" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="244,56,353,83"/>
+<area shape="rect" id="node4" href="$d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3" title="Get the X coordinate of this field." alt="" coords="253,107,344,133"/>
+<area shape="rect" id="node5" href="$d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e" title="Get the Y coordinate of this field." alt="" coords="253,157,344,184"/>
+<area shape="rect" id="node6" href="$d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8" title="Set the unit on this field." alt="" coords="245,208,353,235"/>
+</map>

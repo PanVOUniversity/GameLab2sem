@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameLab2sem: Исходный файл unit.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameLab2sem
+   </div>
+   <div id="projectbrief">A turn-based strategy game with AI and CLI interface.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d7/d49/unit_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">unit.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/d49/unit_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// unit.cpp</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/da2/unit_8h.html">unit.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d5a/field_8h.html">field.h</a>&quot;</span> <span class="comment">// Include Field header</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d5c/functions_8h.html">functions.h</a>&quot;</span> <span class="comment">// Include functions for applyDamage</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span> <span class="comment">// For std::max</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a889a37b2a427c6c220b45057511c0d05">    8</a></span>&#160;<a class="code" href="../../df/dd9/classUnit.html#a889a37b2a427c6c220b45057511c0d05">Unit::Unit</a>(<span class="keyword">const</span> std::string&amp; unitName, <span class="keywordtype">int</span> moveD, <span class="keywordtype">int</span> attackD, <span class="keywordtype">int</span> health, <span class="keywordtype">int</span> dmg, <span class="keywordtype">bool</span> isPlayer, <span class="keywordtype">int</span> will)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    : name(unitName), moveDistance(moveD), attackDistance(attackD),</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      currentHealth(health), maxHealth(health), damage(dmg), isPlayerUnit(isPlayer),</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      currentWill(will), maxWill(will)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a6353fc4c0a329997ad4abcf0dcb4eb27">   15</a></span>&#160;<a class="code" href="../../df/dd9/classUnit.html#a6353fc4c0a329997ad4abcf0dcb4eb27">Unit::~Unit</a>()</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Destructor for Unit.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// No dynamic memory allocated within the base Unit class that needs explicit deletion here.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// Derived classes might need to implement their own destructors if they allocate memory.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">   22</a></span>&#160;std::string <a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">Unit::getName</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#a03a2344fa6977a2ce44b320e44bc9caa">name</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#aba0432bdab275a064c23bc87b12a5d66">   27</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/dd9/classUnit.html#aba0432bdab275a064c23bc87b12a5d66">Unit::getMoveDistance</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#aa53580e05154faa2108a772c694399bb">moveDistance</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a8856896cc73b342fec2cd3e8079e8e6a">   32</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/dd9/classUnit.html#a8856896cc73b342fec2cd3e8079e8e6a">Unit::getAttackDistance</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#ad0b4b3d2dcd3cc1b25581180b4282cee">attackDistance</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23">   37</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23">Unit::getCurrentHealth</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a892f3d3a4dd89188750cdfba57d2e5ae">   42</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/dd9/classUnit.html#a892f3d3a4dd89188750cdfba57d2e5ae">Unit::getMaxHealth</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a0062c5fab5677c6b47e1d881b4dcc53c">   47</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/dd9/classUnit.html#a0062c5fab5677c6b47e1d881b4dcc53c">Unit::getDamage</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#a92bfb1430ab13e69d4c703a7fc8bafdb">damage</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814">   52</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814">Unit::getPlayer</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#aaa16bddcdb423ca124b6b44a4d27afea">isPlayerUnit</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998">   57</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/dd9/classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998">Unit::getWill</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#ae149ab0037a9e0c45e68d93dadfdd83f">   62</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/dd9/classUnit.html#ae149ab0037a9e0c45e68d93dadfdd83f">Unit::getMaxWill</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/dd9/classUnit.html#a93ea56944962c9007c255a0224f744be">maxWill</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a2564f2e55a6aafded781d5796d3a6629">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/dd9/classUnit.html#a2564f2e55a6aafded781d5796d3a6629">Unit::setCurrentHealth</a>(<span class="keywordtype">int</span> health)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> = health;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22">Unit::setWill</a>(<span class="keywordtype">int</span> will)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a> = will;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a43a426d4d87aebf07e2737e122bea210">   78</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/dd9/classUnit.html#a43a426d4d87aebf07e2737e122bea210">Unit::takeDamage</a>(<span class="keywordtype">int</span> damage, <a class="code" href="../../df/dd9/classUnit.html">Unit</a>* attacker)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    (void)attacker; <span class="comment">// Suppress unused parameter warning</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; takes &quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a92bfb1430ab13e69d4c703a7fc8bafdb">damage</a> &lt;&lt; <span class="stringliteral">&quot; damage.\n&quot;</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> -= <a class="code" href="../../df/dd9/classUnit.html#a92bfb1430ab13e69d4c703a7fc8bafdb">damage</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> &lt; 0) <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> = 0; <span class="comment">// Health cannot go below 0</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; health: &quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a> &lt;&lt; <span class="stringliteral">&quot;.\n&quot;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// Note: Unit removal logic is handled in the applyDamage function, not here.</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a9fe18bf6d2917c59c35df6d56c6cbdc2">   89</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/dd9/classUnit.html#a9fe18bf6d2917c59c35df6d56c6cbdc2">Unit::restoreHealth</a>(<span class="keywordtype">int</span> amount)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> += amount;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> &gt; <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a>) <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> = <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a>; <span class="comment">// Health cannot exceed max</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; health restored by &quot;</span> &lt;&lt; amount &lt;&lt; <span class="stringliteral">&quot;. Current health: &quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a> &lt;&lt; <span class="stringliteral">&quot;.\n&quot;</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#aec8e04d487cf005cd75ae9bdf62525e6">   96</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/dd9/classUnit.html#aec8e04d487cf005cd75ae9bdf62525e6">Unit::restoreWill</a>(<span class="keywordtype">int</span> amount)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a> += amount;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a> &gt; <a class="code" href="../../df/dd9/classUnit.html#a93ea56944962c9007c255a0224f744be">maxWill</a>) <a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a> = <a class="code" href="../../df/dd9/classUnit.html#a93ea56944962c9007c255a0224f744be">maxWill</a>; <span class="comment">// Will cannot exceed max</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; will restored by &quot;</span> &lt;&lt; amount &lt;&lt; <span class="stringliteral">&quot;. Current will: &quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">currentWill</a> &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a93ea56944962c9007c255a0224f744be">maxWill</a> &lt;&lt; <span class="stringliteral">&quot;.\n&quot;</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#aaec88b40541cf3eed9e3ab4780fe937e">  103</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/dd9/classUnit.html#aaec88b40541cf3eed9e3ab4780fe937e">Unit::setHealth</a>(<span class="keywordtype">int</span> health)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">currentHealth</a> = std::max(0, std::min(health, <a class="code" href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">maxHealth</a>));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">// Default implementation for useAbility (does nothing)</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="../../df/dd9/classUnit.html#a80e6869b4f62b0ddb793efdf513892ee">  109</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../df/dd9/classUnit.html#a80e6869b4f62b0ddb793efdf513892ee">Unit::useAbility</a>(std::vector&lt;std::vector&lt;Field*&gt;&gt;&amp; board, <span class="keywordtype">int</span> targetX, <span class="keywordtype">int</span> targetY)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    (void)board; (void)targetX; (void)targetY; <span class="comment">// Suppress unused parameter warnings</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">// Base units have no special abilities</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; has no special ability.\n&quot;</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Ability not used</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="ttc" id="aclassUnit_html"><div class="ttname"><a href="../../df/dd9/classUnit.html">Unit</a></div><div class="ttdoc">Represents a unit in the game (base class for all units).</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00015">unit.h:16</a></div></div>
+<div class="ttc" id="aclassUnit_html_a0062c5fab5677c6b47e1d881b4dcc53c"><div class="ttname"><a href="../../df/dd9/classUnit.html#a0062c5fab5677c6b47e1d881b4dcc53c">Unit::getDamage</a></div><div class="ttdeci">int getDamage() const</div><div class="ttdoc">Gets the unit's damage value.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00047">unit.cpp:47</a></div></div>
+<div class="ttc" id="aclassUnit_html_a03a2344fa6977a2ce44b320e44bc9caa"><div class="ttname"><a href="../../df/dd9/classUnit.html#a03a2344fa6977a2ce44b320e44bc9caa">Unit::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00018">unit.h:18</a></div></div>
+<div class="ttc" id="aclassUnit_html_a0497994e384db5c080ec78e9b645fa40"><div class="ttname"><a href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">Unit::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdoc">Gets the unit's name.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00022">unit.cpp:22</a></div></div>
+<div class="ttc" id="aclassUnit_html_a0e44c4741b8ce52687715dc82fdfaf23"><div class="ttname"><a href="../../df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23">Unit::getCurrentHealth</a></div><div class="ttdeci">int getCurrentHealth() const</div><div class="ttdoc">Gets the unit's current health.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00037">unit.cpp:37</a></div></div>
+<div class="ttc" id="aclassUnit_html_a207c7fe4b9d30af2446bb8af0a127c22"><div class="ttname"><a href="../../df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22">Unit::setWill</a></div><div class="ttdeci">void setWill(int will)</div><div class="ttdoc">Sets the unit's will points.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00073">unit.cpp:73</a></div></div>
+<div class="ttc" id="aclassUnit_html_a2564f2e55a6aafded781d5796d3a6629"><div class="ttname"><a href="../../df/dd9/classUnit.html#a2564f2e55a6aafded781d5796d3a6629">Unit::setCurrentHealth</a></div><div class="ttdeci">void setCurrentHealth(int health)</div><div class="ttdoc">Sets the unit's current health.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00068">unit.cpp:68</a></div></div>
+<div class="ttc" id="aclassUnit_html_a3ae356d6dff417f52a1ccf7133807314"><div class="ttname"><a href="../../df/dd9/classUnit.html#a3ae356d6dff417f52a1ccf7133807314">Unit::maxHealth</a></div><div class="ttdeci">int maxHealth</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00022">unit.h:22</a></div></div>
+<div class="ttc" id="aclassUnit_html_a43a426d4d87aebf07e2737e122bea210"><div class="ttname"><a href="../../df/dd9/classUnit.html#a43a426d4d87aebf07e2737e122bea210">Unit::takeDamage</a></div><div class="ttdeci">virtual void takeDamage(int damage, Unit *attacker=nullptr)</div><div class="ttdoc">Applies damage to the unit.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00078">unit.cpp:78</a></div></div>
+<div class="ttc" id="aclassUnit_html_a4d3fd62e52d7c275c5a4b416b03e2998"><div class="ttname"><a href="../../df/dd9/classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998">Unit::getWill</a></div><div class="ttdeci">int getWill() const</div><div class="ttdoc">Gets the unit's current will points.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00057">unit.cpp:57</a></div></div>
+<div class="ttc" id="aclassUnit_html_a6353fc4c0a329997ad4abcf0dcb4eb27"><div class="ttname"><a href="../../df/dd9/classUnit.html#a6353fc4c0a329997ad4abcf0dcb4eb27">Unit::~Unit</a></div><div class="ttdeci">virtual ~Unit()</div><div class="ttdoc">Virtual destructor for Unit.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00015">unit.cpp:15</a></div></div>
+<div class="ttc" id="aclassUnit_html_a72e700f28797f2c1709e03b2b7828814"><div class="ttname"><a href="../../df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814">Unit::getPlayer</a></div><div class="ttdeci">bool getPlayer() const</div><div class="ttdoc">Returns true if the unit is controlled by the player.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00052">unit.cpp:52</a></div></div>
+<div class="ttc" id="aclassUnit_html_a80e6869b4f62b0ddb793efdf513892ee"><div class="ttname"><a href="../../df/dd9/classUnit.html#a80e6869b4f62b0ddb793efdf513892ee">Unit::useAbility</a></div><div class="ttdeci">virtual bool useAbility(std::vector&lt; std::vector&lt; Field * &gt;&gt; &amp;board, int targetX, int targetY)</div><div class="ttdoc">Virtual method for special unit abilities (to be overridden by derived classes).</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00109">unit.cpp:109</a></div></div>
+<div class="ttc" id="aclassUnit_html_a8856896cc73b342fec2cd3e8079e8e6a"><div class="ttname"><a href="../../df/dd9/classUnit.html#a8856896cc73b342fec2cd3e8079e8e6a">Unit::getAttackDistance</a></div><div class="ttdeci">int getAttackDistance() const</div><div class="ttdoc">Gets the unit's attack distance.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00032">unit.cpp:32</a></div></div>
+<div class="ttc" id="aclassUnit_html_a889a37b2a427c6c220b45057511c0d05"><div class="ttname"><a href="../../df/dd9/classUnit.html#a889a37b2a427c6c220b45057511c0d05">Unit::Unit</a></div><div class="ttdeci">Unit(const std::string &amp;unitName, int moveD, int attackD, int health, int dmg, bool isPlayer, int will)</div><div class="ttdoc">Constructs a Unit with the given parameters.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00008">unit.cpp:8</a></div></div>
+<div class="ttc" id="aclassUnit_html_a892f3d3a4dd89188750cdfba57d2e5ae"><div class="ttname"><a href="../../df/dd9/classUnit.html#a892f3d3a4dd89188750cdfba57d2e5ae">Unit::getMaxHealth</a></div><div class="ttdeci">int getMaxHealth() const</div><div class="ttdoc">Gets the unit's max health.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00042">unit.cpp:42</a></div></div>
+<div class="ttc" id="aclassUnit_html_a92bfb1430ab13e69d4c703a7fc8bafdb"><div class="ttname"><a href="../../df/dd9/classUnit.html#a92bfb1430ab13e69d4c703a7fc8bafdb">Unit::damage</a></div><div class="ttdeci">int damage</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00023">unit.h:23</a></div></div>
+<div class="ttc" id="aclassUnit_html_a93ea56944962c9007c255a0224f744be"><div class="ttname"><a href="../../df/dd9/classUnit.html#a93ea56944962c9007c255a0224f744be">Unit::maxWill</a></div><div class="ttdeci">int maxWill</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00026">unit.h:26</a></div></div>
+<div class="ttc" id="aclassUnit_html_a9fe18bf6d2917c59c35df6d56c6cbdc2"><div class="ttname"><a href="../../df/dd9/classUnit.html#a9fe18bf6d2917c59c35df6d56c6cbdc2">Unit::restoreHealth</a></div><div class="ttdeci">void restoreHealth(int amount)</div><div class="ttdoc">Restores health to the unit.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00089">unit.cpp:89</a></div></div>
+<div class="ttc" id="aclassUnit_html_aa53580e05154faa2108a772c694399bb"><div class="ttname"><a href="../../df/dd9/classUnit.html#aa53580e05154faa2108a772c694399bb">Unit::moveDistance</a></div><div class="ttdeci">int moveDistance</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00019">unit.h:19</a></div></div>
+<div class="ttc" id="aclassUnit_html_aaa16bddcdb423ca124b6b44a4d27afea"><div class="ttname"><a href="../../df/dd9/classUnit.html#aaa16bddcdb423ca124b6b44a4d27afea">Unit::isPlayerUnit</a></div><div class="ttdeci">bool isPlayerUnit</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00024">unit.h:24</a></div></div>
+<div class="ttc" id="aclassUnit_html_aaec88b40541cf3eed9e3ab4780fe937e"><div class="ttname"><a href="../../df/dd9/classUnit.html#aaec88b40541cf3eed9e3ab4780fe937e">Unit::setHealth</a></div><div class="ttdeci">void setHealth(int health)</div><div class="ttdoc">Sets the unit's health (alias for setCurrentHealth).</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00103">unit.cpp:103</a></div></div>
+<div class="ttc" id="aclassUnit_html_ab6784baaf16aa725b0873d95f9e455b5"><div class="ttname"><a href="../../df/dd9/classUnit.html#ab6784baaf16aa725b0873d95f9e455b5">Unit::currentHealth</a></div><div class="ttdeci">int currentHealth</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00021">unit.h:21</a></div></div>
+<div class="ttc" id="aclassUnit_html_aba0432bdab275a064c23bc87b12a5d66"><div class="ttname"><a href="../../df/dd9/classUnit.html#aba0432bdab275a064c23bc87b12a5d66">Unit::getMoveDistance</a></div><div class="ttdeci">int getMoveDistance() const</div><div class="ttdoc">Gets the unit's move distance.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00027">unit.cpp:27</a></div></div>
+<div class="ttc" id="aclassUnit_html_ad0b4b3d2dcd3cc1b25581180b4282cee"><div class="ttname"><a href="../../df/dd9/classUnit.html#ad0b4b3d2dcd3cc1b25581180b4282cee">Unit::attackDistance</a></div><div class="ttdeci">int attackDistance</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00020">unit.h:20</a></div></div>
+<div class="ttc" id="aclassUnit_html_ae149ab0037a9e0c45e68d93dadfdd83f"><div class="ttname"><a href="../../df/dd9/classUnit.html#ae149ab0037a9e0c45e68d93dadfdd83f">Unit::getMaxWill</a></div><div class="ttdeci">int getMaxWill() const</div><div class="ttdoc">Gets the unit's max will points.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00062">unit.cpp:62</a></div></div>
+<div class="ttc" id="aclassUnit_html_aec8e04d487cf005cd75ae9bdf62525e6"><div class="ttname"><a href="../../df/dd9/classUnit.html#aec8e04d487cf005cd75ae9bdf62525e6">Unit::restoreWill</a></div><div class="ttdeci">void restoreWill(int amount)</div><div class="ttdoc">Restores will points to the unit.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00096">unit.cpp:96</a></div></div>
+<div class="ttc" id="aclassUnit_html_afcaeef974ce724af04978a375f5a46ea"><div class="ttname"><a href="../../df/dd9/classUnit.html#afcaeef974ce724af04978a375f5a46ea">Unit::currentWill</a></div><div class="ttdeci">int currentWill</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00025">unit.h:25</a></div></div>
+<div class="ttc" id="afield_8h_html"><div class="ttname"><a href="../../d5/d5a/field_8h.html">field.h</a></div></div>
+<div class="ttc" id="afunctions_8h_html"><div class="ttname"><a href="../../d8/d5c/functions_8h.html">functions.h</a></div></div>
+<div class="ttc" id="aunit_8h_html"><div class="ttname"><a href="../../d1/da2/unit_8h.html">unit.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/d49/unit_8cpp.html">unit.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

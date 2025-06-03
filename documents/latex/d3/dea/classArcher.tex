@@ -1,0 +1,172 @@
+\hypertarget{classArcher}{}\doxysection{Класс Archer}
+\label{classArcher}\index{Archer@{Archer}}
+
+
+Ranged unit with variable attack distance (\mbox{\hyperlink{classArcher}{Archer}}).  
+
+
+
+
+{\ttfamily \#include $<$archer.\+h$>$}
+
+
+
+Граф наследования\+:Archer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{d2/de3/classArcher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Archer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{d4/d45/classArcher__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArcher_a276e48f70dc4519948083db92f031b17}{Archer}} (bool player=false)
+\begin{DoxyCompactList}\small\item\em Constructs an \mbox{\hyperlink{classArcher}{Archer}} unit. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classArcher_a527a28312bcb018f04078a3ef1920dce}{$\sim$\+Archer}} ()=default
+\item 
+void \mbox{\hyperlink{classArcher_a9e1c27bf39fb2a49e00f0d0e26f79c29}{update\+Attack\+Distance}} (bool in\+Fortress)
+\begin{DoxyCompactList}\small\item\em Updates the attack distance based on whether the archer is in a fortress. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classArcher_a00963678481911b6c27d2b2f81754b0f}{get\+Symbol}} () const
+\begin{DoxyCompactList}\small\item\em Gets the symbol representing the archer (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+Ranged unit with variable attack distance (\mbox{\hyperlink{classArcher}{Archer}}). 
+
+См. определение в файле archer.\+h строка 10
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classArcher_a276e48f70dc4519948083db92f031b17}\label{classArcher_a276e48f70dc4519948083db92f031b17}} 
+\index{Archer@{Archer}!Archer@{Archer}}
+\index{Archer@{Archer}!Archer@{Archer}}
+\doxysubsubsection{\texorpdfstring{Archer()}{Archer()}}
+{\footnotesize\ttfamily Archer\+::\+Archer (\begin{DoxyParamCaption}\item[{bool}]{player = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructs an \mbox{\hyperlink{classArcher}{Archer}} unit. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em player} & True if controlled by player, false if AI (default\+: false). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле archer.\+cpp строка 6
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7     : \mbox{\hyperlink{classUnit_a889a37b2a427c6c220b45057511c0d05}{Unit}}(\textcolor{stringliteral}{"{}Archer"{}}, 2, 2, 7, 2, player, 2) \textcolor{comment}{// Name, Move, Attack, Health, Damage, isPlayer, Will}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{comment}{// Archer: Move 2, Attack 2 (default), Health 7, Damage 2, Will 2, Symbol 'A'}}
+\DoxyCodeLine{10 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArcher_a527a28312bcb018f04078a3ef1920dce}\label{classArcher_a527a28312bcb018f04078a3ef1920dce}} 
+\index{Archer@{Archer}!````~Archer@{$\sim$Archer}}
+\index{````~Archer@{$\sim$Archer}!Archer@{Archer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Archer()}{~Archer()}}
+{\footnotesize\ttfamily virtual Archer\+::$\sim$\+Archer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classArcher_a00963678481911b6c27d2b2f81754b0f}\label{classArcher_a00963678481911b6c27d2b2f81754b0f}} 
+\index{Archer@{Archer}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!Archer@{Archer}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char Archer\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the symbol representing the archer (for display). 
+
+\begin{DoxyReturn}{Возвращает}
+\textquotesingle{}A\textquotesingle{} character. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classUnit_afd6bcf5adaadb97b1378512344bd642b}{Unit}}.
+
+
+
+См. определение в файле archer.\+h строка 30
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30 \{ \textcolor{keywordflow}{return} \textcolor{charliteral}{'A'}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArcher_a9e1c27bf39fb2a49e00f0d0e26f79c29}\label{classArcher_a9e1c27bf39fb2a49e00f0d0e26f79c29}} 
+\index{Archer@{Archer}!updateAttackDistance@{updateAttackDistance}}
+\index{updateAttackDistance@{updateAttackDistance}!Archer@{Archer}}
+\doxysubsubsection{\texorpdfstring{updateAttackDistance()}{updateAttackDistance()}}
+{\footnotesize\ttfamily void Archer\+::update\+Attack\+Distance (\begin{DoxyParamCaption}\item[{bool}]{in\+Fortress }\end{DoxyParamCaption})}
+
+
+
+Updates the attack distance based on whether the archer is in a fortress. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em in\+Fortress} & True if the archer is in a fortress, false otherwise. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле archer.\+cpp строка 12
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \textcolor{keywordflow}{if} (inFortress) \{}
+\DoxyCodeLine{15         \mbox{\hyperlink{classUnit_ad0b4b3d2dcd3cc1b25581180b4282cee}{attackDistance}} = 3; \textcolor{comment}{// Increased range in a fortress}}
+\DoxyCodeLine{16         std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} gains increased attack range in fortress.\(\backslash\)n"{}};}
+\DoxyCodeLine{17     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{18         \mbox{\hyperlink{classUnit_ad0b4b3d2dcd3cc1b25581180b4282cee}{attackDistance}} = 2; \textcolor{comment}{// Default range}}
+\DoxyCodeLine{19     \}}
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::attack\+Distance и Unit\+::get\+Name().
+
+
+
+Используется в Fortress\+::on\+Enter() и Fortress\+::on\+Leave().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dea/classArcher_a9e1c27bf39fb2a49e00f0d0e26f79c29_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dea/classArcher_a9e1c27bf39fb2a49e00f0d0e26f79c29_icgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{archer_8h}{archer.\+h}}\item 
+\mbox{\hyperlink{archer_8cpp}{archer.\+cpp}}\end{DoxyCompactItemize}

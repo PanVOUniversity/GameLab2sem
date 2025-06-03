@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['setcurrenthealth_171',['setCurrentHealth',['../df/dd9/classUnit.html#a2564f2e55a6aafded781d5796d3a6629',1,'Unit']]],
+  ['setdefeated_172',['setDefeated',['../d2/d4b/classPlayer.html#a9e49b98ab74e5e9538c8e2adbfe67050',1,'Player']]],
+  ['setdirection_173',['setDirection',['../db/dc3/classCannon.html#a5725deffe25c5741d9fd473e7f7842e6',1,'Cannon']]],
+  ['sethealth_174',['setHealth',['../df/dd9/classUnit.html#aaec88b40541cf3eed9e3ab4780fe937e',1,'Unit']]],
+  ['setmana_175',['setMana',['../d2/d4b/classPlayer.html#a884dd5a4d9aa079a465adb44bebd13af',1,'Player']]],
+  ['setmyturn_176',['setMyTurn',['../d2/d4b/classPlayer.html#a702ab07a0927d565734c50f7ed231fac',1,'Player']]],
+  ['setowner_177',['setOwner',['../d8/d05/classFortress.html#a6f9636ea613603c0552331f916bd7146',1,'Fortress']]],
+  ['setskippedturns_178',['setSkippedTurns',['../d2/d4b/classPlayer.html#a5995eaa758f0b796e2d625fa87610278',1,'Player']]],
+  ['setstrength_179',['setStrength',['../d8/d05/classFortress.html#a921a0af7f93cd89a395ab8f053382a2e',1,'Fortress']]],
+  ['setunit_180',['setUnit',['../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8',1,'Field']]],
+  ['setwill_181',['setWill',['../df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22',1,'Unit']]],
+  ['shield_5fmap_182',['shield_map',['../d2/d66/getcommands_8h.html#a13c8ecae8ea8ed72b6b586f00007fc9b',1,'getcommands.h']]],
+  ['shieldedfield_183',['ShieldedField',['../d1/dd1/classShieldedField.html#a74501e892d542268eb16def7254f6bae',1,'ShieldedField::ShieldedField()'],['../d1/dd1/classShieldedField.html',1,'ShieldedField']]],
+  ['shieldedfield_2ecpp_184',['shieldedfield.cpp',['../d8/d4c/shieldedfield_8cpp.html',1,'']]],
+  ['shieldedfield_2eh_185',['shieldedfield.h',['../de/d6a/shieldedfield_8h.html',1,'']]],
+  ['shouldexplode_186',['shouldExplode',['../da/d43/classBombedField.html#af5a1d14775633f750b51ebd59d45e04f',1,'BombedField']]],
+  ['skippedturns_187',['skippedTurns',['../d2/d4b/classPlayer.html#aaec36d1637d025891fc082b9b3cdf4e9',1,'Player']]],
+  ['spell_188',['Spell',['../d1/d16/classSpell.html',1,'Spell'],['../d1/d16/classSpell.html#a198d0b0f123fcd8cd0b2d5c7efd98b5d',1,'Spell::Spell()']]],
+  ['spell_2ecpp_189',['spell.cpp',['../d2/d47/spell_8cpp.html',1,'']]],
+  ['spell_2eh_190',['spell.h',['../d4/de3/spell_8h.html',1,'']]],
+  ['spells_2eh_191',['spells.h',['../d9/d42/spells_8h.html',1,'']]],
+  ['strength_192',['strength',['../d8/d05/classFortress.html#aca68a046715e8e6a2a4f2e3fadc6dbe7',1,'Fortress']]],
+  ['subtractmana_193',['subtractMana',['../d2/d4b/classPlayer.html#a99236b47c18af320bea2e42ac1c7b2fe',1,'Player']]]
+];

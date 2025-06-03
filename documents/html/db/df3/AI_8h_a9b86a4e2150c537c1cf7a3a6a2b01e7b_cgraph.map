@@ -1,0 +1,15 @@
+<map id="tryAIMove" name="tryAIMove">
+<area shape="rect" id="node1" title="Attempts to move the given AI unit." alt="" coords="5,81,95,108"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html#aba0432bdab275a064c23bc87b12a5d66" title="Gets the unit&#39;s move distance." alt="" coords="249,5,420,32"/>
+<area shape="rect" id="node3" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="280,56,389,83"/>
+<area shape="rect" id="node4" href="$df/dd9/classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998" title="Gets the unit&#39;s current will points." alt="" coords="283,107,386,133"/>
+<area shape="rect" id="node5" href="$d3/d36/functions_8cpp.html#a03cfd94cc59ef09a8b66ccbe9d885b19" title=" " alt="" coords="143,233,201,260"/>
+<area shape="rect" id="node6" href="$d7/d24/classField.html#a454ca5b8269657dc01cd611eceb3d397" title="Apply the field&#39;s effect (e.g., mana generation, damage) to the board." alt="" coords="267,208,402,235"/>
+<area shape="rect" id="node7" href="$d7/d24/classField.html#aca250c9a0c031e21c7e7c609b3b3dec3" title="Check if a unit can enter this field." alt="" coords="275,259,394,285"/>
+<area shape="rect" id="node8" href="$df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23" title="Gets the unit&#39;s current health." alt="" coords="250,309,419,336"/>
+<area shape="rect" id="node9" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="276,360,393,387"/>
+<area shape="rect" id="node10" href="$d7/d24/classField.html#af7bbcc952313d63e39ac2915ef92bbde" title="Handle a unit entering this field." alt="" coords="279,411,390,437"/>
+<area shape="rect" id="node11" href="$d7/d24/classField.html#af7cbfac5b4571fde18c48884bc7059b8" title="Handle a unit leaving this field." alt="" coords="277,461,393,488"/>
+<area shape="rect" id="node12" href="$d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8" title="Set the unit on this field." alt="" coords="281,512,389,539"/>
+<area shape="rect" id="node13" href="$df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22" title="Sets the unit&#39;s will points." alt="" coords="283,157,386,184"/>
+</map>

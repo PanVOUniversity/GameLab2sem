@@ -1,0 +1,159 @@
+\hypertarget{classMorogSpell}{}\doxysection{Класс Morog\+Spell}
+\label{classMorogSpell}\index{MorogSpell@{MorogSpell}}
+
+
+\mbox{\hyperlink{classSpell}{Spell}} that changes owner of unit on the field.  
+
+
+
+
+{\ttfamily \#include $<$morogspell.\+h$>$}
+
+
+
+Граф наследования\+:Morog\+Spell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{dc/d39/classMorogSpell__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Morog\+Spell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{d1/d85/classMorogSpell__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMorogSpell_a93b770423caee1971ad3337c48f70a6b}{Morog\+Spell}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classMorogSpell}{Morog\+Spell}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classMorogSpell_ad2a67befa6c8d6c8ff16a03833983be8}{$\sim$\+Morog\+Spell}} ()=default
+\item 
+bool \mbox{\hyperlink{classMorogSpell_ae4434af88dc359059154668ce3af5787}{cast}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y) override
+\begin{DoxyCompactList}\small\item\em Casts the Morog spell at the given coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+\mbox{\hyperlink{classSpell}{Spell}} that changes owner of unit on the field. 
+
+См. определение в файле morogspell.\+h строка 10
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classMorogSpell_a93b770423caee1971ad3337c48f70a6b}\label{classMorogSpell_a93b770423caee1971ad3337c48f70a6b}} 
+\index{MorogSpell@{MorogSpell}!MorogSpell@{MorogSpell}}
+\index{MorogSpell@{MorogSpell}!MorogSpell@{MorogSpell}}
+\doxysubsubsection{\texorpdfstring{MorogSpell()}{MorogSpell()}}
+{\footnotesize\ttfamily Morog\+Spell\+::\+Morog\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classMorogSpell}{Morog\+Spell}}. 
+
+
+
+См. определение в файле morogspell.\+cpp строка 10
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11     : \mbox{\hyperlink{classSpell_a198d0b0f123fcd8cd0b2d5c7efd98b5d}{Spell}}(\textcolor{stringliteral}{"{}Morog"{}}, 5) \textcolor{comment}{// Name, Mana Cost}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMorogSpell_ad2a67befa6c8d6c8ff16a03833983be8}\label{classMorogSpell_ad2a67befa6c8d6c8ff16a03833983be8}} 
+\index{MorogSpell@{MorogSpell}!````~MorogSpell@{$\sim$MorogSpell}}
+\index{````~MorogSpell@{$\sim$MorogSpell}!MorogSpell@{MorogSpell}}
+\doxysubsubsection{\texorpdfstring{$\sim$MorogSpell()}{~MorogSpell()}}
+{\footnotesize\ttfamily virtual Morog\+Spell\+::$\sim$\+Morog\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classMorogSpell_ae4434af88dc359059154668ce3af5787}\label{classMorogSpell_ae4434af88dc359059154668ce3af5787}} 
+\index{MorogSpell@{MorogSpell}!cast@{cast}}
+\index{cast@{cast}!MorogSpell@{MorogSpell}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily bool Morog\+Spell\+::cast (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Casts the Morog spell at the given coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+{\em x} & X coordinate of the target. \\
+\hline
+{\em y} & Y coordinate of the target. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the spell was cast successfully, false otherwise. 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classSpell_adbff32f05577154a0db4606282d0151c}{Spell}}.
+
+
+
+См. определение в файле morogspell.\+cpp строка 15
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \textcolor{comment}{// Check if target coordinates are valid}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{19     \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{20     \textcolor{keywordflow}{if} (x >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(x) < boardWidth \&\&}
+\DoxyCodeLine{21         y >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(y) < boardHeight)}
+\DoxyCodeLine{22     \{}
+\DoxyCodeLine{23         \mbox{\hyperlink{classField}{Field}}* targetField = board[x][y];}
+\DoxyCodeLine{24         \mbox{\hyperlink{classUnit}{Unit}}* targetUnit = targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         \textcolor{comment}{// Morog spell deals significant damage to a single unit}}
+\DoxyCodeLine{27         \textcolor{keywordflow}{if} (targetUnit)}
+\DoxyCodeLine{28         \{}
+\DoxyCodeLine{29             std::cout << \textcolor{stringliteral}{"{}Casting Morog spell on unit at ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}).\(\backslash\)n"{}};}
+\DoxyCodeLine{30             \textcolor{keywordtype}{int} damageToDeal = 15; \textcolor{comment}{// Example significant damage for Morog}}
+\DoxyCodeLine{31             \mbox{\hyperlink{functions_8cpp_a43f0126154376c48e09ec7497e5af839}{applyDamage}}(board, x, y, damageToDeal, \textcolor{keyword}{nullptr}); \textcolor{comment}{// Use applyDamage function, no attacking unit for spell}}
+\DoxyCodeLine{32             \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \textcolor{comment}{// Spell cast successfully}}
+\DoxyCodeLine{33         \}}
+\DoxyCodeLine{34         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{35         \{}
+\DoxyCodeLine{36             std::cout << \textcolor{stringliteral}{"{}Morog spell failed: No unit at target location.\(\backslash\)n"{}};}
+\DoxyCodeLine{37         \}}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         std::cout << \textcolor{stringliteral}{"{}Morog spell failed: Target coordinates out of bounds.\(\backslash\)n"{}};}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Spell cast failed}}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки apply\+Damage() и Field\+::get\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/db9/classMorogSpell_ae4434af88dc359059154668ce3af5787_cgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{morogspell_8h}{morogspell.\+h}}\item 
+\mbox{\hyperlink{morogspell_8cpp}{morogspell.\+cpp}}\end{DoxyCompactItemize}

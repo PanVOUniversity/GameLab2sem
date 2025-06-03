@@ -1,0 +1,5 @@
+<map id="Archer::updateAttackDistance" name="Archer::updateAttackDistance">
+<area shape="rect" id="node1" title="Updates the attack distance based on whether the archer is in a fortress." alt="" coords="191,31,407,57"/>
+<area shape="rect" id="node2" href="$d8/d05/classFortress.html#a59036b76372351a496f86c0813862082" title="Handles a unit entering the fortress." alt="" coords="8,5,140,32"/>
+<area shape="rect" id="node3" href="$d8/d05/classFortress.html#a33bd8cb24eab2488b5a21d17ca60a861" title="Handles a unit leaving the fortress." alt="" coords="5,56,143,83"/>
+</map>

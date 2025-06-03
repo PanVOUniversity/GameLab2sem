@@ -1,0 +1,645 @@
+\hypertarget{classPlayer}{}\doxysection{Класс Player}
+\label{classPlayer}\index{Player@{Player}}
+
+
+Represents a player in the game (human or AI).  
+
+
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+
+
+Граф связей класса Player\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{dc/d25/classPlayer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer_a7df6dfbffdc621302b774a515434064e}{Player}} (std\+::string n, bool \mbox{\hyperlink{classPlayer_a635b14970053a6a2294b372d17a3ca04}{my\+Turn}}=false, bool ai=false, bool \mbox{\hyperlink{classPlayer_afec0b3fb0f79cbd2a70b6b71592f216d}{defeated}}=false, int initial\+Mana=0)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classPlayer}{Player}} with the given parameters. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlayer_aba42f377d067adc41cbc43e679b6349c}{get\+Mana}} () const
+\begin{DoxyCompactList}\small\item\em Gets the player\textquotesingle{}s current mana. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a884dd5a4d9aa079a465adb44bebd13af}{set\+Mana}} (int m)
+\begin{DoxyCompactList}\small\item\em Sets the player\textquotesingle{}s mana. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlayer_a0cb5b17db27a2af6492e270aab8f7870}{get\+AI}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the player is AI-\/controlled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlayer_acc717b90437ca3574a900ea736c4cfec}{get\+My\+Turn}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if it\textquotesingle{}s this player\textquotesingle{}s turn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a702ab07a0927d565734c50f7ed231fac}{set\+My\+Turn}} (bool turn)
+\begin{DoxyCompactList}\small\item\em Sets whether it\textquotesingle{}s this player\textquotesingle{}s turn. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlayer_ac70458faf69bfd5d8131b1b9b6b8c5d5}{get\+Defeated}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the player is defeated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a9e49b98ab74e5e9538c8e2adbfe67050}{set\+Defeated}} (bool d)
+\begin{DoxyCompactList}\small\item\em Sets whether the player is defeated. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlayer_a6f8a2dd8ea91473a3d800d3c4d74057c}{get\+Skipped\+Turns}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of consecutive skipped turns. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a5995eaa758f0b796e2d625fa87610278}{set\+Skipped\+Turns}} (int turns)
+\begin{DoxyCompactList}\small\item\em Sets the number of consecutive skipped turns. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_addff1c790965ad1b6ca5745a0fc849e0}{add\+Mana}} (int amount)
+\begin{DoxyCompactList}\small\item\em Adds mana to the player. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlayer_a99236b47c18af320bea2e42ac1c7b2fe}{subtract\+Mana}} (int amount)
+\begin{DoxyCompactList}\small\item\em Subtracts mana from the player if possible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classPlayer_af9c920fabaafdeb7961a645315b521ff}{name}}
+\item 
+int \mbox{\hyperlink{classPlayer_a9a64ebab916a7b25ecdec767ba111ca7}{mana}}
+\item 
+bool \mbox{\hyperlink{classPlayer_ae9c8c98b632c602b1ab4c66d9eceeb41}{is\+AI}}
+\item 
+bool \mbox{\hyperlink{classPlayer_a635b14970053a6a2294b372d17a3ca04}{my\+Turn}}
+\item 
+bool \mbox{\hyperlink{classPlayer_afec0b3fb0f79cbd2a70b6b71592f216d}{defeated}}
+\item 
+int \mbox{\hyperlink{classPlayer_aaec36d1637d025891fc082b9b3cdf4e9}{skipped\+Turns}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Represents a player in the game (human or AI). 
+
+См. определение в файле player.\+h строка 15
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classPlayer_a7df6dfbffdc621302b774a515434064e}\label{classPlayer_a7df6dfbffdc621302b774a515434064e}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{std\+::string}]{n,  }\item[{bool}]{my\+Turn = {\ttfamily false},  }\item[{bool}]{ai = {\ttfamily false},  }\item[{bool}]{defeated = {\ttfamily false},  }\item[{int}]{initial\+Mana = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classPlayer}{Player}} with the given parameters. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em n} & Name of the player. \\
+\hline
+{\em my\+Turn} & True if it\textquotesingle{}s this player\textquotesingle{}s turn. \\
+\hline
+{\em ai} & True if this player is AI-\/controlled. \\
+\hline
+{\em defeated} & True if the player is defeated. \\
+\hline
+{\em initial\+Mana} & Starting mana value. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле player.\+cpp строка 6
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7     : \mbox{\hyperlink{classPlayer_af9c920fabaafdeb7961a645315b521ff}{name}}(n), \mbox{\hyperlink{classPlayer_a9a64ebab916a7b25ecdec767ba111ca7}{mana}}(initialMana), \mbox{\hyperlink{classPlayer_ae9c8c98b632c602b1ab4c66d9eceeb41}{isAI}}(ai), \mbox{\hyperlink{classPlayer_a635b14970053a6a2294b372d17a3ca04}{myTurn}}(\mbox{\hyperlink{classPlayer_a635b14970053a6a2294b372d17a3ca04}{myTurn}}), \mbox{\hyperlink{classPlayer_afec0b3fb0f79cbd2a70b6b71592f216d}{defeated}}(\mbox{\hyperlink{classPlayer_afec0b3fb0f79cbd2a70b6b71592f216d}{defeated}}), \mbox{\hyperlink{classPlayer_aaec36d1637d025891fc082b9b3cdf4e9}{skippedTurns}}(0)}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{comment}{// Constructor body if needed}}
+\DoxyCodeLine{10 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classPlayer_addff1c790965ad1b6ca5745a0fc849e0}\label{classPlayer_addff1c790965ad1b6ca5745a0fc849e0}} 
+\index{Player@{Player}!addMana@{addMana}}
+\index{addMana@{addMana}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{addMana()}{addMana()}}
+{\footnotesize\ttfamily void Player\+::add\+Mana (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Adds mana to the player. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em amount} & Amount of mana to add. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле player.\+cpp строка 73
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75     \mbox{\hyperlink{classPlayer_a9a64ebab916a7b25ecdec767ba111ca7}{mana}} += amount;}
+\DoxyCodeLine{76     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classPlayer_a9a64ebab916a7b25ecdec767ba111ca7}{mana}} < 0) \mbox{\hyperlink{classPlayer_a9a64ebab916a7b25ecdec767ba111ca7}{mana}} = 0; \textcolor{comment}{// Prevent negative mana}}
+\DoxyCodeLine{77 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки mana.
+
+
+
+Используется в Mana\+Mine\+Field\+::apply\+Effect(), Mana\+Mine\+Field\+::generate\+Mana() и get\+Player\+Commands().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d4b/classPlayer_addff1c790965ad1b6ca5745a0fc849e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a0cb5b17db27a2af6492e270aab8f7870}\label{classPlayer_a0cb5b17db27a2af6492e270aab8f7870}} 
+\index{Player@{Player}!getAI@{getAI}}
+\index{getAI@{getAI}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getAI()}{getAI()}}
+{\footnotesize\ttfamily bool Player\+::get\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the player is AI-\/controlled. 
+
+
+
+См. определение в файле player.\+cpp строка 33
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} \mbox{\hyperlink{classPlayer_ae9c8c98b632c602b1ab4c66d9eceeb41}{isAI}};}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки is\+AI.
+
+
+
+Используется в AIact(), Fortress\+::apply\+Effect(), Hospital\+Field\+::apply\+Effect(), Mana\+Mine\+Field\+::apply\+Effect() и get\+Player\+Commands().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d4b/classPlayer_a0cb5b17db27a2af6492e270aab8f7870_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_ac70458faf69bfd5d8131b1b9b6b8c5d5}\label{classPlayer_ac70458faf69bfd5d8131b1b9b6b8c5d5}} 
+\index{Player@{Player}!getDefeated@{getDefeated}}
+\index{getDefeated@{getDefeated}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getDefeated()}{getDefeated()}}
+{\footnotesize\ttfamily bool Player\+::get\+Defeated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the player is defeated. 
+
+
+
+См. определение в файле player.\+cpp строка 49
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51     \textcolor{keywordflow}{return} \mbox{\hyperlink{classPlayer_afec0b3fb0f79cbd2a70b6b71592f216d}{defeated}};}
+\DoxyCodeLine{52 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки defeated.
+
+
+
+Используется в main().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{d2/d4b/classPlayer_ac70458faf69bfd5d8131b1b9b6b8c5d5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_aba42f377d067adc41cbc43e679b6349c}\label{classPlayer_aba42f377d067adc41cbc43e679b6349c}} 
+\index{Player@{Player}!getMana@{getMana}}
+\index{getMana@{getMana}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getMana()}{getMana()}}
+{\footnotesize\ttfamily int Player\+::get\+Mana (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the player\textquotesingle{}s current mana. 
+
+
+
+См. определение в файле player.\+cpp строка 23
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     \textcolor{keywordflow}{return} \mbox{\hyperlink{classPlayer_a9a64ebab916a7b25ecdec767ba111ca7}{mana}};}
+\DoxyCodeLine{26 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки mana.
+
+
+
+Используется в AIact(), check\+Victory(), get\+Player\+Commands(), main(), try\+AICast\+Specific\+Spell(), try\+AICreate\+Specific\+Unit() и try\+AIEngineer\+Build\+Specific().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d4b/classPlayer_aba42f377d067adc41cbc43e679b6349c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_acc717b90437ca3574a900ea736c4cfec}\label{classPlayer_acc717b90437ca3574a900ea736c4cfec}} 
+\index{Player@{Player}!getMyTurn@{getMyTurn}}
+\index{getMyTurn@{getMyTurn}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getMyTurn()}{getMyTurn()}}
+{\footnotesize\ttfamily bool Player\+::get\+My\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if it\textquotesingle{}s this player\textquotesingle{}s turn. 
+
+
+
+См. определение в файле player.\+cpp строка 38
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40     \textcolor{keywordflow}{return} \mbox{\hyperlink{classPlayer_a635b14970053a6a2294b372d17a3ca04}{myTurn}};}
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки my\+Turn.
+
+
+
+Используется в AIact() и main().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d4b/classPlayer_acc717b90437ca3574a900ea736c4cfec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85}\label{classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85}} 
+\index{Player@{Player}!getName@{getName}}
+\index{getName@{getName}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Player\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the player\textquotesingle{}s name. 
+
+
+
+См. определение в файле player.\+cpp строка 18
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{keywordflow}{return} \mbox{\hyperlink{classPlayer_af9c920fabaafdeb7961a645315b521ff}{name}};}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки name.
+
+
+
+Используется в Mana\+Mine\+Field\+::apply\+Effect(), Mana\+Mine\+Field\+::generate\+Mana() и main().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d4b/classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a6f8a2dd8ea91473a3d800d3c4d74057c}\label{classPlayer_a6f8a2dd8ea91473a3d800d3c4d74057c}} 
+\index{Player@{Player}!getSkippedTurns@{getSkippedTurns}}
+\index{getSkippedTurns@{getSkippedTurns}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getSkippedTurns()}{getSkippedTurns()}}
+{\footnotesize\ttfamily int Player\+::get\+Skipped\+Turns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of consecutive skipped turns. 
+
+
+
+См. определение в файле player.\+cpp строка 61
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62 \{}
+\DoxyCodeLine{63     \textcolor{keywordflow}{return} \mbox{\hyperlink{classPlayer_aaec36d1637d025891fc082b9b3cdf4e9}{skippedTurns}};}
+\DoxyCodeLine{64 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки skipped\+Turns.
+
+
+
+Используется в main().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{d2/d4b/classPlayer_a6f8a2dd8ea91473a3d800d3c4d74057c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a9e49b98ab74e5e9538c8e2adbfe67050}\label{classPlayer_a9e49b98ab74e5e9538c8e2adbfe67050}} 
+\index{Player@{Player}!setDefeated@{setDefeated}}
+\index{setDefeated@{setDefeated}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setDefeated()}{setDefeated()}}
+{\footnotesize\ttfamily void Player\+::set\+Defeated (\begin{DoxyParamCaption}\item[{bool}]{d }\end{DoxyParamCaption})}
+
+
+
+Sets whether the player is defeated. 
+
+
+
+См. определение в файле player.\+cpp строка 55
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57     \mbox{\hyperlink{classPlayer_afec0b3fb0f79cbd2a70b6b71592f216d}{defeated}} = d;}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки defeated.
+
+\mbox{\Hypertarget{classPlayer_a884dd5a4d9aa079a465adb44bebd13af}\label{classPlayer_a884dd5a4d9aa079a465adb44bebd13af}} 
+\index{Player@{Player}!setMana@{setMana}}
+\index{setMana@{setMana}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setMana()}{setMana()}}
+{\footnotesize\ttfamily void Player\+::set\+Mana (\begin{DoxyParamCaption}\item[{int}]{m }\end{DoxyParamCaption})}
+
+
+
+Sets the player\textquotesingle{}s mana. 
+
+
+
+См. определение в файле player.\+cpp строка 28
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30     \mbox{\hyperlink{classPlayer_a9a64ebab916a7b25ecdec767ba111ca7}{mana}} = m;}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки mana.
+
+
+
+Используется в AIact(), try\+AICast\+Specific\+Spell(), try\+AICreate\+Specific\+Unit() и try\+AIEngineer\+Build\+Specific().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d4b/classPlayer_a884dd5a4d9aa079a465adb44bebd13af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a702ab07a0927d565734c50f7ed231fac}\label{classPlayer_a702ab07a0927d565734c50f7ed231fac}} 
+\index{Player@{Player}!setMyTurn@{setMyTurn}}
+\index{setMyTurn@{setMyTurn}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setMyTurn()}{setMyTurn()}}
+{\footnotesize\ttfamily void Player\+::set\+My\+Turn (\begin{DoxyParamCaption}\item[{bool}]{turn }\end{DoxyParamCaption})}
+
+
+
+Sets whether it\textquotesingle{}s this player\textquotesingle{}s turn. 
+
+
+
+См. определение в файле player.\+cpp строка 43
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45     \mbox{\hyperlink{classPlayer_a635b14970053a6a2294b372d17a3ca04}{myTurn}} = turn;}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки my\+Turn.
+
+
+
+Используется в AIact() и main().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d4b/classPlayer_a702ab07a0927d565734c50f7ed231fac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a5995eaa758f0b796e2d625fa87610278}\label{classPlayer_a5995eaa758f0b796e2d625fa87610278}} 
+\index{Player@{Player}!setSkippedTurns@{setSkippedTurns}}
+\index{setSkippedTurns@{setSkippedTurns}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setSkippedTurns()}{setSkippedTurns()}}
+{\footnotesize\ttfamily void Player\+::set\+Skipped\+Turns (\begin{DoxyParamCaption}\item[{int}]{turns }\end{DoxyParamCaption})}
+
+
+
+Sets the number of consecutive skipped turns. 
+
+
+
+См. определение в файле player.\+cpp строка 67
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68 \{}
+\DoxyCodeLine{69     \mbox{\hyperlink{classPlayer_aaec36d1637d025891fc082b9b3cdf4e9}{skippedTurns}} = turns;}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки skipped\+Turns.
+
+
+
+Используется в main().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{d2/d4b/classPlayer_a5995eaa758f0b796e2d625fa87610278_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a99236b47c18af320bea2e42ac1c7b2fe}\label{classPlayer_a99236b47c18af320bea2e42ac1c7b2fe}} 
+\index{Player@{Player}!subtractMana@{subtractMana}}
+\index{subtractMana@{subtractMana}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{subtractMana()}{subtractMana()}}
+{\footnotesize\ttfamily bool Player\+::subtract\+Mana (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Subtracts mana from the player if possible. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em amount} & Amount of mana to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if mana was subtracted, false if not enough mana. 
+\end{DoxyReturn}
+
+
+См. определение в файле player.\+cpp строка 79
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80 \{}
+\DoxyCodeLine{81     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classPlayer_a9a64ebab916a7b25ecdec767ba111ca7}{mana}} >= amount)}
+\DoxyCodeLine{82     \{}
+\DoxyCodeLine{83         \mbox{\hyperlink{classPlayer_a9a64ebab916a7b25ecdec767ba111ca7}{mana}} -\/= amount;}
+\DoxyCodeLine{84         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{85     \}}
+\DoxyCodeLine{86     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Not enough mana}}
+\DoxyCodeLine{87 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки mana.
+
+
+
+Используется в get\+Player\+Commands().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d4b/classPlayer_a99236b47c18af320bea2e42ac1c7b2fe_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classPlayer_afec0b3fb0f79cbd2a70b6b71592f216d}\label{classPlayer_afec0b3fb0f79cbd2a70b6b71592f216d}} 
+\index{Player@{Player}!defeated@{defeated}}
+\index{defeated@{defeated}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{defeated}{defeated}}
+{\footnotesize\ttfamily bool Player\+::defeated\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле player.\+h строка 22
+
+
+
+Используется в get\+Defeated() и set\+Defeated().
+
+\mbox{\Hypertarget{classPlayer_ae9c8c98b632c602b1ab4c66d9eceeb41}\label{classPlayer_ae9c8c98b632c602b1ab4c66d9eceeb41}} 
+\index{Player@{Player}!isAI@{isAI}}
+\index{isAI@{isAI}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{isAI}{isAI}}
+{\footnotesize\ttfamily bool Player\+::is\+AI\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле player.\+h строка 20
+
+
+
+Используется в get\+AI().
+
+\mbox{\Hypertarget{classPlayer_a9a64ebab916a7b25ecdec767ba111ca7}\label{classPlayer_a9a64ebab916a7b25ecdec767ba111ca7}} 
+\index{Player@{Player}!mana@{mana}}
+\index{mana@{mana}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{mana}{mana}}
+{\footnotesize\ttfamily int Player\+::mana\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле player.\+h строка 19
+
+
+
+Используется в add\+Mana(), get\+Mana(), set\+Mana() и subtract\+Mana().
+
+\mbox{\Hypertarget{classPlayer_a635b14970053a6a2294b372d17a3ca04}\label{classPlayer_a635b14970053a6a2294b372d17a3ca04}} 
+\index{Player@{Player}!myTurn@{myTurn}}
+\index{myTurn@{myTurn}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{myTurn}{myTurn}}
+{\footnotesize\ttfamily bool Player\+::my\+Turn\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле player.\+h строка 21
+
+
+
+Используется в get\+My\+Turn() и set\+My\+Turn().
+
+\mbox{\Hypertarget{classPlayer_af9c920fabaafdeb7961a645315b521ff}\label{classPlayer_af9c920fabaafdeb7961a645315b521ff}} 
+\index{Player@{Player}!name@{name}}
+\index{name@{name}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Player\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле player.\+h строка 18
+
+
+
+Используется в get\+Name().
+
+\mbox{\Hypertarget{classPlayer_aaec36d1637d025891fc082b9b3cdf4e9}\label{classPlayer_aaec36d1637d025891fc082b9b3cdf4e9}} 
+\index{Player@{Player}!skippedTurns@{skippedTurns}}
+\index{skippedTurns@{skippedTurns}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{skippedTurns}{skippedTurns}}
+{\footnotesize\ttfamily int Player\+::skipped\+Turns\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле player.\+h строка 23
+
+
+
+Используется в get\+Skipped\+Turns() и set\+Skipped\+Turns().
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{player_8h}{player.\+h}}\item 
+\mbox{\hyperlink{player_8cpp}{player.\+cpp}}\end{DoxyCompactItemize}

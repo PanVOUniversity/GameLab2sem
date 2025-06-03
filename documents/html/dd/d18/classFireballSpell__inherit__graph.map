@@ -1,0 +1,4 @@
+<map id="FireballSpell" name="FireballSpell">
+<area shape="rect" id="node1" title="Spell that deals damage to a target unit (Fireball)." alt="" coords="5,204,144,311"/>
+<area shape="rect" id="node2" href="$d1/d16/classSpell.html" title="Abstract base class for all spells in the game." alt="" coords="8,5,141,156"/>
+</map>

@@ -1,0 +1,934 @@
+\hypertarget{classUnit}{}\doxysection{Класс Unit}
+\label{classUnit}\index{Unit@{Unit}}
+
+
+Represents a unit in the game (base class for all units).  
+
+
+
+
+{\ttfamily \#include $<$unit.\+h$>$}
+
+
+
+Граф наследования\+:Unit\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d58/classUnit__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Unit\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{d5/dc8/classUnit__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUnit_a889a37b2a427c6c220b45057511c0d05}{Unit}} (const std\+::string \&unit\+Name, int moveD, int attackD, int health, int dmg, bool is\+Player, int will)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classUnit}{Unit}} with the given parameters. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classUnit_a6353fc4c0a329997ad4abcf0dcb4eb27}{$\sim$\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \mbox{\hyperlink{classUnit}{Unit}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unit\textquotesingle{}s name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUnit_aba0432bdab275a064c23bc87b12a5d66}{get\+Move\+Distance}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unit\textquotesingle{}s move distance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUnit_a8856896cc73b342fec2cd3e8079e8e6a}{get\+Attack\+Distance}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unit\textquotesingle{}s attack distance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUnit_a0e44c4741b8ce52687715dc82fdfaf23}{get\+Current\+Health}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unit\textquotesingle{}s current health. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUnit_a892f3d3a4dd89188750cdfba57d2e5ae}{get\+Max\+Health}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unit\textquotesingle{}s max health. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUnit_a0062c5fab5677c6b47e1d881b4dcc53c}{get\+Damage}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unit\textquotesingle{}s damage value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{get\+Player}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the unit is controlled by the player. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{get\+Will}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unit\textquotesingle{}s current will points. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUnit_ae149ab0037a9e0c45e68d93dadfdd83f}{get\+Max\+Will}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unit\textquotesingle{}s max will points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUnit_a2564f2e55a6aafded781d5796d3a6629}{set\+Current\+Health}} (int health)
+\begin{DoxyCompactList}\small\item\em Sets the unit\textquotesingle{}s current health. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUnit_a207c7fe4b9d30af2446bb8af0a127c22}{set\+Will}} (int will)
+\begin{DoxyCompactList}\small\item\em Sets the unit\textquotesingle{}s will points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUnit_aaec88b40541cf3eed9e3ab4780fe937e}{set\+Health}} (int health)
+\begin{DoxyCompactList}\small\item\em Sets the unit\textquotesingle{}s health (alias for set\+Current\+Health). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classUnit_a43a426d4d87aebf07e2737e122bea210}{take\+Damage}} (int \mbox{\hyperlink{classUnit_a92bfb1430ab13e69d4c703a7fc8bafdb}{damage}}, \mbox{\hyperlink{classUnit}{Unit}} $\ast$attacker=nullptr)
+\begin{DoxyCompactList}\small\item\em Applies damage to the unit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUnit_a9fe18bf6d2917c59c35df6d56c6cbdc2}{restore\+Health}} (int amount)
+\begin{DoxyCompactList}\small\item\em Restores health to the unit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUnit_aec8e04d487cf005cd75ae9bdf62525e6}{restore\+Will}} (int amount)
+\begin{DoxyCompactList}\small\item\em Restores will points to the unit. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classUnit_a80e6869b4f62b0ddb793efdf513892ee}{use\+Ability}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int targetX, int targetY)
+\begin{DoxyCompactList}\small\item\em Virtual method for special unit abilities (to be overridden by derived classes). \end{DoxyCompactList}\item 
+virtual char \mbox{\hyperlink{classUnit_afd6bcf5adaadb97b1378512344bd642b}{get\+Symbol}} () const
+\begin{DoxyCompactList}\small\item\em Gets the symbol representing the unit (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classUnit_a03a2344fa6977a2ce44b320e44bc9caa}{name}}
+\item 
+int \mbox{\hyperlink{classUnit_aa53580e05154faa2108a772c694399bb}{move\+Distance}}
+\item 
+int \mbox{\hyperlink{classUnit_ad0b4b3d2dcd3cc1b25581180b4282cee}{attack\+Distance}}
+\item 
+int \mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{current\+Health}}
+\item 
+int \mbox{\hyperlink{classUnit_a3ae356d6dff417f52a1ccf7133807314}{max\+Health}}
+\item 
+int \mbox{\hyperlink{classUnit_a92bfb1430ab13e69d4c703a7fc8bafdb}{damage}}
+\item 
+bool \mbox{\hyperlink{classUnit_aaa16bddcdb423ca124b6b44a4d27afea}{is\+Player\+Unit}}
+\item 
+int \mbox{\hyperlink{classUnit_afcaeef974ce724af04978a375f5a46ea}{current\+Will}}
+\item 
+int \mbox{\hyperlink{classUnit_a93ea56944962c9007c255a0224f744be}{max\+Will}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Represents a unit in the game (base class for all units). 
+
+См. определение в файле unit.\+h строка 15
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classUnit_a889a37b2a427c6c220b45057511c0d05}\label{classUnit_a889a37b2a427c6c220b45057511c0d05}} 
+\index{Unit@{Unit}!Unit@{Unit}}
+\index{Unit@{Unit}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{Unit()}{Unit()}}
+{\footnotesize\ttfamily Unit\+::\+Unit (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{unit\+Name,  }\item[{int}]{moveD,  }\item[{int}]{attackD,  }\item[{int}]{health,  }\item[{int}]{dmg,  }\item[{bool}]{is\+Player,  }\item[{int}]{will }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classUnit}{Unit}} with the given parameters. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit\+Name} & Name of the unit. \\
+\hline
+{\em moveD} & Move distance. \\
+\hline
+{\em attackD} & Attack distance. \\
+\hline
+{\em health} & Initial and max health. \\
+\hline
+{\em dmg} & Damage value. \\
+\hline
+{\em is\+Player} & True if controlled by player, false if AI. \\
+\hline
+{\em will} & Initial and max will points. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле unit.\+cpp строка 8
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9     : \mbox{\hyperlink{classUnit_a03a2344fa6977a2ce44b320e44bc9caa}{name}}(unitName), \mbox{\hyperlink{classUnit_aa53580e05154faa2108a772c694399bb}{moveDistance}}(moveD), \mbox{\hyperlink{classUnit_ad0b4b3d2dcd3cc1b25581180b4282cee}{attackDistance}}(attackD),}
+\DoxyCodeLine{10       \mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{currentHealth}}(health), \mbox{\hyperlink{classUnit_a3ae356d6dff417f52a1ccf7133807314}{maxHealth}}(health), \mbox{\hyperlink{classUnit_a92bfb1430ab13e69d4c703a7fc8bafdb}{damage}}(dmg), \mbox{\hyperlink{classUnit_aaa16bddcdb423ca124b6b44a4d27afea}{isPlayerUnit}}(isPlayer),}
+\DoxyCodeLine{11       \mbox{\hyperlink{classUnit_afcaeef974ce724af04978a375f5a46ea}{currentWill}}(will), \mbox{\hyperlink{classUnit_a93ea56944962c9007c255a0224f744be}{maxWill}}(will)}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnit_a6353fc4c0a329997ad4abcf0dcb4eb27}\label{classUnit_a6353fc4c0a329997ad4abcf0dcb4eb27}} 
+\index{Unit@{Unit}!````~Unit@{$\sim$Unit}}
+\index{````~Unit@{$\sim$Unit}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{$\sim$Unit()}{~Unit()}}
+{\footnotesize\ttfamily Unit\+::$\sim$\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for \mbox{\hyperlink{classUnit}{Unit}}. 
+
+
+
+См. определение в файле unit.\+cpp строка 15
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \textcolor{comment}{// Destructor for Unit.}}
+\DoxyCodeLine{18     \textcolor{comment}{// No dynamic memory allocated within the base Unit class that needs explicit deletion here.}}
+\DoxyCodeLine{19     \textcolor{comment}{// Derived classes might need to implement their own destructors if they allocate memory.}}
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classUnit_a8856896cc73b342fec2cd3e8079e8e6a}\label{classUnit_a8856896cc73b342fec2cd3e8079e8e6a}} 
+\index{Unit@{Unit}!getAttackDistance@{getAttackDistance}}
+\index{getAttackDistance@{getAttackDistance}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{getAttackDistance()}{getAttackDistance()}}
+{\footnotesize\ttfamily int Unit\+::get\+Attack\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the unit\textquotesingle{}s attack distance. 
+
+
+
+См. определение в файле unit.\+cpp строка 32
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33 \{}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUnit_ad0b4b3d2dcd3cc1b25581180b4282cee}{attackDistance}};}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки attack\+Distance.
+
+
+
+Используется в Cannon\+::\+\_\+find\+Enemy\+In\+Range(), attack(), Cannon\+::fire(), get\+Player\+Commands() и try\+AIAttack().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dd9/classUnit_a8856896cc73b342fec2cd3e8079e8e6a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_a0e44c4741b8ce52687715dc82fdfaf23}\label{classUnit_a0e44c4741b8ce52687715dc82fdfaf23}} 
+\index{Unit@{Unit}!getCurrentHealth@{getCurrentHealth}}
+\index{getCurrentHealth@{getCurrentHealth}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{getCurrentHealth()}{getCurrentHealth()}}
+{\footnotesize\ttfamily int Unit\+::get\+Current\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the unit\textquotesingle{}s current health. 
+
+
+
+См. определение в файле unit.\+cpp строка 37
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{currentHealth}};}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки current\+Health.
+
+
+
+Используется в apply\+Damage(), attack(), Cannon\+::fire(), get\+Effective\+Defense(), move() и unit\+\_\+map().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dd9/classUnit_a0e44c4741b8ce52687715dc82fdfaf23_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_a0062c5fab5677c6b47e1d881b4dcc53c}\label{classUnit_a0062c5fab5677c6b47e1d881b4dcc53c}} 
+\index{Unit@{Unit}!getDamage@{getDamage}}
+\index{getDamage@{getDamage}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{getDamage()}{getDamage()}}
+{\footnotesize\ttfamily int Unit\+::get\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the unit\textquotesingle{}s damage value. 
+
+
+
+См. определение в файле unit.\+cpp строка 47
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUnit_a92bfb1430ab13e69d4c703a7fc8bafdb}{damage}};}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки damage.
+
+
+
+Используется в attack(), Infantry\+::counter\+Attack() и Cannon\+::fire().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dd9/classUnit_a0062c5fab5677c6b47e1d881b4dcc53c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_a892f3d3a4dd89188750cdfba57d2e5ae}\label{classUnit_a892f3d3a4dd89188750cdfba57d2e5ae}} 
+\index{Unit@{Unit}!getMaxHealth@{getMaxHealth}}
+\index{getMaxHealth@{getMaxHealth}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{getMaxHealth()}{getMaxHealth()}}
+{\footnotesize\ttfamily int Unit\+::get\+Max\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the unit\textquotesingle{}s max health. 
+
+
+
+См. определение в файле unit.\+cpp строка 42
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43 \{}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUnit_a3ae356d6dff417f52a1ccf7133807314}{maxHealth}};}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки max\+Health.
+
+\mbox{\Hypertarget{classUnit_ae149ab0037a9e0c45e68d93dadfdd83f}\label{classUnit_ae149ab0037a9e0c45e68d93dadfdd83f}} 
+\index{Unit@{Unit}!getMaxWill@{getMaxWill}}
+\index{getMaxWill@{getMaxWill}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{getMaxWill()}{getMaxWill()}}
+{\footnotesize\ttfamily int Unit\+::get\+Max\+Will (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the unit\textquotesingle{}s max will points. 
+
+
+
+См. определение в файле unit.\+cpp строка 62
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUnit_a93ea56944962c9007c255a0224f744be}{maxWill}};}
+\DoxyCodeLine{65 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки max\+Will.
+
+\mbox{\Hypertarget{classUnit_aba0432bdab275a064c23bc87b12a5d66}\label{classUnit_aba0432bdab275a064c23bc87b12a5d66}} 
+\index{Unit@{Unit}!getMoveDistance@{getMoveDistance}}
+\index{getMoveDistance@{getMoveDistance}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{getMoveDistance()}{getMoveDistance()}}
+{\footnotesize\ttfamily int Unit\+::get\+Move\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the unit\textquotesingle{}s move distance. 
+
+
+
+См. определение в файле unit.\+cpp строка 27
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUnit_aa53580e05154faa2108a772c694399bb}{moveDistance}};}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки move\+Distance.
+
+
+
+Используется в Cannon\+::\+\_\+find\+Empty\+Field\+In\+Range(), get\+Player\+Commands(), move() и try\+AIMove().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dd9/classUnit_aba0432bdab275a064c23bc87b12a5d66_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_a0497994e384db5c080ec78e9b645fa40}\label{classUnit_a0497994e384db5c080ec78e9b645fa40}} 
+\index{Unit@{Unit}!getName@{getName}}
+\index{getName@{getName}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Unit\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the unit\textquotesingle{}s name. 
+
+
+
+См. определение в файле unit.\+cpp строка 22
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUnit_a03a2344fa6977a2ce44b320e44bc9caa}{name}};}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки name.
+
+
+
+Используется в apply\+Damage(), Burned\+Field\+::apply\+Effect(), Fortress\+::apply\+Effect(), Hospital\+Field\+::apply\+Effect(), attack(), Curse\+Spell\+::cast(), Teleport\+Spell\+::cast(), Infantry\+::counter\+Attack(), Bombed\+Field\+::explode(), Cannon\+::fire(), move(), Bombed\+Field\+::on\+Enter(), Fortress\+::on\+Enter(), Fortress\+::on\+Leave(), Priest\+::pray(), restore\+Health(), restore\+Will(), take\+Damage(), try\+AIAttack(), unit\+\_\+map(), Archer\+::update\+Attack\+Distance() и use\+Ability().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dd9/classUnit_a0497994e384db5c080ec78e9b645fa40_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_a72e700f28797f2c1709e03b2b7828814}\label{classUnit_a72e700f28797f2c1709e03b2b7828814}} 
+\index{Unit@{Unit}!getPlayer@{getPlayer}}
+\index{getPlayer@{getPlayer}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{getPlayer()}{getPlayer()}}
+{\footnotesize\ttfamily bool Unit\+::get\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the unit is controlled by the player. 
+
+
+
+См. определение в файле unit.\+cpp строка 52
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53 \{}
+\DoxyCodeLine{54     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUnit_aaa16bddcdb423ca124b6b44a4d27afea}{isPlayerUnit}};}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки is\+Player\+Unit.
+
+
+
+Используется в Cannon\+::\+\_\+find\+Enemy\+In\+Range(), Cannon\+::\+\_\+find\+Friendly\+Fortress\+Nearby(), Cannon\+::\+\_\+find\+Friendly\+Nearby(), AIact(), Fortress\+::apply\+Effect(), Hospital\+Field\+::apply\+Effect(), Mana\+Mine\+Field\+::apply\+Effect(), attack(), Teleport\+Spell\+::cast(), check\+Victory(), Engineer\+::create\+Fortress(), find\+Random\+Enemy\+Unit\+Coords(), Cannon\+::fire(), get\+Player\+Commands(), main(), Priest\+::pray(), try\+AIAttack() и unit\+\_\+map().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dd9/classUnit_a72e700f28797f2c1709e03b2b7828814_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_afd6bcf5adaadb97b1378512344bd642b}\label{classUnit_afd6bcf5adaadb97b1378512344bd642b}} 
+\index{Unit@{Unit}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily virtual char Unit\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the symbol representing the unit (for display). 
+
+\begin{DoxyReturn}{Возвращает}
+Character symbol. 
+\end{DoxyReturn}
+
+
+Переопределяется в \mbox{\hyperlink{classPriest_a743cec8dc0cf919d42b677a2a3d7ddac}{Priest}}, \mbox{\hyperlink{classInfantry_aef29ebf2c72cb8f110ca98c1ff2029e6}{Infantry}}, \mbox{\hyperlink{classEngineer_aa7fb1c7fca9ac7c9c4e44d93bd5e89a1}{Engineer}}, \mbox{\hyperlink{classCannon_af6d2765b54c29a5d5221880722258270}{Cannon}} и \mbox{\hyperlink{classArcher_a00963678481911b6c27d2b2f81754b0f}{Archer}}.
+
+
+
+См. определение в файле unit.\+h строка 103
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103 \{ \textcolor{keywordflow}{return} \textcolor{charliteral}{'?'}; \}}
+
+\end{DoxyCode}
+
+
+Используется в display\+Board().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{df/dd9/classUnit_afd6bcf5adaadb97b1378512344bd642b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}\label{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}} 
+\index{Unit@{Unit}!getWill@{getWill}}
+\index{getWill@{getWill}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{getWill()}{getWill()}}
+{\footnotesize\ttfamily int Unit\+::get\+Will (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the unit\textquotesingle{}s current will points. 
+
+
+
+См. определение в файле unit.\+cpp строка 57
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUnit_afcaeef974ce724af04978a375f5a46ea}{currentWill}};}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки current\+Will.
+
+
+
+Используется в AIact(), attack(), Curse\+Spell\+::cast(), Cannon\+::fire(), get\+Player\+Commands(), move(), Priest\+::pray(), try\+AIAttack(), try\+AIEngineer\+Build\+Specific() и try\+AIMove().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dd9/classUnit_a4d3fd62e52d7c275c5a4b416b03e2998_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_a9fe18bf6d2917c59c35df6d56c6cbdc2}\label{classUnit_a9fe18bf6d2917c59c35df6d56c6cbdc2}} 
+\index{Unit@{Unit}!restoreHealth@{restoreHealth}}
+\index{restoreHealth@{restoreHealth}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{restoreHealth()}{restoreHealth()}}
+{\footnotesize\ttfamily void Unit\+::restore\+Health (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Restores health to the unit. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em amount} & Amount of health to restore. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле unit.\+cpp строка 89
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{90 \{}
+\DoxyCodeLine{91     \mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{currentHealth}} += amount;}
+\DoxyCodeLine{92     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{currentHealth}} > \mbox{\hyperlink{classUnit_a3ae356d6dff417f52a1ccf7133807314}{maxHealth}}) \mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{currentHealth}} = \mbox{\hyperlink{classUnit_a3ae356d6dff417f52a1ccf7133807314}{maxHealth}}; \textcolor{comment}{// Health cannot exceed max}}
+\DoxyCodeLine{93     std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} health restored by "{}} << amount << \textcolor{stringliteral}{"{}. Current health: "{}} << \mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{currentHealth}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classUnit_a3ae356d6dff417f52a1ccf7133807314}{maxHealth}} << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{94 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки current\+Health, get\+Name() и max\+Health.
+
+
+
+Используется в Fortress\+::apply\+Effect() и Hospital\+Field\+::apply\+Effect().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{df/dd9/classUnit_a9fe18bf6d2917c59c35df6d56c6cbdc2_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dd9/classUnit_a9fe18bf6d2917c59c35df6d56c6cbdc2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_aec8e04d487cf005cd75ae9bdf62525e6}\label{classUnit_aec8e04d487cf005cd75ae9bdf62525e6}} 
+\index{Unit@{Unit}!restoreWill@{restoreWill}}
+\index{restoreWill@{restoreWill}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{restoreWill()}{restoreWill()}}
+{\footnotesize\ttfamily void Unit\+::restore\+Will (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Restores will points to the unit. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em amount} & Amount of will to restore. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле unit.\+cpp строка 96
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97 \{}
+\DoxyCodeLine{98     \mbox{\hyperlink{classUnit_afcaeef974ce724af04978a375f5a46ea}{currentWill}} += amount;}
+\DoxyCodeLine{99     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classUnit_afcaeef974ce724af04978a375f5a46ea}{currentWill}} > \mbox{\hyperlink{classUnit_a93ea56944962c9007c255a0224f744be}{maxWill}}) \mbox{\hyperlink{classUnit_afcaeef974ce724af04978a375f5a46ea}{currentWill}} = \mbox{\hyperlink{classUnit_a93ea56944962c9007c255a0224f744be}{maxWill}}; \textcolor{comment}{// Will cannot exceed max}}
+\DoxyCodeLine{100     std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} will restored by "{}} << amount << \textcolor{stringliteral}{"{}. Current will: "{}} << \mbox{\hyperlink{classUnit_afcaeef974ce724af04978a375f5a46ea}{currentWill}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classUnit_a93ea56944962c9007c255a0224f744be}{maxWill}} << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{101 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки current\+Will, get\+Name() и max\+Will.
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{df/dd9/classUnit_aec8e04d487cf005cd75ae9bdf62525e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_a2564f2e55a6aafded781d5796d3a6629}\label{classUnit_a2564f2e55a6aafded781d5796d3a6629}} 
+\index{Unit@{Unit}!setCurrentHealth@{setCurrentHealth}}
+\index{setCurrentHealth@{setCurrentHealth}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{setCurrentHealth()}{setCurrentHealth()}}
+{\footnotesize\ttfamily void Unit\+::set\+Current\+Health (\begin{DoxyParamCaption}\item[{int}]{health }\end{DoxyParamCaption})}
+
+
+
+Sets the unit\textquotesingle{}s current health. 
+
+
+
+См. определение в файле unit.\+cpp строка 68
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70     \mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{currentHealth}} = health;}
+\DoxyCodeLine{71 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки current\+Health.
+
+\mbox{\Hypertarget{classUnit_aaec88b40541cf3eed9e3ab4780fe937e}\label{classUnit_aaec88b40541cf3eed9e3ab4780fe937e}} 
+\index{Unit@{Unit}!setHealth@{setHealth}}
+\index{setHealth@{setHealth}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{setHealth()}{setHealth()}}
+{\footnotesize\ttfamily void Unit\+::set\+Health (\begin{DoxyParamCaption}\item[{int}]{health }\end{DoxyParamCaption})}
+
+
+
+Sets the unit\textquotesingle{}s health (alias for set\+Current\+Health). 
+
+
+
+См. определение в файле unit.\+cpp строка 103
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104 \{}
+\DoxyCodeLine{105     \mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{currentHealth}} = std::max(0, std::min(health, \mbox{\hyperlink{classUnit_a3ae356d6dff417f52a1ccf7133807314}{maxHealth}}));}
+\DoxyCodeLine{106 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки current\+Health и max\+Health.
+
+
+
+Используется в Cannon\+::fire().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dd9/classUnit_aaec88b40541cf3eed9e3ab4780fe937e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_a207c7fe4b9d30af2446bb8af0a127c22}\label{classUnit_a207c7fe4b9d30af2446bb8af0a127c22}} 
+\index{Unit@{Unit}!setWill@{setWill}}
+\index{setWill@{setWill}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{setWill()}{setWill()}}
+{\footnotesize\ttfamily void Unit\+::set\+Will (\begin{DoxyParamCaption}\item[{int}]{will }\end{DoxyParamCaption})}
+
+
+
+Sets the unit\textquotesingle{}s will points. 
+
+
+
+См. определение в файле unit.\+cpp строка 73
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75     \mbox{\hyperlink{classUnit_afcaeef974ce724af04978a375f5a46ea}{currentWill}} = will;}
+\DoxyCodeLine{76 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки current\+Will.
+
+
+
+Используется в attack(), Curse\+Spell\+::cast(), Cannon\+::fire(), get\+Player\+Commands(), move(), Priest\+::pray() и try\+AIEngineer\+Build\+Specific().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dd9/classUnit_a207c7fe4b9d30af2446bb8af0a127c22_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_a43a426d4d87aebf07e2737e122bea210}\label{classUnit_a43a426d4d87aebf07e2737e122bea210}} 
+\index{Unit@{Unit}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily void Unit\+::take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage,  }\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{attacker = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Applies damage to the unit. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em damage} & Amount of damage to apply. \\
+\hline
+{\em attacker} & The attacking unit (optional). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле unit.\+cpp строка 78
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79 \{}
+\DoxyCodeLine{80     (void)attacker; \textcolor{comment}{// Suppress unused parameter warning}}
+\DoxyCodeLine{81     std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} takes "{}} << \mbox{\hyperlink{classUnit_a92bfb1430ab13e69d4c703a7fc8bafdb}{damage}} << \textcolor{stringliteral}{"{} damage.\(\backslash\)n"{}};}
+\DoxyCodeLine{82     \mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{currentHealth}} -\/= \mbox{\hyperlink{classUnit_a92bfb1430ab13e69d4c703a7fc8bafdb}{damage}};}
+\DoxyCodeLine{83     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{currentHealth}} < 0) \mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{currentHealth}} = 0; \textcolor{comment}{// Health cannot go below 0}}
+\DoxyCodeLine{84     std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} health: "{}} << \mbox{\hyperlink{classUnit_ab6784baaf16aa725b0873d95f9e455b5}{currentHealth}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classUnit_a3ae356d6dff417f52a1ccf7133807314}{maxHealth}} << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     \textcolor{comment}{// Note: Unit removal logic is handled in the applyDamage function, not here.}}
+\DoxyCodeLine{87 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки current\+Health, damage, get\+Name() и max\+Health.
+
+
+
+Используется в apply\+Damage() и Infantry\+::counter\+Attack().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{df/dd9/classUnit_a43a426d4d87aebf07e2737e122bea210_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dd9/classUnit_a43a426d4d87aebf07e2737e122bea210_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUnit_a80e6869b4f62b0ddb793efdf513892ee}\label{classUnit_a80e6869b4f62b0ddb793efdf513892ee}} 
+\index{Unit@{Unit}!useAbility@{useAbility}}
+\index{useAbility@{useAbility}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{useAbility()}{useAbility()}}
+{\footnotesize\ttfamily bool Unit\+::use\+Ability (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{targetX,  }\item[{int}]{targetY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual method for special unit abilities (to be overridden by derived classes). 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+{\em targetX} & X coordinate of the target. \\
+\hline
+{\em targetY} & Y coordinate of the target. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the ability was used successfully. 
+\end{DoxyReturn}
+
+
+Переопределяется в \mbox{\hyperlink{classCannon_a1d7f5eea1d4dbc32c152762c97b90f43}{Cannon}}.
+
+
+
+См. определение в файле unit.\+cpp строка 109
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{110 \{}
+\DoxyCodeLine{111     (void)board; (void)targetX; (void)targetY; \textcolor{comment}{// Suppress unused parameter warnings}}
+\DoxyCodeLine{112     \textcolor{comment}{// Base units have no special abilities}}
+\DoxyCodeLine{113     std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} has no special ability.\(\backslash\)n"{}};}
+\DoxyCodeLine{114     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Ability not used}}
+\DoxyCodeLine{115 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки get\+Name().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{df/dd9/classUnit_a80e6869b4f62b0ddb793efdf513892ee_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classUnit_ad0b4b3d2dcd3cc1b25581180b4282cee}\label{classUnit_ad0b4b3d2dcd3cc1b25581180b4282cee}} 
+\index{Unit@{Unit}!attackDistance@{attackDistance}}
+\index{attackDistance@{attackDistance}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{attackDistance}{attackDistance}}
+{\footnotesize\ttfamily int Unit\+::attack\+Distance\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле unit.\+h строка 20
+
+
+
+Используется в get\+Attack\+Distance() и Archer\+::update\+Attack\+Distance().
+
+\mbox{\Hypertarget{classUnit_ab6784baaf16aa725b0873d95f9e455b5}\label{classUnit_ab6784baaf16aa725b0873d95f9e455b5}} 
+\index{Unit@{Unit}!currentHealth@{currentHealth}}
+\index{currentHealth@{currentHealth}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{currentHealth}{currentHealth}}
+{\footnotesize\ttfamily int Unit\+::current\+Health\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле unit.\+h строка 21
+
+
+
+Используется в get\+Current\+Health(), restore\+Health(), set\+Current\+Health(), set\+Health() и take\+Damage().
+
+\mbox{\Hypertarget{classUnit_afcaeef974ce724af04978a375f5a46ea}\label{classUnit_afcaeef974ce724af04978a375f5a46ea}} 
+\index{Unit@{Unit}!currentWill@{currentWill}}
+\index{currentWill@{currentWill}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{currentWill}{currentWill}}
+{\footnotesize\ttfamily int Unit\+::current\+Will\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле unit.\+h строка 25
+
+
+
+Используется в get\+Will(), restore\+Will() и set\+Will().
+
+\mbox{\Hypertarget{classUnit_a92bfb1430ab13e69d4c703a7fc8bafdb}\label{classUnit_a92bfb1430ab13e69d4c703a7fc8bafdb}} 
+\index{Unit@{Unit}!damage@{damage}}
+\index{damage@{damage}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{damage}{damage}}
+{\footnotesize\ttfamily int Unit\+::damage\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле unit.\+h строка 23
+
+
+
+Используется в get\+Damage() и take\+Damage().
+
+\mbox{\Hypertarget{classUnit_aaa16bddcdb423ca124b6b44a4d27afea}\label{classUnit_aaa16bddcdb423ca124b6b44a4d27afea}} 
+\index{Unit@{Unit}!isPlayerUnit@{isPlayerUnit}}
+\index{isPlayerUnit@{isPlayerUnit}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{isPlayerUnit}{isPlayerUnit}}
+{\footnotesize\ttfamily bool Unit\+::is\+Player\+Unit\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле unit.\+h строка 24
+
+
+
+Используется в get\+Player().
+
+\mbox{\Hypertarget{classUnit_a3ae356d6dff417f52a1ccf7133807314}\label{classUnit_a3ae356d6dff417f52a1ccf7133807314}} 
+\index{Unit@{Unit}!maxHealth@{maxHealth}}
+\index{maxHealth@{maxHealth}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{maxHealth}{maxHealth}}
+{\footnotesize\ttfamily int Unit\+::max\+Health\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле unit.\+h строка 22
+
+
+
+Используется в get\+Max\+Health(), restore\+Health(), set\+Health() и take\+Damage().
+
+\mbox{\Hypertarget{classUnit_a93ea56944962c9007c255a0224f744be}\label{classUnit_a93ea56944962c9007c255a0224f744be}} 
+\index{Unit@{Unit}!maxWill@{maxWill}}
+\index{maxWill@{maxWill}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{maxWill}{maxWill}}
+{\footnotesize\ttfamily int Unit\+::max\+Will\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле unit.\+h строка 26
+
+
+
+Используется в get\+Max\+Will() и restore\+Will().
+
+\mbox{\Hypertarget{classUnit_aa53580e05154faa2108a772c694399bb}\label{classUnit_aa53580e05154faa2108a772c694399bb}} 
+\index{Unit@{Unit}!moveDistance@{moveDistance}}
+\index{moveDistance@{moveDistance}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{moveDistance}{moveDistance}}
+{\footnotesize\ttfamily int Unit\+::move\+Distance\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле unit.\+h строка 19
+
+
+
+Используется в get\+Move\+Distance().
+
+\mbox{\Hypertarget{classUnit_a03a2344fa6977a2ce44b320e44bc9caa}\label{classUnit_a03a2344fa6977a2ce44b320e44bc9caa}} 
+\index{Unit@{Unit}!name@{name}}
+\index{name@{name}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Unit\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+См. определение в файле unit.\+h строка 18
+
+
+
+Используется в get\+Name().
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{unit_8h}{unit.\+h}}\item 
+\mbox{\hyperlink{unit_8cpp}{unit.\+cpp}}\end{DoxyCompactItemize}

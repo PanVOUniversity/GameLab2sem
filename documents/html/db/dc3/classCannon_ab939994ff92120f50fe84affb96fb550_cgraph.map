@@ -1,0 +1,6 @@
+<map id="Cannon::_findEnemyInRange" name="Cannon::_findEnemyInRange">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,213,83"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html#a8856896cc73b342fec2cd3e8079e8e6a" title="Gets the unit&#39;s attack distance." alt="" coords="261,5,439,32"/>
+<area shape="rect" id="node3" href="$df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814" title="Returns true if the unit is controlled by the player." alt="" coords="291,56,409,83"/>
+<area shape="rect" id="node4" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="295,107,405,133"/>
+</map>
