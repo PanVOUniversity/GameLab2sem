@@ -1,0 +1,8 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$df/dd9/classUnit.html" title="Represents a unit in the game (base class for all units)." alt="" coords="5,107,55,133"/>
+<area shape="rect" id="node2" href="$d3/dea/classArcher.html" title="Ranged unit with variable attack distance (Archer)." alt="" coords="110,5,174,32"/>
+<area shape="rect" id="node3" href="$db/dc3/classCannon.html" title="Stationary ranged unit with directional fire ability (Cannon)." alt="" coords="107,56,177,83"/>
+<area shape="rect" id="node4" href="$dc/d9b/classEngineer.html" title="Utility unit that can build special fields (Engineer)." alt="" coords="103,107,181,133"/>
+<area shape="rect" id="node5" href="$da/def/classInfantry.html" title="Melee unit with counter&#45;attack ability (Infantry)." alt="" coords="105,157,179,184"/>
+<area shape="rect" id="node6" href="$de/db7/classPriest.html" title="Support unit that can create shielded fields (Priest)." alt="" coords="113,208,171,235"/>
+</map>

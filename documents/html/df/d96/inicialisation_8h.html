@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameLab2sem: Файл inicialisation.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameLab2sem
+   </div>
+   <div id="projectbrief">A turn-based strategy game with AI and CLI interface.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('df/d96/inicialisation_8h.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл inicialisation.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d5a/field_8h_source.html">field.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/dad/hill_8h_source.html">hill.h</a>&quot;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d62/player_8h_source.html">player.h</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для inicialisation.h:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/dfa/inicialisation_8h__incl.svg" width="584" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d4f/inicialisation_8h__dep__incl.svg" width="243" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<p><a href="../../df/d96/inicialisation_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d6e/structGameData.html">GameData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the main game data: board and players.  <a href="../../d4/d6e/structGameData.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ae87b658cf20897b09a0f27da810b8069"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d6e/structGameData.html">GameData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d96/inicialisation_8h.html#ae87b658cf20897b09a0f27da810b8069">inicialisation</a> (int width, int height, int numHills, const std::string &amp;name1, const std::string &amp;name2, int initialMana, bool player1Starts)</td></tr>
+<tr class="memdesc:ae87b658cf20897b09a0f27da810b8069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the game board and players.  <a href="../../df/d96/inicialisation_8h.html#ae87b658cf20897b09a0f27da810b8069">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae87b658cf20897b09a0f27da810b8069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="ae87b658cf20897b09a0f27da810b8069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae87b658cf20897b09a0f27da810b8069">&#9670;&nbsp;</a></span>inicialisation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d6e/structGameData.html">GameData</a> inicialisation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numHills</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>initialMana</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>player1Starts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the game board and players. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>Board width. </td></tr>
+    <tr><td class="paramname">height</td><td>Board height. </td></tr>
+    <tr><td class="paramname">numHills</td><td>Number of hills to place on the board. </td></tr>
+    <tr><td class="paramname">name1</td><td>Name of player 1. </td></tr>
+    <tr><td class="paramname">name2</td><td>Name of player 2. </td></tr>
+    <tr><td class="paramname">initialMana</td><td>Starting mana for each player. </td></tr>
+    <tr><td class="paramname">player1Starts</td><td>True if player 1 starts the game. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="../../d4/d6e/structGameData.html" title="Holds the main game data: board and players.">GameData</a> struct containing the initialized board and players. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d3b/inicialisation_8cpp_source.html">inicialisation.cpp</a> строка <a class="el" href="../../da/d3b/inicialisation_8cpp_source.html#l00068">68</a></p>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="../../d4/d6e/structGameData.html">GameData</a> gameData;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// Create game board</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    gameData.<a class="code" href="../../d4/d6e/structGameData.html#a735972727dbf3553be5123b1d578aea7">board</a> = <a class="code" href="../../da/d3b/inicialisation_8cpp.html#a9ae889de92b70715e095b0cbbbf290b0">createBoard</a>(width, height);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// Place hills on the board</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="../../da/d3b/inicialisation_8cpp.html#a91ca1465d8213810c75621ec83695f3b">placeHills</a>(gameData.<a class="code" href="../../d4/d6e/structGameData.html#a735972727dbf3553be5123b1d578aea7">board</a>, numHills);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// Create players with specified mana and turn order</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">// The Player constructor now takes initialMana as the last parameter</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    gameData.<a class="code" href="../../d4/d6e/structGameData.html#adfdfaa8fab3dbf823faf146211111be1">player1</a> = <span class="keyword">new</span> <a class="code" href="../../d2/d4b/classPlayer.html">Player</a>(name1, player1Starts, <span class="keyword">false</span>, <span class="keyword">false</span>, initialMana);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    gameData.<a class="code" href="../../d4/d6e/structGameData.html#a10b8d83791fd710e75a70ba52b4a2eee">player2</a> = <span class="keyword">new</span> <a class="code" href="../../d2/d4b/classPlayer.html">Player</a>(name2, !player1Starts, <span class="keyword">true</span>, <span class="keyword">false</span>, initialMana);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> gameData;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="../../d2/d4b/classPlayer.html">Player</a></div><div class="ttdoc">Represents a player in the game (human or AI).</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d62/player_8h_source.html#l00015">player.h:16</a></div></div>
+<div class="ttc" id="ainicialisation_8cpp_html_a91ca1465d8213810c75621ec83695f3b"><div class="ttname"><a href="../../da/d3b/inicialisation_8cpp.html#a91ca1465d8213810c75621ec83695f3b">placeHills</a></div><div class="ttdeci">void placeHills(std::vector&lt; std::vector&lt; Field * &gt;&gt; &amp;board, int numHills)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3b/inicialisation_8cpp_source.html#l00029">inicialisation.cpp:29</a></div></div>
+<div class="ttc" id="ainicialisation_8cpp_html_a9ae889de92b70715e095b0cbbbf290b0"><div class="ttname"><a href="../../da/d3b/inicialisation_8cpp.html#a9ae889de92b70715e095b0cbbbf290b0">createBoard</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; Field * &gt; &gt; createBoard(int width, int height)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3b/inicialisation_8cpp_source.html#l00007">inicialisation.cpp:7</a></div></div>
+<div class="ttc" id="astructGameData_html"><div class="ttname"><a href="../../d4/d6e/structGameData.html">GameData</a></div><div class="ttdoc">Holds the main game data: board and players.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d96/inicialisation_8h_source.html#l00015">inicialisation.h:16</a></div></div>
+<div class="ttc" id="astructGameData_html_a10b8d83791fd710e75a70ba52b4a2eee"><div class="ttname"><a href="../../d4/d6e/structGameData.html#a10b8d83791fd710e75a70ba52b4a2eee">GameData::player2</a></div><div class="ttdeci">Player * player2</div><div class="ttdoc">Pointer to player 2.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d96/inicialisation_8h_source.html#l00019">inicialisation.h:19</a></div></div>
+<div class="ttc" id="astructGameData_html_a735972727dbf3553be5123b1d578aea7"><div class="ttname"><a href="../../d4/d6e/structGameData.html#a735972727dbf3553be5123b1d578aea7">GameData::board</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; Field * &gt; &gt; board</div><div class="ttdoc">The game board.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d96/inicialisation_8h_source.html#l00017">inicialisation.h:17</a></div></div>
+<div class="ttc" id="astructGameData_html_adfdfaa8fab3dbf823faf146211111be1"><div class="ttname"><a href="../../d4/d6e/structGameData.html#adfdfaa8fab3dbf823faf146211111be1">GameData::player1</a></div><div class="ttdeci">Player * player1</div><div class="ttdoc">Pointer to player 1.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d96/inicialisation_8h_source.html#l00018">inicialisation.h:18</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../df/d96/inicialisation_8h_source.html#l00017">GameData::board</a>, <a class="el" href="../../da/d3b/inicialisation_8cpp_source.html#l00007">createBoard()</a>, <a class="el" href="../../da/d3b/inicialisation_8cpp_source.html#l00029">placeHills()</a>, <a class="el" href="../../df/d96/inicialisation_8h_source.html#l00018">GameData::player1</a> и <a class="el" href="../../df/d96/inicialisation_8h_source.html#l00019">GameData::player2</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../df/d0a/main_8cpp_source.html#l00005">main()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d96/inicialisation_8h_ae87b658cf20897b09a0f27da810b8069_cgraph.svg" width="266" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d96/inicialisation_8h_ae87b658cf20897b09a0f27da810b8069_icgraph.svg" width="219" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../df/d96/inicialisation_8h.html">inicialisation.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

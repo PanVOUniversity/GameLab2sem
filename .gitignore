@@ -37,6 +37,7 @@
 *start
 .vscode
 *.orig
+*/script.sh
 
 #bin
 *.raw

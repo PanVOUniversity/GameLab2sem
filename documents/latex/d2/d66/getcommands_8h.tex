@@ -1,0 +1,1065 @@
+\hypertarget{getcommands_8h}{}\doxysection{Файл getcommands.\+h}
+\label{getcommands_8h}\index{getcommands.h@{getcommands.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}field.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}functions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spells.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}unit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hill.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}burnedfield.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bombedfield.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hospitalfield.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fortress.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shieldedfield.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}archer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}infantry.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}priest.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}engineer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cannon.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}manaminefield.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для getcommands.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d84/getcommands_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{df/d46/getcommands_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{getcommands_8h_a4ffff192321e79e17d14dc4a1af609a7}{get\+Player\+Commands}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$current\+Player, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Handles player commands during their turn. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{getcommands_8h_ad90f841d71e5bae7186823d947a92551}{get\+AICommands}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$current\+Player, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Handles AI commands during its turn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_a5a918c926be360a684c63f4c368a162c}{hill\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing the locations of hills. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_abb0225b6a78d3d158b2671440d7f4692}{burned\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing burned fields. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_aae1a95124f03cd22dba9500e5cd2b154}{bomb\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing bombed fields. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_a2ed49a60b13be1e4632d9681d24856d7}{hospital\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing hospital fields. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_ad879e678fb470228e81db77c63a90381}{fortress\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing fortresses. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_a13c8ecae8ea8ed72b6b586f00007fc9b}{shield\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing shielded fields. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_a8d755658a24617058a3b7dbd0ea59417}{manamine\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing mana mine positions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_a1a9d211a16e23e03d7bf73ddd055e636}{trap\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Displays a map showing trap positions (bombed fields). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{getcommands_8h_a942be8cf7926326d52493f26a13b070b}{display\+Board}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\item 
+void \mbox{\hyperlink{getcommands_8h_add5d2eade35143ea61cfb9bf44f5a1b2}{unit\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\item 
+void \mbox{\hyperlink{getcommands_8h_a5169c33ec08531429e9eddf9cdb2b802}{field\+\_\+map}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{getcommands_8h_aae1a95124f03cd22dba9500e5cd2b154}\label{getcommands_8h_aae1a95124f03cd22dba9500e5cd2b154}} 
+\index{getcommands.h@{getcommands.h}!bomb\_map@{bomb\_map}}
+\index{bomb\_map@{bomb\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{bomb\_map()}{bomb\_map()}}
+{\footnotesize\ttfamily void bomb\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing bombed fields. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_abb0225b6a78d3d158b2671440d7f4692}\label{getcommands_8h_abb0225b6a78d3d158b2671440d7f4692}} 
+\index{getcommands.h@{getcommands.h}!burned\_map@{burned\_map}}
+\index{burned\_map@{burned\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{burned\_map()}{burned\_map()}}
+{\footnotesize\ttfamily void burned\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing burned fields. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_a942be8cf7926326d52493f26a13b070b}\label{getcommands_8h_a942be8cf7926326d52493f26a13b070b}} 
+\index{getcommands.h@{getcommands.h}!displayBoard@{displayBoard}}
+\index{displayBoard@{displayBoard}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{displayBoard()}{displayBoard()}}
+{\footnotesize\ttfamily void display\+Board (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле getcommands.\+cpp строка 701
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{701                                                              \{}
+\DoxyCodeLine{702     \textcolor{keywordtype}{size\_t} width = board.size();}
+\DoxyCodeLine{703     \textcolor{keywordflow}{if} (width == 0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{704     \textcolor{keywordtype}{size\_t} height = board[0].size();}
+\DoxyCodeLine{705 }
+\DoxyCodeLine{706     std::cout << \textcolor{stringliteral}{"{}   "{}};}
+\DoxyCodeLine{707     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < height; ++y) std::cout << y << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{708     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{709     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < width; ++x) \{}
+\DoxyCodeLine{710         std::cout << x << \textcolor{stringliteral}{"{}: "{}};}
+\DoxyCodeLine{711         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < height; ++y) \{}
+\DoxyCodeLine{712             \mbox{\hyperlink{classField}{Field}}* field = board[x][y];}
+\DoxyCodeLine{713             \textcolor{keywordflow}{if} (field-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}())}
+\DoxyCodeLine{714                 std::cout << field-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_afd6bcf5adaadb97b1378512344bd642b}{getSymbol}}() << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{715             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{716                 std::cout << field-\/>\mbox{\hyperlink{classField_a03e73113267195f2680dd028f8950ae5}{getSymbol}}() << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{717         \}}
+\DoxyCodeLine{718         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{719     \}}
+\DoxyCodeLine{720 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Field\+::get\+Symbol(), Unit\+::get\+Symbol() и Field\+::get\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{d2/d66/getcommands_8h_a942be8cf7926326d52493f26a13b070b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{getcommands_8h_a5169c33ec08531429e9eddf9cdb2b802}\label{getcommands_8h_a5169c33ec08531429e9eddf9cdb2b802}} 
+\index{getcommands.h@{getcommands.h}!field\_map@{field\_map}}
+\index{field\_map@{field\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{field\_map()}{field\_map()}}
+{\footnotesize\ttfamily void field\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле getcommands.\+cpp строка 672
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{672                                                           \{}
+\DoxyCodeLine{673     std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/ Field Map -\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{674     std::cout << \textcolor{stringliteral}{"{}Legend: Fortress-\/F, Hospital-\/H, Shielded-\/S, Mana Mine-\/M, Bombed-\/B, Burned-\/*, Hill-\/\string^, Normal-\/N\(\backslash\)n"{}};}
+\DoxyCodeLine{675     \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{676     \textcolor{keywordtype}{size\_t} boardHeight = boardWidth ? board[0].size() : 0;}
+\DoxyCodeLine{677     \textcolor{comment}{// Print column indices}}
+\DoxyCodeLine{678     std::cout << \textcolor{stringliteral}{"{}   "{}};}
+\DoxyCodeLine{679     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < boardHeight; ++y) std::cout << y << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{680     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{681     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < boardWidth; ++x) \{}
+\DoxyCodeLine{682         std::cout << x << \textcolor{stringliteral}{"{}: "{}};}
+\DoxyCodeLine{683         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < boardHeight; ++y) \{}
+\DoxyCodeLine{684             \mbox{\hyperlink{classField}{Field}}* field = board[x][y];}
+\DoxyCodeLine{685             \textcolor{keywordflow}{if} (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classFortress}{Fortress}}*\textcolor{keyword}{>}(field)) std::cout << \textcolor{charliteral}{'F'};}
+\DoxyCodeLine{686             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHospitalField}{HospitalField}}*\textcolor{keyword}{>}(field)) std::cout << \textcolor{charliteral}{'H'};}
+\DoxyCodeLine{687             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classShieldedField}{ShieldedField}}*\textcolor{keyword}{>}(field)) std::cout << \textcolor{charliteral}{'S'};}
+\DoxyCodeLine{688             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classManaMineField}{ManaMineField}}*\textcolor{keyword}{>}(field)) std::cout << \textcolor{charliteral}{'M'};}
+\DoxyCodeLine{689             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBombedField}{BombedField}}*\textcolor{keyword}{>}(field)) std::cout << \textcolor{charliteral}{'B'};}
+\DoxyCodeLine{690             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBurnedField}{BurnedField}}*\textcolor{keyword}{>}(field)) std::cout << \textcolor{charliteral}{'*'};}
+\DoxyCodeLine{691             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHill}{Hill}}*\textcolor{keyword}{>}(field)) std::cout << \textcolor{charliteral}{'\string^'};}
+\DoxyCodeLine{692             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classField}{Field}}*\textcolor{keyword}{>}(field)) std::cout << \textcolor{charliteral}{'N'};}
+\DoxyCodeLine{693             \textcolor{keywordflow}{else} std::cout << \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{694             std::cout << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{695         \}}
+\DoxyCodeLine{696         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{697     \}}
+\DoxyCodeLine{698     std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{699 \}}
+
+\end{DoxyCode}
+
+
+Используется в get\+Player\+Commands().
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d66/getcommands_8h_a5169c33ec08531429e9eddf9cdb2b802_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{getcommands_8h_ad879e678fb470228e81db77c63a90381}\label{getcommands_8h_ad879e678fb470228e81db77c63a90381}} 
+\index{getcommands.h@{getcommands.h}!fortress\_map@{fortress\_map}}
+\index{fortress\_map@{fortress\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{fortress\_map()}{fortress\_map()}}
+{\footnotesize\ttfamily void fortress\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing fortresses. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_ad90f841d71e5bae7186823d947a92551}\label{getcommands_8h_ad90f841d71e5bae7186823d947a92551}} 
+\index{getcommands.h@{getcommands.h}!getAICommands@{getAICommands}}
+\index{getAICommands@{getAICommands}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{getAICommands()}{getAICommands()}}
+{\footnotesize\ttfamily bool get\+AICommands (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{current\+Player,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Handles AI commands during its turn. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em current\+Player} & The current AI player. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true if a resource-\/consuming action was taken, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em current\+Player} & The current AI player. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if a resource-\/consuming action was taken, false otherwise. 
+\end{DoxyReturn}
+
+
+См. определение в файле AI.\+cpp строка 676
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{676                                                                                \{}
+\DoxyCodeLine{677     \textcolor{keywordflow}{return} \mbox{\hyperlink{AI_8cpp_a977b9434bdf2f1cb57f540e4098d1a57}{AIact}}(currentPlayer, board);}
+\DoxyCodeLine{678 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки AIact().
+
+
+
+Используется в main().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d66/getcommands_8h_ad90f841d71e5bae7186823d947a92551_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{d2/d66/getcommands_8h_ad90f841d71e5bae7186823d947a92551_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{getcommands_8h_a4ffff192321e79e17d14dc4a1af609a7}\label{getcommands_8h_a4ffff192321e79e17d14dc4a1af609a7}} 
+\index{getcommands.h@{getcommands.h}!getPlayerCommands@{getPlayerCommands}}
+\index{getPlayerCommands@{getPlayerCommands}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{getPlayerCommands()}{getPlayerCommands()}}
+{\footnotesize\ttfamily bool get\+Player\+Commands (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{current\+Player,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Handles player commands during their turn. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em current\+Player} & The current player. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true if a resource-\/consuming action was taken, false otherwise. 
+\end{DoxyReturn}
+
+
+См. определение в файле getcommands.\+cpp строка 37
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39     \textcolor{keywordtype}{bool} actionTaken = \textcolor{keyword}{false}; \textcolor{comment}{// Track if any action was taken during the turn}}
+\DoxyCodeLine{40     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{41         \textcolor{comment}{// Show all available player commands at the start of the turn}}
+\DoxyCodeLine{42         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n=== PLAYER COMMANDS ===\(\backslash\)n"{}};}
+\DoxyCodeLine{43         std::cout << \textcolor{stringliteral}{"{}Current mana: "{}} << currentPlayer-\/>\mbox{\hyperlink{classPlayer_aba42f377d067adc41cbc43e679b6349c}{getMana}}() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{44         std::cout << \textcolor{stringliteral}{"{}MOVE startX startY endX endY         -\/ Move a unit\(\backslash\)n"{}};}
+\DoxyCodeLine{45         std::cout << \textcolor{stringliteral}{"{}ATTACK attackerX attackerY targetX targetY -\/ Attack with a unit\(\backslash\)n"{}};}
+\DoxyCodeLine{46         std::cout << \textcolor{stringliteral}{"{}CREATE unitType X Y                  -\/ Create a unit (infantry, archer, priest, engineer, cannon)\(\backslash\)n"{}};}
+\DoxyCodeLine{47         std::cout << \textcolor{stringliteral}{"{}SPELL spellName X Y                  -\/ Cast a spell (morog, fireball, curse, bomb)\(\backslash\)n"{}};}
+\DoxyCodeLine{48         std::cout << \textcolor{stringliteral}{"{}PRAY X Y                             -\/ Use Priest's pray ability\(\backslash\)n"{}};}
+\DoxyCodeLine{49         std::cout << \textcolor{stringliteral}{"{}BUILD buildType X Y                  -\/ Use Engineer to build (fortress, cannon, manamine, trap)\(\backslash\)n"{}};}
+\DoxyCodeLine{50         std::cout << \textcolor{stringliteral}{"{}UNITS                                -\/ Show unit descriptions\(\backslash\)n"{}};}
+\DoxyCodeLine{51         std::cout << \textcolor{stringliteral}{"{}SPELLS                               -\/ Show spell descriptions\(\backslash\)n"{}};}
+\DoxyCodeLine{52         std::cout << \textcolor{stringliteral}{"{}RULES                                -\/ Show all game rules\(\backslash\)n"{}};}
+\DoxyCodeLine{53         std::cout << \textcolor{stringliteral}{"{}END                                  -\/ End your turn\(\backslash\)n"{}};}
+\DoxyCodeLine{54         std::cout << \textcolor{stringliteral}{"{}MAPS                                 -\/ Show special field maps\(\backslash\)n"{}};}
+\DoxyCodeLine{55         std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     std::string command;}
+\DoxyCodeLine{58     std::cin >> command;}
+\DoxyCodeLine{59     std::transform(command.begin(), command.end(), command.begin(), ::tolower);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}rules"{}}) \{}
+\DoxyCodeLine{62         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n=== GAME RULES ===\(\backslash\)n"{}};}
+\DoxyCodeLine{63         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/ Turn Structure -\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{64         std::cout << \textcolor{stringliteral}{"{}1. The game is played on a 10x10 board. Each player takes turns, starting with the human player.\(\backslash\)n"{}};}
+\DoxyCodeLine{65         std::cout << \textcolor{stringliteral}{"{}2. On your turn, you may perform any number of actions (move, attack, create, spell, pray, build) as long as you have enough mana and your units have will points.\(\backslash\)n"{}};}
+\DoxyCodeLine{66         std::cout << \textcolor{stringliteral}{"{}3. You may use meta-\/commands (RULES, UNITS, SPELLS, MAPS) at any time; these do not count as actions.\(\backslash\)n"{}};}
+\DoxyCodeLine{67         std::cout << \textcolor{stringliteral}{"{}4. To end your turn, use the END command. If you take no action and use END, it counts as a skipped turn.\(\backslash\)n"{}};}
+\DoxyCodeLine{68         std::cout << \textcolor{stringliteral}{"{}NOTE: You can only create units in rows y > 4.\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70         std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/ Units and Actions -\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{71         std::cout << \textcolor{stringliteral}{"{}-\/ Each unit has: Health, Damage, Will (actions per turn), Move Distance, Attack Range, and Mana Cost.\(\backslash\)n"{}};}
+\DoxyCodeLine{72         std::cout << \textcolor{stringliteral}{"{}-\/ Units can move, attack, and use special abilities if they have will points left.\(\backslash\)n"{}};}
+\DoxyCodeLine{73         std::cout << \textcolor{stringliteral}{"{}-\/ Infantry can move and attack in the same turn. Other units must choose one action per turn.\(\backslash\)n"{}};}
+\DoxyCodeLine{74         std::cout << \textcolor{stringliteral}{"{}-\/ Engineers can build special fields (Fortress, Mana Mine, Trap, Hospital, Cannon) on empty, valid tiles.\(\backslash\)n"{}};}
+\DoxyCodeLine{75         std::cout << \textcolor{stringliteral}{"{}-\/ Priests can PRAY to create a Shielded Field.\(\backslash\)n"{}};}
+\DoxyCodeLine{76         std::cout << \textcolor{stringliteral}{"{}-\/ Cannons are built by Engineers and cannot move.\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78         std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/ Resource Management -\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{79         std::cout << \textcolor{stringliteral}{"{}-\/ Mana is used to create units, cast spells, and build special fields.\(\backslash\)n"{}};}
+\DoxyCodeLine{80         std::cout << \textcolor{stringliteral}{"{}-\/ Mana Mines generate 1 mana per turn for their owner.\(\backslash\)n"{}};}
+\DoxyCodeLine{81         std::cout << \textcolor{stringliteral}{"{}-\/ If you have no units and no mana, you lose the game.\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83         std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/ Field Effects -\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{84         std::cout << \textcolor{stringliteral}{"{}-\/ Fortress: Defensive bonus, can be captured, heals units.\(\backslash\)n"{}};}
+\DoxyCodeLine{85         std::cout << \textcolor{stringliteral}{"{}-\/ Mana Mine: Generates mana for the owner.\(\backslash\)n"{}};}
+\DoxyCodeLine{86         std::cout << \textcolor{stringliteral}{"{}-\/ Trap (Bombed Field): Damages units that step on it.\(\backslash\)n"{}};}
+\DoxyCodeLine{87         std::cout << \textcolor{stringliteral}{"{}-\/ Hill: Provides attack/defense bonus.\(\backslash\)n"{}};}
+\DoxyCodeLine{88         std::cout << \textcolor{stringliteral}{"{}-\/ Burned Field: Damages units at the end of turn.\(\backslash\)n"{}};}
+\DoxyCodeLine{89         std::cout << \textcolor{stringliteral}{"{}-\/ Hospital: Heals units at the end of turn.\(\backslash\)n"{}};}
+\DoxyCodeLine{90         std::cout << \textcolor{stringliteral}{"{}-\/ Shielded Field: Absorbs damage for a limited time.\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92         std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/ Spells -\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{93         std::cout << \textcolor{stringliteral}{"{}-\/ Morog: 5 mana. Deals 15 damage to a unit.\(\backslash\)n"{}};}
+\DoxyCodeLine{94         std::cout << \textcolor{stringliteral}{"{}-\/ Fireball: 2 mana. Deals 5 damage to a unit.\(\backslash\)n"{}};}
+\DoxyCodeLine{95         std::cout << \textcolor{stringliteral}{"{}-\/ Curse: 3 mana. Reduces a unit's Will by 1.\(\backslash\)n"{}};}
+\DoxyCodeLine{96         std::cout << \textcolor{stringliteral}{"{}-\/ Bomb: 4 mana. Creates a BombedField (trap) at a location.\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98         std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/ Victory and Defeat -\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{99         std::cout << \textcolor{stringliteral}{"{}-\/ The game ends if:\(\backslash\)n"{}};}
+\DoxyCodeLine{100         std::cout << \textcolor{stringliteral}{"{}  1. A player has no units and no mana.\(\backslash\)n"{}};}
+\DoxyCodeLine{101         std::cout << \textcolor{stringliteral}{"{}  2. Either player skips 2 turns in a row.\(\backslash\)n"{}};}
+\DoxyCodeLine{102         std::cout << \textcolor{stringliteral}{"{}  3. 16 turns have passed (draw).\(\backslash\)n"{}};}
+\DoxyCodeLine{103         std::cout << \textcolor{stringliteral}{"{}-\/ Capturing all fortresses or eliminating all enemy units also results in victory.\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105         std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/ Meta-\/Commands -\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{106         std::cout << \textcolor{stringliteral}{"{}-\/ UNITS: Show unit descriptions.\(\backslash\)n"{}};}
+\DoxyCodeLine{107         std::cout << \textcolor{stringliteral}{"{}-\/ SPELLS: Show spell descriptions.\(\backslash\)n"{}};}
+\DoxyCodeLine{108         std::cout << \textcolor{stringliteral}{"{}-\/ MAPS: Show special field maps.\(\backslash\)n"{}};}
+\DoxyCodeLine{109         std::cout << \textcolor{stringliteral}{"{}-\/ RULES: Show these rules.\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111         std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/ Additional Notes -\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{112         std::cout << \textcolor{stringliteral}{"{}-\/ Units cannot move or attack through other units.\(\backslash\)n"{}};}
+\DoxyCodeLine{113         std::cout << \textcolor{stringliteral}{"{}-\/ Spells and builds require sufficient mana.\(\backslash\)n"{}};}
+\DoxyCodeLine{114         std::cout << \textcolor{stringliteral}{"{}-\/ Units require sufficient mana to create.\(\backslash\)n"{}};}
+\DoxyCodeLine{115         std::cout << \textcolor{stringliteral}{"{}-\/ Use the MAPS command to view the board's special fields and unit positions.\(\backslash\)n"{}};}
+\DoxyCodeLine{116         std::cout << \textcolor{stringliteral}{"{}-\/ Use END to finish your turn if you do not wish to take further actions.\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{117         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{118     \}}
+\DoxyCodeLine{119     \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}units"{}}) \{}
+\DoxyCodeLine{120         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n=== UNITS ===\(\backslash\)n"{}};}
+\DoxyCodeLine{121         std::cout << \textcolor{stringliteral}{"{}Infantry (I): Move 2, Attack 1, Health 10, Damage 3, Will 2, Cost 2 mana. Can counter-\/attack.\(\backslash\)n"{}};}
+\DoxyCodeLine{122         std::cout << \textcolor{stringliteral}{"{}Archer (A): Move 2, Attack 2 (3 in Fortress), Health 7, Damage 2, Will 2, Cost 3 mana. Range bonus in Fortress.\(\backslash\)n"{}};}
+\DoxyCodeLine{123         std::cout << \textcolor{stringliteral}{"{}Priest (P): Move 2, Attack 0, Health 5, Damage 0, Will 1, Cost 5 mana. Can pray to create ShieldedField.\(\backslash\)n"{}};}
+\DoxyCodeLine{124         std::cout << \textcolor{stringliteral}{"{}Engineer (E): Move 1, Attack 1, Health 6, Damage 1, Will 3, Cost 5 mana. Can build Fortress, Mana Mine, Trap, Hospital, Cannon.\(\backslash\)n"{}};}
+\DoxyCodeLine{125         std::cout << \textcolor{stringliteral}{"{}Cannon (C): Move 0, Attack 4, Health 4, Damage 5, Will 1, Cost 0 mana (built by Engineer). Static, powerful ranged attack.\(\backslash\)n"{}};}
+\DoxyCodeLine{126         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128     \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}spells"{}}) \{}
+\DoxyCodeLine{129         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n=== SPELLS ===\(\backslash\)n"{}};}
+\DoxyCodeLine{130         std::cout << \textcolor{stringliteral}{"{}Morog: 5 mana. Deals 15 damage to a unit.\(\backslash\)n"{}};}
+\DoxyCodeLine{131         std::cout << \textcolor{stringliteral}{"{}Fireball: 2 mana. Deals 5 damage to a unit.\(\backslash\)n"{}};}
+\DoxyCodeLine{132         std::cout << \textcolor{stringliteral}{"{}Curse: 3 mana. Reduces a unit's Will by 1.\(\backslash\)n"{}};}
+\DoxyCodeLine{133         std::cout << \textcolor{stringliteral}{"{}Bomb: 4 mana. Creates a BombedField (trap) at a location.\(\backslash\)n"{}};}
+\DoxyCodeLine{134         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{135     \}}
+\DoxyCodeLine{136     \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}maps"{}}) \{}
+\DoxyCodeLine{137         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n=== MAPS ===\(\backslash\)n"{}};}
+\DoxyCodeLine{138         std::cout << \textcolor{stringliteral}{"{}Available maps: field, unit\(\backslash\)n"{}};}
+\DoxyCodeLine{139         std::cout << \textcolor{stringliteral}{"{}Enter map type: "{}};}
+\DoxyCodeLine{140         std::string mapType;}
+\DoxyCodeLine{141         std::cin >> mapType;}
+\DoxyCodeLine{142         std::transform(mapType.begin(), mapType.end(), mapType.begin(), ::tolower);}
+\DoxyCodeLine{143         \textcolor{keywordflow}{if} (mapType == \textcolor{stringliteral}{"{}field"{}}) \mbox{\hyperlink{getcommands_8cpp_a5169c33ec08531429e9eddf9cdb2b802}{field\_map}}(board);}
+\DoxyCodeLine{144         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (mapType == \textcolor{stringliteral}{"{}unit"{}}) \mbox{\hyperlink{getcommands_8cpp_add5d2eade35143ea61cfb9bf44f5a1b2}{unit\_map}}(board);}
+\DoxyCodeLine{145         \textcolor{keywordflow}{else} std::cout << \textcolor{stringliteral}{"{}Unknown map type.\(\backslash\)n"{}};}
+\DoxyCodeLine{146         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{147     \}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149     \textcolor{comment}{// Only show the turn prompt for actionable commands}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151     \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}move"{}})}
+\DoxyCodeLine{152     \{}
+\DoxyCodeLine{153         \textcolor{keywordtype}{int} startX, startY, endX, endY;}
+\DoxyCodeLine{154         \textcolor{keywordflow}{if} (std::cin >> startX >> startY >> endX >> endY)}
+\DoxyCodeLine{155         \{}
+\DoxyCodeLine{156             \textcolor{comment}{// Check if coordinates are within board bounds}}
+\DoxyCodeLine{157             \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{158             \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{159             \textcolor{keywordflow}{if} (startX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(startX) < boardWidth \&\&}
+\DoxyCodeLine{160                 startY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(startY) < boardHeight \&\&}
+\DoxyCodeLine{161                 endX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(endX) < boardWidth \&\&}
+\DoxyCodeLine{162                 endY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(endY) < boardHeight)}
+\DoxyCodeLine{163             \{}
+\DoxyCodeLine{164                 \mbox{\hyperlink{classField}{Field}}* startField = board[startX][startY];}
+\DoxyCodeLine{165                 \mbox{\hyperlink{classField}{Field}}* endField = board[endX][endY];}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167                 \textcolor{comment}{// Check if there's a unit at the start position and it belongs to the current player}}
+\DoxyCodeLine{168                 \textcolor{keywordflow}{if} (startField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() \&\& startField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() == !currentPlayer-\/>\mbox{\hyperlink{classPlayer_a0cb5b17db27a2af6492e270aab8f7870}{getAI}}()) \textcolor{comment}{// Assuming human player is !getAI()}}
+\DoxyCodeLine{169                 \{}
+\DoxyCodeLine{170                     \textcolor{comment}{// Check if the unit has enough will to move}}
+\DoxyCodeLine{171                     \textcolor{keywordflow}{if} (startField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() > 0) \{}
+\DoxyCodeLine{172                         \textcolor{comment}{// Check if the target field is valid for movement (empty and not a blocking field)}}
+\DoxyCodeLine{173                         \textcolor{keywordflow}{if} (endField-\/>\mbox{\hyperlink{classField_aca250c9a0c031e21c7e7c609b3b3dec3}{canEnter}}(startField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}())) \{}
+\DoxyCodeLine{174                              \textcolor{comment}{// Check if the move is within the unit's move distance (Manhattan distance)}}
+\DoxyCodeLine{175                              \textcolor{keywordflow}{if} (std::abs(startX -\/ endX) + std::abs(startY -\/ endY) <= startField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_aba0432bdab275a064c23bc87b12a5d66}{getMoveDistance}}()) \{}
+\DoxyCodeLine{176                                  \mbox{\hyperlink{functions_8cpp_a03cfd94cc59ef09a8b66ccbe9d885b19}{move}}(board, startX, startY, endX, endY);}
+\DoxyCodeLine{177                                  startField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a207c7fe4b9d30af2446bb8af0a127c22}{setWill}}(startField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() -\/ 1); \textcolor{comment}{// Consume will}}
+\DoxyCodeLine{178                                  actionTaken = \textcolor{keyword}{true};}
+\DoxyCodeLine{179                                  \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{180                              \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{181                                  std::cout << \textcolor{stringliteral}{"{}Invalid move: Target is outside unit's move distance.\(\backslash\)n"{}};}
+\DoxyCodeLine{182                              \}}
+\DoxyCodeLine{183                         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{184                             std::cout << \textcolor{stringliteral}{"{}Invalid move: Cannot move to this field.\(\backslash\)n"{}};}
+\DoxyCodeLine{185                         \}}
+\DoxyCodeLine{186                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{187                         std::cout << \textcolor{stringliteral}{"{}Invalid move: Unit has no will left.\(\backslash\)n"{}};}
+\DoxyCodeLine{188                     \}}
+\DoxyCodeLine{189                 \}}
+\DoxyCodeLine{190                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{191                 \{}
+\DoxyCodeLine{192                     std::cout << \textcolor{stringliteral}{"{}Invalid move: No unit or not your unit at starting position.\(\backslash\)n"{}};}
+\DoxyCodeLine{193                 \}}
+\DoxyCodeLine{194             \}}
+\DoxyCodeLine{195             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{196             \{}
+\DoxyCodeLine{197                 std::cout << \textcolor{stringliteral}{"{}Invalid move: Coordinates out of bounds.\(\backslash\)n"{}};}
+\DoxyCodeLine{198             \}}
+\DoxyCodeLine{199         \}}
+\DoxyCodeLine{200         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{201         \{}
+\DoxyCodeLine{202             std::cout << \textcolor{stringliteral}{"{}Invalid MOVE command format. Use: MOVE startX startY endX endY\(\backslash\)n"{}};}
+\DoxyCodeLine{203             std::cin.clear(); \textcolor{comment}{// Clear error flags}}
+\DoxyCodeLine{204             std::cin.ignore(std::numeric\_limits<std::streamsize>::max(), \textcolor{charliteral}{'\(\backslash\)n'}); \textcolor{comment}{// Discard invalid input}}
+\DoxyCodeLine{205         \}}
+\DoxyCodeLine{206     \}}
+\DoxyCodeLine{207     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}attack"{}})}
+\DoxyCodeLine{208     \{}
+\DoxyCodeLine{209         \textcolor{keywordtype}{int} attackerX, attackerY, targetX, targetY;}
+\DoxyCodeLine{210         \textcolor{keywordflow}{if} (std::cin >> attackerX >> attackerY >> targetX >> targetY)}
+\DoxyCodeLine{211         \{}
+\DoxyCodeLine{212             \textcolor{comment}{// Check if coordinates are within board bounds}}
+\DoxyCodeLine{213              \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{214             \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{215             \textcolor{keywordflow}{if} (attackerX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(attackerX) < boardWidth \&\&}
+\DoxyCodeLine{216                 attackerY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(attackerY) < boardHeight \&\&}
+\DoxyCodeLine{217                 targetX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetX) < boardWidth \&\&}
+\DoxyCodeLine{218                 targetY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetY) < boardHeight)}
+\DoxyCodeLine{219             \{}
+\DoxyCodeLine{220                 \mbox{\hyperlink{classField}{Field}}* attackerField = board[attackerX][attackerY];}
+\DoxyCodeLine{221                 \mbox{\hyperlink{classField}{Field}}* targetField = board[targetX][targetY];}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223                 \textcolor{comment}{// Check if there's a unit at the attacker position and it belongs to the current player}}
+\DoxyCodeLine{224                 \textcolor{keywordflow}{if} (attackerField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() \&\& attackerField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() == !currentPlayer-\/>\mbox{\hyperlink{classPlayer_a0cb5b17db27a2af6492e270aab8f7870}{getAI}}()) \textcolor{comment}{// Assuming human player is !getAI()}}
+\DoxyCodeLine{225                 \{}
+\DoxyCodeLine{226                     \textcolor{comment}{// Check if the unit has enough will to attack}}
+\DoxyCodeLine{227                     \textcolor{keywordflow}{if} (attackerField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() > 0) \{}
+\DoxyCodeLine{228                         \textcolor{comment}{// Check if there's a unit at the target position and it belongs to the opponent}}
+\DoxyCodeLine{229                         \textcolor{keywordflow}{if} (targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() \&\& targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() != !currentPlayer-\/>\mbox{\hyperlink{classPlayer_a0cb5b17db27a2af6492e270aab8f7870}{getAI}}())}
+\DoxyCodeLine{230                         \{}
+\DoxyCodeLine{231                             \textcolor{comment}{// Check if the target is within the attacker's attack distance (Manhattan distance)}}
+\DoxyCodeLine{232                              \textcolor{comment}{// Corrected: Changed startY to attackerY}}
+\DoxyCodeLine{233                              \textcolor{keywordflow}{if} (std::abs(attackerX -\/ targetX) + std::abs(attackerY -\/ targetY) <= attackerField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a8856896cc73b342fec2cd3e8079e8e6a}{getAttackDistance}}()) \{}
+\DoxyCodeLine{234                                  \mbox{\hyperlink{functions_8cpp_acfc6ab57758c3db7e635b17b396796ba}{attack}}(board, attackerX, attackerY, targetX, targetY);}
+\DoxyCodeLine{235                                  attackerField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a207c7fe4b9d30af2446bb8af0a127c22}{setWill}}(attackerField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() -\/ 1); \textcolor{comment}{// Consume will}}
+\DoxyCodeLine{236                                  actionTaken = \textcolor{keyword}{true};}
+\DoxyCodeLine{237                                  \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{238                              \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{239                                  std::cout << \textcolor{stringliteral}{"{}Invalid attack: Target is outside unit's attack distance.\(\backslash\)n"{}};}
+\DoxyCodeLine{240                              \}}
+\DoxyCodeLine{241                         \}}
+\DoxyCodeLine{242                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{243                         \{}
+\DoxyCodeLine{244                             std::cout << \textcolor{stringliteral}{"{}Invalid attack: No unit or not an enemy unit at target position.\(\backslash\)n"{}};}
+\DoxyCodeLine{245                         \}}
+\DoxyCodeLine{246                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{247                         std::cout << \textcolor{stringliteral}{"{}Invalid attack: Unit has no will left.\(\backslash\)n"{}};}
+\DoxyCodeLine{248                     \}}
+\DoxyCodeLine{249                 \}}
+\DoxyCodeLine{250                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{251                 \{}
+\DoxyCodeLine{252                     std::cout << \textcolor{stringliteral}{"{}Invalid attack: No unit or not your unit at attacking position.\(\backslash\)n"{}};}
+\DoxyCodeLine{253                 \}}
+\DoxyCodeLine{254             \}}
+\DoxyCodeLine{255             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{256             \{}
+\DoxyCodeLine{257                 std::cout << \textcolor{stringliteral}{"{}Invalid ATTACK command format. Coordinates out of bounds.\(\backslash\)n"{}};}
+\DoxyCodeLine{258             \}}
+\DoxyCodeLine{259         \}}
+\DoxyCodeLine{260         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{261         \{}
+\DoxyCodeLine{262             std::cout << \textcolor{stringliteral}{"{}Invalid ATTACK command format. Use: ATTACK attackerX attackerY targetX targetY\(\backslash\)n"{}};}
+\DoxyCodeLine{263             std::cin.clear(); \textcolor{comment}{// Clear error flags}}
+\DoxyCodeLine{264             std::cin.ignore(std::numeric\_limits<std::streamsize>::max(), \textcolor{charliteral}{'\(\backslash\)n'}); \textcolor{comment}{// Discard invalid input}}
+\DoxyCodeLine{265         \}}
+\DoxyCodeLine{266     \}}
+\DoxyCodeLine{267     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}create"{}})}
+\DoxyCodeLine{268     \{}
+\DoxyCodeLine{269         std::string unitType;}
+\DoxyCodeLine{270         \textcolor{keywordtype}{int} x, y;}
+\DoxyCodeLine{271         \textcolor{keywordflow}{if} (std::cin >> unitType >> x >> y)}
+\DoxyCodeLine{272         \{}
+\DoxyCodeLine{273             \textcolor{comment}{// Convert unitType to lowercase}}
+\DoxyCodeLine{274             std::transform(unitType.begin(), unitType.end(), unitType.begin(), ::tolower);}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276             \textcolor{comment}{// Check if coordinates are within board bounds}}
+\DoxyCodeLine{277              \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{278             \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{279             \textcolor{keywordflow}{if} (x >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(x) < boardWidth \&\&}
+\DoxyCodeLine{280                 y >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(y) < boardHeight) \{}
+\DoxyCodeLine{281                 \textcolor{keywordflow}{if} (y <= 4) \{}
+\DoxyCodeLine{282                     std::cout << \textcolor{stringliteral}{"{}You can only create units in rows y > 4.\(\backslash\)n"{}};}
+\DoxyCodeLine{283                     \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{284                 \}}
+\DoxyCodeLine{285                  \mbox{\hyperlink{classField}{Field}}* targetField = board[x][y];}
+\DoxyCodeLine{286                 \textcolor{comment}{// Check if the target field is empty and not a special field that blocks creation}}
+\DoxyCodeLine{287                 \textcolor{keywordtype}{bool} isSpecialField = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classManaMineField}{ManaMineField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{288                                       \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBombedField}{BombedField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{289                                       \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classFortress}{Fortress}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{290                                       \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHill}{Hill}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{291                                       \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBurnedField}{BurnedField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{292                                       \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHospitalField}{HospitalField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{293                                       \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classShieldedField}{ShieldedField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{294 }
+\DoxyCodeLine{295                 \textcolor{keywordflow}{if} (targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() == \textcolor{keyword}{nullptr} \&\& !isSpecialField) \textcolor{comment}{// Corrected condition}}
+\DoxyCodeLine{296                 \{}
+\DoxyCodeLine{297                     \mbox{\hyperlink{classUnit}{Unit}}* newUnit = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{298                     \textcolor{keywordtype}{int} cost = 0;}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300                     \textcolor{keywordflow}{if} (unitType == \textcolor{stringliteral}{"{}infantry"{}}) \{ newUnit = \textcolor{keyword}{new} \mbox{\hyperlink{classInfantry}{Infantry}}(\textcolor{keyword}{true}); cost = 2; \}}
+\DoxyCodeLine{301                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (unitType == \textcolor{stringliteral}{"{}archer"{}}) \{ newUnit = \textcolor{keyword}{new} \mbox{\hyperlink{classArcher}{Archer}}(\textcolor{keyword}{true}); cost = 3; \}}
+\DoxyCodeLine{302                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (unitType == \textcolor{stringliteral}{"{}priest"{}}) \{ newUnit = \textcolor{keyword}{new} \mbox{\hyperlink{classPriest}{Priest}}(\textcolor{keyword}{true}); cost = 5; \}}
+\DoxyCodeLine{303                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (unitType == \textcolor{stringliteral}{"{}engineer"{}}) \{ newUnit = \textcolor{keyword}{new} \mbox{\hyperlink{classEngineer}{Engineer}}(\textcolor{keyword}{true}); cost = 5; \}}
+\DoxyCodeLine{304                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (unitType == \textcolor{stringliteral}{"{}cannon"{}}) \{ newUnit = \textcolor{keyword}{new} \mbox{\hyperlink{classCannon}{Cannon}}(\textcolor{stringliteral}{"{}Cannon"{}}, 0, 4, 4, 5, \textcolor{keyword}{true}); cost = 0; \} \textcolor{comment}{// Cannon cost is 0}}
+\DoxyCodeLine{305 }
+\DoxyCodeLine{306                     \textcolor{keywordflow}{if} (newUnit)}
+\DoxyCodeLine{307                     \{}
+\DoxyCodeLine{308                         \textcolor{keywordflow}{if} (currentPlayer-\/>\mbox{\hyperlink{classPlayer_a99236b47c18af320bea2e42ac1c7b2fe}{subtractMana}}(cost))}
+\DoxyCodeLine{309                         \{}
+\DoxyCodeLine{310                             board[x][y]-\/>setUnit(newUnit);}
+\DoxyCodeLine{311                             std::cout << \textcolor{stringliteral}{"{}Created "{}} << unitType << \textcolor{stringliteral}{"{} at ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}) for "{}} << cost << \textcolor{stringliteral}{"{} mana.\(\backslash\)n"{}};}
+\DoxyCodeLine{312                             actionTaken = \textcolor{keyword}{true};}
+\DoxyCodeLine{313                             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{314                         \}}
+\DoxyCodeLine{315                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{316                         \{}
+\DoxyCodeLine{317                             std::cout << \textcolor{stringliteral}{"{}Not enough mana to create "{}} << unitType << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{318                             \textcolor{keyword}{delete} newUnit; \textcolor{comment}{// Clean up allocated unit}}
+\DoxyCodeLine{319                         \}}
+\DoxyCodeLine{320                     \}}
+\DoxyCodeLine{321                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{322                     \{}
+\DoxyCodeLine{323                         std::cout << \textcolor{stringliteral}{"{}Invalid unit type: "{}} << unitType << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{324                     \}}
+\DoxyCodeLine{325                 \}}
+\DoxyCodeLine{326                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{327                 \{}
+\DoxyCodeLine{328                     std::cout << \textcolor{stringliteral}{"{}Invalid CREATE location: Field is occupied or is a special field.\(\backslash\)n"{}};}
+\DoxyCodeLine{329                 \}}
+\DoxyCodeLine{330             \}}
+\DoxyCodeLine{331             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{332             \{}
+\DoxyCodeLine{333                 std::cout << \textcolor{stringliteral}{"{}Invalid CREATE command format. Coordinates out of bounds.\(\backslash\)n"{}};}
+\DoxyCodeLine{334             \}}
+\DoxyCodeLine{335         \}}
+\DoxyCodeLine{336         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{337         \{}
+\DoxyCodeLine{338             std::cout << \textcolor{stringliteral}{"{}Invalid CREATE command format. Use: CREATE unitType X Y\(\backslash\)n"{}};}
+\DoxyCodeLine{339             std::cin.clear(); \textcolor{comment}{// Clear error flags}}
+\DoxyCodeLine{340             std::cin.ignore(std::numeric\_limits<std::streamsize>::max(), \textcolor{charliteral}{'\(\backslash\)n'}); \textcolor{comment}{// Discard invalid input}}
+\DoxyCodeLine{341         \}}
+\DoxyCodeLine{342     \}}
+\DoxyCodeLine{343     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}spell"{}})}
+\DoxyCodeLine{344     \{}
+\DoxyCodeLine{345         std::string spellName;}
+\DoxyCodeLine{346         \textcolor{keywordtype}{int} x, y;}
+\DoxyCodeLine{347         \textcolor{keywordflow}{if} (std::cin >> spellName >> x >> y)}
+\DoxyCodeLine{348         \{}
+\DoxyCodeLine{349             \textcolor{comment}{// Convert spellName to lowercase}}
+\DoxyCodeLine{350             std::transform(spellName.begin(), spellName.end(), spellName.begin(), ::tolower);}
+\DoxyCodeLine{351 }
+\DoxyCodeLine{352             \textcolor{comment}{// Check if coordinates are within board bounds}}
+\DoxyCodeLine{353              \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{354             \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{355             \textcolor{keywordflow}{if} (x >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(x) < boardWidth \&\&}
+\DoxyCodeLine{356                 y >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(y) < boardHeight)}
+\DoxyCodeLine{357             \{}
+\DoxyCodeLine{358                 \mbox{\hyperlink{classSpell}{Spell}}* spellToCast = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{359                 \textcolor{keywordtype}{int} cost = 0;}
+\DoxyCodeLine{360 }
+\DoxyCodeLine{361                 \textcolor{keywordflow}{if} (spellName == \textcolor{stringliteral}{"{}morog"{}}) \{ spellToCast = \textcolor{keyword}{new} \mbox{\hyperlink{classMorogSpell}{MorogSpell}}(); cost = 5; \}}
+\DoxyCodeLine{362                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (spellName == \textcolor{stringliteral}{"{}fireball"{}}) \{ spellToCast = \textcolor{keyword}{new} \mbox{\hyperlink{classFireballSpell}{FireballSpell}}(); cost = 2; \}}
+\DoxyCodeLine{363                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (spellName == \textcolor{stringliteral}{"{}curse"{}}) \{ spellToCast = \textcolor{keyword}{new} \mbox{\hyperlink{classCurseSpell}{CurseSpell}}(); cost = 3; \}}
+\DoxyCodeLine{364                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (spellName == \textcolor{stringliteral}{"{}bomb"{}}) \{ spellToCast = \textcolor{keyword}{new} \mbox{\hyperlink{classBombSpell}{BombSpell}}(); cost = 4; \}}
+\DoxyCodeLine{365                 \textcolor{comment}{// else if (spellName == "{}teleport"{}) \{ spellToCast = new TeleportSpell(); cost = 6; \} // Commented out due to TeleportSpell being abstract}}
+\DoxyCodeLine{366                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{367                     std::cout << \textcolor{stringliteral}{"{}Invalid spell name: "{}} << spellName << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{368                 \}}
+\DoxyCodeLine{369 }
+\DoxyCodeLine{370                 \textcolor{keywordflow}{if} (spellToCast)}
+\DoxyCodeLine{371                 \{}
+\DoxyCodeLine{372                     \textcolor{keywordflow}{if} (currentPlayer-\/>\mbox{\hyperlink{classPlayer_a99236b47c18af320bea2e42ac1c7b2fe}{subtractMana}}(cost))}
+\DoxyCodeLine{373                     \{}
+\DoxyCodeLine{374                         \textcolor{keywordflow}{if} (spellToCast-\/>\mbox{\hyperlink{classSpell_adbff32f05577154a0db4606282d0151c}{cast}}(board, x, y))}
+\DoxyCodeLine{375                         \{}
+\DoxyCodeLine{376                             std::cout << \textcolor{stringliteral}{"{}Cast "{}} << spellName << \textcolor{stringliteral}{"{} at ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}) for "{}} << cost << \textcolor{stringliteral}{"{} mana.\(\backslash\)n"{}};}
+\DoxyCodeLine{377                             \textcolor{keyword}{delete} spellToCast; \textcolor{comment}{// Clean up allocated spell}}
+\DoxyCodeLine{378                             actionTaken = \textcolor{keyword}{true};}
+\DoxyCodeLine{379                             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{380                         \}}
+\DoxyCodeLine{381                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{382                         \{}
+\DoxyCodeLine{383                             std::cout << \textcolor{stringliteral}{"{}Spell failed to cast at ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}).\(\backslash\)n"{}};}
+\DoxyCodeLine{384                             currentPlayer-\/>\mbox{\hyperlink{classPlayer_addff1c790965ad1b6ca5745a0fc849e0}{addMana}}(cost); \textcolor{comment}{// Refund mana if spell failed}}
+\DoxyCodeLine{385                             \textcolor{keyword}{delete} spellToCast; \textcolor{comment}{// Clean up allocated spell}}
+\DoxyCodeLine{386                         \}}
+\DoxyCodeLine{387                     \}}
+\DoxyCodeLine{388                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{389                     \{}
+\DoxyCodeLine{390                         std::cout << \textcolor{stringliteral}{"{}Not enough mana to cast "{}} << spellName << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{391                         \textcolor{keyword}{delete} spellToCast; \textcolor{comment}{// Clean up allocated spell}}
+\DoxyCodeLine{392                     \}}
+\DoxyCodeLine{393                 \}}
+\DoxyCodeLine{394             \}}
+\DoxyCodeLine{395             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{396             \{}
+\DoxyCodeLine{397                 std::cout << \textcolor{stringliteral}{"{}Invalid SPELL command format. Coordinates out of bounds.\(\backslash\)n"{}};}
+\DoxyCodeLine{398             \}}
+\DoxyCodeLine{399         \}}
+\DoxyCodeLine{400         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{401         \{}
+\DoxyCodeLine{402             std::cout << \textcolor{stringliteral}{"{}Invalid SPELL command format. Use: SPELL spellName X Y\(\backslash\)n"{}};}
+\DoxyCodeLine{403             std::cin.clear(); \textcolor{comment}{// Clear error flags}}
+\DoxyCodeLine{404             std::cin.ignore(std::numeric\_limits<std::streamsize>::max(), \textcolor{charliteral}{'\(\backslash\)n'}); \textcolor{comment}{// Discard invalid input}}
+\DoxyCodeLine{405         \}}
+\DoxyCodeLine{406     \}}
+\DoxyCodeLine{407     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}pray"{}})}
+\DoxyCodeLine{408     \{}
+\DoxyCodeLine{409          \textcolor{keywordtype}{int} x, y;}
+\DoxyCodeLine{410          \textcolor{keywordflow}{if} (std::cin >> x >> y)}
+\DoxyCodeLine{411          \{}
+\DoxyCodeLine{412              \textcolor{comment}{// Check if coordinates are within board bounds}}
+\DoxyCodeLine{413               \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{414              \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{415              \textcolor{keywordflow}{if} (x >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(x) < boardWidth \&\&}
+\DoxyCodeLine{416                  y >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(y) < boardHeight)}
+\DoxyCodeLine{417              \{}
+\DoxyCodeLine{418                  \textcolor{comment}{// Find a Priest unit controlled by the current player with Will > 0}}
+\DoxyCodeLine{419                  \mbox{\hyperlink{classPriest}{Priest}}* castingPriest = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{420                  \textcolor{comment}{// Iterate through the board to find the player's priests}}
+\DoxyCodeLine{421                  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < boardWidth; ++i) \{}
+\DoxyCodeLine{422                      \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; j < boardHeight; ++j) \{}
+\DoxyCodeLine{423                          \mbox{\hyperlink{classField}{Field}}* currentField = board[i][j];}
+\DoxyCodeLine{424                          \mbox{\hyperlink{classUnit}{Unit}}* unit = currentField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{425                          \textcolor{comment}{// Human player units have getPlayer() == true}}
+\DoxyCodeLine{426                          \textcolor{keywordflow}{if} (unit \&\& unit-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() \&\& \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classPriest}{Priest}}*\textcolor{keyword}{>}(unit) \&\& unit-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() > 0) \{}
+\DoxyCodeLine{427                              castingPriest = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classPriest}{Priest}}*\textcolor{keyword}{>}(unit);}
+\DoxyCodeLine{428                              \textcolor{keywordflow}{break}; \textcolor{comment}{// Found a priest, take the first one}}
+\DoxyCodeLine{429                          \}}
+\DoxyCodeLine{430                      \}}
+\DoxyCodeLine{431                      \textcolor{keywordflow}{if} (castingPriest) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{432                  \}}
+\DoxyCodeLine{433 }
+\DoxyCodeLine{434                  \textcolor{keywordflow}{if} (castingPriest) \{}
+\DoxyCodeLine{435                       \textcolor{comment}{// Check if the target field is valid for praying (not a special field that cannot be shielded)}}
+\DoxyCodeLine{436                       \mbox{\hyperlink{classField}{Field}}* targetField = board[x][y];}
+\DoxyCodeLine{437                        \textcolor{keywordtype}{bool} isSpecialField = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classShieldedField}{ShieldedField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{438                                              \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classFortress}{Fortress}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{439                                              \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHill}{Hill}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{440                                              \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBurnedField}{BurnedField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{441                                              \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBombedField}{BombedField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{442                                              \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHospitalField}{HospitalField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{443                                              \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classManaMineField}{ManaMineField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{444 }
+\DoxyCodeLine{445                       \textcolor{keywordflow}{if} (!isSpecialField) \textcolor{comment}{// Can pray on non-\/special fields}}
+\DoxyCodeLine{446                       \{}
+\DoxyCodeLine{447                          \textcolor{keywordflow}{if} (castingPriest-\/>\mbox{\hyperlink{classPriest_a071c64e9c9ef7e3cb87669a14f54b268}{pray}}(board, x, y)) \{ \textcolor{comment}{// Priest::pray handles mana and will cost}}
+\DoxyCodeLine{448                              std::cout << \textcolor{stringliteral}{"{}Priest prayed at ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}).\(\backslash\)n"{}};}
+\DoxyCodeLine{449                              actionTaken = \textcolor{keyword}{true};}
+\DoxyCodeLine{450                              \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{451                          \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{452                              std::cout << \textcolor{stringliteral}{"{}Priest failed to pray at ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}).\(\backslash\)n"{}};}
+\DoxyCodeLine{453                          \}}
+\DoxyCodeLine{454                       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{455                           std::cout << \textcolor{stringliteral}{"{}Invalid PRAY target: Cannot pray on this special field.\(\backslash\)n"{}};}
+\DoxyCodeLine{456                       \}}
+\DoxyCodeLine{457 }
+\DoxyCodeLine{458                  \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{459                      std::cout << \textcolor{stringliteral}{"{}No Priest unit with will available to pray.\(\backslash\)n"{}};}
+\DoxyCodeLine{460                  \}}
+\DoxyCodeLine{461 }
+\DoxyCodeLine{462              \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{463                  std::cout << \textcolor{stringliteral}{"{}Invalid PRAY command format. Coordinates out of bounds.\(\backslash\)n"{}};}
+\DoxyCodeLine{464              \}}
+\DoxyCodeLine{465          \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{466              std::cout << \textcolor{stringliteral}{"{}Invalid PRAY command format. Use: PRAY X Y\(\backslash\)n"{}};}
+\DoxyCodeLine{467              std::cin.clear(); \textcolor{comment}{// Clear error flags}}
+\DoxyCodeLine{468              std::cin.ignore(std::numeric\_limits<std::streamsize>::max(), \textcolor{charliteral}{'\(\backslash\)n'}); \textcolor{comment}{// Discard invalid input}}
+\DoxyCodeLine{469          \}}
+\DoxyCodeLine{470     \}}
+\DoxyCodeLine{471     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}build"{}})}
+\DoxyCodeLine{472     \{}
+\DoxyCodeLine{473         std::string buildType;}
+\DoxyCodeLine{474         \textcolor{keywordtype}{int} x, y;}
+\DoxyCodeLine{475         \textcolor{keywordflow}{if} (std::cin >> buildType >> x >> y)}
+\DoxyCodeLine{476         \{}
+\DoxyCodeLine{477             \textcolor{comment}{// Convert buildType to lowercase}}
+\DoxyCodeLine{478             std::transform(buildType.begin(), buildType.end(), buildType.begin(), ::tolower);}
+\DoxyCodeLine{479 }
+\DoxyCodeLine{480             \textcolor{comment}{// Check if coordinates are within board bounds}}
+\DoxyCodeLine{481              \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{482             \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{483             \textcolor{keywordflow}{if} (x >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(x) < boardWidth \&\&}
+\DoxyCodeLine{484                 y >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(y) < boardHeight)}
+\DoxyCodeLine{485             \{}
+\DoxyCodeLine{486                 \textcolor{comment}{// Find an Engineer unit controlled by the current player with Will > 0}}
+\DoxyCodeLine{487                 \mbox{\hyperlink{classEngineer}{Engineer}}* buildingEngineer = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{488                  \textcolor{comment}{// Iterate through the board to find the player's engineers}}
+\DoxyCodeLine{489                  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < boardWidth; ++i) \{}
+\DoxyCodeLine{490                      \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; j < boardHeight; ++j) \{}
+\DoxyCodeLine{491                          \mbox{\hyperlink{classField}{Field}}* currentField = board[i][j];}
+\DoxyCodeLine{492                          \mbox{\hyperlink{classUnit}{Unit}}* unit = currentField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{493                          \textcolor{comment}{// Human player units have getPlayer() == true}}
+\DoxyCodeLine{494                          \textcolor{keywordflow}{if} (unit \&\& unit-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() \&\& \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classEngineer}{Engineer}}*\textcolor{keyword}{>}(unit) \&\& unit-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() > 0) \{}
+\DoxyCodeLine{495                              buildingEngineer = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classEngineer}{Engineer}}*\textcolor{keyword}{>}(unit);}
+\DoxyCodeLine{496                              \textcolor{keywordflow}{break}; \textcolor{comment}{// Found an engineer, take the first one}}
+\DoxyCodeLine{497                          \}}
+\DoxyCodeLine{498                      \}}
+\DoxyCodeLine{499                      \textcolor{keywordflow}{if} (buildingEngineer) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{500                  \}}
+\DoxyCodeLine{501 }
+\DoxyCodeLine{502 }
+\DoxyCodeLine{503                 \textcolor{keywordflow}{if} (buildingEngineer) \{}
+\DoxyCodeLine{504                      \mbox{\hyperlink{classField}{Field}}* targetField = board[x][y];}
+\DoxyCodeLine{505                     \textcolor{comment}{// Check if the target field is empty and not a special field that blocks building}}
+\DoxyCodeLine{506                     \textcolor{keywordtype}{bool} isSpecialField = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classManaMineField}{ManaMineField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{507                                           \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBombedField}{BombedField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{508                                           \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classFortress}{Fortress}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{509                                           \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHill}{Hill}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{510                                           \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBurnedField}{BurnedField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{511                                           \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHospitalField}{HospitalField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} ||}
+\DoxyCodeLine{512                                           \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classShieldedField}{ShieldedField}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{513 }
+\DoxyCodeLine{514                     \textcolor{keywordflow}{if} (targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() == \textcolor{keyword}{nullptr} \&\& !isSpecialField) \textcolor{comment}{// Corrected condition}}
+\DoxyCodeLine{515                     \{}
+\DoxyCodeLine{516                         \textcolor{keywordtype}{int} cost = 0;}
+\DoxyCodeLine{517                         \mbox{\hyperlink{classField}{Field}}* newField = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{518                         \textcolor{comment}{// Unit* unitOnField = board[x][y]-\/>getUnit(); // Removed unused variable}}
+\DoxyCodeLine{519 }
+\DoxyCodeLine{520                         \textcolor{keywordflow}{if} (buildType == \textcolor{stringliteral}{"{}fortress"{}}) \{}
+\DoxyCodeLine{521                             cost = 3;}
+\DoxyCodeLine{522                             \textcolor{keywordflow}{if} (currentPlayer-\/>\mbox{\hyperlink{classPlayer_a99236b47c18af320bea2e42ac1c7b2fe}{subtractMana}}(cost)) \{}
+\DoxyCodeLine{523                                 newField = buildingEngineer-\/>\mbox{\hyperlink{classEngineer_ad4076b7f94e65fd55c68fc1cbd740533}{createFortress}}(x, y);}
+\DoxyCodeLine{524                             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{525                                 std::cout << \textcolor{stringliteral}{"{}Not enough mana to build Fortress.\(\backslash\)n"{}};}
+\DoxyCodeLine{526                             \}}
+\DoxyCodeLine{527                         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (buildType == \textcolor{stringliteral}{"{}cannon"{}}) \{}
+\DoxyCodeLine{528                             cost = 0; \textcolor{comment}{// Cannon build cost is 0}}
+\DoxyCodeLine{529                             \textcolor{comment}{// Cannons are units, created directly.}}
+\DoxyCodeLine{530                             \textcolor{comment}{// Check if the target field is valid for placing a unit.}}
+\DoxyCodeLine{531                             \textcolor{keywordflow}{if} (targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() == \textcolor{keyword}{nullptr} \&\& !isSpecialField) \{ \textcolor{comment}{// Re-\/check validity for unit placement}}
+\DoxyCodeLine{532                                 \textcolor{comment}{// Determine player status for the new cannon (should be human player)}}
+\DoxyCodeLine{533                                 \textcolor{keywordtype}{bool} cannonIsPlayer = !currentPlayer-\/>\mbox{\hyperlink{classPlayer_a0cb5b17db27a2af6492e270aab8f7870}{getAI}}();}
+\DoxyCodeLine{534                                 \mbox{\hyperlink{classUnit}{Unit}}* newCannon = \textcolor{keyword}{new} \mbox{\hyperlink{classCannon}{Cannon}}(\textcolor{stringliteral}{"{}Cannon"{}}, 0, 4, 4, 5, cannonIsPlayer);}
+\DoxyCodeLine{535                                 board[x][y]-\/>setUnit(newCannon);}
+\DoxyCodeLine{536                                 buildingEngineer-\/>\mbox{\hyperlink{classUnit_a207c7fe4b9d30af2446bb8af0a127c22}{setWill}}(buildingEngineer-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() -\/ 1); \textcolor{comment}{// Consume engineer's will}}
+\DoxyCodeLine{537                                 std::cout << \textcolor{stringliteral}{"{}Engineer built Cannon at ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}).\(\backslash\)n"{}};}
+\DoxyCodeLine{538                                 actionTaken = \textcolor{keyword}{true};}
+\DoxyCodeLine{539                                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{540                             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{541                                 std::cout << \textcolor{stringliteral}{"{}Invalid BUILD cannon location: Field is occupied or is a special field.\(\backslash\)n"{}};}
+\DoxyCodeLine{542                             \}}
+\DoxyCodeLine{543 }
+\DoxyCodeLine{544                         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (buildType == \textcolor{stringliteral}{"{}manamine"{}}) \{}
+\DoxyCodeLine{545                             cost = 4;}
+\DoxyCodeLine{546                             \textcolor{keywordflow}{if} (currentPlayer-\/>\mbox{\hyperlink{classPlayer_a99236b47c18af320bea2e42ac1c7b2fe}{subtractMana}}(cost)) \{}
+\DoxyCodeLine{547                                 newField = buildingEngineer-\/>\mbox{\hyperlink{classEngineer_a4259ec02bdc511cb22ebb20ab73354c7}{createManaMine}}(x, y);}
+\DoxyCodeLine{548                             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{549                                 std::cout << \textcolor{stringliteral}{"{}Not enough mana to build Mana Mine.\(\backslash\)n"{}};}
+\DoxyCodeLine{550                             \}}
+\DoxyCodeLine{551                         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (buildType == \textcolor{stringliteral}{"{}trap"{}}) \{}
+\DoxyCodeLine{552                             cost = 2;}
+\DoxyCodeLine{553                              \textcolor{keywordflow}{if} (currentPlayer-\/>\mbox{\hyperlink{classPlayer_a99236b47c18af320bea2e42ac1c7b2fe}{subtractMana}}(cost)) \{}
+\DoxyCodeLine{554                                 newField = buildingEngineer-\/>\mbox{\hyperlink{classEngineer_a4f9b54503e8a0fd99ed35f6c78710c56}{createTrap}}(x, y);}
+\DoxyCodeLine{555                             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{556                                 std::cout << \textcolor{stringliteral}{"{}Not enough mana to build Trap.\(\backslash\)n"{}};}
+\DoxyCodeLine{557                             \}}
+\DoxyCodeLine{558                         \}}
+\DoxyCodeLine{559                         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{560                             std::cout << \textcolor{stringliteral}{"{}Invalid build type: "{}} << buildType << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{561                         \}}
+\DoxyCodeLine{562 }
+\DoxyCodeLine{563                         \textcolor{keywordflow}{if} (newField)}
+\DoxyCodeLine{564                         \{}
+\DoxyCodeLine{565                              \textcolor{comment}{// Need to preserve the unit if there is one on the field when creating a special field}}
+\DoxyCodeLine{566                             \mbox{\hyperlink{classUnit}{Unit}}* unitBeforeBuild = board[x][y]-\/>getUnit(); \textcolor{comment}{// Should be null based on validation}}
+\DoxyCodeLine{567                             \textcolor{keyword}{delete} board[x][y]; \textcolor{comment}{// Delete the old field object}}
+\DoxyCodeLine{568                             board[x][y] = newField; \textcolor{comment}{// Place the new field}}
+\DoxyCodeLine{569                              \textcolor{comment}{// Re-\/set the unit if it was there, as the new field constructor might not handle it}}
+\DoxyCodeLine{570                             \textcolor{keywordflow}{if}(unitBeforeBuild \&\& newField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{571                                 board[x][y]-\/>\mbox{\hyperlink{classField_aac940692dbfe1437aba7efc3a8903ea8}{setUnit}}(unitBeforeBuild);}
+\DoxyCodeLine{572                             \}}
+\DoxyCodeLine{573 }
+\DoxyCodeLine{574                             buildingEngineer-\/>\mbox{\hyperlink{classUnit_a207c7fe4b9d30af2446bb8af0a127c22}{setWill}}(buildingEngineer-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() -\/ 1); \textcolor{comment}{// Consume engineer's will}}
+\DoxyCodeLine{575                             std::cout << \textcolor{stringliteral}{"{}Engineer built "{}} << buildType << \textcolor{stringliteral}{"{} at ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}) for "{}} << cost << \textcolor{stringliteral}{"{} mana.\(\backslash\)n"{}};}
+\DoxyCodeLine{576                             actionTaken = \textcolor{keyword}{true};}
+\DoxyCodeLine{577                             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{578                         \}}
+\DoxyCodeLine{579                     \}}
+\DoxyCodeLine{580                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{581                     \{}
+\DoxyCodeLine{582                         std::cout << \textcolor{stringliteral}{"{}Invalid BUILD location: Field is occupied or is a special field.\(\backslash\)n"{}};}
+\DoxyCodeLine{583                     \}}
+\DoxyCodeLine{584                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{585                     std::cout << \textcolor{stringliteral}{"{}No Engineer unit with will available to build.\(\backslash\)n"{}};}
+\DoxyCodeLine{586                 \}}
+\DoxyCodeLine{587             \}}
+\DoxyCodeLine{588             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{589             \{}
+\DoxyCodeLine{590                 std::cout << \textcolor{stringliteral}{"{}Invalid BUILD command format. Coordinates out of bounds.\(\backslash\)n"{}};}
+\DoxyCodeLine{591             \}}
+\DoxyCodeLine{592         \}}
+\DoxyCodeLine{593         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{594         \{}
+\DoxyCodeLine{595             std::cout << \textcolor{stringliteral}{"{}Invalid BUILD command format. Use: BUILD buildType X Y\(\backslash\)n"{}};}
+\DoxyCodeLine{596             std::cin.clear(); \textcolor{comment}{// Clear error flags}}
+\DoxyCodeLine{597             std::cin.ignore(std::numeric\_limits<std::streamsize>::max(), \textcolor{charliteral}{'\(\backslash\)n'}); \textcolor{comment}{// Discard invalid input}}
+\DoxyCodeLine{598         \}}
+\DoxyCodeLine{599     \}}
+\DoxyCodeLine{600     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"{}end"{}})}
+\DoxyCodeLine{601     \{}
+\DoxyCodeLine{602         std::cout << \textcolor{stringliteral}{"{}Ending turn.\(\backslash\)n"{}};}
+\DoxyCodeLine{603         \textcolor{keywordflow}{return} actionTaken; \textcolor{comment}{// Return whether any action was taken this turn}}
+\DoxyCodeLine{604     \}}
+\DoxyCodeLine{605     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{606     \{}
+\DoxyCodeLine{607         std::cout << \textcolor{stringliteral}{"{}Unknown command.\(\backslash\)n"{}};}
+\DoxyCodeLine{608         \textcolor{comment}{// Consume the rest of the line to prevent issues with the next input}}
+\DoxyCodeLine{609         std::cin.ignore(std::numeric\_limits<std::streamsize>::max(), \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{610         \}}
+\DoxyCodeLine{611     \}}
+\DoxyCodeLine{612 }
+\DoxyCodeLine{613     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// No valid action was taken}}
+\DoxyCodeLine{614 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Player\+::add\+Mana(), attack(), Field\+::can\+Enter(), Spell\+::cast(), Engineer\+::create\+Fortress(), Engineer\+::create\+Mana\+Mine(), Engineer\+::create\+Trap(), field\+\_\+map(), Player\+::get\+AI(), Unit\+::get\+Attack\+Distance(), Player\+::get\+Mana(), Unit\+::get\+Move\+Distance(), Unit\+::get\+Player(), Field\+::get\+Unit(), Unit\+::get\+Will(), move(), Priest\+::pray(), Field\+::set\+Unit(), Unit\+::set\+Will(), Player\+::subtract\+Mana() и unit\+\_\+map().
+
+
+
+Используется в main().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d2/d66/getcommands_8h_a4ffff192321e79e17d14dc4a1af609a7_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{d2/d66/getcommands_8h_a4ffff192321e79e17d14dc4a1af609a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{getcommands_8h_a5a918c926be360a684c63f4c368a162c}\label{getcommands_8h_a5a918c926be360a684c63f4c368a162c}} 
+\index{getcommands.h@{getcommands.h}!hill\_map@{hill\_map}}
+\index{hill\_map@{hill\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{hill\_map()}{hill\_map()}}
+{\footnotesize\ttfamily void hill\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing the locations of hills. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_a2ed49a60b13be1e4632d9681d24856d7}\label{getcommands_8h_a2ed49a60b13be1e4632d9681d24856d7}} 
+\index{getcommands.h@{getcommands.h}!hospital\_map@{hospital\_map}}
+\index{hospital\_map@{hospital\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{hospital\_map()}{hospital\_map()}}
+{\footnotesize\ttfamily void hospital\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing hospital fields. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_a8d755658a24617058a3b7dbd0ea59417}\label{getcommands_8h_a8d755658a24617058a3b7dbd0ea59417}} 
+\index{getcommands.h@{getcommands.h}!manamine\_map@{manamine\_map}}
+\index{manamine\_map@{manamine\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{manamine\_map()}{manamine\_map()}}
+{\footnotesize\ttfamily void manamine\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing mana mine positions. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_a13c8ecae8ea8ed72b6b586f00007fc9b}\label{getcommands_8h_a13c8ecae8ea8ed72b6b586f00007fc9b}} 
+\index{getcommands.h@{getcommands.h}!shield\_map@{shield\_map}}
+\index{shield\_map@{shield\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{shield\_map()}{shield\_map()}}
+{\footnotesize\ttfamily void shield\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing shielded fields. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_a1a9d211a16e23e03d7bf73ddd055e636}\label{getcommands_8h_a1a9d211a16e23e03d7bf73ddd055e636}} 
+\index{getcommands.h@{getcommands.h}!trap\_map@{trap\_map}}
+\index{trap\_map@{trap\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{trap\_map()}{trap\_map()}}
+{\footnotesize\ttfamily void trap\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays a map showing trap positions (bombed fields). 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{getcommands_8h_add5d2eade35143ea61cfb9bf44f5a1b2}\label{getcommands_8h_add5d2eade35143ea61cfb9bf44f5a1b2}} 
+\index{getcommands.h@{getcommands.h}!unit\_map@{unit\_map}}
+\index{unit\_map@{unit\_map}!getcommands.h@{getcommands.h}}
+\doxysubsubsection{\texorpdfstring{unit\_map()}{unit\_map()}}
+{\footnotesize\ttfamily void unit\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле getcommands.\+cpp строка 623
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{623                                                          \{}
+\DoxyCodeLine{624     std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/ Unit Map -\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{625     std::cout << \textcolor{stringliteral}{"{}Legend: 1st letter -\/ owner (M=Player, E=Enemy/AI), 2nd letter -\/ unit type (I=Infantry, A=Archer, P=Priest, E=Engineer, C=Cannon), number -\/ HP\(\backslash\)n"{}};}
+\DoxyCodeLine{626     \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{627     \textcolor{keywordtype}{size\_t} boardHeight = boardWidth ? board[0].size() : 0;}
+\DoxyCodeLine{628 }
+\DoxyCodeLine{629     \textcolor{comment}{// Print column indices (now x axis)}}
+\DoxyCodeLine{630     std::cout << \textcolor{stringliteral}{"{}    "{}};}
+\DoxyCodeLine{631     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < boardWidth; ++x) std::cout << \textcolor{stringliteral}{"{}   "{}} << x << \textcolor{stringliteral}{"{}   "{}};}
+\DoxyCodeLine{632     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{633     \textcolor{comment}{// Print alignment bars under column numbers}}
+\DoxyCodeLine{634     std::cout << \textcolor{stringliteral}{"{}    "{}};}
+\DoxyCodeLine{635     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < boardWidth; ++x) std::cout << \textcolor{stringliteral}{"{}   |   "{}};}
+\DoxyCodeLine{636     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{637 }
+\DoxyCodeLine{638     \textcolor{comment}{// Print top border}}
+\DoxyCodeLine{639     std::cout << \textcolor{stringliteral}{"{}    +"{}};}
+\DoxyCodeLine{640     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < boardWidth; ++x) std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/"{}};}
+\DoxyCodeLine{641     std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/+\(\backslash\)n"{}};}
+\DoxyCodeLine{642 }
+\DoxyCodeLine{643     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < boardHeight; ++y) \{}
+\DoxyCodeLine{644         \textcolor{comment}{// Print each of the 3 lines for the 3x3 box}}
+\DoxyCodeLine{645         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} boxLine = 0; boxLine < 3; ++boxLine) \{}
+\DoxyCodeLine{646             \textcolor{keywordflow}{if} (boxLine == 1) std::cout << std::setw(4) << (std::to\_string(y) + \textcolor{stringliteral}{"{}:"{}}) << \textcolor{stringliteral}{"{}|"{}};}
+\DoxyCodeLine{647             \textcolor{keywordflow}{else} std::cout << \textcolor{stringliteral}{"{}    |"{}};}
+\DoxyCodeLine{648             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < boardWidth; ++x) \{}
+\DoxyCodeLine{649                 \mbox{\hyperlink{classField}{Field}}* field = board[x][y];}
+\DoxyCodeLine{650                 \mbox{\hyperlink{classUnit}{Unit}}* unit = field-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{651                 \textcolor{keywordflow}{if} (unit) \{}
+\DoxyCodeLine{652                     \textcolor{keywordtype}{char} owner = unit-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() ? \textcolor{charliteral}{'M'} : \textcolor{charliteral}{'E'};}
+\DoxyCodeLine{653                     \textcolor{keywordtype}{char} type = unit-\/>\mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}().empty() ? \textcolor{charliteral}{'?'} : std::toupper(unit-\/>\mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}()[0]);}
+\DoxyCodeLine{654                     \textcolor{keywordtype}{int} hp = unit-\/>\mbox{\hyperlink{classUnit_a0e44c4741b8ce52687715dc82fdfaf23}{getCurrentHealth}}();}
+\DoxyCodeLine{655                     \textcolor{keywordflow}{if} (hp > 9) hp = 9;}
+\DoxyCodeLine{656                     std::string unitStr = std::string(1, owner) + type + std::to\_string(hp);}
+\DoxyCodeLine{657                     \textcolor{keywordflow}{if} (boxLine == 1) std::cout << \textcolor{stringliteral}{"{} "{}} << unitStr << \textcolor{stringliteral}{"{}  |"{}};}
+\DoxyCodeLine{658                     \textcolor{keywordflow}{else} std::cout << \textcolor{stringliteral}{"{}      |"{}};}
+\DoxyCodeLine{659                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{660                     std::cout << \textcolor{stringliteral}{"{}      |"{}};}
+\DoxyCodeLine{661                 \}}
+\DoxyCodeLine{662             \}}
+\DoxyCodeLine{663             std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{664         \}}
+\DoxyCodeLine{665         \textcolor{comment}{// Print row separator}}
+\DoxyCodeLine{666         std::cout << \textcolor{stringliteral}{"{}    +"{}};}
+\DoxyCodeLine{667         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < boardWidth; ++x) std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/"{}};}
+\DoxyCodeLine{668         std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/+\(\backslash\)n"{}};}
+\DoxyCodeLine{669     \}}
+\DoxyCodeLine{670 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Current\+Health(), Unit\+::get\+Name(), Unit\+::get\+Player() и Field\+::get\+Unit().
+
+
+
+Используется в get\+Player\+Commands().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{d2/d66/getcommands_8h_add5d2eade35143ea61cfb9bf44f5a1b2_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d66/getcommands_8h_add5d2eade35143ea61cfb9bf44f5a1b2_icgraph}
+\end{center}
+\end{figure}

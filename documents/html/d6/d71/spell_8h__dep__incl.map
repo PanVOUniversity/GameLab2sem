@@ -1,0 +1,20 @@
+<map id="spell.h" name="spell.h">
+<area shape="rect" id="node1" title=" " alt="" coords="495,5,561,32"/>
+<area shape="rect" id="node2" href="$de/d59/bombspell_8cpp.html" title=" " alt="" coords="5,155,123,181"/>
+<area shape="rect" id="node3" href="$d3/d01/bombspell_8h.html" title=" " alt="" coords="111,80,214,107"/>
+<area shape="rect" id="node5" href="$d9/d42/spells_8h.html" title="Includes all spell types used in the game for easy access and registration." alt="" coords="584,155,656,181"/>
+<area shape="rect" id="node10" href="$d4/d21/cursespell_8cpp.html" title=" " alt="" coords="197,155,312,181"/>
+<area shape="rect" id="node11" href="$d8/d7b/cursespell_8h.html" title=" " alt="" coords="299,80,399,107"/>
+<area shape="rect" id="node12" href="$da/def/fireballspell_8cpp.html" title=" " alt="" coords="885,155,1011,181"/>
+<area shape="rect" id="node13" href="$d5/d5d/fireballspell_8h.html" title=" " alt="" coords="797,80,907,107"/>
+<area shape="rect" id="node14" href="$d1/d55/morogspell_8cpp.html" title=" " alt="" coords="387,155,509,181"/>
+<area shape="rect" id="node15" href="$db/daa/morogspell_8h.html" title=" " alt="" coords="475,80,581,107"/>
+<area shape="rect" id="node16" href="$d2/d47/spell_8cpp.html" title=" " alt="" coords="983,80,1063,107"/>
+<area shape="rect" id="node17" href="$df/db2/teleportspell_8h.html" title=" " alt="" coords="657,80,773,107"/>
+<area shape="rect" id="node4" href="$d0/d77/AI_8cpp.html" title=" " alt="" coords="515,229,578,256"/>
+<area shape="rect" id="node6" href="$d9/deb/getcommands_8cpp.html" title=" " alt="" coords="539,304,682,331"/>
+<area shape="rect" id="node7" href="$d2/d66/getcommands_8h.html" title=" " alt="" coords="669,229,795,256"/>
+<area shape="rect" id="node8" href="$df/d0a/main_8cpp.html" title=" " alt="" coords="733,379,816,405"/>
+<area shape="rect" id="node9" href="$d4/dbf/main_8h.html" title=" " alt="" coords="707,304,773,331"/>
+<area shape="rect" id="node18" href="$d6/d16/teleportspell_8cpp.html" title=" " alt="" coords="680,155,811,181"/>
+</map>

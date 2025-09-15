@@ -1,0 +1,159 @@
+\hypertarget{classFireballSpell}{}\doxysection{Класс Fireball\+Spell}
+\label{classFireballSpell}\index{FireballSpell@{FireballSpell}}
+
+
+\mbox{\hyperlink{classSpell}{Spell}} that deals damage to a target unit (Fireball).  
+
+
+
+
+{\ttfamily \#include $<$fireballspell.\+h$>$}
+
+
+
+Граф наследования\+:Fireball\+Spell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{dd/d18/classFireballSpell__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Fireball\+Spell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d2/dbb/classFireballSpell__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFireballSpell_aab39fda94547e0a010ef808ca39738cb}{Fireball\+Spell}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classFireballSpell}{Fireball\+Spell}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classFireballSpell_a95bd0e7b4677e05b11e6c9f4bae63748}{$\sim$\+Fireball\+Spell}} ()=default
+\item 
+bool \mbox{\hyperlink{classFireballSpell_af74e7fda9c1770dc17a5eec298c1be3c}{cast}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y) override
+\begin{DoxyCompactList}\small\item\em Casts the Fireball spell at the given coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+\mbox{\hyperlink{classSpell}{Spell}} that deals damage to a target unit (Fireball). 
+
+См. определение в файле fireballspell.\+h строка 10
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classFireballSpell_aab39fda94547e0a010ef808ca39738cb}\label{classFireballSpell_aab39fda94547e0a010ef808ca39738cb}} 
+\index{FireballSpell@{FireballSpell}!FireballSpell@{FireballSpell}}
+\index{FireballSpell@{FireballSpell}!FireballSpell@{FireballSpell}}
+\doxysubsubsection{\texorpdfstring{FireballSpell()}{FireballSpell()}}
+{\footnotesize\ttfamily Fireball\+Spell\+::\+Fireball\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classFireballSpell}{Fireball\+Spell}}. 
+
+
+
+См. определение в файле fireballspell.\+cpp строка 11
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12     : \mbox{\hyperlink{classSpell_a198d0b0f123fcd8cd0b2d5c7efd98b5d}{Spell}}(\textcolor{stringliteral}{"{}Fireball"{}}, 2) \textcolor{comment}{// Name, Mana Cost}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFireballSpell_a95bd0e7b4677e05b11e6c9f4bae63748}\label{classFireballSpell_a95bd0e7b4677e05b11e6c9f4bae63748}} 
+\index{FireballSpell@{FireballSpell}!````~FireballSpell@{$\sim$FireballSpell}}
+\index{````~FireballSpell@{$\sim$FireballSpell}!FireballSpell@{FireballSpell}}
+\doxysubsubsection{\texorpdfstring{$\sim$FireballSpell()}{~FireballSpell()}}
+{\footnotesize\ttfamily virtual Fireball\+Spell\+::$\sim$\+Fireball\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classFireballSpell_af74e7fda9c1770dc17a5eec298c1be3c}\label{classFireballSpell_af74e7fda9c1770dc17a5eec298c1be3c}} 
+\index{FireballSpell@{FireballSpell}!cast@{cast}}
+\index{cast@{cast}!FireballSpell@{FireballSpell}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily bool Fireball\+Spell\+::cast (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Casts the Fireball spell at the given coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+{\em x} & X coordinate of the target. \\
+\hline
+{\em y} & Y coordinate of the target. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the spell was cast successfully, false otherwise. 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classSpell_adbff32f05577154a0db4606282d0151c}{Spell}}.
+
+
+
+См. определение в файле fireballspell.\+cpp строка 16
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \textcolor{comment}{// Check if target coordinates are valid}}
+\DoxyCodeLine{19     \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{21     \textcolor{keywordflow}{if} (x >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(x) < boardWidth \&\&}
+\DoxyCodeLine{22         y >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(y) < boardHeight)}
+\DoxyCodeLine{23     \{}
+\DoxyCodeLine{24         \mbox{\hyperlink{classField}{Field}}* targetField = board[x][y];}
+\DoxyCodeLine{25         \mbox{\hyperlink{classUnit}{Unit}}* targetUnit = targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         \textcolor{comment}{// Fireball deals damage to a unit}}
+\DoxyCodeLine{28         \textcolor{keywordflow}{if} (targetUnit)}
+\DoxyCodeLine{29         \{}
+\DoxyCodeLine{30             std::cout << \textcolor{stringliteral}{"{}Casting Fireball on unit at ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}).\(\backslash\)n"{}};}
+\DoxyCodeLine{31             \textcolor{keywordtype}{int} damageToDeal = 5; \textcolor{comment}{// Example damage for Fireball}}
+\DoxyCodeLine{32             \mbox{\hyperlink{functions_8cpp_a43f0126154376c48e09ec7497e5af839}{applyDamage}}(board, x, y, damageToDeal, \textcolor{keyword}{nullptr}); \textcolor{comment}{// Use applyDamage function, no attacking unit for spell}}
+\DoxyCodeLine{33             \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \textcolor{comment}{// Spell cast successfully}}
+\DoxyCodeLine{34         \}}
+\DoxyCodeLine{35         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{36         \{}
+\DoxyCodeLine{37             std::cout << \textcolor{stringliteral}{"{}Fireball spell failed: No unit at target location.\(\backslash\)n"{}};}
+\DoxyCodeLine{38         \}}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{41     \{}
+\DoxyCodeLine{42         std::cout << \textcolor{stringliteral}{"{}Fireball spell failed: Target coordinates out of bounds.\(\backslash\)n"{}};}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Spell cast failed}}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки apply\+Damage() и Field\+::get\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dbb/classFireballSpell_af74e7fda9c1770dc17a5eec298c1be3c_cgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{fireballspell_8h}{fireballspell.\+h}}\item 
+\mbox{\hyperlink{fireballspell_8cpp}{fireballspell.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameLab2sem: Исходный файл fortress.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameLab2sem
+   </div>
+   <div id="projectbrief">A turn-based strategy game with AI and CLI interface.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/dad/fortress_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">fortress.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/dad/fortress_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// fortress.cpp</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d43/fortress_8h.html">fortress.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d5a/field_8h.html">field.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/da2/unit_8h.html">unit.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d62/player_8h.html">player.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/de1/archer_8h.html">archer.h</a>&quot;</span> <span class="comment">// Include Archer header for dynamic_cast</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d8/d05/classFortress.html#a92944f05f74802d6faa4fd3441291a76">    9</a></span>&#160;<a class="code" href="../../d8/d05/classFortress.html#a92944f05f74802d6faa4fd3441291a76">Fortress::Fortress</a>(<span class="keywordtype">int</span> fieldX, <span class="keywordtype">int</span> fieldY, <span class="keywordtype">int</span> initialStrength, <span class="keywordtype">int</span> maxStrength, <a class="code" href="../../d2/d4b/classPlayer.html">Player</a>* owner)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    : <a class="code" href="../../d7/d24/classField.html">Field</a>(fieldX, fieldY, <span class="stringliteral">&quot;fortress&quot;</span>), strength(initialStrength), maxStrength(maxStrength), owner(owner)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">// Ensure strength doesn&#39;t exceed max strength on creation</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d8/d05/classFortress.html#aca68a046715e8e6a2a4f2e3fadc6dbe7">strength</a> &gt; <a class="code" href="../../d8/d05/classFortress.html#a2225df475b421d8c557f581ab3209002">maxStrength</a>) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="../../d8/d05/classFortress.html#aca68a046715e8e6a2a4f2e3fadc6dbe7">strength</a> = <a class="code" href="../../d8/d05/classFortress.html#a2225df475b421d8c557f581ab3209002">maxStrength</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Destructor is defaulted in header, no dynamic memory owned by Fortress itself.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d8/d05/classFortress.html#a910fc391be59542b1ead1c96e997cd8a">   20</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/d05/classFortress.html#a910fc391be59542b1ead1c96e997cd8a">Fortress::getStrength</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d8/d05/classFortress.html#aca68a046715e8e6a2a4f2e3fadc6dbe7">strength</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// Setter for strength - Returns true if destroyed</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// Corrected: Changed return type to bool to match declaration</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d8/d05/classFortress.html#a921a0af7f93cd89a395ab8f053382a2e">   27</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d8/d05/classFortress.html#a921a0af7f93cd89a395ab8f053382a2e">Fortress::setStrength</a>(<span class="keywordtype">int</span> s)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../d8/d05/classFortress.html#aca68a046715e8e6a2a4f2e3fadc6dbe7">strength</a> = s;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d8/d05/classFortress.html#aca68a046715e8e6a2a4f2e3fadc6dbe7">strength</a> &lt; 0) <a class="code" href="../../d8/d05/classFortress.html#aca68a046715e8e6a2a4f2e3fadc6dbe7">strength</a> = 0; <span class="comment">// Strength cannot go below 0</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d8/d05/classFortress.html#aca68a046715e8e6a2a4f2e3fadc6dbe7">strength</a> &lt;= 0; <span class="comment">// Return true if strength is 0 or less</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d8/d05/classFortress.html#add91c2e8c192fb57bad9507934df2802">   34</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/d05/classFortress.html#add91c2e8c192fb57bad9507934df2802">Fortress::getMaxStrength</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d8/d05/classFortress.html#a2225df475b421d8c557f581ab3209002">maxStrength</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// Corrected: Commented out unused &#39;board&#39; parameter</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d8/d05/classFortress.html#a29d63386bdfb5769839506b137877b68">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/d05/classFortress.html#a29d63386bdfb5769839506b137877b68">Fortress::applyEffect</a>(<a class="code" href="../../d2/d4b/classPlayer.html">Player</a>* owner, std::vector&lt;std::vector&lt;Field*&gt;&gt;&amp; <span class="comment">/*board*/</span>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// Fortresses could potentially heal units on them each turn</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// Assuming the unit on the fortress belongs to the owner whose turn it is</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// This logic might need refinement based on actual game rules for fortress ownership</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// For now, let&#39;s assume it heals the unit if it&#39;s a player unit (human or AI)</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// Check if the unit belongs to the current player before healing</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d8/d05/classFortress.html#a6d0d01ed550a728e177cab80e0d2408b">owner</a> &amp;&amp; ((<a class="code" href="../../d8/d05/classFortress.html#a6d0d01ed550a728e177cab80e0d2408b">owner</a>-&gt;<a class="code" href="../../d2/d4b/classPlayer.html#a0cb5b17db27a2af6492e270aab8f7870">getAI</a>() &amp;&amp; !<a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>-&gt;<a class="code" href="../../df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814">getPlayer</a>()) || (!<a class="code" href="../../d8/d05/classFortress.html#a6d0d01ed550a728e177cab80e0d2408b">owner</a>-&gt;<a class="code" href="../../d2/d4b/classPlayer.html#a0cb5b17db27a2af6492e270aab8f7870">getAI</a>() &amp;&amp; <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>-&gt;<a class="code" href="../../df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814">getPlayer</a>()))) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;             <span class="keywordtype">int</span> healAmount = 2; <span class="comment">// Example heal amount per turn</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;             std::cout &lt;&lt; <span class="stringliteral">&quot;Fortress at (&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>() &lt;&lt; <span class="stringliteral">&quot;) heals &quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>-&gt;<a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; for &quot;</span> &lt;&lt; healAmount &lt;&lt; <span class="stringliteral">&quot; health.\n&quot;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;             <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>-&gt;<a class="code" href="../../df/dd9/classUnit.html#a9fe18bf6d2917c59c35df6d56c6cbdc2">restoreHealth</a>(healAmount);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d8/d05/classFortress.html#ada80de06eab758febec3af099bc21fba">   57</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/d05/classFortress.html#ada80de06eab758febec3af099bc21fba">Fortress::getDefenseBonus</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// Fortresses provide a significant defense bonus</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> 10; <span class="comment">// Example defense bonus</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">// Corrected: Commented out unused &#39;unit&#39; parameter</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d8/d05/classFortress.html#a6cb9778963a2a807e36c4ef8eb8c40e6">   64</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d8/d05/classFortress.html#a6cb9778963a2a807e36c4ef8eb8c40e6">Fortress::canEnter</a>(<a class="code" href="../../df/dd9/classUnit.html">Unit</a>* <span class="comment">/*unit*/</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// Units can enter a fortress, but typically only one unit can occupy a fortress field.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// Also, check if the unit belongs to the player who controls the fortress (if applicable).</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// For simplicity, let&#39;s assume any unit can enter if the fortress is empty.</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;     <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a> == <span class="keyword">nullptr</span>; <span class="comment">// Can enter if empty</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d8/d05/classFortress.html#a59036b76372351a496f86c0813862082">   72</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/d05/classFortress.html#a59036b76372351a496f86c0813862082">Fortress::onEnter</a>(<a class="code" href="../../df/dd9/classUnit.html">Unit</a>* unit)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// Handle actions when a unit enters the fortress (e.g., update unit stats)</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>-&gt;<a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; entered the Fortress at (&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>() &lt;&lt; <span class="stringliteral">&quot;).\n&quot;</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">// Example: If the unit is an Archer, update its attack distance</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="../../d3/dea/classArcher.html">Archer</a>* archer = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d3/dea/classArcher.html">Archer</a>*<span class="keyword">&gt;</span>(<a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span> (archer) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        archer-&gt;<a class="code" href="../../d3/dea/classArcher.html#a9e1c27bf39fb2a49e00f0d0e26f79c29">updateAttackDistance</a>(<span class="keyword">true</span>); <span class="comment">// Indicate it&#39;s in a fortress</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../d8/d05/classFortress.html#a33bd8cb24eab2488b5a21d17ca60a861">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/d05/classFortress.html#a33bd8cb24eab2488b5a21d17ca60a861">Fortress::onLeave</a>(<a class="code" href="../../df/dd9/classUnit.html">Unit</a>* unit)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// Handle actions when a unit leaves the fortress (e.g., revert unit stats)</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>-&gt;<a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; left the Fortress at (&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>() &lt;&lt; <span class="stringliteral">&quot;).\n&quot;</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// Example: If the unit is an Archer, revert its attack distance</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../d3/dea/classArcher.html">Archer</a>* archer = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d3/dea/classArcher.html">Archer</a>*<span class="keyword">&gt;</span>(<a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (archer) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        archer-&gt;<a class="code" href="../../d3/dea/classArcher.html#a9e1c27bf39fb2a49e00f0d0e26f79c29">updateAttackDistance</a>(<span class="keyword">false</span>); <span class="comment">// Indicate it left the fortress</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="ttc" id="aarcher_8h_html"><div class="ttname"><a href="../../dc/de1/archer_8h.html">archer.h</a></div></div>
+<div class="ttc" id="aclassArcher_html"><div class="ttname"><a href="../../d3/dea/classArcher.html">Archer</a></div><div class="ttdoc">Ranged unit with variable attack distance (Archer).</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/archer_8h_source.html#l00010">archer.h:11</a></div></div>
+<div class="ttc" id="aclassArcher_html_a9e1c27bf39fb2a49e00f0d0e26f79c29"><div class="ttname"><a href="../../d3/dea/classArcher.html#a9e1c27bf39fb2a49e00f0d0e26f79c29">Archer::updateAttackDistance</a></div><div class="ttdeci">void updateAttackDistance(bool inFortress)</div><div class="ttdoc">Updates the attack distance based on whether the archer is in a fortress.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d4e/archer_8cpp_source.html#l00012">archer.cpp:12</a></div></div>
+<div class="ttc" id="aclassField_html"><div class="ttname"><a href="../../d7/d24/classField.html">Field</a></div><div class="ttdoc">Represents a field (tile) on the game board. Base class for all field types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/field_8h_source.html#l00015">field.h:16</a></div></div>
+<div class="ttc" id="aclassField_html_a363d83248e8f66bf865e514432072afb"><div class="ttname"><a href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">Field::unit</a></div><div class="ttdeci">Unit * unit</div><div class="ttdoc">Pointer to the unit on this field (if any)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/field_8h_source.html#l00018">field.h:18</a></div></div>
+<div class="ttc" id="aclassField_html_a86673ee820c9cfed15b603c9dae6853e"><div class="ttname"><a href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">Field::getY</a></div><div class="ttdeci">int getY() const</div><div class="ttdoc">Get the Y coordinate of this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00035">field.cpp:35</a></div></div>
+<div class="ttc" id="aclassField_html_af4b70c294dd34070bcae38b5b518f6d3"><div class="ttname"><a href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">Field::getX</a></div><div class="ttdeci">int getX() const</div><div class="ttdoc">Get the X coordinate of this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00030">field.cpp:30</a></div></div>
+<div class="ttc" id="aclassFortress_html_a2225df475b421d8c557f581ab3209002"><div class="ttname"><a href="../../d8/d05/classFortress.html#a2225df475b421d8c557f581ab3209002">Fortress::maxStrength</a></div><div class="ttdeci">int maxStrength</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d43/fortress_8h_source.html#l00019">fortress.h:19</a></div></div>
+<div class="ttc" id="aclassFortress_html_a29d63386bdfb5769839506b137877b68"><div class="ttname"><a href="../../d8/d05/classFortress.html#a29d63386bdfb5769839506b137877b68">Fortress::applyEffect</a></div><div class="ttdeci">void applyEffect(Player *owner, std::vector&lt; std::vector&lt; Field * &gt;&gt; &amp;board) override</div><div class="ttdoc">Applies the fortress's effect (e.g., healing, defense) to the board.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dad/fortress_8cpp_source.html#l00040">fortress.cpp:40</a></div></div>
+<div class="ttc" id="aclassFortress_html_a33bd8cb24eab2488b5a21d17ca60a861"><div class="ttname"><a href="../../d8/d05/classFortress.html#a33bd8cb24eab2488b5a21d17ca60a861">Fortress::onLeave</a></div><div class="ttdeci">void onLeave(Unit *unit) override</div><div class="ttdoc">Handles a unit leaving the fortress.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dad/fortress_8cpp_source.html#l00083">fortress.cpp:83</a></div></div>
+<div class="ttc" id="aclassFortress_html_a59036b76372351a496f86c0813862082"><div class="ttname"><a href="../../d8/d05/classFortress.html#a59036b76372351a496f86c0813862082">Fortress::onEnter</a></div><div class="ttdeci">void onEnter(Unit *unit) override</div><div class="ttdoc">Handles a unit entering the fortress.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dad/fortress_8cpp_source.html#l00072">fortress.cpp:72</a></div></div>
+<div class="ttc" id="aclassFortress_html_a6cb9778963a2a807e36c4ef8eb8c40e6"><div class="ttname"><a href="../../d8/d05/classFortress.html#a6cb9778963a2a807e36c4ef8eb8c40e6">Fortress::canEnter</a></div><div class="ttdeci">bool canEnter(Unit *unit) const override</div><div class="ttdoc">Checks if a unit can enter the fortress.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dad/fortress_8cpp_source.html#l00064">fortress.cpp:64</a></div></div>
+<div class="ttc" id="aclassFortress_html_a6d0d01ed550a728e177cab80e0d2408b"><div class="ttname"><a href="../../d8/d05/classFortress.html#a6d0d01ed550a728e177cab80e0d2408b">Fortress::owner</a></div><div class="ttdeci">Player * owner</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d43/fortress_8h_source.html#l00020">fortress.h:20</a></div></div>
+<div class="ttc" id="aclassFortress_html_a910fc391be59542b1ead1c96e997cd8a"><div class="ttname"><a href="../../d8/d05/classFortress.html#a910fc391be59542b1ead1c96e997cd8a">Fortress::getStrength</a></div><div class="ttdeci">int getStrength() const</div><div class="ttdoc">Gets the current strength of the fortress.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dad/fortress_8cpp_source.html#l00020">fortress.cpp:20</a></div></div>
+<div class="ttc" id="aclassFortress_html_a921a0af7f93cd89a395ab8f053382a2e"><div class="ttname"><a href="../../d8/d05/classFortress.html#a921a0af7f93cd89a395ab8f053382a2e">Fortress::setStrength</a></div><div class="ttdeci">bool setStrength(int s)</div><div class="ttdoc">Sets the strength of the fortress.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dad/fortress_8cpp_source.html#l00027">fortress.cpp:27</a></div></div>
+<div class="ttc" id="aclassFortress_html_a92944f05f74802d6faa4fd3441291a76"><div class="ttname"><a href="../../d8/d05/classFortress.html#a92944f05f74802d6faa4fd3441291a76">Fortress::Fortress</a></div><div class="ttdeci">Fortress(int fieldX, int fieldY, int initialStrength, int maxStrength, Player *owner=nullptr)</div><div class="ttdoc">Constructs a Fortress at the given coordinates.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dad/fortress_8cpp_source.html#l00009">fortress.cpp:9</a></div></div>
+<div class="ttc" id="aclassFortress_html_aca68a046715e8e6a2a4f2e3fadc6dbe7"><div class="ttname"><a href="../../d8/d05/classFortress.html#aca68a046715e8e6a2a4f2e3fadc6dbe7">Fortress::strength</a></div><div class="ttdeci">int strength</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d43/fortress_8h_source.html#l00018">fortress.h:18</a></div></div>
+<div class="ttc" id="aclassFortress_html_ada80de06eab758febec3af099bc21fba"><div class="ttname"><a href="../../d8/d05/classFortress.html#ada80de06eab758febec3af099bc21fba">Fortress::getDefenseBonus</a></div><div class="ttdeci">int getDefenseBonus() const override</div><div class="ttdoc">Gets the defense bonus provided by the fortress.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dad/fortress_8cpp_source.html#l00057">fortress.cpp:57</a></div></div>
+<div class="ttc" id="aclassFortress_html_add91c2e8c192fb57bad9507934df2802"><div class="ttname"><a href="../../d8/d05/classFortress.html#add91c2e8c192fb57bad9507934df2802">Fortress::getMaxStrength</a></div><div class="ttdeci">int getMaxStrength() const</div><div class="ttdoc">Gets the maximum strength of the fortress.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dad/fortress_8cpp_source.html#l00034">fortress.cpp:34</a></div></div>
+<div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="../../d2/d4b/classPlayer.html">Player</a></div><div class="ttdoc">Represents a player in the game (human or AI).</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d62/player_8h_source.html#l00015">player.h:16</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a0cb5b17db27a2af6492e270aab8f7870"><div class="ttname"><a href="../../d2/d4b/classPlayer.html#a0cb5b17db27a2af6492e270aab8f7870">Player::getAI</a></div><div class="ttdeci">bool getAI() const</div><div class="ttdoc">Returns true if the player is AI-controlled.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d80/player_8cpp_source.html#l00033">player.cpp:33</a></div></div>
+<div class="ttc" id="aclassUnit_html"><div class="ttname"><a href="../../df/dd9/classUnit.html">Unit</a></div><div class="ttdoc">Represents a unit in the game (base class for all units).</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00015">unit.h:16</a></div></div>
+<div class="ttc" id="aclassUnit_html_a0497994e384db5c080ec78e9b645fa40"><div class="ttname"><a href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">Unit::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdoc">Gets the unit's name.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00022">unit.cpp:22</a></div></div>
+<div class="ttc" id="aclassUnit_html_a72e700f28797f2c1709e03b2b7828814"><div class="ttname"><a href="../../df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814">Unit::getPlayer</a></div><div class="ttdeci">bool getPlayer() const</div><div class="ttdoc">Returns true if the unit is controlled by the player.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00052">unit.cpp:52</a></div></div>
+<div class="ttc" id="aclassUnit_html_a9fe18bf6d2917c59c35df6d56c6cbdc2"><div class="ttname"><a href="../../df/dd9/classUnit.html#a9fe18bf6d2917c59c35df6d56c6cbdc2">Unit::restoreHealth</a></div><div class="ttdeci">void restoreHealth(int amount)</div><div class="ttdoc">Restores health to the unit.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00089">unit.cpp:89</a></div></div>
+<div class="ttc" id="afield_8h_html"><div class="ttname"><a href="../../d5/d5a/field_8h.html">field.h</a></div></div>
+<div class="ttc" id="afortress_8h_html"><div class="ttname"><a href="../../d4/d43/fortress_8h.html">fortress.h</a></div></div>
+<div class="ttc" id="aplayer_8h_html"><div class="ttname"><a href="../../d3/d62/player_8h.html">player.h</a></div></div>
+<div class="ttc" id="aunit_8h_html"><div class="ttname"><a href="../../d1/da2/unit_8h.html">unit.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../de/dad/fortress_8cpp.html">fortress.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,312 @@
+\hypertarget{classBurnedField}{}\doxysection{Класс Burned\+Field}
+\label{classBurnedField}\index{BurnedField@{BurnedField}}
+
+
+\mbox{\hyperlink{classField}{Field}} that deals damage to units each turn for a limited duration (Burned \mbox{\hyperlink{classField}{Field}}).  
+
+
+
+
+{\ttfamily \#include $<$burnedfield.\+h$>$}
+
+
+
+Граф наследования\+:Burned\+Field\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d3/d82/classBurnedField__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Burned\+Field\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d9/dca/classBurnedField__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBurnedField_aac00bdda0a3ea75a0319a2331a5a8d38}{Burned\+Field}} (int fieldX, int fieldY, \mbox{\hyperlink{classUnit}{Unit}} $\ast$initial\+Unit=nullptr, int initial\+Duration=2, int damage=2)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classBurnedField}{Burned\+Field}} at the given coordinates. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classBurnedField_a5321a37fdaafdc0f73127b225a5ca303}{$\sim$\+Burned\+Field}} ()=default
+\item 
+void \mbox{\hyperlink{classBurnedField_a8f5789ec0273283d79911bf6bed5936e}{apply\+Effect}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$owner, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board) override
+\begin{DoxyCompactList}\small\item\em Applies the burned field\textquotesingle{}s effect (ticks duration, deals damage). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBurnedField_aadd590a0712a8e49f83d0b75882f9cb0}{get\+Defense\+Bonus}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the defense bonus provided by the burned field. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBurnedField_a82887e288b4f87ef932186270408a7ba}{can\+Enter}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}) const override
+\begin{DoxyCompactList}\small\item\em Checks if a unit can enter the burned field. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classBurnedField_a3e7c0d7ea920806724075c22157e27a7}{get\+Symbol}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the symbol representing the burned field (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classBurnedField_af8ecc8111db6762950b91d267bcdc511}{duration}}
+\item 
+int \mbox{\hyperlink{classBurnedField_a7f66b53dd4345a1df3e9e827960d9c64}{damage\+Per\+Turn}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+\mbox{\hyperlink{classField}{Field}} that deals damage to units each turn for a limited duration (Burned \mbox{\hyperlink{classField}{Field}}). 
+
+См. определение в файле burnedfield.\+h строка 17
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classBurnedField_aac00bdda0a3ea75a0319a2331a5a8d38}\label{classBurnedField_aac00bdda0a3ea75a0319a2331a5a8d38}} 
+\index{BurnedField@{BurnedField}!BurnedField@{BurnedField}}
+\index{BurnedField@{BurnedField}!BurnedField@{BurnedField}}
+\doxysubsubsection{\texorpdfstring{BurnedField()}{BurnedField()}}
+{\footnotesize\ttfamily Burned\+Field\+::\+Burned\+Field (\begin{DoxyParamCaption}\item[{int}]{fieldX,  }\item[{int}]{fieldY,  }\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{initial\+Unit = {\ttfamily nullptr},  }\item[{int}]{initial\+Duration = {\ttfamily 2},  }\item[{int}]{damage = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classBurnedField}{Burned\+Field}} at the given coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em fieldX} & X coordinate. \\
+\hline
+{\em fieldY} & Y coordinate. \\
+\hline
+{\em initial\+Unit} & Pointer to the initial unit on the field (default nullptr). \\
+\hline
+{\em initial\+Duration} & Number of turns the field remains burned (default 2). \\
+\hline
+{\em damage} & Damage dealt per turn (default 2). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле burnedfield.\+cpp строка 10
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11     : \mbox{\hyperlink{classField_ad8556c0f47d0dc949f11480c4c6e4521}{Field}}(fieldX, fieldY, \textcolor{stringliteral}{"{}burned"{}}), \mbox{\hyperlink{classBurnedField_af8ecc8111db6762950b91d267bcdc511}{duration}}(initialDuration), \mbox{\hyperlink{classBurnedField_a7f66b53dd4345a1df3e9e827960d9c64}{damagePerTurn}}(damage)}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     \textcolor{comment}{// Set the initial unit if there is one}}
+\DoxyCodeLine{14     \mbox{\hyperlink{classField_aac940692dbfe1437aba7efc3a8903ea8}{setUnit}}(initialUnit);}
+\DoxyCodeLine{15 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Field\+::set\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{d6/ded/classBurnedField_aac00bdda0a3ea75a0319a2331a5a8d38_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBurnedField_a5321a37fdaafdc0f73127b225a5ca303}\label{classBurnedField_a5321a37fdaafdc0f73127b225a5ca303}} 
+\index{BurnedField@{BurnedField}!````~BurnedField@{$\sim$BurnedField}}
+\index{````~BurnedField@{$\sim$BurnedField}!BurnedField@{BurnedField}}
+\doxysubsubsection{\texorpdfstring{$\sim$BurnedField()}{~BurnedField()}}
+{\footnotesize\ttfamily virtual Burned\+Field\+::$\sim$\+Burned\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classBurnedField_a8f5789ec0273283d79911bf6bed5936e}\label{classBurnedField_a8f5789ec0273283d79911bf6bed5936e}} 
+\index{BurnedField@{BurnedField}!applyEffect@{applyEffect}}
+\index{applyEffect@{applyEffect}!BurnedField@{BurnedField}}
+\doxysubsubsection{\texorpdfstring{applyEffect()}{applyEffect()}}
+{\footnotesize\ttfamily void Burned\+Field\+::apply\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{owner,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the burned field\textquotesingle{}s effect (ticks duration, deals damage). 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em owner} & The player whose turn it is. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_a454ca5b8269657dc01cd611eceb3d397}{Field}}.
+
+
+
+См. определение в файле burnedfield.\+cpp строка 25
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \textcolor{comment}{// Apply damage to the unit on the field if there is one}}
+\DoxyCodeLine{28     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}})}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         std::cout << \textcolor{stringliteral}{"{}Burned field at ("{}} << \mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}() << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}() << \textcolor{stringliteral}{"{}) deals "{}} << \mbox{\hyperlink{classBurnedField_a7f66b53dd4345a1df3e9e827960d9c64}{damagePerTurn}} << \textcolor{stringliteral}{"{} damage to "{}} << \mbox{\hyperlink{classField_a363d83248e8f66bf865e514432072afb}{unit}}-\/>\mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{31         \mbox{\hyperlink{functions_8cpp_a43f0126154376c48e09ec7497e5af839}{applyDamage}}(board, \mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}(), \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}(), \mbox{\hyperlink{classBurnedField_a7f66b53dd4345a1df3e9e827960d9c64}{damagePerTurn}}, \textcolor{keyword}{nullptr}); \textcolor{comment}{// Use applyDamage, no attacking unit for field effect}}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{comment}{// Decrease the duration}}
+\DoxyCodeLine{35     \mbox{\hyperlink{classBurnedField_af8ecc8111db6762950b91d267bcdc511}{duration}}-\/-\/;}
+\DoxyCodeLine{36     std::cout << \textcolor{stringliteral}{"{}Burned field at ("{}} << \mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}() << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}() << \textcolor{stringliteral}{"{}) duration: "{}} << \mbox{\hyperlink{classBurnedField_af8ecc8111db6762950b91d267bcdc511}{duration}} << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{comment}{// If duration reaches 0, revert to a plain field}}
+\DoxyCodeLine{39     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBurnedField_af8ecc8111db6762950b91d267bcdc511}{duration}} <= 0)}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         std::cout << \textcolor{stringliteral}{"{}Burned field at ("{}} << \mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}() << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}() << \textcolor{stringliteral}{"{}) fades away.\(\backslash\)n"{}};}
+\DoxyCodeLine{42         \mbox{\hyperlink{classUnit}{Unit}}* unitOnField = \mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}(); \textcolor{comment}{// Get unit before deleting the field}}
+\DoxyCodeLine{43         \textcolor{comment}{// Create a new plain field at the same coordinates}}
+\DoxyCodeLine{44         \mbox{\hyperlink{classField}{Field}}* plainField = \textcolor{keyword}{new} \mbox{\hyperlink{classField_ad8556c0f47d0dc949f11480c4c6e4521}{Field}}(\mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}(), \mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}(), \textcolor{stringliteral}{"{}plain"{}});}
+\DoxyCodeLine{45         plainField-\/>\mbox{\hyperlink{classField_aac940692dbfe1437aba7efc3a8903ea8}{setUnit}}(unitOnField); \textcolor{comment}{// Place the unit on the new plain field}}
+\DoxyCodeLine{46         \textcolor{keyword}{delete} \textcolor{keyword}{this}; \textcolor{comment}{// Delete the burned field object}}
+\DoxyCodeLine{47         board[\mbox{\hyperlink{classField_af4b70c294dd34070bcae38b5b518f6d3}{getX}}()][\mbox{\hyperlink{classField_a86673ee820c9cfed15b603c9dae6853e}{getY}}()] = plainField; \textcolor{comment}{// Replace the pointer in the board}}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки apply\+Damage(), damage\+Per\+Turn, duration, Field\+::\+Field(), Unit\+::get\+Name(), Field\+::get\+Unit(), Field\+::get\+X(), Field\+::get\+Y(), Field\+::set\+Unit() и Field\+::unit.
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/ded/classBurnedField_a8f5789ec0273283d79911bf6bed5936e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBurnedField_a82887e288b4f87ef932186270408a7ba}\label{classBurnedField_a82887e288b4f87ef932186270408a7ba}} 
+\index{BurnedField@{BurnedField}!canEnter@{canEnter}}
+\index{canEnter@{canEnter}!BurnedField@{BurnedField}}
+\doxysubsubsection{\texorpdfstring{canEnter()}{canEnter()}}
+{\footnotesize\ttfamily bool Burned\+Field\+::can\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if a unit can enter the burned field. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit} & The unit to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the unit can enter, false otherwise. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_aca250c9a0c031e21c7e7c609b3b3dec3}{Field}}.
+
+
+
+См. определение в файле burnedfield.\+cpp строка 57
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59     \textcolor{comment}{// Units can enter burned fields, but will take damage}}
+\DoxyCodeLine{60     \textcolor{keywordflow}{return} this-\/>unit == \textcolor{keyword}{nullptr}; \textcolor{comment}{// Can enter if empty}}
+\DoxyCodeLine{61 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Field\+::unit.
+
+\mbox{\Hypertarget{classBurnedField_aadd590a0712a8e49f83d0b75882f9cb0}\label{classBurnedField_aadd590a0712a8e49f83d0b75882f9cb0}} 
+\index{BurnedField@{BurnedField}!getDefenseBonus@{getDefenseBonus}}
+\index{getDefenseBonus@{getDefenseBonus}!BurnedField@{BurnedField}}
+\doxysubsubsection{\texorpdfstring{getDefenseBonus()}{getDefenseBonus()}}
+{\footnotesize\ttfamily int Burned\+Field\+::get\+Defense\+Bonus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the defense bonus provided by the burned field. 
+
+\begin{DoxyReturn}{Возвращает}
+The defense bonus value. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_a718edf661e92a18a81c1a434b8e9ba40}{Field}}.
+
+
+
+См. определение в файле burnedfield.\+cpp строка 51
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52 \{}
+\DoxyCodeLine{53     \textcolor{comment}{// Burned fields might offer no defense bonus or even a penalty}}
+\DoxyCodeLine{54     \textcolor{keywordflow}{return} 0; \textcolor{comment}{// Or return a negative value for penalty}}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBurnedField_a3e7c0d7ea920806724075c22157e27a7}\label{classBurnedField_a3e7c0d7ea920806724075c22157e27a7}} 
+\index{BurnedField@{BurnedField}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!BurnedField@{BurnedField}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char Burned\+Field\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the symbol representing the burned field (for display). 
+
+\begin{DoxyReturn}{Возвращает}
+\textquotesingle{}$\ast$\textquotesingle{} character. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classField_a03e73113267195f2680dd028f8950ae5}{Field}}.
+
+
+
+См. определение в файле burnedfield.\+h строка 59
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59 \{ \textcolor{keywordflow}{return} \textcolor{charliteral}{'*'}; \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classBurnedField_a7f66b53dd4345a1df3e9e827960d9c64}\label{classBurnedField_a7f66b53dd4345a1df3e9e827960d9c64}} 
+\index{BurnedField@{BurnedField}!damagePerTurn@{damagePerTurn}}
+\index{damagePerTurn@{damagePerTurn}!BurnedField@{BurnedField}}
+\doxysubsubsection{\texorpdfstring{damagePerTurn}{damagePerTurn}}
+{\footnotesize\ttfamily int Burned\+Field\+::damage\+Per\+Turn\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле burnedfield.\+h строка 21
+
+
+
+Используется в apply\+Effect().
+
+\mbox{\Hypertarget{classBurnedField_af8ecc8111db6762950b91d267bcdc511}\label{classBurnedField_af8ecc8111db6762950b91d267bcdc511}} 
+\index{BurnedField@{BurnedField}!duration@{duration}}
+\index{duration@{duration}!BurnedField@{BurnedField}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily int Burned\+Field\+::duration\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле burnedfield.\+h строка 20
+
+
+
+Используется в apply\+Effect().
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{burnedfield_8h}{burnedfield.\+h}}\item 
+\mbox{\hyperlink{burnedfield_8cpp}{burnedfield.\+cpp}}\end{DoxyCompactItemize}

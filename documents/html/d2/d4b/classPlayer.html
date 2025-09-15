@@ -1,0 +1,822 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameLab2sem: Класс Player</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameLab2sem
+   </div>
+   <div id="projectbrief">A turn-based strategy game with AI and CLI interface.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d2/d4b/classPlayer.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="../../dc/dc5/classPlayer-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Player</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Represents a player in the game (human or AI).  
+ <a href="../../d2/d4b/classPlayer.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d3/d62/player_8h_source.html">player.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса Player:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d25/classPlayer__coll__graph.svg" width="166" height="338"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a7df6dfbffdc621302b774a515434064e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#a7df6dfbffdc621302b774a515434064e">Player</a> (std::string n, bool <a class="el" href="../../d2/d4b/classPlayer.html#a635b14970053a6a2294b372d17a3ca04">myTurn</a>=false, bool ai=false, bool <a class="el" href="../../d2/d4b/classPlayer.html#afec0b3fb0f79cbd2a70b6b71592f216d">defeated</a>=false, int initialMana=0)</td></tr>
+<tr class="memdesc:a7df6dfbffdc621302b774a515434064e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="../../d2/d4b/classPlayer.html" title="Represents a player in the game (human or AI).">Player</a> with the given parameters.  <a href="../../d2/d4b/classPlayer.html#a7df6dfbffdc621302b774a515434064e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7df6dfbffdc621302b774a515434064e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e4ff2d70e62ca7e3be1d9b4ad9de85"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#a73e4ff2d70e62ca7e3be1d9b4ad9de85">getName</a> () const</td></tr>
+<tr class="memdesc:a73e4ff2d70e62ca7e3be1d9b4ad9de85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the player's name.  <a href="../../d2/d4b/classPlayer.html#a73e4ff2d70e62ca7e3be1d9b4ad9de85">Подробнее...</a><br /></td></tr>
+<tr class="separator:a73e4ff2d70e62ca7e3be1d9b4ad9de85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba42f377d067adc41cbc43e679b6349c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#aba42f377d067adc41cbc43e679b6349c">getMana</a> () const</td></tr>
+<tr class="memdesc:aba42f377d067adc41cbc43e679b6349c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the player's current mana.  <a href="../../d2/d4b/classPlayer.html#aba42f377d067adc41cbc43e679b6349c">Подробнее...</a><br /></td></tr>
+<tr class="separator:aba42f377d067adc41cbc43e679b6349c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884dd5a4d9aa079a465adb44bebd13af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#a884dd5a4d9aa079a465adb44bebd13af">setMana</a> (int m)</td></tr>
+<tr class="memdesc:a884dd5a4d9aa079a465adb44bebd13af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the player's mana.  <a href="../../d2/d4b/classPlayer.html#a884dd5a4d9aa079a465adb44bebd13af">Подробнее...</a><br /></td></tr>
+<tr class="separator:a884dd5a4d9aa079a465adb44bebd13af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cb5b17db27a2af6492e270aab8f7870"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#a0cb5b17db27a2af6492e270aab8f7870">getAI</a> () const</td></tr>
+<tr class="memdesc:a0cb5b17db27a2af6492e270aab8f7870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the player is AI-controlled.  <a href="../../d2/d4b/classPlayer.html#a0cb5b17db27a2af6492e270aab8f7870">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0cb5b17db27a2af6492e270aab8f7870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc717b90437ca3574a900ea736c4cfec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#acc717b90437ca3574a900ea736c4cfec">getMyTurn</a> () const</td></tr>
+<tr class="memdesc:acc717b90437ca3574a900ea736c4cfec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if it's this player's turn.  <a href="../../d2/d4b/classPlayer.html#acc717b90437ca3574a900ea736c4cfec">Подробнее...</a><br /></td></tr>
+<tr class="separator:acc717b90437ca3574a900ea736c4cfec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a702ab07a0927d565734c50f7ed231fac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#a702ab07a0927d565734c50f7ed231fac">setMyTurn</a> (bool turn)</td></tr>
+<tr class="memdesc:a702ab07a0927d565734c50f7ed231fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether it's this player's turn.  <a href="../../d2/d4b/classPlayer.html#a702ab07a0927d565734c50f7ed231fac">Подробнее...</a><br /></td></tr>
+<tr class="separator:a702ab07a0927d565734c50f7ed231fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70458faf69bfd5d8131b1b9b6b8c5d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#ac70458faf69bfd5d8131b1b9b6b8c5d5">getDefeated</a> () const</td></tr>
+<tr class="memdesc:ac70458faf69bfd5d8131b1b9b6b8c5d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the player is defeated.  <a href="../../d2/d4b/classPlayer.html#ac70458faf69bfd5d8131b1b9b6b8c5d5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac70458faf69bfd5d8131b1b9b6b8c5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e49b98ab74e5e9538c8e2adbfe67050"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#a9e49b98ab74e5e9538c8e2adbfe67050">setDefeated</a> (bool d)</td></tr>
+<tr class="memdesc:a9e49b98ab74e5e9538c8e2adbfe67050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the player is defeated.  <a href="../../d2/d4b/classPlayer.html#a9e49b98ab74e5e9538c8e2adbfe67050">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9e49b98ab74e5e9538c8e2adbfe67050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f8a2dd8ea91473a3d800d3c4d74057c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#a6f8a2dd8ea91473a3d800d3c4d74057c">getSkippedTurns</a> () const</td></tr>
+<tr class="memdesc:a6f8a2dd8ea91473a3d800d3c4d74057c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of consecutive skipped turns.  <a href="../../d2/d4b/classPlayer.html#a6f8a2dd8ea91473a3d800d3c4d74057c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6f8a2dd8ea91473a3d800d3c4d74057c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5995eaa758f0b796e2d625fa87610278"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#a5995eaa758f0b796e2d625fa87610278">setSkippedTurns</a> (int turns)</td></tr>
+<tr class="memdesc:a5995eaa758f0b796e2d625fa87610278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of consecutive skipped turns.  <a href="../../d2/d4b/classPlayer.html#a5995eaa758f0b796e2d625fa87610278">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5995eaa758f0b796e2d625fa87610278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addff1c790965ad1b6ca5745a0fc849e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#addff1c790965ad1b6ca5745a0fc849e0">addMana</a> (int amount)</td></tr>
+<tr class="memdesc:addff1c790965ad1b6ca5745a0fc849e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds mana to the player.  <a href="../../d2/d4b/classPlayer.html#addff1c790965ad1b6ca5745a0fc849e0">Подробнее...</a><br /></td></tr>
+<tr class="separator:addff1c790965ad1b6ca5745a0fc849e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99236b47c18af320bea2e42ac1c7b2fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#a99236b47c18af320bea2e42ac1c7b2fe">subtractMana</a> (int amount)</td></tr>
+<tr class="memdesc:a99236b47c18af320bea2e42ac1c7b2fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts mana from the player if possible.  <a href="../../d2/d4b/classPlayer.html#a99236b47c18af320bea2e42ac1c7b2fe">Подробнее...</a><br /></td></tr>
+<tr class="separator:a99236b47c18af320bea2e42ac1c7b2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:af9c920fabaafdeb7961a645315b521ff"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#af9c920fabaafdeb7961a645315b521ff">name</a></td></tr>
+<tr class="separator:af9c920fabaafdeb7961a645315b521ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a64ebab916a7b25ecdec767ba111ca7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#a9a64ebab916a7b25ecdec767ba111ca7">mana</a></td></tr>
+<tr class="separator:a9a64ebab916a7b25ecdec767ba111ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c8c98b632c602b1ab4c66d9eceeb41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#ae9c8c98b632c602b1ab4c66d9eceeb41">isAI</a></td></tr>
+<tr class="separator:ae9c8c98b632c602b1ab4c66d9eceeb41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a635b14970053a6a2294b372d17a3ca04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#a635b14970053a6a2294b372d17a3ca04">myTurn</a></td></tr>
+<tr class="separator:a635b14970053a6a2294b372d17a3ca04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec0b3fb0f79cbd2a70b6b71592f216d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#afec0b3fb0f79cbd2a70b6b71592f216d">defeated</a></td></tr>
+<tr class="separator:afec0b3fb0f79cbd2a70b6b71592f216d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaec36d1637d025891fc082b9b3cdf4e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/classPlayer.html#aaec36d1637d025891fc082b9b3cdf4e9">skippedTurns</a></td></tr>
+<tr class="separator:aaec36d1637d025891fc082b9b3cdf4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Represents a player in the game (human or AI). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/d62/player_8h_source.html">player.h</a> строка <a class="el" href="../../d3/d62/player_8h_source.html#l00015">15</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a7df6dfbffdc621302b774a515434064e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df6dfbffdc621302b774a515434064e">&#9670;&nbsp;</a></span>Player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Player::Player </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>myTurn</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ai</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>defeated</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>initialMana</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="../../d2/d4b/classPlayer.html" title="Represents a player in the game (human or AI).">Player</a> with the given parameters. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Name of the player. </td></tr>
+    <tr><td class="paramname">myTurn</td><td>True if it's this player's turn. </td></tr>
+    <tr><td class="paramname">ai</td><td>True if this player is AI-controlled. </td></tr>
+    <tr><td class="paramname">defeated</td><td>True if the player is defeated. </td></tr>
+    <tr><td class="paramname">initialMana</td><td>Starting mana value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00006">6</a></p>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    : <a class="code" href="../../d2/d4b/classPlayer.html#af9c920fabaafdeb7961a645315b521ff">name</a>(n), <a class="code" href="../../d2/d4b/classPlayer.html#a9a64ebab916a7b25ecdec767ba111ca7">mana</a>(initialMana), <a class="code" href="../../d2/d4b/classPlayer.html#ae9c8c98b632c602b1ab4c66d9eceeb41">isAI</a>(ai), <a class="code" href="../../d2/d4b/classPlayer.html#a635b14970053a6a2294b372d17a3ca04">myTurn</a>(<a class="code" href="../../d2/d4b/classPlayer.html#a635b14970053a6a2294b372d17a3ca04">myTurn</a>), <a class="code" href="../../d2/d4b/classPlayer.html#afec0b3fb0f79cbd2a70b6b71592f216d">defeated</a>(<a class="code" href="../../d2/d4b/classPlayer.html#afec0b3fb0f79cbd2a70b6b71592f216d">defeated</a>), <a class="code" href="../../d2/d4b/classPlayer.html#aaec36d1637d025891fc082b9b3cdf4e9">skippedTurns</a>(0)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">// Constructor body if needed</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="ttc" id="aclassPlayer_html_a635b14970053a6a2294b372d17a3ca04"><div class="ttname"><a href="../../d2/d4b/classPlayer.html#a635b14970053a6a2294b372d17a3ca04">Player::myTurn</a></div><div class="ttdeci">bool myTurn</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d62/player_8h_source.html#l00021">player.h:21</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a9a64ebab916a7b25ecdec767ba111ca7"><div class="ttname"><a href="../../d2/d4b/classPlayer.html#a9a64ebab916a7b25ecdec767ba111ca7">Player::mana</a></div><div class="ttdeci">int mana</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d62/player_8h_source.html#l00019">player.h:19</a></div></div>
+<div class="ttc" id="aclassPlayer_html_aaec36d1637d025891fc082b9b3cdf4e9"><div class="ttname"><a href="../../d2/d4b/classPlayer.html#aaec36d1637d025891fc082b9b3cdf4e9">Player::skippedTurns</a></div><div class="ttdeci">int skippedTurns</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d62/player_8h_source.html#l00023">player.h:23</a></div></div>
+<div class="ttc" id="aclassPlayer_html_ae9c8c98b632c602b1ab4c66d9eceeb41"><div class="ttname"><a href="../../d2/d4b/classPlayer.html#ae9c8c98b632c602b1ab4c66d9eceeb41">Player::isAI</a></div><div class="ttdeci">bool isAI</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d62/player_8h_source.html#l00020">player.h:20</a></div></div>
+<div class="ttc" id="aclassPlayer_html_af9c920fabaafdeb7961a645315b521ff"><div class="ttname"><a href="../../d2/d4b/classPlayer.html#af9c920fabaafdeb7961a645315b521ff">Player::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d62/player_8h_source.html#l00018">player.h:18</a></div></div>
+<div class="ttc" id="aclassPlayer_html_afec0b3fb0f79cbd2a70b6b71592f216d"><div class="ttname"><a href="../../d2/d4b/classPlayer.html#afec0b3fb0f79cbd2a70b6b71592f216d">Player::defeated</a></div><div class="ttdeci">bool defeated</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d62/player_8h_source.html#l00022">player.h:22</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="addff1c790965ad1b6ca5745a0fc849e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addff1c790965ad1b6ca5745a0fc849e0">&#9670;&nbsp;</a></span>addMana()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::addMana </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds mana to the player. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>Amount of mana to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00073">73</a></p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="../../d2/d4b/classPlayer.html#a9a64ebab916a7b25ecdec767ba111ca7">mana</a> += amount;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d2/d4b/classPlayer.html#a9a64ebab916a7b25ecdec767ba111ca7">mana</a> &lt; 0) <a class="code" href="../../d2/d4b/classPlayer.html#a9a64ebab916a7b25ecdec767ba111ca7">mana</a> = 0; <span class="comment">// Prevent negative mana</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d62/player_8h_source.html#l00019">mana</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00024">ManaMineField::applyEffect()</a>, <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00045">ManaMineField::generateMana()</a> и <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00037">getPlayerCommands()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d4b/classPlayer_addff1c790965ad1b6ca5745a0fc849e0_icgraph.svg" width="515" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a0cb5b17db27a2af6492e270aab8f7870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cb5b17db27a2af6492e270aab8f7870">&#9670;&nbsp;</a></span>getAI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::getAI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the player is AI-controlled. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00033">33</a></p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d2/d4b/classPlayer.html#ae9c8c98b632c602b1ab4c66d9eceeb41">isAI</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d62/player_8h_source.html#l00020">isAI</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00255">AIact()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00040">Fortress::applyEffect()</a>, <a class="el" href="../../d3/d97/hospitalfield_8cpp_source.html#l00023">HospitalField::applyEffect()</a>, <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00024">ManaMineField::applyEffect()</a> и <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00037">getPlayerCommands()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d2/d4b/classPlayer_a0cb5b17db27a2af6492e270aab8f7870_icgraph.svg" width="100%" height="464"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ac70458faf69bfd5d8131b1b9b6b8c5d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70458faf69bfd5d8131b1b9b6b8c5d5">&#9670;&nbsp;</a></span>getDefeated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::getDefeated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the player is defeated. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00049">49</a></p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d2/d4b/classPlayer.html#afec0b3fb0f79cbd2a70b6b71592f216d">defeated</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d62/player_8h_source.html#l00022">defeated</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../df/d0a/main_8cpp_source.html#l00005">main()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d4b/classPlayer_ac70458faf69bfd5d8131b1b9b6b8c5d5_icgraph.svg" width="266" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aba42f377d067adc41cbc43e679b6349c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba42f377d067adc41cbc43e679b6349c">&#9670;&nbsp;</a></span>getMana()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::getMana </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the player's current mana. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00023">23</a></p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d2/d4b/classPlayer.html#a9a64ebab916a7b25ecdec767ba111ca7">mana</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d62/player_8h_source.html#l00019">mana</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00255">AIact()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00326">checkVictory()</a>, <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00037">getPlayerCommands()</a>, <a class="el" href="../../df/d0a/main_8cpp_source.html#l00005">main()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00172">tryAICastSpecificSpell()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00141">tryAICreateSpecificUnit()</a> и <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00204">tryAIEngineerBuildSpecific()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d2/d4b/classPlayer_aba42f377d067adc41cbc43e679b6349c_icgraph.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="acc717b90437ca3574a900ea736c4cfec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc717b90437ca3574a900ea736c4cfec">&#9670;&nbsp;</a></span>getMyTurn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::getMyTurn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if it's this player's turn. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00038">38</a></p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d2/d4b/classPlayer.html#a635b14970053a6a2294b372d17a3ca04">myTurn</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d62/player_8h_source.html#l00021">myTurn</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00255">AIact()</a> и <a class="el" href="../../df/d0a/main_8cpp_source.html#l00005">main()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d4b/classPlayer_acc717b90437ca3574a900ea736c4cfec_icgraph.svg" width="534" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a73e4ff2d70e62ca7e3be1d9b4ad9de85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e4ff2d70e62ca7e3be1d9b4ad9de85">&#9670;&nbsp;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Player::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the player's name. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00018">18</a></p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d2/d4b/classPlayer.html#af9c920fabaafdeb7961a645315b521ff">name</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d62/player_8h_source.html#l00018">name</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00024">ManaMineField::applyEffect()</a>, <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00045">ManaMineField::generateMana()</a> и <a class="el" href="../../df/d0a/main_8cpp_source.html#l00005">main()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d4b/classPlayer_a73e4ff2d70e62ca7e3be1d9b4ad9de85_icgraph.svg" width="515" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6f8a2dd8ea91473a3d800d3c4d74057c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8a2dd8ea91473a3d800d3c4d74057c">&#9670;&nbsp;</a></span>getSkippedTurns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::getSkippedTurns </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the number of consecutive skipped turns. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00061">61</a></p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d2/d4b/classPlayer.html#aaec36d1637d025891fc082b9b3cdf4e9">skippedTurns</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d62/player_8h_source.html#l00023">skippedTurns</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../df/d0a/main_8cpp_source.html#l00005">main()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d4b/classPlayer_a6f8a2dd8ea91473a3d800d3c4d74057c_icgraph.svg" width="292" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9e49b98ab74e5e9538c8e2adbfe67050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e49b98ab74e5e9538c8e2adbfe67050">&#9670;&nbsp;</a></span>setDefeated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setDefeated </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets whether the player is defeated. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00055">55</a></p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="../../d2/d4b/classPlayer.html#afec0b3fb0f79cbd2a70b6b71592f216d">defeated</a> = d;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d62/player_8h_source.html#l00022">defeated</a>.</p>
+
+</div>
+</div>
+<a id="a884dd5a4d9aa079a465adb44bebd13af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a884dd5a4d9aa079a465adb44bebd13af">&#9670;&nbsp;</a></span>setMana()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setMana </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the player's mana. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00028">28</a></p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="../../d2/d4b/classPlayer.html#a9a64ebab916a7b25ecdec767ba111ca7">mana</a> = m;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d62/player_8h_source.html#l00019">mana</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00255">AIact()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00172">tryAICastSpecificSpell()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00141">tryAICreateSpecificUnit()</a> и <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00204">tryAIEngineerBuildSpecific()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d2/d4b/classPlayer_a884dd5a4d9aa079a465adb44bebd13af_icgraph.svg" width="100%" height="422"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a702ab07a0927d565734c50f7ed231fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a702ab07a0927d565734c50f7ed231fac">&#9670;&nbsp;</a></span>setMyTurn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setMyTurn </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>turn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets whether it's this player's turn. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00043">43</a></p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="../../d2/d4b/classPlayer.html#a635b14970053a6a2294b372d17a3ca04">myTurn</a> = turn;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d62/player_8h_source.html#l00021">myTurn</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00255">AIact()</a> и <a class="el" href="../../df/d0a/main_8cpp_source.html#l00005">main()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d4b/classPlayer_a702ab07a0927d565734c50f7ed231fac_icgraph.svg" width="534" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a5995eaa758f0b796e2d625fa87610278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5995eaa758f0b796e2d625fa87610278">&#9670;&nbsp;</a></span>setSkippedTurns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setSkippedTurns </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>turns</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the number of consecutive skipped turns. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00067">67</a></p>
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="../../d2/d4b/classPlayer.html#aaec36d1637d025891fc082b9b3cdf4e9">skippedTurns</a> = turns;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d62/player_8h_source.html#l00023">skippedTurns</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../df/d0a/main_8cpp_source.html#l00005">main()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d4b/classPlayer_a5995eaa758f0b796e2d625fa87610278_icgraph.svg" width="291" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a99236b47c18af320bea2e42ac1c7b2fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99236b47c18af320bea2e42ac1c7b2fe">&#9670;&nbsp;</a></span>subtractMana()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::subtractMana </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subtracts mana from the player if possible. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>Amount of mana to subtract. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True if mana was subtracted, false if not enough mana. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a> строка <a class="el" href="../../db/d80/player_8cpp_source.html#l00079">79</a></p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d2/d4b/classPlayer.html#a9a64ebab916a7b25ecdec767ba111ca7">mana</a> &gt;= amount)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="../../d2/d4b/classPlayer.html#a9a64ebab916a7b25ecdec767ba111ca7">mana</a> -= amount;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Not enough mana</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d62/player_8h_source.html#l00019">mana</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00037">getPlayerCommands()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d4b/classPlayer_a99236b47c18af320bea2e42ac1c7b2fe_icgraph.svg" width="480" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="afec0b3fb0f79cbd2a70b6b71592f216d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec0b3fb0f79cbd2a70b6b71592f216d">&#9670;&nbsp;</a></span>defeated</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::defeated</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/d62/player_8h_source.html">player.h</a> строка <a class="el" href="../../d3/d62/player_8h_source.html#l00022">22</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d80/player_8cpp_source.html#l00049">getDefeated()</a> и <a class="el" href="../../db/d80/player_8cpp_source.html#l00055">setDefeated()</a>.</p>
+
+</div>
+</div>
+<a id="ae9c8c98b632c602b1ab4c66d9eceeb41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c8c98b632c602b1ab4c66d9eceeb41">&#9670;&nbsp;</a></span>isAI</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::isAI</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/d62/player_8h_source.html">player.h</a> строка <a class="el" href="../../d3/d62/player_8h_source.html#l00020">20</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d80/player_8cpp_source.html#l00033">getAI()</a>.</p>
+
+</div>
+</div>
+<a id="a9a64ebab916a7b25ecdec767ba111ca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a64ebab916a7b25ecdec767ba111ca7">&#9670;&nbsp;</a></span>mana</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::mana</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/d62/player_8h_source.html">player.h</a> строка <a class="el" href="../../d3/d62/player_8h_source.html#l00019">19</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d80/player_8cpp_source.html#l00073">addMana()</a>, <a class="el" href="../../db/d80/player_8cpp_source.html#l00023">getMana()</a>, <a class="el" href="../../db/d80/player_8cpp_source.html#l00028">setMana()</a> и <a class="el" href="../../db/d80/player_8cpp_source.html#l00079">subtractMana()</a>.</p>
+
+</div>
+</div>
+<a id="a635b14970053a6a2294b372d17a3ca04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a635b14970053a6a2294b372d17a3ca04">&#9670;&nbsp;</a></span>myTurn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::myTurn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/d62/player_8h_source.html">player.h</a> строка <a class="el" href="../../d3/d62/player_8h_source.html#l00021">21</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d80/player_8cpp_source.html#l00038">getMyTurn()</a> и <a class="el" href="../../db/d80/player_8cpp_source.html#l00043">setMyTurn()</a>.</p>
+
+</div>
+</div>
+<a id="af9c920fabaafdeb7961a645315b521ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c920fabaafdeb7961a645315b521ff">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Player::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/d62/player_8h_source.html">player.h</a> строка <a class="el" href="../../d3/d62/player_8h_source.html#l00018">18</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d80/player_8cpp_source.html#l00018">getName()</a>.</p>
+
+</div>
+</div>
+<a id="aaec36d1637d025891fc082b9b3cdf4e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaec36d1637d025891fc082b9b3cdf4e9">&#9670;&nbsp;</a></span>skippedTurns</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::skippedTurns</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/d62/player_8h_source.html">player.h</a> строка <a class="el" href="../../d3/d62/player_8h_source.html#l00023">23</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d80/player_8cpp_source.html#l00061">getSkippedTurns()</a> и <a class="el" href="../../db/d80/player_8cpp_source.html#l00067">setSkippedTurns()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="../../d3/d62/player_8h_source.html">player.h</a></li>
+<li><a class="el" href="../../db/d80/player_8cpp_source.html">player.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d2/d4b/classPlayer.html">Player</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

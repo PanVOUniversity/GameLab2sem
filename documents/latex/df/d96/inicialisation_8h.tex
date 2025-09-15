@@ -1,0 +1,112 @@
+\hypertarget{inicialisation_8h}{}\doxysection{Файл inicialisation.\+h}
+\label{inicialisation_8h}\index{inicialisation.h@{inicialisation.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}field.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hill.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Граф включаемых заголовочных файлов для inicialisation.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dfa/inicialisation_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{de/d4f/inicialisation_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structGameData}{Game\+Data}}
+\begin{DoxyCompactList}\small\item\em Holds the main game data\+: board and players. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structGameData}{Game\+Data}} \mbox{\hyperlink{inicialisation_8h_ae87b658cf20897b09a0f27da810b8069}{inicialisation}} (int width, int height, int num\+Hills, const std\+::string \&name1, const std\+::string \&name2, int initial\+Mana, bool player1\+Starts)
+\begin{DoxyCompactList}\small\item\em Initializes the game board and players. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{inicialisation_8h_ae87b658cf20897b09a0f27da810b8069}\label{inicialisation_8h_ae87b658cf20897b09a0f27da810b8069}} 
+\index{inicialisation.h@{inicialisation.h}!inicialisation@{inicialisation}}
+\index{inicialisation@{inicialisation}!inicialisation.h@{inicialisation.h}}
+\doxysubsubsection{\texorpdfstring{inicialisation()}{inicialisation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGameData}{Game\+Data}} inicialisation (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{num\+Hills,  }\item[{const std\+::string \&}]{name1,  }\item[{const std\+::string \&}]{name2,  }\item[{int}]{initial\+Mana,  }\item[{bool}]{player1\+Starts }\end{DoxyParamCaption})}
+
+
+
+Initializes the game board and players. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em width} & Board width. \\
+\hline
+{\em height} & Board height. \\
+\hline
+{\em num\+Hills} & Number of hills to place on the board. \\
+\hline
+{\em name1} & Name of player 1. \\
+\hline
+{\em name2} & Name of player 2. \\
+\hline
+{\em initial\+Mana} & Starting mana for each player. \\
+\hline
+{\em player1\+Starts} & True if player 1 starts the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\mbox{\hyperlink{structGameData}{Game\+Data}} struct containing the initialized board and players. 
+\end{DoxyReturn}
+
+
+См. определение в файле inicialisation.\+cpp строка 68
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71 \{}
+\DoxyCodeLine{72     \mbox{\hyperlink{structGameData}{GameData}} gameData;}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{comment}{// Create game board}}
+\DoxyCodeLine{75     gameData.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}} = \mbox{\hyperlink{inicialisation_8cpp_a9ae889de92b70715e095b0cbbbf290b0}{createBoard}}(width, height);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     \textcolor{comment}{// Place hills on the board}}
+\DoxyCodeLine{78     \mbox{\hyperlink{inicialisation_8cpp_a91ca1465d8213810c75621ec83695f3b}{placeHills}}(gameData.\mbox{\hyperlink{structGameData_a735972727dbf3553be5123b1d578aea7}{board}}, numHills);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \textcolor{comment}{// Create players with specified mana and turn order}}
+\DoxyCodeLine{81     \textcolor{comment}{// The Player constructor now takes initialMana as the last parameter}}
+\DoxyCodeLine{82     gameData.\mbox{\hyperlink{structGameData_adfdfaa8fab3dbf823faf146211111be1}{player1}} = \textcolor{keyword}{new} \mbox{\hyperlink{classPlayer}{Player}}(name1, player1Starts, \textcolor{keyword}{false}, \textcolor{keyword}{false}, initialMana);}
+\DoxyCodeLine{83     gameData.\mbox{\hyperlink{structGameData_a10b8d83791fd710e75a70ba52b4a2eee}{player2}} = \textcolor{keyword}{new} \mbox{\hyperlink{classPlayer}{Player}}(name2, !player1Starts, \textcolor{keyword}{true}, \textcolor{keyword}{false}, initialMana);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{keywordflow}{return} gameData;}
+\DoxyCodeLine{86 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Game\+Data\+::board, create\+Board(), place\+Hills(), Game\+Data\+::player1 и Game\+Data\+::player2.
+
+
+
+Используется в main().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{df/d96/inicialisation_8h_ae87b658cf20897b09a0f27da810b8069_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{df/d96/inicialisation_8h_ae87b658cf20897b09a0f27da810b8069_icgraph}
+\end{center}
+\end{figure}

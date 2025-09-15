@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['setcurrenthealth_402',['setCurrentHealth',['../df/dd9/classUnit.html#a2564f2e55a6aafded781d5796d3a6629',1,'Unit']]],
+  ['setdefeated_403',['setDefeated',['../d2/d4b/classPlayer.html#a9e49b98ab74e5e9538c8e2adbfe67050',1,'Player']]],
+  ['setdirection_404',['setDirection',['../db/dc3/classCannon.html#a5725deffe25c5741d9fd473e7f7842e6',1,'Cannon']]],
+  ['sethealth_405',['setHealth',['../df/dd9/classUnit.html#aaec88b40541cf3eed9e3ab4780fe937e',1,'Unit']]],
+  ['setmana_406',['setMana',['../d2/d4b/classPlayer.html#a884dd5a4d9aa079a465adb44bebd13af',1,'Player']]],
+  ['setmyturn_407',['setMyTurn',['../d2/d4b/classPlayer.html#a702ab07a0927d565734c50f7ed231fac',1,'Player']]],
+  ['setowner_408',['setOwner',['../d8/d05/classFortress.html#a6f9636ea613603c0552331f916bd7146',1,'Fortress']]],
+  ['setskippedturns_409',['setSkippedTurns',['../d2/d4b/classPlayer.html#a5995eaa758f0b796e2d625fa87610278',1,'Player']]],
+  ['setstrength_410',['setStrength',['../d8/d05/classFortress.html#a921a0af7f93cd89a395ab8f053382a2e',1,'Fortress']]],
+  ['setunit_411',['setUnit',['../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8',1,'Field']]],
+  ['setwill_412',['setWill',['../df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22',1,'Unit']]],
+  ['shield_5fmap_413',['shield_map',['../d2/d66/getcommands_8h.html#a13c8ecae8ea8ed72b6b586f00007fc9b',1,'getcommands.h']]],
+  ['shieldedfield_414',['ShieldedField',['../d1/dd1/classShieldedField.html#a74501e892d542268eb16def7254f6bae',1,'ShieldedField']]],
+  ['shouldexplode_415',['shouldExplode',['../da/d43/classBombedField.html#af5a1d14775633f750b51ebd59d45e04f',1,'BombedField']]],
+  ['spell_416',['Spell',['../d1/d16/classSpell.html#a198d0b0f123fcd8cd0b2d5c7efd98b5d',1,'Spell']]],
+  ['subtractmana_417',['subtractMana',['../d2/d4b/classPlayer.html#a99236b47c18af320bea2e42ac1c7b2fe',1,'Player']]]
+];

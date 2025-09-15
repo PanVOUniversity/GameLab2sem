@@ -1,0 +1,21 @@
+<map id="tryAIAttack" name="tryAIAttack">
+<area shape="rect" id="node1" title="Attempts to make the AI attack with the given unit." alt="" coords="5,704,100,731"/>
+<area shape="rect" id="node2" href="$d3/d36/functions_8cpp.html#acfc6ab57758c3db7e635b17b396796ba" title=" " alt="" coords="148,476,211,503"/>
+<area shape="rect" id="node5" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="727,175,845,201"/>
+<area shape="rect" id="node7" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="731,605,841,632"/>
+<area shape="rect" id="node15" href="$df/dd9/classUnit.html#a8856896cc73b342fec2cd3e8079e8e6a" title="Gets the unit&#39;s attack distance." alt="" coords="259,679,436,705"/>
+<area shape="rect" id="node17" href="$df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814" title="Returns true if the unit is controlled by the player." alt="" coords="288,729,407,756"/>
+<area shape="rect" id="node18" href="$df/dd9/classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998" title="Gets the unit&#39;s current will points." alt="" coords="296,780,399,807"/>
+<area shape="rect" id="node3" href="$d3/d36/functions_8cpp.html#a43f0126154376c48e09ec7497e5af839" title=" " alt="" coords="291,400,404,427"/>
+<area shape="rect" id="node4" href="$df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23" title="Gets the unit&#39;s current health." alt="" coords="487,276,656,303"/>
+<area shape="rect" id="node6" href="$d8/d05/classFortress.html#a910fc391be59542b1ead1c96e997cd8a" title="Gets the current strength of the fortress." alt="" coords="707,479,865,505"/>
+<area shape="rect" id="node10" href="$d3/d36/functions_8cpp.html#ae92c15badcbeac5edc544eec40902bac" title=" " alt="" coords="484,529,659,556"/>
+<area shape="rect" id="node12" href="$d7/d24/classField.html#a454ca5b8269657dc01cd611eceb3d397" title="Apply the field&#39;s effect (e.g., mana generation, damage) to the board." alt="" coords="280,577,415,604"/>
+<area shape="rect" id="node13" href="$da/def/classInfantry.html#a05b6abbf09ed604fda5c276588ccf0a8" title="Performs a counter&#45;attack against an attacker." alt="" coords="262,280,433,307"/>
+<area shape="rect" id="node14" href="$df/dd9/classUnit.html#a0062c5fab5677c6b47e1d881b4dcc53c" title="Gets the unit&#39;s damage value." alt="" coords="505,124,638,151"/>
+<area shape="rect" id="node16" href="$d7/d24/classField.html#a718edf661e92a18a81c1a434b8e9ba40" title="Get the defense bonus provided by this field." alt="" coords="259,179,435,205"/>
+<area shape="rect" id="node19" href="$df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22" title="Sets the unit&#39;s will points." alt="" coords="296,229,399,256"/>
+<area shape="rect" id="node8" href="$d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8" title="Set the unit on this field." alt="" coords="517,428,625,455"/>
+<area shape="rect" id="node9" href="$df/dd9/classUnit.html#a43a426d4d87aebf07e2737e122bea210" title="Applies damage to the unit." alt="" coords="501,225,641,252"/>
+<area shape="rect" id="node11" href="$d8/d05/classFortress.html#a921a0af7f93cd89a395ab8f053382a2e" title="Sets the strength of the fortress." alt="" coords="707,529,865,556"/>
+</map>

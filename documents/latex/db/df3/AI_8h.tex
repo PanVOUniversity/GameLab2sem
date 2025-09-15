@@ -1,0 +1,623 @@
+\hypertarget{AI_8h}{}\doxysection{Файл AI.\+h}
+\label{AI_8h}\index{AI.h@{AI.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+Граф включаемых заголовочных файлов для AI.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{df/d25/AI_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{da/d2a/AI_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{AI_8h_a977b9434bdf2f1cb57f540e4098d1a57}{AIact}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$ai\+Player, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Performs the main AI logic for the AI player\textquotesingle{}s turn. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{AI_8h_ad90f841d71e5bae7186823d947a92551}{get\+AICommands}} (\mbox{\hyperlink{classPlayer}{Player}} $\ast$current\+Player, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Handles AI commands during its turn. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{AI_8h_a4ee9cecc823bd9a64a65152b5d5ff307}{try\+AIAttack}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$unit, int x, int y, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Attempts to make the AI attack with the given unit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{AI_8h_a9b86a4e2150c537c1cf7a3a6a2b01e7b}{try\+AIMove}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$unit, int x, int y, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board)
+\begin{DoxyCompactList}\small\item\em Attempts to move the given AI unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{AI_8h_a977b9434bdf2f1cb57f540e4098d1a57}\label{AI_8h_a977b9434bdf2f1cb57f540e4098d1a57}} 
+\index{AI.h@{AI.h}!AIact@{AIact}}
+\index{AIact@{AIact}!AI.h@{AI.h}}
+\doxysubsubsection{\texorpdfstring{AIact()}{AIact()}}
+{\footnotesize\ttfamily bool AIact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{ai\+Player,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Performs the main AI logic for the AI player\textquotesingle{}s turn. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ai\+Player} & Pointer to the AI player. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the AI performed a resource-\/consuming action, false otherwise. 
+\end{DoxyReturn}
+
+
+См. определение в файле AI.\+cpp строка 255
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{255                                                                   \{}
+\DoxyCodeLine{256     \textcolor{comment}{// Ensure this is an AI player's turn}}
+\DoxyCodeLine{257     \textcolor{keywordflow}{if} (!aiPlayer || !aiPlayer-\/>\mbox{\hyperlink{classPlayer_a0cb5b17db27a2af6492e270aab8f7870}{getAI}}() || !aiPlayer-\/>\mbox{\hyperlink{classPlayer_acc717b90437ca3574a900ea736c4cfec}{getMyTurn}}() || board.empty() || board[0].empty()) \{}
+\DoxyCodeLine{258         \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Return false if AI cannot act}}
+\DoxyCodeLine{259     \}}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n=== AI Player's turn ===\(\backslash\)n"{}};}
+\DoxyCodeLine{262     std::cout << \textcolor{stringliteral}{"{}Current mana: "{}} << aiPlayer-\/>\mbox{\hyperlink{classPlayer_aba42f377d067adc41cbc43e679b6349c}{getMana}}() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264     \textcolor{comment}{// Seed the random number generator}}
+\DoxyCodeLine{265     \textcolor{keywordtype}{unsigned} seed = std::chrono::steady\_clock::now().time\_since\_epoch().count();}
+\DoxyCodeLine{266     std::default\_random\_engine rng(seed);}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268     \textcolor{keywordtype}{int} currentMana = aiPlayer-\/>\mbox{\hyperlink{classPlayer_aba42f377d067adc41cbc43e679b6349c}{getMana}}();}
+\DoxyCodeLine{269     \textcolor{keywordtype}{int} manaSpent = 0; \textcolor{comment}{// Declare and initialize manaSpent}}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{271     \textcolor{comment}{// 1. AI make 3 random numbers for mana allocation}}
+\DoxyCodeLine{272     std::uniform\_int\_distribution<int> dist1(0, currentMana);}
+\DoxyCodeLine{273     \textcolor{keywordtype}{int} manaForUnits = dist1(rng);}
+\DoxyCodeLine{274     \textcolor{keywordtype}{int} manaRemainingAfterUnits = currentMana -\/ manaForUnits;}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276     std::uniform\_int\_distribution<int> dist2(0, manaRemainingAfterUnits);}
+\DoxyCodeLine{277     \textcolor{keywordtype}{int} manaForBuild = dist2(rng);}
+\DoxyCodeLine{278     \textcolor{keywordtype}{int} manaRemainingAfterBuild = manaRemainingAfterUnits -\/ manaForBuild;}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{280     std::uniform\_int\_distribution<int> dist3(0, manaRemainingAfterBuild);}
+\DoxyCodeLine{281     \textcolor{keywordtype}{int} manaForSpells = dist3(rng);}
+\DoxyCodeLine{282     \textcolor{keywordtype}{int} manaForAttackMove = currentMana -\/ manaForUnits -\/ manaForBuild -\/ manaForSpells; \textcolor{comment}{// Mana not allocated to specific actions}}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284     \textcolor{comment}{// -\/-\/-\/ FIX: Ensure at least one allocation is nonzero if AI has mana -\/-\/-\/}}
+\DoxyCodeLine{285     \textcolor{keywordflow}{if} (currentMana > 0 \&\& manaForUnits == 0 \&\& manaForBuild == 0 \&\& manaForSpells == 0 \&\& manaForAttackMove == 0) \{}
+\DoxyCodeLine{286         \textcolor{comment}{// Prefer to allocate to units, but fallback to build or spells if needed}}
+\DoxyCodeLine{287         \textcolor{keywordflow}{if} (currentMana >= 2) \{ \textcolor{comment}{// Infantry cost}}
+\DoxyCodeLine{288             manaForUnits = 2;}
+\DoxyCodeLine{289         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (currentMana >= 3) \{ \textcolor{comment}{// Fortress cost}}
+\DoxyCodeLine{290             manaForBuild = 3;}
+\DoxyCodeLine{291         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (currentMana >= 2) \{ \textcolor{comment}{// Fireball cost}}
+\DoxyCodeLine{292             manaForSpells = 2;}
+\DoxyCodeLine{293         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{294             manaForAttackMove = currentMana; \textcolor{comment}{// Just try to move/attack}}
+\DoxyCodeLine{295         \}}
+\DoxyCodeLine{296     \}}
+\DoxyCodeLine{297     \textcolor{comment}{// -\/-\/-\/ END FIX -\/-\/-\/}}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{299     std::cout << \textcolor{stringliteral}{"{}AI allocated Mana: Units="{}} << manaForUnits << \textcolor{stringliteral}{"{}, Build="{}} << manaForBuild << \textcolor{stringliteral}{"{}, Spells="{}} << manaForSpells << \textcolor{stringliteral}{"{}, Attack/Move="{}} << manaForAttackMove << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{300     \textcolor{keywordtype}{bool} actionTakenThisTurn = \textcolor{keyword}{false}; \textcolor{comment}{// Flag to track if any action was taken during the entire turn}}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{302     \textcolor{comment}{// 2. Create units until spend 1st number amount of mana}}
+\DoxyCodeLine{303     std::vector<std::string> creatableUnits = \{\textcolor{stringliteral}{"{}infantry"{}}, \textcolor{stringliteral}{"{}archer"{}}, \textcolor{stringliteral}{"{}priest"{}}, \textcolor{stringliteral}{"{}engineer"{}}, \textcolor{stringliteral}{"{}cannon"{}}\};}
+\DoxyCodeLine{304     \textcolor{keywordtype}{int} manaSpentOnUnits = 0;}
+\DoxyCodeLine{305     \textcolor{keywordflow}{while} (manaSpentOnUnits < manaForUnits \&\& aiPlayer-\/>getMana() > 0) \{}
+\DoxyCodeLine{306         std::vector<std::string> shuffledUnits = creatableUnits;}
+\DoxyCodeLine{307         std::shuffle(shuffledUnits.begin(), shuffledUnits.end(), rng);}
+\DoxyCodeLine{308 }
+\DoxyCodeLine{309         \textcolor{keywordtype}{bool} unitCreatedThisAttempt = \textcolor{keyword}{false}; \textcolor{comment}{// Flag to see if a unit was created in this inner loop iteration}}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{311         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& unitTypeToCreate : shuffledUnits) \{}
+\DoxyCodeLine{312             \textcolor{keywordtype}{int} unitCost = 0;}
+\DoxyCodeLine{313             \textcolor{keywordflow}{if} (unitTypeToCreate == \textcolor{stringliteral}{"{}archer"{}}) unitCost = 3;}
+\DoxyCodeLine{314             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (unitTypeToCreate == \textcolor{stringliteral}{"{}infantry"{}}) unitCost = 2;}
+\DoxyCodeLine{315             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (unitTypeToCreate == \textcolor{stringliteral}{"{}priest"{}}) unitCost = 5;}
+\DoxyCodeLine{316             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (unitTypeToCreate == \textcolor{stringliteral}{"{}engineer"{}}) unitCost = 5;}
+\DoxyCodeLine{317             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (unitTypeToCreate == \textcolor{stringliteral}{"{}cannon"{}}) unitCost = 0;}
+\DoxyCodeLine{318 }
+\DoxyCodeLine{319             \textcolor{keywordflow}{if} (aiPlayer-\/>\mbox{\hyperlink{classPlayer_aba42f377d067adc41cbc43e679b6349c}{getMana}}() >= unitCost \&\& manaSpentOnUnits + unitCost <= manaForUnits) \{}
+\DoxyCodeLine{320                  std::pair<int, int> spawnSpot = \mbox{\hyperlink{AI_8cpp_a5fc62a23f7607888da5ef4b4d2aae775}{findRandomAICreateSpot}}(board);}
+\DoxyCodeLine{321                 \textcolor{keywordflow}{if} (spawnSpot.first != -\/1) \{}
+\DoxyCodeLine{322                      \textcolor{keywordtype}{int} x = spawnSpot.first;}
+\DoxyCodeLine{323                      \textcolor{keywordtype}{int} y = spawnSpot.second;}
+\DoxyCodeLine{324                      \mbox{\hyperlink{classUnit}{Unit}}* newUnit = \mbox{\hyperlink{AI_8cpp_a9c227821be3a51f43920f8be94b338ef}{createUnit}}(unitTypeToCreate, \textcolor{keyword}{false}); \textcolor{comment}{// false for AI player}}
+\DoxyCodeLine{325                      \textcolor{keywordflow}{if} (newUnit) \{}
+\DoxyCodeLine{326                          board[x][y]-\/>setUnit(newUnit);}
+\DoxyCodeLine{327                          aiPlayer-\/>\mbox{\hyperlink{classPlayer_a884dd5a4d9aa079a465adb44bebd13af}{setMana}}(aiPlayer-\/>\mbox{\hyperlink{classPlayer_aba42f377d067adc41cbc43e679b6349c}{getMana}}() -\/ unitCost);}
+\DoxyCodeLine{328                          manaSpentOnUnits += unitCost;}
+\DoxyCodeLine{329                          actionTakenThisTurn = \textcolor{keyword}{true};}
+\DoxyCodeLine{330                          unitCreatedThisAttempt = \textcolor{keyword}{true}; \textcolor{comment}{// Mark that a unit was created}}
+\DoxyCodeLine{331                          std::cout << \textcolor{stringliteral}{"{}AI created "{}} << unitTypeToCreate << \textcolor{stringliteral}{"{} at ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}) for "{}} << unitCost << \textcolor{stringliteral}{"{} mana.\(\backslash\)n"{}};}
+\DoxyCodeLine{332                          \textcolor{comment}{// No break here, continue trying to create more units within the allocated mana}}
+\DoxyCodeLine{333                      \}}
+\DoxyCodeLine{334                  \}}
+\DoxyCodeLine{335             \}}
+\DoxyCodeLine{336         \}}
+\DoxyCodeLine{337         \textcolor{comment}{// If no unit was created in this attempt through all shuffled types, break the outer while loop}}
+\DoxyCodeLine{338         \textcolor{keywordflow}{if} (!unitCreatedThisAttempt) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{339     \}}
+\DoxyCodeLine{340     manaSpent += manaSpentOnUnits; \textcolor{comment}{// Add mana spent on units to total}}
+\DoxyCodeLine{341 }
+\DoxyCodeLine{342     \textcolor{comment}{// 3. Build things with engineer until spend 2nd number amount of mana}}
+\DoxyCodeLine{343     \textcolor{keywordtype}{int} manaSpentOnBuild = 0;}
+\DoxyCodeLine{344     \textcolor{comment}{// Find an AI-\/controlled engineer -\/ Need to re-\/find engineer after potential unit creation}}
+\DoxyCodeLine{345     \mbox{\hyperlink{classEngineer}{Engineer}}* engineerUnit = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{346     \textcolor{keywordtype}{size\_t} boardWidth = board.size(); \textcolor{comment}{// Use this declaration}}
+\DoxyCodeLine{347     \textcolor{keywordtype}{size\_t} boardHeight = board[0].size(); \textcolor{comment}{// Use this declaration}}
+\DoxyCodeLine{348     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < boardWidth; ++x) \{}
+\DoxyCodeLine{349         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < boardHeight; ++y) \{}
+\DoxyCodeLine{350             \mbox{\hyperlink{classField}{Field}}* field = board[x][y];}
+\DoxyCodeLine{351             \textcolor{keywordflow}{if} (field) \{}
+\DoxyCodeLine{352                 \mbox{\hyperlink{classUnit}{Unit}}* unit = field-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{353                 \textcolor{keywordflow}{if} (unit \&\& !unit-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() \&\& \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classEngineer}{Engineer}}*\textcolor{keyword}{>}(unit)) \{}
+\DoxyCodeLine{354                     engineerUnit = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classEngineer}{Engineer}}*\textcolor{keyword}{>}(unit);}
+\DoxyCodeLine{355                     \textcolor{keywordflow}{break}; \textcolor{comment}{// Found an engineer, take the first one}}
+\DoxyCodeLine{356                 \}}
+\DoxyCodeLine{357             \}}
+\DoxyCodeLine{358         \}}
+\DoxyCodeLine{359         \textcolor{keywordflow}{if} (engineerUnit) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{360     \}}
+\DoxyCodeLine{361 }
+\DoxyCodeLine{362     \textcolor{keywordflow}{if} (engineerUnit) \{}
+\DoxyCodeLine{363          std::vector<std::string> creatableBuildings = \{\textcolor{stringliteral}{"{}Fortress"{}}, \textcolor{stringliteral}{"{}Mana Mine"{}}, \textcolor{stringliteral}{"{}Trap"{}}\};}
+\DoxyCodeLine{364          \textcolor{keywordflow}{while} (manaSpentOnBuild < manaForBuild \&\& aiPlayer-\/>getMana() > 0 \&\& engineerUnit-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() > 0) \{}
+\DoxyCodeLine{365              \textcolor{keywordtype}{bool} buildingAttemptedThisRound = \textcolor{keyword}{false};}
+\DoxyCodeLine{366              std::vector<std::string> shuffledBuildings = creatableBuildings;}
+\DoxyCodeLine{367              std::shuffle(shuffledBuildings.begin(), shuffledBuildings.end(), rng);}
+\DoxyCodeLine{368              \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& buildType : shuffledBuildings) \{}
+\DoxyCodeLine{369                  \textcolor{keywordtype}{int} buildCost = 0;}
+\DoxyCodeLine{370                  \textcolor{keywordflow}{if} (buildType == \textcolor{stringliteral}{"{}Fortress"{}}) buildCost = 3;}
+\DoxyCodeLine{371                  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (buildType == \textcolor{stringliteral}{"{}Mana Mine"{}}) buildCost = 4;}
+\DoxyCodeLine{372                  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (buildType == \textcolor{stringliteral}{"{}Trap"{}}) buildCost = 2;}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{374                  \textcolor{keywordflow}{if} (aiPlayer-\/>\mbox{\hyperlink{classPlayer_aba42f377d067adc41cbc43e679b6349c}{getMana}}() >= buildCost \&\& manaSpentOnBuild + buildCost <= manaForBuild \&\& engineerUnit-\/>getWill() > 0) \{}
+\DoxyCodeLine{375                       \textcolor{comment}{// Re-\/find engineer position in case it moved (unlikely for engineer)}}
+\DoxyCodeLine{376                      \textcolor{keywordtype}{int} currentEngX = -\/1, currentEngY = -\/1;}
+\DoxyCodeLine{377                      \textcolor{keywordtype}{bool} engineerFound = \textcolor{keyword}{false};}
+\DoxyCodeLine{378                      \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} x = 0; x < boardWidth; ++x) \{}
+\DoxyCodeLine{379                          \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} y = 0; y < boardHeight; ++y) \{}
+\DoxyCodeLine{380                              \textcolor{keywordflow}{if}(board[x][y]-\/>getUnit() == engineerUnit) \{}
+\DoxyCodeLine{381 }
+\DoxyCodeLine{382                                  currentEngX = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(x);}
+\DoxyCodeLine{383                                  currentEngY = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(y);}
+\DoxyCodeLine{384                                  engineerFound = \textcolor{keyword}{true};}
+\DoxyCodeLine{385                                  \textcolor{keywordflow}{break};}
+\DoxyCodeLine{386                              \}}
+\DoxyCodeLine{387                          \}}
+\DoxyCodeLine{388                          \textcolor{keywordflow}{if}(engineerFound) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{389                      \}}
+\DoxyCodeLine{390 }
+\DoxyCodeLine{391                      \textcolor{keywordflow}{if} (!engineerFound) \textcolor{keywordflow}{break}; \textcolor{comment}{// Engineer is gone}}
+\DoxyCodeLine{392 }
+\DoxyCodeLine{393                      \textcolor{keywordtype}{int} tempManaRemaining = manaForBuild -\/ manaSpentOnBuild; \textcolor{comment}{// Pass remaining allocated mana for build}}
+\DoxyCodeLine{394                      \textcolor{keywordflow}{if} (\mbox{\hyperlink{AI_8cpp_aa85b51ecb98c4e8ed799b67e297c30f9}{tryAIEngineerBuildSpecific}}(engineerUnit, aiPlayer, currentEngX, currentEngY, board, buildType, tempManaRemaining)) \{}
+\DoxyCodeLine{395                           manaSpentOnBuild += (manaForBuild -\/ manaSpentOnBuild) -\/ tempManaRemaining; \textcolor{comment}{// Update mana spent}}
+\DoxyCodeLine{396                           actionTakenThisTurn = \textcolor{keyword}{true};}
+\DoxyCodeLine{397                           buildingAttemptedThisRound = \textcolor{keyword}{true};}
+\DoxyCodeLine{398                      \}}
+\DoxyCodeLine{399                  \}}
+\DoxyCodeLine{400              \}}
+\DoxyCodeLine{401              \textcolor{keywordflow}{if} (!buildingAttemptedThisRound) \textcolor{keywordflow}{break}; \textcolor{comment}{// If no building was attempted in this round, stop.}}
+\DoxyCodeLine{402          \}}
+\DoxyCodeLine{403     \}}
+\DoxyCodeLine{404     manaSpent += manaSpentOnBuild; \textcolor{comment}{// Add mana spent on build to total}}
+\DoxyCodeLine{405 }
+\DoxyCodeLine{406 }
+\DoxyCodeLine{407     \textcolor{comment}{// 4. Cast spells until spend 3d amount of mana}}
+\DoxyCodeLine{408     \textcolor{keywordtype}{int} manaSpentOnSpells = 0;}
+\DoxyCodeLine{409     std::vector<Spell*> creatableSpells;}
+\DoxyCodeLine{410     \textcolor{comment}{// Create instances of spells to get their costs}}
+\DoxyCodeLine{411     creatableSpells.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{classMorogSpell}{MorogSpell}}()); \textcolor{comment}{// 5 mana}}
+\DoxyCodeLine{412     creatableSpells.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{classFireballSpell}{FireballSpell}}()); \textcolor{comment}{// 2 mana}}
+\DoxyCodeLine{413     creatableSpells.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{classCurseSpell}{CurseSpell}}()); \textcolor{comment}{// 3 mana}}
+\DoxyCodeLine{414     creatableSpells.push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{classBombSpell}{BombSpell}}()); \textcolor{comment}{// 4 mana}}
+\DoxyCodeLine{415 }
+\DoxyCodeLine{416     \textcolor{keywordflow}{while} (manaSpentOnSpells < manaForSpells \&\& aiPlayer-\/>getMana() > 0) \{}
+\DoxyCodeLine{417         \textcolor{keywordtype}{bool} spellCastThisAttempt = \textcolor{keyword}{false};}
+\DoxyCodeLine{418         std::vector<Spell*> shuffledSpells = creatableSpells;}
+\DoxyCodeLine{419          \textcolor{keywordtype}{unsigned} seed\_spell = std::chrono::steady\_clock::now().time\_since\_epoch().count();}
+\DoxyCodeLine{420         std::shuffle(shuffledSpells.begin(), shuffledSpells.end(), std::default\_random\_engine(seed\_spell));}
+\DoxyCodeLine{421         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classSpell}{Spell}}* spellToCast : shuffledSpells) \{}
+\DoxyCodeLine{422             \textcolor{keywordtype}{int} spellCost = spellToCast-\/>getManaCost();}
+\DoxyCodeLine{423             \textcolor{keywordflow}{if} (aiPlayer-\/>\mbox{\hyperlink{classPlayer_aba42f377d067adc41cbc43e679b6349c}{getMana}}() >= spellCost \&\& manaSpentOnSpells + spellCost <= manaForSpells) \{}
+\DoxyCodeLine{424                  \textcolor{keywordtype}{int} tempManaRemaining = manaForSpells -\/ manaSpentOnSpells; \textcolor{comment}{// Pass remaining allocated mana for spells}}
+\DoxyCodeLine{425                  \textcolor{keywordflow}{if} (\mbox{\hyperlink{AI_8cpp_aef67bf16c2c1822aa23d45df5472b29a}{tryAICastSpecificSpell}}(aiPlayer, board, spellToCast, tempManaRemaining)) \{}
+\DoxyCodeLine{426                      manaSpentOnSpells += (manaForSpells -\/ manaSpentOnSpells) -\/ tempManaRemaining; \textcolor{comment}{// Update mana spent}}
+\DoxyCodeLine{427                      actionTakenThisTurn = \textcolor{keyword}{true};}
+\DoxyCodeLine{428                      spellCastThisAttempt = \textcolor{keyword}{true};}
+\DoxyCodeLine{429                  \}}
+\DoxyCodeLine{430              \}}
+\DoxyCodeLine{431         \}}
+\DoxyCodeLine{432         \textcolor{keywordflow}{if} (!spellCastThisAttempt) \textcolor{keywordflow}{break}; \textcolor{comment}{// If no spell was cast in this round of attempts, stop.}}
+\DoxyCodeLine{433     \}}
+\DoxyCodeLine{434 }
+\DoxyCodeLine{435     \textcolor{comment}{// Clean up dynamically allocated spell objects}}
+\DoxyCodeLine{436     \textcolor{keywordflow}{for}(\mbox{\hyperlink{classSpell}{Spell}}* spell : creatableSpells) \{}
+\DoxyCodeLine{437         \textcolor{keyword}{delete} spell;}
+\DoxyCodeLine{438     \}}
+\DoxyCodeLine{439     creatableSpells.clear();}
+\DoxyCodeLine{440     manaSpent += manaSpentOnSpells; \textcolor{comment}{// Add mana spent on spells to total}}
+\DoxyCodeLine{441 }
+\DoxyCodeLine{442 }
+\DoxyCodeLine{443     \textcolor{comment}{// 5. tries to attack and spend on as much will as it can (attack in functions) with all units}}
+\DoxyCodeLine{444     \textcolor{comment}{// 6. tries to move until spend all will}}
+\DoxyCodeLine{445     \textcolor{comment}{// Collect AI units' current positions after mana spending}}
+\DoxyCodeLine{446     std::vector<std::pair<int, int>> aiUnitsCoords;}
+\DoxyCodeLine{447     \textcolor{comment}{// size\_t boardWidth = board.size(); // Removed redeclaration}}
+\DoxyCodeLine{448     \textcolor{comment}{// size\_t boardHeight = board[0].size(); // Removed redeclaration}}
+\DoxyCodeLine{449     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < boardWidth; ++x) \{}
+\DoxyCodeLine{450         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < boardHeight; ++y) \{}
+\DoxyCodeLine{451             \mbox{\hyperlink{classField}{Field}}* field = board[x][y];}
+\DoxyCodeLine{452             \textcolor{keywordflow}{if} (field) \{}
+\DoxyCodeLine{453                 \mbox{\hyperlink{classUnit}{Unit}}* unit = field-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{454                 \textcolor{keywordflow}{if} (unit \&\& !unit-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}()) \{ \textcolor{comment}{// Check for AI units}}
+\DoxyCodeLine{455                      aiUnitsCoords.push\_back(\{\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(x), \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(y)\});}
+\DoxyCodeLine{456                 \}}
+\DoxyCodeLine{457             \}}
+\DoxyCodeLine{458         \}}
+\DoxyCodeLine{459     \}}
+\DoxyCodeLine{460     \textcolor{comment}{// Shuffle units to randomize action order}}
+\DoxyCodeLine{461     std::shuffle(aiUnitsCoords.begin(), aiUnitsCoords.end(), rng);}
+\DoxyCodeLine{462     \textcolor{comment}{// Action phase (Attack and Move)}}
+\DoxyCodeLine{463     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& coords : aiUnitsCoords) \{}
+\DoxyCodeLine{464         \textcolor{keywordtype}{int} currentX = coords.first;}
+\DoxyCodeLine{465         \textcolor{keywordtype}{int} currentY = coords.second;}
+\DoxyCodeLine{466 }
+\DoxyCodeLine{467         \textcolor{comment}{// Re-\/fetch field and unit at the *current* coordinates within the loop}}
+\DoxyCodeLine{468         \mbox{\hyperlink{classField}{Field}}* currentField = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{469         \textcolor{keywordflow}{if} (currentX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(currentX) < boardWidth \&\& currentY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(currentY) < boardHeight) \{}
+\DoxyCodeLine{470             currentField = board[currentX][currentY];}
+\DoxyCodeLine{471         \}}
+\DoxyCodeLine{472 }
+\DoxyCodeLine{473         \textcolor{keywordflow}{if} (!currentField || !currentField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() || currentField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() || currentField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() <= 0) \{}
+\DoxyCodeLine{474              \textcolor{keywordflow}{continue}; \textcolor{comment}{// Skip if no valid AI unit with will at this coordinate}}
+\DoxyCodeLine{475         \}}
+\DoxyCodeLine{476 }
+\DoxyCodeLine{477         \mbox{\hyperlink{classUnit}{Unit}}* unit = currentField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{478         \textcolor{comment}{// Unit action loop based on Will}}
+\DoxyCodeLine{479         \textcolor{keywordflow}{while}(unit-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() > 0) \{}
+\DoxyCodeLine{480             \textcolor{keywordtype}{bool} unitActionTakenThisIteration = \textcolor{keyword}{false}; \textcolor{comment}{// Flag to track if a unit action occurred}}
+\DoxyCodeLine{481 }
+\DoxyCodeLine{482             \textcolor{comment}{// Prioritize attack over move}}
+\DoxyCodeLine{483             \textcolor{comment}{// Use currentX and currentY for actions}}
+\DoxyCodeLine{484             \textcolor{keywordflow}{if} (\mbox{\hyperlink{AI_8cpp_a4ee9cecc823bd9a64a65152b5d5ff307}{tryAIAttack}}(unit, currentX, currentY, board)) \{ \textcolor{comment}{// tryAIAttack consumes Will on success and returns true if successful}}
+\DoxyCodeLine{485                 unitActionTakenThisIteration = \textcolor{keyword}{true};}
+\DoxyCodeLine{486                 actionTakenThisTurn = \textcolor{keyword}{true}; \textcolor{comment}{// Mark that an action was taken this turn}}
+\DoxyCodeLine{487 }
+\DoxyCodeLine{488                  \textcolor{comment}{// After successful attack, re-\/verify unit's presence and position}}
+\DoxyCodeLine{489                  \mbox{\hyperlink{classField}{Field}}* fieldAfterAttack = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{490                  \textcolor{keywordflow}{if} (currentX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(currentX) < boardWidth \&\& currentY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(currentY) < boardHeight) \{}
+\DoxyCodeLine{491                     fieldAfterAttack = board[currentX][currentY];}
+\DoxyCodeLine{492                  \}}
+\DoxyCodeLine{493 }
+\DoxyCodeLine{494                  \textcolor{keywordflow}{if} (!fieldAfterAttack || fieldAfterAttack-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() != unit) \{}
+\DoxyCodeLine{495                       \textcolor{keywordflow}{break}; \textcolor{comment}{// Unit was removed or moved}}
+\DoxyCodeLine{496                  \}}
+\DoxyCodeLine{497 }
+\DoxyCodeLine{498             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{499                 \textcolor{comment}{// If attack not possible, try to move}}
+\DoxyCodeLine{500                 \textcolor{keywordtype}{int} willBeforeMove = unit-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}();}
+\DoxyCodeLine{501                 \mbox{\hyperlink{AI_8cpp_a9b86a4e2150c537c1cf7a3a6a2b01e7b}{tryAIMove}}(unit, currentX, currentY, board);}
+\DoxyCodeLine{502 }
+\DoxyCodeLine{503                 \textcolor{comment}{// Find the unit again to check its will and new position}}
+\DoxyCodeLine{504                 \textcolor{keywordtype}{bool} unitFoundAfterMove = \textcolor{keyword}{false};}
+\DoxyCodeLine{505                 \textcolor{keywordtype}{int} newX = -\/1, newY = -\/1;}
+\DoxyCodeLine{506                 \mbox{\hyperlink{classUnit}{Unit}}* unitAfterMove = \textcolor{keyword}{nullptr}; \textcolor{comment}{// Pointer to the unit after potential move}}
+\DoxyCodeLine{507                  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} bx = 0; bx < boardWidth; ++bx) \{}
+\DoxyCodeLine{508                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} by = 0; by < boardHeight; ++by) \{}
+\DoxyCodeLine{509                         \textcolor{keywordflow}{if} (board[bx][by] \&\& board[bx][by]-\/>getUnit() == unit) \{}
+\DoxyCodeLine{510 }
+\DoxyCodeLine{511                             newX = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(bx);}
+\DoxyCodeLine{512                             newY = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(by);}
+\DoxyCodeLine{513                             unitAfterMove = unit; \textcolor{comment}{// Found the unit}}
+\DoxyCodeLine{514                             unitFoundAfterMove = \textcolor{keyword}{true};}
+\DoxyCodeLine{515                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{516                         \}}
+\DoxyCodeLine{517                     \}}
+\DoxyCodeLine{518                     \textcolor{keywordflow}{if} (unitFoundAfterMove) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{519                 \}}
+\DoxyCodeLine{520 }
+\DoxyCodeLine{521                 \textcolor{comment}{// Check if move was successful}}
+\DoxyCodeLine{522                 \textcolor{keywordflow}{if} (unitFoundAfterMove \&\& unitAfterMove-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() < willBeforeMove) \{}
+\DoxyCodeLine{523                     unitActionTakenThisIteration = \textcolor{keyword}{true};}
+\DoxyCodeLine{524                     actionTakenThisTurn = \textcolor{keyword}{true};}
+\DoxyCodeLine{525                     currentX = newX;}
+\DoxyCodeLine{526                     currentY = newY;}
+\DoxyCodeLine{527                  \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!unitFoundAfterMove) \{}
+\DoxyCodeLine{528                      \textcolor{comment}{// Unit disappeared from board after move attempt?}}
+\DoxyCodeLine{529                      \textcolor{comment}{// This shouldn't happen.}}
+\DoxyCodeLine{530                      \textcolor{comment}{// Log error or break? For now, break the inner loop for this unit.}}
+\DoxyCodeLine{531                      \textcolor{comment}{// std::cerr << "{}Error: AI Unit lost after move attempt.\(\backslash\)n"{};}}
+\DoxyCodeLine{532                      \textcolor{keywordflow}{break};}
+\DoxyCodeLine{533                  \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{534                      \textcolor{comment}{// Move attempt failed or did not consume will}}
+\DoxyCodeLine{535                      unitActionTakenThisIteration = \textcolor{keyword}{false}; \textcolor{comment}{// Explicitly mark no action}}
+\DoxyCodeLine{536                  \}}
+\DoxyCodeLine{537             \}}
+\DoxyCodeLine{538 }
+\DoxyCodeLine{539             \textcolor{comment}{// If unit still has will but no action was taken in this iteration, break to prevent infinite loop}}
+\DoxyCodeLine{540             \textcolor{keywordflow}{if} (unit-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() > 0 \&\& !unitActionTakenThisIteration) \{}
+\DoxyCodeLine{541                  \textcolor{keywordflow}{break};}
+\DoxyCodeLine{542             \}}
+\DoxyCodeLine{543 }
+\DoxyCodeLine{544             \textcolor{comment}{// If the unit's will has become 0 or less, exit the while loop}}
+\DoxyCodeLine{545             \textcolor{keywordflow}{if} (unit-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() <= 0) \{}
+\DoxyCodeLine{546                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{547             \}}
+\DoxyCodeLine{548 }
+\DoxyCodeLine{549             \textcolor{comment}{// Re-\/fetch unit pointer in case it was deleted (e.g., counter-\/attack)}}
+\DoxyCodeLine{550             \textcolor{comment}{// Check bounds first}}
+\DoxyCodeLine{551              \textcolor{keywordflow}{if} (currentX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(currentX) < boardWidth \&\& currentY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(currentY) < boardHeight) \{}
+\DoxyCodeLine{552                 unit = board[currentX][currentY]-\/>getUnit();}
+\DoxyCodeLine{553                 \textcolor{keywordflow}{if} (!unit) \textcolor{keywordflow}{break}; \textcolor{comment}{// Unit was destroyed, exit loop}}
+\DoxyCodeLine{554              \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{555                  \textcolor{keywordflow}{break}; \textcolor{comment}{// Unit moved out of bounds? Should not happen.}}
+\DoxyCodeLine{556              \}}
+\DoxyCodeLine{557 }
+\DoxyCodeLine{558 }
+\DoxyCodeLine{559         \} \textcolor{comment}{// End while(unit-\/>getWill() > 0)}}
+\DoxyCodeLine{560     \} \textcolor{comment}{// End for (const auto\& coords : aiUnitsCoords)}}
+\DoxyCodeLine{561 }
+\DoxyCodeLine{562 }
+\DoxyCodeLine{563     \textcolor{comment}{// -\/-\/-\/ End Turn -\/-\/-\/}}
+\DoxyCodeLine{564     \textcolor{comment}{// Corrected: Use aiPlayer instead of currentPlayer}}
+\DoxyCodeLine{565     \textcolor{comment}{// Corrected: Use the declared manaSpent variable}}
+\DoxyCodeLine{566     std::cout << \textcolor{stringliteral}{"{}AI turn ended. Mana spent: "{}} << manaSpent << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{567     aiPlayer-\/>\mbox{\hyperlink{classPlayer_a702ab07a0927d565734c50f7ed231fac}{setMyTurn}}(\textcolor{keyword}{false}); \textcolor{comment}{// End AI's turn}}
+\DoxyCodeLine{568     \textcolor{keywordflow}{return} actionTakenThisTurn; \textcolor{comment}{// Return whether any action was taken}}
+\DoxyCodeLine{569 \} \textcolor{comment}{// <-\/-\/-\/ End of AIact function (renamed from getAICommands)}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки create\+Unit(), find\+Random\+AICreate\+Spot(), Player\+::get\+AI(), Player\+::get\+Mana(), Player\+::get\+My\+Turn(), Unit\+::get\+Player(), Field\+::get\+Unit(), Unit\+::get\+Will(), Player\+::set\+Mana(), Player\+::set\+My\+Turn(), try\+AIAttack(), try\+AICast\+Specific\+Spell(), try\+AIEngineer\+Build\+Specific() и try\+AIMove().
+
+
+
+Используется в get\+AICommands().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/df3/AI_8h_a977b9434bdf2f1cb57f540e4098d1a57_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{db/df3/AI_8h_a977b9434bdf2f1cb57f540e4098d1a57_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AI_8h_ad90f841d71e5bae7186823d947a92551}\label{AI_8h_ad90f841d71e5bae7186823d947a92551}} 
+\index{AI.h@{AI.h}!getAICommands@{getAICommands}}
+\index{getAICommands@{getAICommands}!AI.h@{AI.h}}
+\doxysubsubsection{\texorpdfstring{getAICommands()}{getAICommands()}}
+{\footnotesize\ttfamily bool get\+AICommands (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{current\+Player,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Handles AI commands during its turn. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em current\+Player} & The current AI player. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if a resource-\/consuming action was taken, false otherwise. 
+\end{DoxyReturn}
+
+
+См. определение в файле AI.\+cpp строка 676
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{676                                                                                \{}
+\DoxyCodeLine{677     \textcolor{keywordflow}{return} \mbox{\hyperlink{AI_8cpp_a977b9434bdf2f1cb57f540e4098d1a57}{AIact}}(currentPlayer, board);}
+\DoxyCodeLine{678 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{AI_8h_a4ee9cecc823bd9a64a65152b5d5ff307}\label{AI_8h_a4ee9cecc823bd9a64a65152b5d5ff307}} 
+\index{AI.h@{AI.h}!tryAIAttack@{tryAIAttack}}
+\index{tryAIAttack@{tryAIAttack}!AI.h@{AI.h}}
+\doxysubsubsection{\texorpdfstring{tryAIAttack()}{tryAIAttack()}}
+{\footnotesize\ttfamily bool try\+AIAttack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Attempts to make the AI attack with the given unit. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit} & The unit to attack with. \\
+\hline
+{\em x} & The unit\textquotesingle{}s x coordinate. \\
+\hline
+{\em y} & The unit\textquotesingle{}s y coordinate. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if an attack was performed, false otherwise. 
+\end{DoxyReturn}
+
+
+См. определение в файле AI.\+cpp строка 582
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{582                                                                                 \{}
+\DoxyCodeLine{583     \textcolor{keywordflow}{if} (!unit || unit-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() <= 0 || board.empty() || board[0].empty()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{584     \textcolor{keywordtype}{int} attackRange = unit-\/>\mbox{\hyperlink{classUnit_a8856896cc73b342fec2cd3e8079e8e6a}{getAttackDistance}}();}
+\DoxyCodeLine{585     \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{586     \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{587 }
+\DoxyCodeLine{588     std::vector<std::pair<int, int>> possibleTargets;}
+\DoxyCodeLine{589     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dx = -\/attackRange; dx <= attackRange; ++dx) \{}
+\DoxyCodeLine{590         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dy = -\/attackRange; dy <= attackRange; ++dy) \{}
+\DoxyCodeLine{591             \textcolor{keywordflow}{if} (dx == 0 \&\& dy == 0) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{592             \textcolor{keywordtype}{int} targetX = x + dx;}
+\DoxyCodeLine{593             \textcolor{keywordtype}{int} targetY = y + dy;}
+\DoxyCodeLine{594             \textcolor{keywordflow}{if} (targetX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetX) < boardWidth \&\&}
+\DoxyCodeLine{595                 targetY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetY) < boardHeight)}
+\DoxyCodeLine{596             \{}
+\DoxyCodeLine{597                 \mbox{\hyperlink{classField}{Field}}* targetField = board[targetX][targetY];}
+\DoxyCodeLine{598                 \textcolor{keywordflow}{if} (!targetField) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{599                 \mbox{\hyperlink{classUnit}{Unit}}* targetUnit = targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{600 }
+\DoxyCodeLine{601                 \textcolor{keywordflow}{if} (targetUnit \&\& targetUnit-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() != unit-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}()) \{}
+\DoxyCodeLine{602                      \textcolor{comment}{// Use Manhattan distance for attack range check}}
+\DoxyCodeLine{603                     \textcolor{keywordflow}{if} (std::abs(dx) + std::abs(dy) <= attackRange) \{}
+\DoxyCodeLine{604                         possibleTargets.push\_back(\{targetX, targetY\});}
+\DoxyCodeLine{605                     \}}
+\DoxyCodeLine{606                 \}}
+\DoxyCodeLine{607             \}}
+\DoxyCodeLine{608         \}}
+\DoxyCodeLine{609     \}}
+\DoxyCodeLine{610 }
+\DoxyCodeLine{611     \textcolor{keywordflow}{if} (!possibleTargets.empty()) \{}
+\DoxyCodeLine{612          \textcolor{keywordtype}{unsigned} seed = std::chrono::steady\_clock::now().time\_since\_epoch().count();}
+\DoxyCodeLine{613          std::default\_random\_engine rng(seed);}
+\DoxyCodeLine{614         std::shuffle(possibleTargets.begin(), possibleTargets.end(), rng);}
+\DoxyCodeLine{615 }
+\DoxyCodeLine{616         \textcolor{keywordtype}{int} targetX = possibleTargets[0].first;}
+\DoxyCodeLine{617         \textcolor{keywordtype}{int} targetY = possibleTargets[0].second;}
+\DoxyCodeLine{618         std::cout << \textcolor{stringliteral}{"{}AI "{}} << unit-\/>\mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} ("{}} << x << \textcolor{stringliteral}{"{},"{}} << y << \textcolor{stringliteral}{"{}) attacks "{}} << board[targetX][targetY]-\/>getUnit()-\/>getName() << \textcolor{stringliteral}{"{} ("{}} << targetX << \textcolor{stringliteral}{"{},"{}} << targetY << \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{619         \mbox{\hyperlink{functions_8cpp_acfc6ab57758c3db7e635b17b396796ba}{attack}}(board, x, y, targetX, targetY);}
+\DoxyCodeLine{620         \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \textcolor{comment}{// Attack successful}}
+\DoxyCodeLine{621     \}}
+\DoxyCodeLine{622 }
+\DoxyCodeLine{623     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// No successful attack}}
+\DoxyCodeLine{624 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки attack(), Unit\+::get\+Attack\+Distance(), Unit\+::get\+Name(), Unit\+::get\+Player(), Field\+::get\+Unit() и Unit\+::get\+Will().
+
+
+
+Используется в AIact().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/df3/AI_8h_a4ee9cecc823bd9a64a65152b5d5ff307_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/df3/AI_8h_a4ee9cecc823bd9a64a65152b5d5ff307_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AI_8h_a9b86a4e2150c537c1cf7a3a6a2b01e7b}\label{AI_8h_a9b86a4e2150c537c1cf7a3a6a2b01e7b}} 
+\index{AI.h@{AI.h}!tryAIMove@{tryAIMove}}
+\index{tryAIMove@{tryAIMove}!AI.h@{AI.h}}
+\doxysubsubsection{\texorpdfstring{tryAIMove()}{tryAIMove()}}
+{\footnotesize\ttfamily void try\+AIMove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{unit,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board }\end{DoxyParamCaption})}
+
+
+
+Attempts to move the given AI unit. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit} & The unit to move. \\
+\hline
+{\em x} & The unit\textquotesingle{}s x coordinate. \\
+\hline
+{\em y} & The unit\textquotesingle{}s y coordinate. \\
+\hline
+{\em board} & The game board. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле AI.\+cpp строка 627
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{627                                                                               \{}
+\DoxyCodeLine{628     \textcolor{keywordflow}{if} (!unit || unit-\/>\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() <= 0 || board.empty() || board[0].empty()) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{629     \textcolor{keywordtype}{int} moveRange = unit-\/>\mbox{\hyperlink{classUnit_aba0432bdab275a064c23bc87b12a5d66}{getMoveDistance}}();}
+\DoxyCodeLine{630     \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{631     \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{632     std::vector<std::pair<int, int>> possibleMoves; \textcolor{comment}{// Store possible moves}}
+\DoxyCodeLine{633     std::vector<std::pair<int, int>> safeMoves; \textcolor{comment}{// Moves that are not BombedField}}
+\DoxyCodeLine{634 }
+\DoxyCodeLine{635     \textcolor{comment}{// Find all valid moves within Manhattan distance}}
+\DoxyCodeLine{636     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dx = -\/moveRange; dx <= moveRange; ++dx) \{}
+\DoxyCodeLine{637         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dy = -\/moveRange; dy <= moveRange; ++dy) \{}
+\DoxyCodeLine{638              \textcolor{keywordflow}{if} (std::abs(dx) + std::abs(dy) > moveRange || (dx == 0 \&\& dy == 0)) \{}
+\DoxyCodeLine{639                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{640              \}}
+\DoxyCodeLine{641             \textcolor{keywordtype}{int} newX = x + dx;}
+\DoxyCodeLine{642             \textcolor{keywordtype}{int} newY = y + dy;}
+\DoxyCodeLine{643             \textcolor{keywordflow}{if} (newX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(newX) < boardWidth \&\&}
+\DoxyCodeLine{644                 newY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(newY) < boardHeight)}
+\DoxyCodeLine{645             \{}
+\DoxyCodeLine{646                  \mbox{\hyperlink{classField}{Field}}* targetField = board[newX][newY];}
+\DoxyCodeLine{647                  \textcolor{comment}{// Check if the target field is a plain field or a hill, and is empty}}
+\DoxyCodeLine{648                  \textcolor{keywordflow}{if}(targetField \&\& !targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() \&\&}
+\DoxyCodeLine{649                     (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classField}{Field}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr} || \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classHill}{Hill}}*\textcolor{keyword}{>}(targetField) != \textcolor{keyword}{nullptr})) \{}
+\DoxyCodeLine{650                      possibleMoves.push\_back(\{newX, newY\});}
+\DoxyCodeLine{651                      \textcolor{keywordflow}{if} (!\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classBombedField}{BombedField}}*\textcolor{keyword}{>}(targetField)) \{}
+\DoxyCodeLine{652                          safeMoves.push\_back(\{newX, newY\});}
+\DoxyCodeLine{653                      \}}
+\DoxyCodeLine{654                  \}}
+\DoxyCodeLine{655             \}}
+\DoxyCodeLine{656         \}}
+\DoxyCodeLine{657     \}}
+\DoxyCodeLine{658 }
+\DoxyCodeLine{659     std::vector<std::pair<int, int>>* movesToUse = \&possibleMoves;}
+\DoxyCodeLine{660     \textcolor{keywordflow}{if} (!safeMoves.empty()) \{}
+\DoxyCodeLine{661         movesToUse = \&safeMoves;}
+\DoxyCodeLine{662     \}}
+\DoxyCodeLine{663 }
+\DoxyCodeLine{664     \textcolor{keywordflow}{if} (!movesToUse-\/>empty()) \{}
+\DoxyCodeLine{665         \textcolor{comment}{// Shuffle the possible moves and pick the first one}}
+\DoxyCodeLine{666         \textcolor{keywordtype}{unsigned} seed = std::chrono::steady\_clock::now().time\_since\_epoch().count();}
+\DoxyCodeLine{667         std::default\_random\_engine rng(seed);}
+\DoxyCodeLine{668         std::shuffle(movesToUse-\/>begin(), movesToUse-\/>end(), rng);}
+\DoxyCodeLine{669         \textcolor{keywordtype}{int} targetX = (*movesToUse)[0].first;}
+\DoxyCodeLine{670         \textcolor{keywordtype}{int} targetY = (*movesToUse)[0].second;}
+\DoxyCodeLine{671         \mbox{\hyperlink{functions_8cpp_a03cfd94cc59ef09a8b66ccbe9d885b19}{move}}(board, x, y, targetX, targetY);}
+\DoxyCodeLine{672     \}}
+\DoxyCodeLine{673     \textcolor{comment}{// If no valid moves, do nothing (will not be reduced)}}
+\DoxyCodeLine{674 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Move\+Distance(), Field\+::get\+Unit(), Unit\+::get\+Will() и move().
+
+
+
+Используется в AIact().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/df3/AI_8h_a9b86a4e2150c537c1cf7a3a6a2b01e7b_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/df3/AI_8h_a9b86a4e2150c537c1cf7a3a6a2b01e7b_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,172 @@
+\hypertarget{classInfantry}{}\doxysection{Класс Infantry}
+\label{classInfantry}\index{Infantry@{Infantry}}
+
+
+Melee unit with counter-\/attack ability (\mbox{\hyperlink{classInfantry}{Infantry}}).  
+
+
+
+
+{\ttfamily \#include $<$infantry.\+h$>$}
+
+
+
+Граф наследования\+:Infantry\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{de/da6/classInfantry__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Infantry\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{d9/db7/classInfantry__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInfantry_a08733790f4cca4e653b788b3829774a8}{Infantry}} (bool player=false)
+\begin{DoxyCompactList}\small\item\em Constructs an \mbox{\hyperlink{classInfantry}{Infantry}} unit. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classInfantry_accd381890771b9e64f5d2cdc07d4d27c}{$\sim$\+Infantry}} ()=default
+\item 
+void \mbox{\hyperlink{classInfantry_a05b6abbf09ed604fda5c276588ccf0a8}{counter\+Attack}} (\mbox{\hyperlink{classUnit}{Unit}} $\ast$attacker)
+\begin{DoxyCompactList}\small\item\em Performs a counter-\/attack against an attacker. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classInfantry_aef29ebf2c72cb8f110ca98c1ff2029e6}{get\+Symbol}} () const
+\begin{DoxyCompactList}\small\item\em Gets the symbol representing the infantry (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+Melee unit with counter-\/attack ability (\mbox{\hyperlink{classInfantry}{Infantry}}). 
+
+См. определение в файле infantry.\+h строка 10
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classInfantry_a08733790f4cca4e653b788b3829774a8}\label{classInfantry_a08733790f4cca4e653b788b3829774a8}} 
+\index{Infantry@{Infantry}!Infantry@{Infantry}}
+\index{Infantry@{Infantry}!Infantry@{Infantry}}
+\doxysubsubsection{\texorpdfstring{Infantry()}{Infantry()}}
+{\footnotesize\ttfamily Infantry\+::\+Infantry (\begin{DoxyParamCaption}\item[{bool}]{player = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructs an \mbox{\hyperlink{classInfantry}{Infantry}} unit. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em player} & True if controlled by player, false if AI (default\+: false). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле infantry.\+cpp строка 6
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7     : \mbox{\hyperlink{classUnit_a889a37b2a427c6c220b45057511c0d05}{Unit}}(\textcolor{stringliteral}{"{}Infantry"{}}, 2, 1, 10, 3, player, 2) \textcolor{comment}{// Name, Move, Attack, Health, Damage, isPlayer, Will}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{comment}{// Infantry: Move 2, Attack 1, Health 10, Damage 3, Will 2, Symbol 'I'}}
+\DoxyCodeLine{10 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInfantry_accd381890771b9e64f5d2cdc07d4d27c}\label{classInfantry_accd381890771b9e64f5d2cdc07d4d27c}} 
+\index{Infantry@{Infantry}!````~Infantry@{$\sim$Infantry}}
+\index{````~Infantry@{$\sim$Infantry}!Infantry@{Infantry}}
+\doxysubsubsection{\texorpdfstring{$\sim$Infantry()}{~Infantry()}}
+{\footnotesize\ttfamily virtual Infantry\+::$\sim$\+Infantry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classInfantry_a05b6abbf09ed604fda5c276588ccf0a8}\label{classInfantry_a05b6abbf09ed604fda5c276588ccf0a8}} 
+\index{Infantry@{Infantry}!counterAttack@{counterAttack}}
+\index{counterAttack@{counterAttack}!Infantry@{Infantry}}
+\doxysubsubsection{\texorpdfstring{counterAttack()}{counterAttack()}}
+{\footnotesize\ttfamily void Infantry\+::counter\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUnit}{Unit}} $\ast$}]{attacker }\end{DoxyParamCaption})}
+
+
+
+Performs a counter-\/attack against an attacker. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em attacker} & The attacking unit. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле infantry.\+cpp строка 12
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \textcolor{keywordflow}{if} (attacker) \{}
+\DoxyCodeLine{15         std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} counter-\/attacks "{}} << attacker-\/>\mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{}!\(\backslash\)n"{}};}
+\DoxyCodeLine{16         \textcolor{comment}{// Infantry deals half their damage in a counter-\/attack (rounded down)}}
+\DoxyCodeLine{17         \textcolor{keywordtype}{int} counterDamage = \mbox{\hyperlink{classUnit_a0062c5fab5677c6b47e1d881b4dcc53c}{getDamage}}() / 2;}
+\DoxyCodeLine{18         attacker-\/>\mbox{\hyperlink{classUnit_a43a426d4d87aebf07e2737e122bea210}{takeDamage}}(counterDamage, \textcolor{keyword}{this}); \textcolor{comment}{// 'this' is the counter-\/attacking Infantry}}
+\DoxyCodeLine{19     \}}
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Damage(), Unit\+::get\+Name() и Unit\+::take\+Damage().
+
+
+
+Используется в attack().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/def/classInfantry_a05b6abbf09ed604fda5c276588ccf0a8_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/def/classInfantry_a05b6abbf09ed604fda5c276588ccf0a8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInfantry_aef29ebf2c72cb8f110ca98c1ff2029e6}\label{classInfantry_aef29ebf2c72cb8f110ca98c1ff2029e6}} 
+\index{Infantry@{Infantry}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!Infantry@{Infantry}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char Infantry\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the symbol representing the infantry (for display). 
+
+\begin{DoxyReturn}{Возвращает}
+\textquotesingle{}I\textquotesingle{} character. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classUnit_afd6bcf5adaadb97b1378512344bd642b}{Unit}}.
+
+
+
+См. определение в файле infantry.\+h строка 30
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30 \{ \textcolor{keywordflow}{return} \textcolor{charliteral}{'I'}; \}}
+
+\end{DoxyCode}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{infantry_8h}{infantry.\+h}}\item 
+\mbox{\hyperlink{infantry_8cpp}{infantry.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,25 @@
+var annotated_dup =
+[
+    [ "Archer", "d3/dea/classArcher.html", "d3/dea/classArcher" ],
+    [ "BombedField", "da/d43/classBombedField.html", "da/d43/classBombedField" ],
+    [ "BombSpell", "d0/dd8/classBombSpell.html", "d0/dd8/classBombSpell" ],
+    [ "BurnedField", "d6/ded/classBurnedField.html", "d6/ded/classBurnedField" ],
+    [ "Cannon", "db/dc3/classCannon.html", "db/dc3/classCannon" ],
+    [ "CurseSpell", "de/deb/classCurseSpell.html", "de/deb/classCurseSpell" ],
+    [ "Engineer", "dc/d9b/classEngineer.html", "dc/d9b/classEngineer" ],
+    [ "Field", "d7/d24/classField.html", "d7/d24/classField" ],
+    [ "FireballSpell", "d9/dbb/classFireballSpell.html", "d9/dbb/classFireballSpell" ],
+    [ "Fortress", "d8/d05/classFortress.html", "d8/d05/classFortress" ],
+    [ "GameData", "d4/d6e/structGameData.html", "d4/d6e/structGameData" ],
+    [ "Hill", "d8/d63/classHill.html", "d8/d63/classHill" ],
+    [ "HospitalField", "dd/db4/classHospitalField.html", "dd/db4/classHospitalField" ],
+    [ "Infantry", "da/def/classInfantry.html", "da/def/classInfantry" ],
+    [ "ManaMineField", "db/d5c/classManaMineField.html", "db/d5c/classManaMineField" ],
+    [ "MorogSpell", "d8/db9/classMorogSpell.html", "d8/db9/classMorogSpell" ],
+    [ "Player", "d2/d4b/classPlayer.html", "d2/d4b/classPlayer" ],
+    [ "Priest", "de/db7/classPriest.html", "de/db7/classPriest" ],
+    [ "ShieldedField", "d1/dd1/classShieldedField.html", "d1/dd1/classShieldedField" ],
+    [ "Spell", "d1/d16/classSpell.html", "d1/d16/classSpell" ],
+    [ "TeleportSpell", "d7/d0e/classTeleportSpell.html", "d7/d0e/classTeleportSpell" ],
+    [ "Unit", "df/dd9/classUnit.html", "df/dd9/classUnit" ]
+];

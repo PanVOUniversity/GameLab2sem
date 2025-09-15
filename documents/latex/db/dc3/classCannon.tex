@@ -1,0 +1,616 @@
+\hypertarget{classCannon}{}\doxysection{Класс Cannon}
+\label{classCannon}\index{Cannon@{Cannon}}
+
+
+Stationary ranged unit with directional fire ability (\mbox{\hyperlink{classCannon}{Cannon}}).  
+
+
+
+
+{\ttfamily \#include $<$cannon.\+h$>$}
+
+
+
+Граф наследования\+:Cannon\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{db/d21/classCannon__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Cannon\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{d5/d4e/classCannon__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCannon_ae91e5681c70654d43304011e7e7ffac8}{Cannon}} (const std\+::string \&unit\+Name=\char`\"{}Cannon\char`\"{}, int moveD=0, int attackD=4, int health=4, int dmg=5, bool is\+Player=false, int will=1, \mbox{\hyperlink{cannon_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir=\mbox{\hyperlink{cannon_8h_a224b9163917ac32fc95a60d8c1eec3aaabb2fe5c916efb43aab8cbb68f997d2ee}{Direction\+::\+FRONT}})
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classCannon}{Cannon}} unit. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCannon_abc40160e2c8899dd71121160a419a51f}{$\sim$\+Cannon}} ()=default
+\item 
+void \mbox{\hyperlink{classCannon_a5725deffe25c5741d9fd473e7f7842e6}{set\+Direction}} (\mbox{\hyperlink{cannon_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\begin{DoxyCompactList}\small\item\em Sets the cannon\textquotesingle{}s direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cannon_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{classCannon_a1aadba7595ed0f8ce3f6aaf9e3923ca9}{get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the cannon\textquotesingle{}s direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCannon_a98c5782f0e545c9ddbf4c4829af63800}{fire}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int targetX, int targetY)
+\begin{DoxyCompactList}\small\item\em Fires at the specified target coordinates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCannon_a1d7f5eea1d4dbc32c152762c97b90f43}{use\+Ability}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int targetX, int targetY) override
+\begin{DoxyCompactList}\small\item\em Uses the cannon\textquotesingle{}s special ability (fire). \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classCannon_af6d2765b54c29a5d5221880722258270}{get\+Symbol}} () const
+\begin{DoxyCompactList}\small\item\em Gets the symbol representing the cannon (for display). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classCannon_a6f9c188b16c445e9385d82002903f530}{\+\_\+find\+Friendly\+Nearby}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y) const
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classCannon_ab939994ff92120f50fe84affb96fb550}{\+\_\+find\+Enemy\+In\+Range}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y) const
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classCannon_afd42a8112bc244ed69a45291da55eff6}{\+\_\+find\+Empty\+Field\+In\+Range}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y) const
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classCannon_a7983308d4c1a799a8394d8c489829db1}{\+\_\+find\+Friendly\+Fortress\+Nearby}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cannon_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{classCannon_a8f025d4de3fc0f7a1ef4d0836e495bca}{\+\_\+direction}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+Stationary ranged unit with directional fire ability (\mbox{\hyperlink{classCannon}{Cannon}}). 
+
+См. определение в файле cannon.\+h строка 24
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classCannon_ae91e5681c70654d43304011e7e7ffac8}\label{classCannon_ae91e5681c70654d43304011e7e7ffac8}} 
+\index{Cannon@{Cannon}!Cannon@{Cannon}}
+\index{Cannon@{Cannon}!Cannon@{Cannon}}
+\doxysubsubsection{\texorpdfstring{Cannon()}{Cannon()}}
+{\footnotesize\ttfamily Cannon\+::\+Cannon (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{unit\+Name = {\ttfamily \char`\"{}Cannon\char`\"{}},  }\item[{int}]{moveD = {\ttfamily 0},  }\item[{int}]{attackD = {\ttfamily 4},  }\item[{int}]{health = {\ttfamily 4},  }\item[{int}]{dmg = {\ttfamily 5},  }\item[{bool}]{is\+Player = {\ttfamily false},  }\item[{int}]{will = {\ttfamily 1},  }\item[{\mbox{\hyperlink{cannon_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir = {\ttfamily \mbox{\hyperlink{cannon_8h_a224b9163917ac32fc95a60d8c1eec3aaabb2fe5c916efb43aab8cbb68f997d2ee}{Direction\+::\+FRONT}}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classCannon}{Cannon}} unit. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unit\+Name} & Name of the unit (default\+: \char`\"{}\+Cannon\char`\"{}). \\
+\hline
+{\em moveD} & Move distance (default\+: 0). \\
+\hline
+{\em attackD} & Attack distance (default\+: 4). \\
+\hline
+{\em health} & Health value (default\+: 4). \\
+\hline
+{\em dmg} & Damage value (default\+: 5). \\
+\hline
+{\em is\+Player} & True if controlled by player, false if AI (default\+: false). \\
+\hline
+{\em will} & Will points (default\+: 1). \\
+\hline
+{\em dir} & Initial direction (default\+: FRONT). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле cannon.\+cpp строка 17
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18     : \mbox{\hyperlink{classUnit_a889a37b2a427c6c220b45057511c0d05}{Unit}}(unitName, moveD, attackD, health, dmg, isPlayer, will), \mbox{\hyperlink{classCannon_a8f025d4de3fc0f7a1ef4d0836e495bca}{\_direction}}(dir) \textcolor{comment}{// Initialize direction}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{comment}{// Cannon: Move 0, Attack 4, Health 4, Damage 5, Will 1, Symbol 'C'}}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCannon_abc40160e2c8899dd71121160a419a51f}\label{classCannon_abc40160e2c8899dd71121160a419a51f}} 
+\index{Cannon@{Cannon}!````~Cannon@{$\sim$Cannon}}
+\index{````~Cannon@{$\sim$Cannon}!Cannon@{Cannon}}
+\doxysubsubsection{\texorpdfstring{$\sim$Cannon()}{~Cannon()}}
+{\footnotesize\ttfamily virtual Cannon\+::$\sim$\+Cannon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classCannon_afd42a8112bc244ed69a45291da55eff6}\label{classCannon_afd42a8112bc244ed69a45291da55eff6}} 
+\index{Cannon@{Cannon}!\_findEmptyFieldInRange@{\_findEmptyFieldInRange}}
+\index{\_findEmptyFieldInRange@{\_findEmptyFieldInRange}!Cannon@{Cannon}}
+\doxysubsubsection{\texorpdfstring{\_findEmptyFieldInRange()}{\_findEmptyFieldInRange()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Cannon\+::\+\_\+find\+Empty\+Field\+In\+Range (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле cannon.\+cpp строка 189
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{189                                                                                                               \{}
+\DoxyCodeLine{190      \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{191     \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{192     \textcolor{keywordtype}{int} moveRange = \mbox{\hyperlink{classUnit_aba0432bdab275a064c23bc87b12a5d66}{getMoveDistance}}(); \textcolor{comment}{// For Cannon, this is 0}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194     \textcolor{comment}{// Since Cannon moveDistance is 0, it can only "{}move"{} to its current empty field if it somehow became empty}}
+\DoxyCodeLine{195     \textcolor{comment}{// This function might not be relevant for a static unit like Cannon unless its moveDistance can change.}}
+\DoxyCodeLine{196     \textcolor{comment}{// However, implementing it for completeness based on the base Unit class.}}
+\DoxyCodeLine{197     std::vector<std::pair<int, int>> possibleMoves;}
+\DoxyCodeLine{198     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dx = -\/moveRange; dx <= moveRange; ++dx) \{}
+\DoxyCodeLine{199         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dy = -\/moveRange; dy <= moveRange; ++dy) \{}
+\DoxyCodeLine{200              \textcolor{keywordflow}{if} (std::abs(dx) + std::abs(dy) > moveRange || (dx == 0 \&\& dy == 0)) \{}
+\DoxyCodeLine{201                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{202              \}}
+\DoxyCodeLine{203             \textcolor{keywordtype}{int} newX = x + dx;}
+\DoxyCodeLine{204             \textcolor{keywordtype}{int} newY = y + dy;}
+\DoxyCodeLine{205             \textcolor{keywordflow}{if} (newX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(newX) < boardWidth \&\&}
+\DoxyCodeLine{206                 newY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(newY) < boardHeight)}
+\DoxyCodeLine{207             \{}
+\DoxyCodeLine{208                  \mbox{\hyperlink{classField}{Field}}* targetField = board[newX][newY];}
+\DoxyCodeLine{209                  \textcolor{keywordflow}{if}(targetField \&\& !targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()) \{}
+\DoxyCodeLine{210                      possibleMoves.push\_back(\{newX, newY\});}
+\DoxyCodeLine{211                  \}}
+\DoxyCodeLine{212             \}}
+\DoxyCodeLine{213         \}}
+\DoxyCodeLine{214     \}}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216     \textcolor{keywordflow}{if} (!possibleMoves.empty()) \{}
+\DoxyCodeLine{217         \textcolor{keywordtype}{unsigned} seed = std::chrono::steady\_clock::now().time\_since\_epoch().count();}
+\DoxyCodeLine{218         std::default\_random\_engine rng(seed);}
+\DoxyCodeLine{219         std::shuffle(possibleMoves.begin(), possibleMoves.end(), rng);}
+\DoxyCodeLine{220         \textcolor{keywordflow}{return} possibleMoves[0];}
+\DoxyCodeLine{221     \}}
+\DoxyCodeLine{222     \textcolor{keywordflow}{return} \{-\/1, -\/1\}; \textcolor{comment}{// No empty field found in range}}
+\DoxyCodeLine{223 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Move\+Distance() и Field\+::get\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dc3/classCannon_afd42a8112bc244ed69a45291da55eff6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCannon_ab939994ff92120f50fe84affb96fb550}\label{classCannon_ab939994ff92120f50fe84affb96fb550}} 
+\index{Cannon@{Cannon}!\_findEnemyInRange@{\_findEnemyInRange}}
+\index{\_findEnemyInRange@{\_findEnemyInRange}!Cannon@{Cannon}}
+\doxysubsubsection{\texorpdfstring{\_findEnemyInRange()}{\_findEnemyInRange()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Cannon\+::\+\_\+find\+Enemy\+In\+Range (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле cannon.\+cpp строка 162
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{162                                                                                                          \{}
+\DoxyCodeLine{163     \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{164     \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{165     \textcolor{keywordtype}{int} attackRange = \mbox{\hyperlink{classUnit_a8856896cc73b342fec2cd3e8079e8e6a}{getAttackDistance}}();}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dx = -\/attackRange; dx <= attackRange; ++dx) \{}
+\DoxyCodeLine{168         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dy = -\/attackRange; dy <= attackRange; ++dy) \{}
+\DoxyCodeLine{169             \textcolor{keywordflow}{if} (dx == 0 \&\& dy == 0) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{170             \textcolor{keywordtype}{int} targetX = x + dx;}
+\DoxyCodeLine{171             \textcolor{keywordtype}{int} targetY = y + dy;}
+\DoxyCodeLine{172             \textcolor{keywordflow}{if} (targetX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetX) < boardWidth \&\&}
+\DoxyCodeLine{173                 targetY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetY) < boardHeight)}
+\DoxyCodeLine{174             \{}
+\DoxyCodeLine{175                 \mbox{\hyperlink{classField}{Field}}* targetField = board[targetX][targetY];}
+\DoxyCodeLine{176                 \textcolor{keywordflow}{if} (targetField \&\& targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() \&\& targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() != \mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}()) \{}
+\DoxyCodeLine{177                     \textcolor{comment}{// Use Manhattan distance for attack range check}}
+\DoxyCodeLine{178                     \textcolor{keywordflow}{if} (std::abs(dx) + std::abs(dy) <= attackRange) \{}
+\DoxyCodeLine{179                         \textcolor{keywordflow}{return} \{targetX, targetY\}; \textcolor{comment}{// Found an enemy unit in range}}
+\DoxyCodeLine{180                     \}}
+\DoxyCodeLine{181                 \}}
+\DoxyCodeLine{182             \}}
+\DoxyCodeLine{183         \}}
+\DoxyCodeLine{184     \}}
+\DoxyCodeLine{185     \textcolor{keywordflow}{return} \{-\/1, -\/1\}; \textcolor{comment}{// No enemy unit found in range}}
+\DoxyCodeLine{186 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Attack\+Distance(), Unit\+::get\+Player() и Field\+::get\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dc3/classCannon_ab939994ff92120f50fe84affb96fb550_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCannon_a7983308d4c1a799a8394d8c489829db1}\label{classCannon_a7983308d4c1a799a8394d8c489829db1}} 
+\index{Cannon@{Cannon}!\_findFriendlyFortressNearby@{\_findFriendlyFortressNearby}}
+\index{\_findFriendlyFortressNearby@{\_findFriendlyFortressNearby}!Cannon@{Cannon}}
+\doxysubsubsection{\texorpdfstring{\_findFriendlyFortressNearby()}{\_findFriendlyFortressNearby()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Cannon\+::\+\_\+find\+Friendly\+Fortress\+Nearby (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле cannon.\+cpp строка 226
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{226                                                                                                                    \{}
+\DoxyCodeLine{227     \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{228     \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{229     \textcolor{keywordtype}{int} searchRange = 3; \textcolor{comment}{// Example search range for nearby friendly fortresses}}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dx = -\/searchRange; dx <= searchRange; ++dx) \{}
+\DoxyCodeLine{232         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dy = -\/searchRange; dy <= searchRange; ++dy) \{}
+\DoxyCodeLine{233             \textcolor{keywordflow}{if} (dx == 0 \&\& dy == 0) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{234             \textcolor{keywordtype}{int} targetX = x + dx;}
+\DoxyCodeLine{235             \textcolor{keywordtype}{int} targetY = y + dy;}
+\DoxyCodeLine{236             \textcolor{keywordflow}{if} (targetX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetX) < boardWidth \&\&}
+\DoxyCodeLine{237                 targetY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetY) < boardHeight)}
+\DoxyCodeLine{238             \{}
+\DoxyCodeLine{239                 \mbox{\hyperlink{classField}{Field}}* targetField = board[targetX][targetY];}
+\DoxyCodeLine{240                 \textcolor{comment}{// Check if it's a Fortress and if it's occupied by a friendly unit}}
+\DoxyCodeLine{241                 \textcolor{keywordflow}{if} (targetField \&\& \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classFortress}{Fortress}}*\textcolor{keyword}{>}(targetField) \&\& targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() \&\& targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() == \mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}()) \{}
+\DoxyCodeLine{242                     \textcolor{keywordflow}{return} \{targetX, targetY\}; \textcolor{comment}{// Found a friendly fortress}}
+\DoxyCodeLine{243                 \}}
+\DoxyCodeLine{244             \}}
+\DoxyCodeLine{245         \}}
+\DoxyCodeLine{246     \}}
+\DoxyCodeLine{247     \textcolor{keywordflow}{return} \{-\/1, -\/1\}; \textcolor{comment}{// No friendly fortress found nearby}}
+\DoxyCodeLine{248 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Player() и Field\+::get\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dc3/classCannon_a7983308d4c1a799a8394d8c489829db1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCannon_a6f9c188b16c445e9385d82002903f530}\label{classCannon_a6f9c188b16c445e9385d82002903f530}} 
+\index{Cannon@{Cannon}!\_findFriendlyNearby@{\_findFriendlyNearby}}
+\index{\_findFriendlyNearby@{\_findFriendlyNearby}!Cannon@{Cannon}}
+\doxysubsubsection{\texorpdfstring{\_findFriendlyNearby()}{\_findFriendlyNearby()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Cannon\+::\+\_\+find\+Friendly\+Nearby (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле cannon.\+cpp строка 138
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138                                                                                                            \{}
+\DoxyCodeLine{139     \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{140     \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{141     \textcolor{keywordtype}{int} searchRange = 2; \textcolor{comment}{// Example search range for nearby friendly units}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dx = -\/searchRange; dx <= searchRange; ++dx) \{}
+\DoxyCodeLine{144         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dy = -\/searchRange; dy <= searchRange; ++dy) \{}
+\DoxyCodeLine{145             \textcolor{keywordflow}{if} (dx == 0 \&\& dy == 0) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{146             \textcolor{keywordtype}{int} targetX = x + dx;}
+\DoxyCodeLine{147             \textcolor{keywordtype}{int} targetY = y + dy;}
+\DoxyCodeLine{148             \textcolor{keywordflow}{if} (targetX >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetX) < boardWidth \&\&}
+\DoxyCodeLine{149                 targetY >= 0 \&\& \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetY) < boardHeight)}
+\DoxyCodeLine{150             \{}
+\DoxyCodeLine{151                 \mbox{\hyperlink{classField}{Field}}* targetField = board[targetX][targetY];}
+\DoxyCodeLine{152                 \textcolor{keywordflow}{if} (targetField \&\& targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() \&\& targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() == \mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}()) \{}
+\DoxyCodeLine{153                     \textcolor{keywordflow}{return} \{targetX, targetY\}; \textcolor{comment}{// Found a friendly unit}}
+\DoxyCodeLine{154                 \}}
+\DoxyCodeLine{155             \}}
+\DoxyCodeLine{156         \}}
+\DoxyCodeLine{157     \}}
+\DoxyCodeLine{158     \textcolor{keywordflow}{return} \{-\/1, -\/1\}; \textcolor{comment}{// No friendly unit found nearby}}
+\DoxyCodeLine{159 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Player() и Field\+::get\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dc3/classCannon_a6f9c188b16c445e9385d82002903f530_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCannon_a98c5782f0e545c9ddbf4c4829af63800}\label{classCannon_a98c5782f0e545c9ddbf4c4829af63800}} 
+\index{Cannon@{Cannon}!fire@{fire}}
+\index{fire@{fire}!Cannon@{Cannon}}
+\doxysubsubsection{\texorpdfstring{fire()}{fire()}}
+{\footnotesize\ttfamily bool Cannon\+::fire (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{targetX,  }\item[{int}]{targetY }\end{DoxyParamCaption})}
+
+
+
+Fires at the specified target coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+{\em targetX} & X coordinate of the target. \\
+\hline
+{\em targetY} & Y coordinate of the target. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the fire action was successful. 
+\end{DoxyReturn}
+
+
+См. определение в файле cannon.\+cpp строка 47
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                                                                \{}
+\DoxyCodeLine{48     \textcolor{comment}{// Cannons use 1 Will point to fire}}
+\DoxyCodeLine{49     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() <= 0) \{}
+\DoxyCodeLine{50         std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} has no Will to fire.\(\backslash\)n"{}};}
+\DoxyCodeLine{51         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{comment}{// Check if the target is within attack distance (using Manhattan distance as per AI logic)}}
+\DoxyCodeLine{55     \textcolor{comment}{// This assumes targetX and targetY are absolute board coordinates, not relative}}
+\DoxyCodeLine{56     \textcolor{comment}{// Need the cannon's current position to calculate distance}}
+\DoxyCodeLine{57     \textcolor{keywordtype}{int} cannonX = -\/1, cannonY = -\/1;}
+\DoxyCodeLine{58     \textcolor{keywordtype}{bool} foundCannon = \textcolor{keyword}{false};}
+\DoxyCodeLine{59     \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{60     \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \textcolor{comment}{// Find the cannon's position}}
+\DoxyCodeLine{63     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < boardWidth; ++x) \{}
+\DoxyCodeLine{64         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < boardHeight; ++y) \{}
+\DoxyCodeLine{65             \textcolor{keywordflow}{if} (board[x][y]-\/>getUnit() == \textcolor{keyword}{this}) \{}
+\DoxyCodeLine{66                 cannonX = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(x);}
+\DoxyCodeLine{67                 cannonY = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(y);}
+\DoxyCodeLine{68                 foundCannon = \textcolor{keyword}{true};}
+\DoxyCodeLine{69                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{70             \}}
+\DoxyCodeLine{71         \}}
+\DoxyCodeLine{72         \textcolor{keywordflow}{if} (foundCannon) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{73     \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     \textcolor{keywordflow}{if} (!foundCannon) \{}
+\DoxyCodeLine{76         std::cerr << \textcolor{stringliteral}{"{}Error: Cannon unit not found on the board.\(\backslash\)n"{}};}
+\DoxyCodeLine{77         \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Cannon not on board?}}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \textcolor{keywordtype}{int} distance = std::abs(targetX -\/ cannonX) + std::abs(targetY -\/ cannonY);}
+\DoxyCodeLine{81     \textcolor{keywordflow}{if} (distance > \mbox{\hyperlink{classUnit_a8856896cc73b342fec2cd3e8079e8e6a}{getAttackDistance}}()) \{}
+\DoxyCodeLine{82         std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} target ("{}} << targetX << \textcolor{stringliteral}{"{},"{}} << targetY << \textcolor{stringliteral}{"{}) is out of range.\(\backslash\)n"{}};}
+\DoxyCodeLine{83         \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Target out of range}}
+\DoxyCodeLine{84     \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     \textcolor{comment}{// Check if the target field exists and has a unit}}
+\DoxyCodeLine{87     \textcolor{keywordflow}{if} (targetX < 0 || \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetX) >= boardWidth || targetY < 0 || \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetY) >= boardHeight) \{}
+\DoxyCodeLine{88         std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} target coordinates ("{}} << targetX << \textcolor{stringliteral}{"{},"{}} << targetY << \textcolor{stringliteral}{"{}) are out of bounds.\(\backslash\)n"{}};}
+\DoxyCodeLine{89         \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Target out of bounds}}
+\DoxyCodeLine{90     \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \mbox{\hyperlink{classField}{Field}}* targetField = board[targetX][targetY];}
+\DoxyCodeLine{93     \textcolor{keywordflow}{if} (!targetField || !targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}()) \{}
+\DoxyCodeLine{94         std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} target field ("{}} << targetX << \textcolor{stringliteral}{"{},"{}} << targetY << \textcolor{stringliteral}{"{}) is empty.\(\backslash\)n"{}};}
+\DoxyCodeLine{95         \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Target field is empty}}
+\DoxyCodeLine{96     \}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98     \mbox{\hyperlink{classUnit}{Unit}}* target = targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{99     \textcolor{keywordflow}{if} (target-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}() == \mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}()) \{}
+\DoxyCodeLine{100         std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} cannot attack a friendly unit.\(\backslash\)n"{}};}
+\DoxyCodeLine{101         \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Cannot attack friendly unit}}
+\DoxyCodeLine{102     \}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} fires at "{}} << target-\/>\mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{}!\(\backslash\)n"{}};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106     \textcolor{comment}{// Apply damage to the target unit}}
+\DoxyCodeLine{107     target-\/>\mbox{\hyperlink{classUnit_aaec88b40541cf3eed9e3ab4780fe937e}{setHealth}}(target-\/>\mbox{\hyperlink{classUnit_a0e44c4741b8ce52687715dc82fdfaf23}{getCurrentHealth}}() -\/ \mbox{\hyperlink{classUnit_a0062c5fab5677c6b47e1d881b4dcc53c}{getDamage}}());}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \textcolor{comment}{// Check if the target unit is defeated}}
+\DoxyCodeLine{110     \textcolor{keywordflow}{if} (target-\/>\mbox{\hyperlink{classUnit_a0e44c4741b8ce52687715dc82fdfaf23}{getCurrentHealth}}() <= 0) \{}
+\DoxyCodeLine{111         std::cout << target-\/>\mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} has been defeated!\(\backslash\)n"{}};}
+\DoxyCodeLine{112         \textcolor{comment}{// Remove the defeated unit from the board}}
+\DoxyCodeLine{113         targetField-\/>\mbox{\hyperlink{classField_aac940692dbfe1437aba7efc3a8903ea8}{setUnit}}(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{114         \textcolor{comment}{// Note: The actual deletion of the Unit object should be handled by}}
+\DoxyCodeLine{115         \textcolor{comment}{// the game's unit management logic (e.g., the Player class or a central}}
+\DoxyCodeLine{116         \textcolor{comment}{// unit manager) to avoid memory leaks or double deletions.}}
+\DoxyCodeLine{117         \textcolor{comment}{// For simplicity here, we are just removing the pointer from the field.}}
+\DoxyCodeLine{118     \}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120     \textcolor{comment}{// Consume Will point for firing}}
+\DoxyCodeLine{121     \mbox{\hyperlink{classUnit_a207c7fe4b9d30af2446bb8af0a127c22}{setWill}}(\mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() -\/ 1);}
+\DoxyCodeLine{122     std::cout << \mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} Will remaining: "{}} << \mbox{\hyperlink{classUnit_a4d3fd62e52d7c275c5a4b416b03e2998}{getWill}}() << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \textcolor{comment}{// Fire successful}}
+\DoxyCodeLine{125 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Attack\+Distance(), Unit\+::get\+Current\+Health(), Unit\+::get\+Damage(), Unit\+::get\+Name(), Unit\+::get\+Player(), Field\+::get\+Unit(), Unit\+::get\+Will(), Unit\+::set\+Health(), Field\+::set\+Unit() и Unit\+::set\+Will().
+
+
+
+Используется в use\+Ability().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{db/dc3/classCannon_a98c5782f0e545c9ddbf4c4829af63800_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{db/dc3/classCannon_a98c5782f0e545c9ddbf4c4829af63800_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCannon_a1aadba7595ed0f8ce3f6aaf9e3923ca9}\label{classCannon_a1aadba7595ed0f8ce3f6aaf9e3923ca9}} 
+\index{Cannon@{Cannon}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!Cannon@{Cannon}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cannon_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} Cannon\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the cannon\textquotesingle{}s direction. 
+
+\begin{DoxyReturn}{Возвращает}
+The current direction. 
+\end{DoxyReturn}
+
+
+См. определение в файле cannon.\+cpp строка 37
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                      \{}
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCannon_a8f025d4de3fc0f7a1ef4d0836e495bca}{\_direction}};}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки \+\_\+direction.
+
+\mbox{\Hypertarget{classCannon_af6d2765b54c29a5d5221880722258270}\label{classCannon_af6d2765b54c29a5d5221880722258270}} 
+\index{Cannon@{Cannon}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!Cannon@{Cannon}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char Cannon\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the symbol representing the cannon (for display). 
+
+\begin{DoxyReturn}{Возвращает}
+\textquotesingle{}C\textquotesingle{} character. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classUnit_afd6bcf5adaadb97b1378512344bd642b}{Unit}}.
+
+
+
+См. определение в файле cannon.\+h строка 84
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84 \{ \textcolor{keywordflow}{return} \textcolor{charliteral}{'C'}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCannon_a5725deffe25c5741d9fd473e7f7842e6}\label{classCannon_a5725deffe25c5741d9fd473e7f7842e6}} 
+\index{Cannon@{Cannon}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!Cannon@{Cannon}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily void Cannon\+::set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cannon_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir }\end{DoxyParamCaption})}
+
+
+
+Sets the cannon\textquotesingle{}s direction. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em dir} & The new direction. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле cannon.\+cpp строка 32
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                        \{}
+\DoxyCodeLine{33     \mbox{\hyperlink{classCannon_a8f025d4de3fc0f7a1ef4d0836e495bca}{\_direction}} = dir;}
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки \+\_\+direction.
+
+\mbox{\Hypertarget{classCannon_a1d7f5eea1d4dbc32c152762c97b90f43}\label{classCannon_a1d7f5eea1d4dbc32c152762c97b90f43}} 
+\index{Cannon@{Cannon}!useAbility@{useAbility}}
+\index{useAbility@{useAbility}!Cannon@{Cannon}}
+\doxysubsubsection{\texorpdfstring{useAbility()}{useAbility()}}
+{\footnotesize\ttfamily bool Cannon\+::use\+Ability (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{targetX,  }\item[{int}]{targetY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Uses the cannon\textquotesingle{}s special ability (fire). 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+{\em targetX} & X coordinate of the target. \\
+\hline
+{\em targetY} & Y coordinate of the target. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the ability was used successfully. 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classUnit_a80e6869b4f62b0ddb793efdf513892ee}{Unit}}.
+
+
+
+См. определение в файле cannon.\+cpp строка 131
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131                                                                                      \{}
+\DoxyCodeLine{132     \textcolor{comment}{// Assuming useAbility is used to trigger the Cannon's fire action}}
+\DoxyCodeLine{133     \textcolor{comment}{// The targetX and targetY here are the coordinates of the target field.}}
+\DoxyCodeLine{134     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCannon_a98c5782f0e545c9ddbf4c4829af63800}{fire}}(board, targetX, targetY);}
+\DoxyCodeLine{135 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки fire().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dc3/classCannon_a1d7f5eea1d4dbc32c152762c97b90f43_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classCannon_a8f025d4de3fc0f7a1ef4d0836e495bca}\label{classCannon_a8f025d4de3fc0f7a1ef4d0836e495bca}} 
+\index{Cannon@{Cannon}!\_direction@{\_direction}}
+\index{\_direction@{\_direction}!Cannon@{Cannon}}
+\doxysubsubsection{\texorpdfstring{\_direction}{\_direction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cannon_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} Cannon\+::\+\_\+direction\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле cannon.\+h строка 27
+
+
+
+Используется в get\+Direction() и set\+Direction().
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cannon_8h}{cannon.\+h}}\item 
+\mbox{\hyperlink{cannon_8cpp}{cannon.\+cpp}}\end{DoxyCompactItemize}

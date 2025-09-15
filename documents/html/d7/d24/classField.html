@@ -1,0 +1,848 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameLab2sem: Класс Field</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameLab2sem
+   </div>
+   <div id="projectbrief">A turn-based strategy game with AI and CLI interface.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d7/d24/classField.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="../../d9/d14/classField-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Field</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Represents a field (tile) on the game board. Base class for all field types.  
+ <a href="../../d7/d24/classField.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d5/d5a/field_8h_source.html">field.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:Field:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/de6/classField__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Граф связей класса Field:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d3/d0e/classField__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ad8556c0f47d0dc949f11480c4c6e4521"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Field</a> (int fieldX, int fieldY, const std::string &amp;fieldType=&quot;plain&quot;)</td></tr>
+<tr class="memdesc:ad8556c0f47d0dc949f11480c4c6e4521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a> at the given coordinates and type.  <a href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad8556c0f47d0dc949f11480c4c6e4521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d6e6d09b8f8e46de62b40119d62c60"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a45d6e6d09b8f8e46de62b40119d62c60">~Field</a> ()</td></tr>
+<tr class="memdesc:a45d6e6d09b8f8e46de62b40119d62c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a>.  <a href="../../d7/d24/classField.html#a45d6e6d09b8f8e46de62b40119d62c60">Подробнее...</a><br /></td></tr>
+<tr class="separator:a45d6e6d09b8f8e46de62b40119d62c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726868d72ad77d531e0dcf0969b81091"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">getUnit</a> () const</td></tr>
+<tr class="memdesc:a726868d72ad77d531e0dcf0969b81091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the unit on this field.  <a href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">Подробнее...</a><br /></td></tr>
+<tr class="separator:a726868d72ad77d531e0dcf0969b81091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac940692dbfe1437aba7efc3a8903ea8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">setUnit</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *u)</td></tr>
+<tr class="memdesc:aac940692dbfe1437aba7efc3a8903ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the unit on this field.  <a href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">Подробнее...</a><br /></td></tr>
+<tr class="separator:aac940692dbfe1437aba7efc3a8903ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b70c294dd34070bcae38b5b518f6d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a> () const</td></tr>
+<tr class="memdesc:af4b70c294dd34070bcae38b5b518f6d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the X coordinate of this field.  <a href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">Подробнее...</a><br /></td></tr>
+<tr class="separator:af4b70c294dd34070bcae38b5b518f6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86673ee820c9cfed15b603c9dae6853e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a> () const</td></tr>
+<tr class="memdesc:a86673ee820c9cfed15b603c9dae6853e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Y coordinate of this field.  <a href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a86673ee820c9cfed15b603c9dae6853e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9a69868e0480528ccaf9dd309862ef"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a8d9a69868e0480528ccaf9dd309862ef">getType</a> () const</td></tr>
+<tr class="memdesc:a8d9a69868e0480528ccaf9dd309862ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of this field.  <a href="../../d7/d24/classField.html#a8d9a69868e0480528ccaf9dd309862ef">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8d9a69868e0480528ccaf9dd309862ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a454ca5b8269657dc01cd611eceb3d397"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a454ca5b8269657dc01cd611eceb3d397">applyEffect</a> (<a class="el" href="../../d2/d4b/classPlayer.html">Player</a> *owner, std::vector&lt; std::vector&lt; <a class="el" href="../../d7/d24/classField.html">Field</a> * &gt;&gt; &amp;board)</td></tr>
+<tr class="memdesc:a454ca5b8269657dc01cd611eceb3d397"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the field's effect (e.g., mana generation, damage) to the board.  <a href="../../d7/d24/classField.html#a454ca5b8269657dc01cd611eceb3d397">Подробнее...</a><br /></td></tr>
+<tr class="separator:a454ca5b8269657dc01cd611eceb3d397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718edf661e92a18a81c1a434b8e9ba40"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a718edf661e92a18a81c1a434b8e9ba40">getDefenseBonus</a> () const</td></tr>
+<tr class="memdesc:a718edf661e92a18a81c1a434b8e9ba40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the defense bonus provided by this field.  <a href="../../d7/d24/classField.html#a718edf661e92a18a81c1a434b8e9ba40">Подробнее...</a><br /></td></tr>
+<tr class="separator:a718edf661e92a18a81c1a434b8e9ba40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca250c9a0c031e21c7e7c609b3b3dec3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#aca250c9a0c031e21c7e7c609b3b3dec3">canEnter</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *<a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>) const</td></tr>
+<tr class="memdesc:aca250c9a0c031e21c7e7c609b3b3dec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a unit can enter this field.  <a href="../../d7/d24/classField.html#aca250c9a0c031e21c7e7c609b3b3dec3">Подробнее...</a><br /></td></tr>
+<tr class="separator:aca250c9a0c031e21c7e7c609b3b3dec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7bbcc952313d63e39ac2915ef92bbde"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#af7bbcc952313d63e39ac2915ef92bbde">onEnter</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *<a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>)</td></tr>
+<tr class="memdesc:af7bbcc952313d63e39ac2915ef92bbde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a unit entering this field.  <a href="../../d7/d24/classField.html#af7bbcc952313d63e39ac2915ef92bbde">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7bbcc952313d63e39ac2915ef92bbde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cbfac5b4571fde18c48884bc7059b8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#af7cbfac5b4571fde18c48884bc7059b8">onLeave</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *<a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>)</td></tr>
+<tr class="memdesc:af7cbfac5b4571fde18c48884bc7059b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a unit leaving this field.  <a href="../../d7/d24/classField.html#af7cbfac5b4571fde18c48884bc7059b8">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7cbfac5b4571fde18c48884bc7059b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e73113267195f2680dd028f8950ae5"><td class="memItemLeft" align="right" valign="top">virtual char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a03e73113267195f2680dd028f8950ae5">getSymbol</a> () const</td></tr>
+<tr class="memdesc:a03e73113267195f2680dd028f8950ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the symbol representing this field (for display).  <a href="../../d7/d24/classField.html#a03e73113267195f2680dd028f8950ae5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a03e73113267195f2680dd028f8950ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a363d83248e8f66bf865e514432072afb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a></td></tr>
+<tr class="memdesc:a363d83248e8f66bf865e514432072afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the unit on this field (if any)  <a href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a363d83248e8f66bf865e514432072afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60bf7589f33fee524f8cdc980c51a979"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a60bf7589f33fee524f8cdc980c51a979">x</a></td></tr>
+<tr class="separator:a60bf7589f33fee524f8cdc980c51a979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038186563fbee686e206425cc39946d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a038186563fbee686e206425cc39946d9">y</a></td></tr>
+<tr class="memdesc:a038186563fbee686e206425cc39946d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinates of the field.  <a href="../../d7/d24/classField.html#a038186563fbee686e206425cc39946d9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a038186563fbee686e206425cc39946d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842a105b475478a01fefe89821f19a9a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a842a105b475478a01fefe89821f19a9a">type</a></td></tr>
+<tr class="memdesc:a842a105b475478a01fefe89821f19a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the field (e.g., "plain", "fortress", "hill")  <a href="../../d7/d24/classField.html#a842a105b475478a01fefe89821f19a9a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a842a105b475478a01fefe89821f19a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Represents a field (tile) on the game board. Base class for all field types. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d5a/field_8h_source.html">field.h</a> строка <a class="el" href="../../d5/d5a/field_8h_source.html#l00015">15</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ad8556c0f47d0dc949f11480c4c6e4521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8556c0f47d0dc949f11480c4c6e4521">&#9670;&nbsp;</a></span>Field()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Field::Field </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fieldX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fieldY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fieldType</em> = <code>&quot;plain&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a> at the given coordinates and type. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fieldX</td><td>X coordinate. </td></tr>
+    <tr><td class="paramname">fieldY</td><td>Y coordinate. </td></tr>
+    <tr><td class="paramname">fieldType</td><td>Type of the field (default: "plain"). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a> строка <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00008">8</a></p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    : <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>(<span class="keyword">nullptr</span>), <a class="code" href="../../d7/d24/classField.html#a60bf7589f33fee524f8cdc980c51a979">x</a>(fieldX), <a class="code" href="../../d7/d24/classField.html#a038186563fbee686e206425cc39946d9">y</a>(fieldY), <a class="code" href="../../d7/d24/classField.html#a842a105b475478a01fefe89821f19a9a">type</a>(fieldType)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="ttc" id="aclassField_html_a038186563fbee686e206425cc39946d9"><div class="ttname"><a href="../../d7/d24/classField.html#a038186563fbee686e206425cc39946d9">Field::y</a></div><div class="ttdeci">int y</div><div class="ttdoc">Coordinates of the field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/field_8h_source.html#l00019">field.h:19</a></div></div>
+<div class="ttc" id="aclassField_html_a363d83248e8f66bf865e514432072afb"><div class="ttname"><a href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">Field::unit</a></div><div class="ttdeci">Unit * unit</div><div class="ttdoc">Pointer to the unit on this field (if any)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/field_8h_source.html#l00018">field.h:18</a></div></div>
+<div class="ttc" id="aclassField_html_a60bf7589f33fee524f8cdc980c51a979"><div class="ttname"><a href="../../d7/d24/classField.html#a60bf7589f33fee524f8cdc980c51a979">Field::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/field_8h_source.html#l00019">field.h:19</a></div></div>
+<div class="ttc" id="aclassField_html_a842a105b475478a01fefe89821f19a9a"><div class="ttname"><a href="../../d7/d24/classField.html#a842a105b475478a01fefe89821f19a9a">Field::type</a></div><div class="ttdeci">std::string type</div><div class="ttdoc">Type of the field (e.g., &quot;plain&quot;, &quot;fortress&quot;, &quot;hill&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/field_8h_source.html#l00020">field.h:20</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00025">BurnedField::applyEffect()</a>, <a class="el" href="../../d8/d4c/shieldedfield_8cpp_source.html#l00024">ShieldedField::applyEffect()</a> и <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00058">BombedField::explode()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d24/classField_ad8556c0f47d0dc949f11480c4c6e4521_icgraph.svg" width="100%" height="423"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a45d6e6d09b8f8e46de62b40119d62c60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d6e6d09b8f8e46de62b40119d62c60">&#9670;&nbsp;</a></span>~Field()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Field::~Field </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Virtual destructor for <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a> строка <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00013">13</a></p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// The unit on the field is owned by the player, not the field.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// So, the field should not delete the unit here.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// The player&#39;s destructor or game logic should handle unit deletion.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a454ca5b8269657dc01cd611eceb3d397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a454ca5b8269657dc01cd611eceb3d397">&#9670;&nbsp;</a></span>applyEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Field::applyEffect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d4b/classPlayer.html">Player</a> *&#160;</td>
+          <td class="paramname"><em>owner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="../../d7/d24/classField.html">Field</a> * &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>board</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply the field's effect (e.g., mana generation, damage) to the board. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">owner</td><td>The player whose turn it is. </td></tr>
+    <tr><td class="paramname">board</td><td>The game board. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Переопределяется в <a class="el" href="../../d1/dd1/classShieldedField.html#a06a7d981e2f14acf56f98c9c2c3f6d78">ShieldedField</a>, <a class="el" href="../../db/d5c/classManaMineField.html#a58740f41f2ae6d0fe66cbe83116bd755">ManaMineField</a>, <a class="el" href="../../dd/db4/classHospitalField.html#a653ea196bbbdf6f788a88fd70406679d">HospitalField</a>, <a class="el" href="../../d8/d05/classFortress.html#a29d63386bdfb5769839506b137877b68">Fortress</a>, <a class="el" href="../../d6/ded/classBurnedField.html#a8f5789ec0273283d79911bf6bed5936e">BurnedField</a> и <a class="el" href="../../da/d43/classBombedField.html#a48a282d1c5a11b9970228a59b52f6efc">BombedField</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a> строка <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00047">47</a></p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Default fields have no special effects</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00112">attack()</a> и <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00220">move()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d24/classField_a454ca5b8269657dc01cd611eceb3d397_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="aca250c9a0c031e21c7e7c609b3b3dec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca250c9a0c031e21c7e7c609b3b3dec3">&#9670;&nbsp;</a></span>canEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Field::canEnter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td>
+          <td class="paramname"><em>unit</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if a unit can enter this field. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>The unit to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True if the unit can enter, false otherwise. </dd></dl>
+
+<p>Переопределяется в <a class="el" href="../../d1/dd1/classShieldedField.html#a2b42f9d856dd98d6bffaf975bd3bd268">ShieldedField</a>, <a class="el" href="../../db/d5c/classManaMineField.html#a22ab0221bc04d653ec9288b2e00c8d34">ManaMineField</a>, <a class="el" href="../../dd/db4/classHospitalField.html#a8f01ef46e2456b269ca993b74648b5bb">HospitalField</a>, <a class="el" href="../../d8/d63/classHill.html#af19572621a6a70c8a2f765e335f45970">Hill</a>, <a class="el" href="../../d8/d05/classFortress.html#a6cb9778963a2a807e36c4ef8eb8c40e6">Fortress</a>, <a class="el" href="../../d6/ded/classBurnedField.html#a82887e288b4f87ef932186270408a7ba">BurnedField</a> и <a class="el" href="../../da/d43/classBombedField.html#aff9afc2bda8fdb918c29cf04371c5d4e">BombedField</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a> строка <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00060">60</a></p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// Plain fields can be entered if they are empty</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> this-&gt;unit == <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">unit</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00037">getPlayerCommands()</a> и <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00220">move()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d24/classField_aca250c9a0c031e21c7e7c609b3b3dec3_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a718edf661e92a18a81c1a434b8e9ba40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718edf661e92a18a81c1a434b8e9ba40">&#9670;&nbsp;</a></span>getDefenseBonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Field::getDefenseBonus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the defense bonus provided by this field. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>The defense bonus value (default: 0). </dd></dl>
+
+<p>Переопределяется в <a class="el" href="../../d1/dd1/classShieldedField.html#a95b93296f68d0383c45767a1c203126c">ShieldedField</a>, <a class="el" href="../../d8/d63/classHill.html#acf7cc1d58f7d29bf8d84ea2cc8ada242">Hill</a>, <a class="el" href="../../d8/d05/classFortress.html#ada80de06eab758febec3af099bc21fba">Fortress</a> и <a class="el" href="../../d6/ded/classBurnedField.html#aadd590a0712a8e49f83d0b75882f9cb0">BurnedField</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a> строка <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00053">53</a></p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00112">attack()</a> и <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00022">getEffectiveDefense()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d24/classField_a718edf661e92a18a81c1a434b8e9ba40_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a03e73113267195f2680dd028f8950ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e73113267195f2680dd028f8950ae5">&#9670;&nbsp;</a></span>getSymbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual char Field::getSymbol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the symbol representing this field (for display). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Character symbol (default: '+'). </dd></dl>
+
+<p>Переопределяется в <a class="el" href="../../d1/dd1/classShieldedField.html#a239178b926b3c4420eadc00002590cc8">ShieldedField</a>, <a class="el" href="../../db/d5c/classManaMineField.html#aca33a1fb8aa80deeeb5123aa738fd40c">ManaMineField</a>, <a class="el" href="../../dd/db4/classHospitalField.html#a699854aa98e115f2e7c5c16bb09993f4">HospitalField</a>, <a class="el" href="../../d8/d63/classHill.html#ad1e5e44888944a73d9c33f261c33132a">Hill</a>, <a class="el" href="../../d8/d05/classFortress.html#affe6600fca0229e8d582bd364e8216d9">Fortress</a>, <a class="el" href="../../d6/ded/classBurnedField.html#a3e7c0d7ea920806724075c22157e27a7">BurnedField</a> и <a class="el" href="../../da/d43/classBombedField.html#af11d142cae00e419ae8edd821f00cbc7">BombedField</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d5a/field_8h_source.html">field.h</a> строка <a class="el" href="../../d5/d5a/field_8h_source.html#l00100">100</a></p>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{ <span class="keywordflow">return</span> <span class="charliteral">&#39;+&#39;</span>; }</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00701">displayBoard()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d24/classField_a03e73113267195f2680dd028f8950ae5_icgraph.svg" width="296" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8d9a69868e0480528ccaf9dd309862ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9a69868e0480528ccaf9dd309862ef">&#9670;&nbsp;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Field::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the type of this field. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>String representing the field type. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a> строка <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00040">40</a></p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d24/classField.html#a842a105b475478a01fefe89821f19a9a">type</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d5a/field_8h_source.html#l00020">type</a>.</p>
+
+</div>
+</div>
+<a id="a726868d72ad77d531e0dcf0969b81091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a726868d72ad77d531e0dcf0969b81091">&#9670;&nbsp;</a></span>getUnit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> * Field::getUnit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the unit on this field. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Pointer to the unit, or nullptr if none. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a> строка <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00020">20</a></p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">unit</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00189">Cannon::_findEmptyFieldInRange()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00162">Cannon::_findEnemyInRange()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00226">Cannon::_findFriendlyFortressNearby()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00138">Cannon::_findFriendlyNearby()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00255">AIact()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00085">applyDamage()</a>, <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00025">BurnedField::applyEffect()</a>, <a class="el" href="../../d8/d4c/shieldedfield_8cpp_source.html#l00024">ShieldedField::applyEffect()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00112">attack()</a>, <a class="el" href="../../de/d59/bombspell_8cpp_source.html#l00022">BombSpell::cast()</a>, <a class="el" href="../../d4/d21/cursespell_8cpp_source.html#l00014">CurseSpell::cast()</a>, <a class="el" href="../../da/def/fireballspell_8cpp_source.html#l00016">FireballSpell::cast()</a>, <a class="el" href="../../d1/d55/morogspell_8cpp_source.html#l00015">MorogSpell::cast()</a>, <a class="el" href="../../d6/d16/teleportspell_8cpp_source.html#l00021">TeleportSpell::cast()</a>, <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00701">displayBoard()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00058">BombedField::explode()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00048">findRandomAdjacentEmptyField()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00083">findRandomAICreateSpot()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00113">findRandomEnemyUnitCoords()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00047">Cannon::fire()</a>, <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00037">getPlayerCommands()</a>, <a class="el" href="../../df/d0a/main_8cpp_source.html#l00005">main()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00220">move()</a>, <a class="el" href="../../db/d26/priest_8cpp_source.html#l00020">Priest::pray()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00582">tryAIAttack()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00204">tryAIEngineerBuildSpecific()</a>, <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00627">tryAIMove()</a>, <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00623">unit_map()</a> и <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00028">updateFortressStrength()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d24/classField_a726868d72ad77d531e0dcf0969b81091_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="af4b70c294dd34070bcae38b5b518f6d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b70c294dd34070bcae38b5b518f6d3">&#9670;&nbsp;</a></span>getX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Field::getX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the X coordinate of this field. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>X coordinate. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a> строка <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00030">30</a></p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d24/classField.html#a60bf7589f33fee524f8cdc980c51a979">x</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d5a/field_8h_source.html#l00019">x</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00022">BombedField::applyEffect()</a>, <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00025">BurnedField::applyEffect()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00040">Fortress::applyEffect()</a>, <a class="el" href="../../d3/d97/hospitalfield_8cpp_source.html#l00023">HospitalField::applyEffect()</a>, <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00024">ManaMineField::applyEffect()</a>, <a class="el" href="../../d8/d4c/shieldedfield_8cpp_source.html#l00024">ShieldedField::applyEffect()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00058">BombedField::explode()</a>, <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00045">ManaMineField::generateMana()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00041">BombedField::onEnter()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00072">Fortress::onEnter()</a> и <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00083">Fortress::onLeave()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d24/classField_af4b70c294dd34070bcae38b5b518f6d3_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a86673ee820c9cfed15b603c9dae6853e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86673ee820c9cfed15b603c9dae6853e">&#9670;&nbsp;</a></span>getY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Field::getY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Y coordinate of this field. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Y coordinate. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a> строка <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00035">35</a></p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d24/classField.html#a038186563fbee686e206425cc39946d9">y</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d5a/field_8h_source.html#l00019">y</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00022">BombedField::applyEffect()</a>, <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00025">BurnedField::applyEffect()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00040">Fortress::applyEffect()</a>, <a class="el" href="../../d3/d97/hospitalfield_8cpp_source.html#l00023">HospitalField::applyEffect()</a>, <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00024">ManaMineField::applyEffect()</a>, <a class="el" href="../../d8/d4c/shieldedfield_8cpp_source.html#l00024">ShieldedField::applyEffect()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00058">BombedField::explode()</a>, <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00045">ManaMineField::generateMana()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00041">BombedField::onEnter()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00072">Fortress::onEnter()</a> и <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00083">Fortress::onLeave()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d24/classField_a86673ee820c9cfed15b603c9dae6853e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="af7bbcc952313d63e39ac2915ef92bbde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7bbcc952313d63e39ac2915ef92bbde">&#9670;&nbsp;</a></span>onEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Field::onEnter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td>
+          <td class="paramname"><em>unit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle a unit entering this field. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>The unit entering. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Переопределяется в <a class="el" href="../../d8/d05/classFortress.html#a59036b76372351a496f86c0813862082">Fortress</a> и <a class="el" href="../../da/d43/classBombedField.html#a50bc4ead59e96a08eb5f905c9051c010">BombedField</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a> строка <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00068">68</a></p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// No special action when a unit enters a plain field</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d6/d16/teleportspell_8cpp_source.html#l00021">TeleportSpell::cast()</a> и <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00220">move()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d24/classField_af7bbcc952313d63e39ac2915ef92bbde_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="af7cbfac5b4571fde18c48884bc7059b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7cbfac5b4571fde18c48884bc7059b8">&#9670;&nbsp;</a></span>onLeave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Field::onLeave </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td>
+          <td class="paramname"><em>unit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle a unit leaving this field. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>The unit leaving. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Переопределяется в <a class="el" href="../../d8/d05/classFortress.html#a33bd8cb24eab2488b5a21d17ca60a861">Fortress</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a> строка <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00075">75</a></p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// No special action when a unit leaves a plain field</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Используется в <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00220">move()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d24/classField_af7cbfac5b4571fde18c48884bc7059b8_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="aac940692dbfe1437aba7efc3a8903ea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac940692dbfe1437aba7efc3a8903ea8">&#9670;&nbsp;</a></span>setUnit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Field::setUnit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td>
+          <td class="paramname"><em>u</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the unit on this field. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">u</td><td>Pointer to the unit to place. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a> строка <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00025">25</a></p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a> = u;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">unit</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00085">applyDamage()</a>, <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00025">BurnedField::applyEffect()</a>, <a class="el" href="../../d8/d4c/shieldedfield_8cpp_source.html#l00024">ShieldedField::applyEffect()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00011">BombedField::BombedField()</a>, <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00010">BurnedField::BurnedField()</a>, <a class="el" href="../../d6/d16/teleportspell_8cpp_source.html#l00021">TeleportSpell::cast()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00058">BombedField::explode()</a>, <a class="el" href="../../d1/da6/cannon_8cpp_source.html#l00047">Cannon::fire()</a>, <a class="el" href="../../d9/deb/getcommands_8cpp_source.html#l00037">getPlayerCommands()</a>, <a class="el" href="../../d2/d0d/hill_8cpp_source.html#l00007">Hill::Hill()</a>, <a class="el" href="../../d3/d97/hospitalfield_8cpp_source.html#l00008">HospitalField::HospitalField()</a>, <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00009">ManaMineField::ManaMineField()</a>, <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00220">move()</a>, <a class="el" href="../../d8/d4c/shieldedfield_8cpp_source.html#l00009">ShieldedField::ShieldedField()</a> и <a class="el" href="../../d0/d77/AI_8cpp_source.html#l00204">tryAIEngineerBuildSpecific()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d24/classField_aac940692dbfe1437aba7efc3a8903ea8_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a842a105b475478a01fefe89821f19a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842a105b475478a01fefe89821f19a9a">&#9670;&nbsp;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Field::type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Type of the field (e.g., "plain", "fortress", "hill") </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d5a/field_8h_source.html">field.h</a> строка <a class="el" href="../../d5/d5a/field_8h_source.html#l00020">20</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00040">getType()</a>.</p>
+
+</div>
+</div>
+<a id="a363d83248e8f66bf865e514432072afb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a363d83248e8f66bf865e514432072afb">&#9670;&nbsp;</a></span>unit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dd9/classUnit.html">Unit</a>* Field::unit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to the unit on this field (if any) </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d5a/field_8h_source.html">field.h</a> строка <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">18</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00025">BurnedField::applyEffect()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00040">Fortress::applyEffect()</a>, <a class="el" href="../../d3/d97/hospitalfield_8cpp_source.html#l00023">HospitalField::applyEffect()</a>, <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00024">ManaMineField::applyEffect()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00060">canEnter()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00035">BombedField::canEnter()</a>, <a class="el" href="../../da/dca/burnedfield_8cpp_source.html#l00057">BurnedField::canEnter()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00064">Fortress::canEnter()</a>, <a class="el" href="../../d2/d0d/hill_8cpp_source.html#l00030">Hill::canEnter()</a>, <a class="el" href="../../d3/d97/hospitalfield_8cpp_source.html#l00036">HospitalField::canEnter()</a>, <a class="el" href="../../db/d7c/manaminefield_8cpp_source.html#l00038">ManaMineField::canEnter()</a>, <a class="el" href="../../d8/d4c/shieldedfield_8cpp_source.html#l00053">ShieldedField::canEnter()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00058">BombedField::explode()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00020">getUnit()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00041">BombedField::onEnter()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00072">Fortress::onEnter()</a>, <a class="el" href="../../de/dad/fortress_8cpp_source.html#l00083">Fortress::onLeave()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00025">setUnit()</a> и <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00052">BombedField::shouldExplode()</a>.</p>
+
+</div>
+</div>
+<a id="a60bf7589f33fee524f8cdc980c51a979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60bf7589f33fee524f8cdc980c51a979">&#9670;&nbsp;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Field::x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d5a/field_8h_source.html">field.h</a> строка <a class="el" href="../../d5/d5a/field_8h_source.html#l00019">19</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00030">getX()</a>.</p>
+
+</div>
+</div>
+<a id="a038186563fbee686e206425cc39946d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038186563fbee686e206425cc39946d9">&#9670;&nbsp;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Field::y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Coordinates of the field. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d5a/field_8h_source.html">field.h</a> строка <a class="el" href="../../d5/d5a/field_8h_source.html#l00019">19</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00035">getY()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="../../d5/d5a/field_8h_source.html">field.h</a></li>
+<li><a class="el" href="../../d4/dd0/field_8cpp_source.html">field.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/d24/classField.html">Field</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

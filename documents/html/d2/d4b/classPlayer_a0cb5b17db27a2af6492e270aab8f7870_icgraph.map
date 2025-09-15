@@ -1,0 +1,10 @@
+<map id="Player::getAI" name="Player::getAI">
+<area shape="rect" id="node1" title="Returns true if the player is AI&#45;controlled." alt="" coords="565,107,671,133"/>
+<area shape="rect" id="node2" href="$d0/d77/AI_8cpp.html#a977b9434bdf2f1cb57f540e4098d1a57" title="Performs the main AI logic for the AI player&#39;s turn." alt="" coords="389,5,443,32"/>
+<area shape="rect" id="node5" href="$d8/d05/classFortress.html#a29d63386bdfb5769839506b137877b68" title="Applies the fortress&#39;s effect (e.g., healing, defense) to the board." alt="" coords="339,56,493,83"/>
+<area shape="rect" id="node6" href="$dd/db4/classHospitalField.html#a653ea196bbbdf6f788a88fd70406679d" title="Applies the hospital field&#39;s effect (heals unit)." alt="" coords="322,107,510,133"/>
+<area shape="rect" id="node7" href="$db/d5c/classManaMineField.html#a58740f41f2ae6d0fe66cbe83116bd755" title="Applies the mana mine field&#39;s effect (generates mana)." alt="" coords="315,157,517,184"/>
+<area shape="rect" id="node8" href="$d9/deb/getcommands_8cpp.html#a4ffff192321e79e17d14dc4a1af609a7" title="Handles player commands during their turn." alt="" coords="108,132,267,159"/>
+<area shape="rect" id="node3" href="$d0/d77/AI_8cpp.html#ad90f841d71e5bae7186823d947a92551" title="Handles AI commands during its turn." alt="" coords="122,44,253,71"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,107,60,133"/>
+</map>

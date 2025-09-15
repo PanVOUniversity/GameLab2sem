@@ -1,0 +1,6 @@
+<map id="Infantry::counterAttack" name="Infantry::counterAttack">
+<area shape="rect" id="node1" title="Performs a counter&#45;attack against an attacker." alt="" coords="5,56,176,83"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html#a0062c5fab5677c6b47e1d881b4dcc53c" title="Gets the unit&#39;s damage value." alt="" coords="227,5,361,32"/>
+<area shape="rect" id="node3" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="412,81,529,108"/>
+<area shape="rect" id="node4" href="$df/dd9/classUnit.html#a43a426d4d87aebf07e2737e122bea210" title="Applies damage to the unit." alt="" coords="224,107,364,133"/>
+</map>

@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameLab2sem: Класс BombedField</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameLab2sem
+   </div>
+   <div id="projectbrief">A turn-based strategy game with AI and CLI interface.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/d43/classBombedField.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="../../d7/d4f/classBombedField-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс BombedField</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a> that acts as a trap and explodes after a timer or when triggered by a unit (Bombed <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a>).  
+ <a href="../../da/d43/classBombedField.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d6/d83/bombedfield_8h_source.html">bombedfield.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:BombedField:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/dbc/classBombedField__inherit__graph.svg" width="174" height="551"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Граф связей класса BombedField:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/dbc/classBombedField__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac6883f1e8ec612746caa803d7286b5f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d43/classBombedField.html#ac6883f1e8ec612746caa803d7286b5f2">BombedField</a> (int fieldX, int fieldY, <a class="el" href="../../df/dd9/classUnit.html">Unit</a> *initialUnit=nullptr, int initialTimer=3, int damage=10)</td></tr>
+<tr class="memdesc:ac6883f1e8ec612746caa803d7286b5f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="../../da/d43/classBombedField.html" title="Field that acts as a trap and explodes after a timer or when triggered by a unit (Bombed Field).">BombedField</a> at the given coordinates.  <a href="../../da/d43/classBombedField.html#ac6883f1e8ec612746caa803d7286b5f2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac6883f1e8ec612746caa803d7286b5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2172fc3c8afc0d4c9e554ab1375610d3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d43/classBombedField.html#a2172fc3c8afc0d4c9e554ab1375610d3">~BombedField</a> ()=default</td></tr>
+<tr class="separator:a2172fc3c8afc0d4c9e554ab1375610d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a282d1c5a11b9970228a59b52f6efc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d43/classBombedField.html#a48a282d1c5a11b9970228a59b52f6efc">applyEffect</a> (<a class="el" href="../../d2/d4b/classPlayer.html">Player</a> *owner, std::vector&lt; std::vector&lt; <a class="el" href="../../d7/d24/classField.html">Field</a> * &gt;&gt; &amp;board) override</td></tr>
+<tr class="memdesc:a48a282d1c5a11b9970228a59b52f6efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the bombed field's effect (ticks timer, may explode).  <a href="../../da/d43/classBombedField.html#a48a282d1c5a11b9970228a59b52f6efc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a48a282d1c5a11b9970228a59b52f6efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9afc2bda8fdb918c29cf04371c5d4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d43/classBombedField.html#aff9afc2bda8fdb918c29cf04371c5d4e">canEnter</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *<a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>) const override</td></tr>
+<tr class="memdesc:aff9afc2bda8fdb918c29cf04371c5d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a unit can enter the bombed field.  <a href="../../da/d43/classBombedField.html#aff9afc2bda8fdb918c29cf04371c5d4e">Подробнее...</a><br /></td></tr>
+<tr class="separator:aff9afc2bda8fdb918c29cf04371c5d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50bc4ead59e96a08eb5f905c9051c010"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d43/classBombedField.html#a50bc4ead59e96a08eb5f905c9051c010">onEnter</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *<a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>) override</td></tr>
+<tr class="memdesc:a50bc4ead59e96a08eb5f905c9051c010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a unit entering the bombed field (may trigger explosion).  <a href="../../da/d43/classBombedField.html#a50bc4ead59e96a08eb5f905c9051c010">Подробнее...</a><br /></td></tr>
+<tr class="separator:a50bc4ead59e96a08eb5f905c9051c010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5a1d14775633f750b51ebd59d45e04f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d43/classBombedField.html#af5a1d14775633f750b51ebd59d45e04f">shouldExplode</a> () const</td></tr>
+<tr class="memdesc:af5a1d14775633f750b51ebd59d45e04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the bomb should explode.  <a href="../../da/d43/classBombedField.html#af5a1d14775633f750b51ebd59d45e04f">Подробнее...</a><br /></td></tr>
+<tr class="separator:af5a1d14775633f750b51ebd59d45e04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a090802fffedf5da9d68580b172a937e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d43/classBombedField.html#a090802fffedf5da9d68580b172a937e1">explode</a> (std::vector&lt; std::vector&lt; <a class="el" href="../../d7/d24/classField.html">Field</a> * &gt;&gt; &amp;board)</td></tr>
+<tr class="memdesc:a090802fffedf5da9d68580b172a937e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers the explosion effect.  <a href="../../da/d43/classBombedField.html#a090802fffedf5da9d68580b172a937e1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a090802fffedf5da9d68580b172a937e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11d142cae00e419ae8edd821f00cbc7"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d43/classBombedField.html#af11d142cae00e419ae8edd821f00cbc7">getSymbol</a> () const override</td></tr>
+<tr class="memdesc:af11d142cae00e419ae8edd821f00cbc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the symbol representing the bombed field (for display).  <a href="../../da/d43/classBombedField.html#af11d142cae00e419ae8edd821f00cbc7">Подробнее...</a><br /></td></tr>
+<tr class="separator:af11d142cae00e419ae8edd821f00cbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classField"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classField')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../d7/d24/classField.html">Field</a></td></tr>
+<tr class="memitem:ad8556c0f47d0dc949f11480c4c6e4521 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Field</a> (int fieldX, int fieldY, const std::string &amp;fieldType=&quot;plain&quot;)</td></tr>
+<tr class="memdesc:ad8556c0f47d0dc949f11480c4c6e4521 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a> at the given coordinates and type.  <a href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad8556c0f47d0dc949f11480c4c6e4521 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d6e6d09b8f8e46de62b40119d62c60 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a45d6e6d09b8f8e46de62b40119d62c60">~Field</a> ()</td></tr>
+<tr class="memdesc:a45d6e6d09b8f8e46de62b40119d62c60 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a>.  <a href="../../d7/d24/classField.html#a45d6e6d09b8f8e46de62b40119d62c60">Подробнее...</a><br /></td></tr>
+<tr class="separator:a45d6e6d09b8f8e46de62b40119d62c60 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726868d72ad77d531e0dcf0969b81091 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">getUnit</a> () const</td></tr>
+<tr class="memdesc:a726868d72ad77d531e0dcf0969b81091 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the unit on this field.  <a href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">Подробнее...</a><br /></td></tr>
+<tr class="separator:a726868d72ad77d531e0dcf0969b81091 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac940692dbfe1437aba7efc3a8903ea8 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">setUnit</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *u)</td></tr>
+<tr class="memdesc:aac940692dbfe1437aba7efc3a8903ea8 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the unit on this field.  <a href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">Подробнее...</a><br /></td></tr>
+<tr class="separator:aac940692dbfe1437aba7efc3a8903ea8 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b70c294dd34070bcae38b5b518f6d3 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a> () const</td></tr>
+<tr class="memdesc:af4b70c294dd34070bcae38b5b518f6d3 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the X coordinate of this field.  <a href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">Подробнее...</a><br /></td></tr>
+<tr class="separator:af4b70c294dd34070bcae38b5b518f6d3 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86673ee820c9cfed15b603c9dae6853e inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a> () const</td></tr>
+<tr class="memdesc:a86673ee820c9cfed15b603c9dae6853e inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Y coordinate of this field.  <a href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a86673ee820c9cfed15b603c9dae6853e inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9a69868e0480528ccaf9dd309862ef inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a8d9a69868e0480528ccaf9dd309862ef">getType</a> () const</td></tr>
+<tr class="memdesc:a8d9a69868e0480528ccaf9dd309862ef inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of this field.  <a href="../../d7/d24/classField.html#a8d9a69868e0480528ccaf9dd309862ef">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8d9a69868e0480528ccaf9dd309862ef inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718edf661e92a18a81c1a434b8e9ba40 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a718edf661e92a18a81c1a434b8e9ba40">getDefenseBonus</a> () const</td></tr>
+<tr class="memdesc:a718edf661e92a18a81c1a434b8e9ba40 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the defense bonus provided by this field.  <a href="../../d7/d24/classField.html#a718edf661e92a18a81c1a434b8e9ba40">Подробнее...</a><br /></td></tr>
+<tr class="separator:a718edf661e92a18a81c1a434b8e9ba40 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cbfac5b4571fde18c48884bc7059b8 inherit pub_methods_classField"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#af7cbfac5b4571fde18c48884bc7059b8">onLeave</a> (<a class="el" href="../../df/dd9/classUnit.html">Unit</a> *<a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>)</td></tr>
+<tr class="memdesc:af7cbfac5b4571fde18c48884bc7059b8 inherit pub_methods_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a unit leaving this field.  <a href="../../d7/d24/classField.html#af7cbfac5b4571fde18c48884bc7059b8">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7cbfac5b4571fde18c48884bc7059b8 inherit pub_methods_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a5e60c5a4e79005092dad961abf798bc0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d43/classBombedField.html#a5e60c5a4e79005092dad961abf798bc0">timer</a></td></tr>
+<tr class="separator:a5e60c5a4e79005092dad961abf798bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af452175edf9da61f79791ee9ee0f2b66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d43/classBombedField.html#af452175edf9da61f79791ee9ee0f2b66">explosionDamage</a></td></tr>
+<tr class="separator:af452175edf9da61f79791ee9ee0f2b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_attribs_classField"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classField')"><img src="../../closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="../../d7/d24/classField.html">Field</a></td></tr>
+<tr class="memitem:a363d83248e8f66bf865e514432072afb inherit pro_attribs_classField"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a></td></tr>
+<tr class="memdesc:a363d83248e8f66bf865e514432072afb inherit pro_attribs_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the unit on this field (if any)  <a href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a363d83248e8f66bf865e514432072afb inherit pro_attribs_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60bf7589f33fee524f8cdc980c51a979 inherit pro_attribs_classField"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a60bf7589f33fee524f8cdc980c51a979">x</a></td></tr>
+<tr class="separator:a60bf7589f33fee524f8cdc980c51a979 inherit pro_attribs_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038186563fbee686e206425cc39946d9 inherit pro_attribs_classField"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a038186563fbee686e206425cc39946d9">y</a></td></tr>
+<tr class="memdesc:a038186563fbee686e206425cc39946d9 inherit pro_attribs_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinates of the field.  <a href="../../d7/d24/classField.html#a038186563fbee686e206425cc39946d9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a038186563fbee686e206425cc39946d9 inherit pro_attribs_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842a105b475478a01fefe89821f19a9a inherit pro_attribs_classField"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classField.html#a842a105b475478a01fefe89821f19a9a">type</a></td></tr>
+<tr class="memdesc:a842a105b475478a01fefe89821f19a9a inherit pro_attribs_classField"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the field (e.g., "plain", "fortress", "hill")  <a href="../../d7/d24/classField.html#a842a105b475478a01fefe89821f19a9a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a842a105b475478a01fefe89821f19a9a inherit pro_attribs_classField"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p><a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a> that acts as a trap and explodes after a timer or when triggered by a unit (Bombed <a class="el" href="../../d7/d24/classField.html" title="Represents a field (tile) on the game board. Base class for all field types.">Field</a>). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d83/bombedfield_8h_source.html">bombedfield.h</a> строка <a class="el" href="../../d6/d83/bombedfield_8h_source.html#l00017">17</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac6883f1e8ec612746caa803d7286b5f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6883f1e8ec612746caa803d7286b5f2">&#9670;&nbsp;</a></span>BombedField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BombedField::BombedField </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fieldX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fieldY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td>
+          <td class="paramname"><em>initialUnit</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>initialTimer</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>damage</em> = <code>10</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="../../da/d43/classBombedField.html" title="Field that acts as a trap and explodes after a timer or when triggered by a unit (Bombed Field).">BombedField</a> at the given coordinates. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fieldX</td><td>X coordinate. </td></tr>
+    <tr><td class="paramname">fieldY</td><td>Y coordinate. </td></tr>
+    <tr><td class="paramname">initialUnit</td><td>Pointer to the initial unit on the field (default nullptr). </td></tr>
+    <tr><td class="paramname">initialTimer</td><td>Number of turns until explosion (default 3). </td></tr>
+    <tr><td class="paramname">damage</td><td>Damage dealt on explosion (default 10). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d71/bombedfield_8cpp_source.html">bombedfield.cpp</a> строка <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00011">11</a></p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    : <a class="code" href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Field</a>(fieldX, fieldY, <span class="stringliteral">&quot;bombed&quot;</span>), <a class="code" href="../../da/d43/classBombedField.html#a5e60c5a4e79005092dad961abf798bc0">timer</a>(initialTimer), <a class="code" href="../../da/d43/classBombedField.html#af452175edf9da61f79791ee9ee0f2b66">explosionDamage</a>(damage)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">// Set the initial unit if there is one</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">setUnit</a>(initialUnit);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="ttc" id="aclassBombedField_html_a5e60c5a4e79005092dad961abf798bc0"><div class="ttname"><a href="../../da/d43/classBombedField.html#a5e60c5a4e79005092dad961abf798bc0">BombedField::timer</a></div><div class="ttdeci">int timer</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d83/bombedfield_8h_source.html#l00020">bombedfield.h:20</a></div></div>
+<div class="ttc" id="aclassBombedField_html_af452175edf9da61f79791ee9ee0f2b66"><div class="ttname"><a href="../../da/d43/classBombedField.html#af452175edf9da61f79791ee9ee0f2b66">BombedField::explosionDamage</a></div><div class="ttdeci">int explosionDamage</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d83/bombedfield_8h_source.html#l00021">bombedfield.h:21</a></div></div>
+<div class="ttc" id="aclassField_html_aac940692dbfe1437aba7efc3a8903ea8"><div class="ttname"><a href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">Field::setUnit</a></div><div class="ttdeci">void setUnit(Unit *u)</div><div class="ttdoc">Set the unit on this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00025">field.cpp:25</a></div></div>
+<div class="ttc" id="aclassField_html_ad8556c0f47d0dc949f11480c4c6e4521"><div class="ttname"><a href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Field::Field</a></div><div class="ttdeci">Field(int fieldX, int fieldY, const std::string &amp;fieldType=&quot;plain&quot;)</div><div class="ttdoc">Constructs a Field at the given coordinates and type.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00008">field.cpp:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00025">Field::setUnit()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d43/classBombedField_ac6883f1e8ec612746caa803d7286b5f2_cgraph.svg" width="367" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2172fc3c8afc0d4c9e554ab1375610d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2172fc3c8afc0d4c9e554ab1375610d3">&#9670;&nbsp;</a></span>~BombedField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual BombedField::~BombedField </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a48a282d1c5a11b9970228a59b52f6efc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48a282d1c5a11b9970228a59b52f6efc">&#9670;&nbsp;</a></span>applyEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BombedField::applyEffect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d4b/classPlayer.html">Player</a> *&#160;</td>
+          <td class="paramname"><em>owner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="../../d7/d24/classField.html">Field</a> * &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>board</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies the bombed field's effect (ticks timer, may explode). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">owner</td><td>The player whose turn it is. </td></tr>
+    <tr><td class="paramname">board</td><td>The game board. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Переопределяет метод предка <a class="el" href="../../d7/d24/classField.html#a454ca5b8269657dc01cd611eceb3d397">Field</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d71/bombedfield_8cpp_source.html">bombedfield.cpp</a> строка <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00022">22</a></p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// Decrease the timer</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../da/d43/classBombedField.html#a5e60c5a4e79005092dad961abf798bc0">timer</a>--;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Bombed field at (&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>() &lt;&lt; <span class="stringliteral">&quot;) timer: &quot;</span> &lt;&lt; <a class="code" href="../../da/d43/classBombedField.html#a5e60c5a4e79005092dad961abf798bc0">timer</a> &lt;&lt; <span class="stringliteral">&quot;.\n&quot;</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// If timer reaches 0 or a unit is on the field, explode</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/d43/classBombedField.html#af5a1d14775633f750b51ebd59d45e04f">shouldExplode</a>())</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="../../da/d43/classBombedField.html#a090802fffedf5da9d68580b172a937e1">explode</a>(board);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="ttc" id="aclassBombedField_html_a090802fffedf5da9d68580b172a937e1"><div class="ttname"><a href="../../da/d43/classBombedField.html#a090802fffedf5da9d68580b172a937e1">BombedField::explode</a></div><div class="ttdeci">void explode(std::vector&lt; std::vector&lt; Field * &gt;&gt; &amp;board)</div><div class="ttdoc">Triggers the explosion effect.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d71/bombedfield_8cpp_source.html#l00058">bombedfield.cpp:58</a></div></div>
+<div class="ttc" id="aclassBombedField_html_af5a1d14775633f750b51ebd59d45e04f"><div class="ttname"><a href="../../da/d43/classBombedField.html#af5a1d14775633f750b51ebd59d45e04f">BombedField::shouldExplode</a></div><div class="ttdeci">bool shouldExplode() const</div><div class="ttdoc">Checks if the bomb should explode.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d71/bombedfield_8cpp_source.html#l00052">bombedfield.cpp:52</a></div></div>
+<div class="ttc" id="aclassField_html_a86673ee820c9cfed15b603c9dae6853e"><div class="ttname"><a href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">Field::getY</a></div><div class="ttdeci">int getY() const</div><div class="ttdoc">Get the Y coordinate of this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00035">field.cpp:35</a></div></div>
+<div class="ttc" id="aclassField_html_af4b70c294dd34070bcae38b5b518f6d3"><div class="ttname"><a href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">Field::getX</a></div><div class="ttdeci">int getX() const</div><div class="ttdoc">Get the X coordinate of this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00030">field.cpp:30</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00058">explode()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00030">Field::getX()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00035">Field::getY()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00052">shouldExplode()</a> и <a class="el" href="../../d6/d83/bombedfield_8h_source.html#l00020">timer</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d43/classBombedField_a48a282d1c5a11b9970228a59b52f6efc_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="aff9afc2bda8fdb918c29cf04371c5d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff9afc2bda8fdb918c29cf04371c5d4e">&#9670;&nbsp;</a></span>canEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BombedField::canEnter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td>
+          <td class="paramname"><em>unit</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if a unit can enter the bombed field. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>The unit to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True if the unit can enter, false otherwise. </dd></dl>
+
+<p>Переопределяет метод предка <a class="el" href="../../d7/d24/classField.html#aca250c9a0c031e21c7e7c609b3b3dec3">Field</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d71/bombedfield_8cpp_source.html">bombedfield.cpp</a> строка <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00035">35</a></p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// Units can enter bombed fields</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> this-&gt;unit == <span class="keyword">nullptr</span>; <span class="comment">// Can enter if empty</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">Field::unit</a>.</p>
+
+</div>
+</div>
+<a id="a090802fffedf5da9d68580b172a937e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a090802fffedf5da9d68580b172a937e1">&#9670;&nbsp;</a></span>explode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BombedField::explode </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="../../d7/d24/classField.html">Field</a> * &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>board</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Triggers the explosion effect. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">board</td><td>The game board. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d71/bombedfield_8cpp_source.html">bombedfield.cpp</a> строка <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00058">58</a></p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Bombed field at (&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>() &lt;&lt; <span class="stringliteral">&quot;) explodes!\n&quot;</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// Apply explosion damage to adjacent units and the unit on the field</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">size_t</span> boardWidth = board.size();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">size_t</span> boardHeight = board[0].size();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// Check the field itself</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Unit &quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>-&gt;<a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; on the field takes &quot;</span> &lt;&lt; <a class="code" href="../../da/d43/classBombedField.html#af452175edf9da61f79791ee9ee0f2b66">explosionDamage</a> &lt;&lt; <span class="stringliteral">&quot; damage from explosion.\n&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// applyDamage needs board, x, y, damage, attackingUnit</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="../../d3/d36/functions_8cpp.html#a43f0126154376c48e09ec7497e5af839">applyDamage</a>(board, <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>(), <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>(), <a class="code" href="../../da/d43/classBombedField.html#af452175edf9da61f79791ee9ee0f2b66">explosionDamage</a>, <span class="keyword">nullptr</span>); <span class="comment">// Use applyDamage</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// Check adjacent fields (including diagonals)</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dx = -1; dx &lt;= 1; ++dx) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dy = -1; dy &lt;= 1; ++dy) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> (dx == 0 &amp;&amp; dy == 0) <span class="keywordflow">continue</span>; <span class="comment">// Skip the center field</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordtype">int</span> targetX = <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>() + dx;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordtype">int</span> targetY = <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>() + dy;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">if</span> (targetX &gt;= 0 &amp;&amp; <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(targetX) &lt; boardWidth &amp;&amp;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                targetY &gt;= 0 &amp;&amp; <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(targetY) &lt; boardHeight)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <a class="code" href="../../d7/d24/classField.html">Field</a>* adjacentField = board[targetX][targetY];</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">if</span> (adjacentField &amp;&amp; adjacentField-&gt;<a class="code" href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">getUnit</a>()) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    std::cout &lt;&lt; <span class="stringliteral">&quot;Adjacent unit &quot;</span> &lt;&lt; adjacentField-&gt;<a class="code" href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">getUnit</a>()-&gt;<a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; at (&quot;</span> &lt;&lt; targetX &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; targetY &lt;&lt; <span class="stringliteral">&quot;) takes &quot;</span> &lt;&lt; <a class="code" href="../../da/d43/classBombedField.html#af452175edf9da61f79791ee9ee0f2b66">explosionDamage</a> &lt;&lt; <span class="stringliteral">&quot; damage from explosion.\n&quot;</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="comment">// applyDamage needs board, x, y, damage, attackingUnit</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    <a class="code" href="../../d3/d36/functions_8cpp.html#a43f0126154376c48e09ec7497e5af839">applyDamage</a>(board, targetX, targetY, <a class="code" href="../../da/d43/classBombedField.html#af452175edf9da61f79791ee9ee0f2b66">explosionDamage</a>, <span class="keyword">nullptr</span>); <span class="comment">// Use applyDamage</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// After explosion, revert to a plain field</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="../../df/dd9/classUnit.html">Unit</a>* unitAfterExplosion = <a class="code" href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">getUnit</a>(); <span class="comment">// Get unit again in case it survived damage</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// Create a new plain field at the same coordinates</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="../../d7/d24/classField.html">Field</a>* plainField = <span class="keyword">new</span> <a class="code" href="../../d7/d24/classField.html#ad8556c0f47d0dc949f11480c4c6e4521">Field</a>(<a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>(), <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>(), <span class="stringliteral">&quot;plain&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    plainField-&gt;<a class="code" href="../../d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8">setUnit</a>(unitAfterExplosion); <span class="comment">// Place the unit (if it survived) on the new plain field</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">delete</span> <span class="keyword">this</span>; <span class="comment">// Delete the bombed field object</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    board[<a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>()][<a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>()] = plainField; <span class="comment">// Replace the pointer in the board</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="ttc" id="aclassField_html"><div class="ttname"><a href="../../d7/d24/classField.html">Field</a></div><div class="ttdoc">Represents a field (tile) on the game board. Base class for all field types.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/field_8h_source.html#l00015">field.h:16</a></div></div>
+<div class="ttc" id="aclassField_html_a363d83248e8f66bf865e514432072afb"><div class="ttname"><a href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">Field::unit</a></div><div class="ttdeci">Unit * unit</div><div class="ttdoc">Pointer to the unit on this field (if any)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5a/field_8h_source.html#l00018">field.h:18</a></div></div>
+<div class="ttc" id="aclassField_html_a726868d72ad77d531e0dcf0969b81091"><div class="ttname"><a href="../../d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091">Field::getUnit</a></div><div class="ttdeci">Unit * getUnit() const</div><div class="ttdoc">Get the unit on this field.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd0/field_8cpp_source.html#l00020">field.cpp:20</a></div></div>
+<div class="ttc" id="aclassUnit_html"><div class="ttname"><a href="../../df/dd9/classUnit.html">Unit</a></div><div class="ttdoc">Represents a unit in the game (base class for all units).</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da2/unit_8h_source.html#l00015">unit.h:16</a></div></div>
+<div class="ttc" id="aclassUnit_html_a0497994e384db5c080ec78e9b645fa40"><div class="ttname"><a href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">Unit::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdoc">Gets the unit's name.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d49/unit_8cpp_source.html#l00022">unit.cpp:22</a></div></div>
+<div class="ttc" id="afunctions_8cpp_html_a43f0126154376c48e09ec7497e5af839"><div class="ttname"><a href="../../d3/d36/functions_8cpp.html#a43f0126154376c48e09ec7497e5af839">applyDamage</a></div><div class="ttdeci">void applyDamage(std::vector&lt; std::vector&lt; Field * &gt;&gt; &amp;board, int x, int y, int damage, Unit *attackingUnit)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d36/functions_8cpp_source.html#l00085">functions.cpp:85</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00085">applyDamage()</a>, <a class="el" href="../../d6/d83/bombedfield_8h_source.html#l00021">explosionDamage</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00008">Field::Field()</a>, <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00022">Unit::getName()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00020">Field::getUnit()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00030">Field::getX()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00035">Field::getY()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00025">Field::setUnit()</a> и <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">Field::unit</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00022">applyEffect()</a> и <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00055">checkBombExplosions()</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/d43/classBombedField_a090802fffedf5da9d68580b172a937e1_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d43/classBombedField_a090802fffedf5da9d68580b172a937e1_icgraph.svg" width="516" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af11d142cae00e419ae8edd821f00cbc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11d142cae00e419ae8edd821f00cbc7">&#9670;&nbsp;</a></span>getSymbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char BombedField::getSymbol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the symbol representing the bombed field (for display). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>'B' character. </dd></dl>
+
+<p>Переопределяет метод предка <a class="el" href="../../d7/d24/classField.html#a03e73113267195f2680dd028f8950ae5">Field</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d83/bombedfield_8h_source.html">bombedfield.h</a> строка <a class="el" href="../../d6/d83/bombedfield_8h_source.html#l00071">71</a></p>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{ <span class="keywordflow">return</span> <span class="charliteral">&#39;B&#39;</span>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a50bc4ead59e96a08eb5f905c9051c010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50bc4ead59e96a08eb5f905c9051c010">&#9670;&nbsp;</a></span>onEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BombedField::onEnter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dd9/classUnit.html">Unit</a> *&#160;</td>
+          <td class="paramname"><em>unit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles a unit entering the bombed field (may trigger explosion). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>The unit entering. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Переопределяет метод предка <a class="el" href="../../d7/d24/classField.html#af7bbcc952313d63e39ac2915ef92bbde">Field</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d71/bombedfield_8cpp_source.html">bombedfield.cpp</a> строка <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00041">41</a></p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// Handle actions when a unit enters the bombed field (might trigger explosion)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::cout &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>-&gt;<a class="code" href="../../df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40">getName</a>() &lt;&lt; <span class="stringliteral">&quot; entered the Bombed Field at (&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#af4b70c294dd34070bcae38b5b518f6d3">getX</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="../../d7/d24/classField.html#a86673ee820c9cfed15b603c9dae6853e">getY</a>() &lt;&lt; <span class="stringliteral">&quot;).\n&quot;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// If a unit enters, the bomb should explode immediately</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a>) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// Set timer to 0 to trigger explosion in applyEffect</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="../../da/d43/classBombedField.html#a5e60c5a4e79005092dad961abf798bc0">timer</a> = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d7/d49/unit_8cpp_source.html#l00022">Unit::getName()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00030">Field::getX()</a>, <a class="el" href="../../d4/dd0/field_8cpp_source.html#l00035">Field::getY()</a>, <a class="el" href="../../d6/d83/bombedfield_8h_source.html#l00020">timer</a> и <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">Field::unit</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d43/classBombedField_a50bc4ead59e96a08eb5f905c9051c010_cgraph.svg" width="342" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af5a1d14775633f750b51ebd59d45e04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5a1d14775633f750b51ebd59d45e04f">&#9670;&nbsp;</a></span>shouldExplode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BombedField::shouldExplode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the bomb should explode. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>True if the bomb should explode, false otherwise. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d71/bombedfield_8cpp_source.html">bombedfield.cpp</a> строка <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00052">52</a></p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// Explode if timer is 0 or less, or if a unit is on the field</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../da/d43/classBombedField.html#a5e60c5a4e79005092dad961abf798bc0">timer</a> &lt;= 0 || <a class="code" href="../../d7/d24/classField.html#a363d83248e8f66bf865e514432072afb">unit</a> != <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Перекрестные ссылки <a class="el" href="../../d6/d83/bombedfield_8h_source.html#l00020">timer</a> и <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">Field::unit</a>.</p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00022">applyEffect()</a> и <a class="el" href="../../d3/d36/functions_8cpp_source.html#l00055">checkBombExplosions()</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d43/classBombedField_af5a1d14775633f750b51ebd59d45e04f_icgraph.svg" width="560" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="af452175edf9da61f79791ee9ee0f2b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af452175edf9da61f79791ee9ee0f2b66">&#9670;&nbsp;</a></span>explosionDamage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BombedField::explosionDamage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d83/bombedfield_8h_source.html">bombedfield.h</a> строка <a class="el" href="../../d6/d83/bombedfield_8h_source.html#l00021">21</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00058">explode()</a>.</p>
+
+</div>
+</div>
+<a id="a5e60c5a4e79005092dad961abf798bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e60c5a4e79005092dad961abf798bc0">&#9670;&nbsp;</a></span>timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BombedField::timer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d6/d83/bombedfield_8h_source.html">bombedfield.h</a> строка <a class="el" href="../../d6/d83/bombedfield_8h_source.html#l00020">20</a></p>
+
+<p class="reference">Используется в <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00022">applyEffect()</a>, <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00041">onEnter()</a> и <a class="el" href="../../db/d71/bombedfield_8cpp_source.html#l00052">shouldExplode()</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="../../d6/d83/bombedfield_8h_source.html">bombedfield.h</a></li>
+<li><a class="el" href="../../db/d71/bombedfield_8cpp_source.html">bombedfield.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../da/d43/classBombedField.html">BombedField</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="Infantry" name="Infantry">
+<area shape="rect" id="node1" title="Melee unit with counter&#45;attack ability (Infantry)." alt="" coords="19,395,158,516"/>
+<area shape="rect" id="node2" href="$df/dd9/classUnit.html" title="Represents a unit in the game (base class for all units)." alt="" coords="5,5,172,347"/>
+</map>

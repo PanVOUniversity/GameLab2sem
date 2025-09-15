@@ -1,0 +1,10 @@
+<map id="tryAICastSpecificSpell" name="tryAICastSpecificSpell">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,169,133"/>
+<area shape="rect" id="node2" href="$d1/d16/classSpell.html#adbff32f05577154a0db4606282d0151c" title="Casts the spell on the board at the given coordinates." alt="" coords="281,5,371,32"/>
+<area shape="rect" id="node3" href="$d0/d77/AI_8cpp.html#a797bfdb675769ae5ea146f4d32429972" title=" " alt="" coords="217,56,435,83"/>
+<area shape="rect" id="node6" href="$d2/d4b/classPlayer.html#aba42f377d067adc41cbc43e679b6349c" title="Gets the player&#39;s current mana." alt="" coords="262,107,390,133"/>
+<area shape="rect" id="node7" href="$d1/d16/classSpell.html#a6e5d9f981cfd99088a8a5801cedba6ac" title="Gets the mana cost of the spell." alt="" coords="252,157,400,184"/>
+<area shape="rect" id="node8" href="$d2/d4b/classPlayer.html#a884dd5a4d9aa079a465adb44bebd13af" title="Sets the player&#39;s mana." alt="" coords="263,208,389,235"/>
+<area shape="rect" id="node4" href="$df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814" title="Returns true if the unit is controlled by the player." alt="" coords="483,31,601,57"/>
+<area shape="rect" id="node5" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="487,81,597,108"/>
+</map>

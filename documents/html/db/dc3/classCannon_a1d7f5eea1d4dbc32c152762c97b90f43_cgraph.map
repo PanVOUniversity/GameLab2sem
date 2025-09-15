@@ -1,0 +1,14 @@
+<map id="Cannon::useAbility" name="Cannon::useAbility">
+<area shape="rect" id="node1" title="Uses the cannon&#39;s special ability (fire)." alt="" coords="5,233,149,260"/>
+<area shape="rect" id="node2" href="$db/dc3/classCannon.html#a98c5782f0e545c9ddbf4c4829af63800" title="Fires at the specified target coordinates." alt="" coords="197,233,297,260"/>
+<area shape="rect" id="node3" href="$df/dd9/classUnit.html#a8856896cc73b342fec2cd3e8079e8e6a" title="Gets the unit&#39;s attack distance." alt="" coords="345,5,523,32"/>
+<area shape="rect" id="node4" href="$df/dd9/classUnit.html#a0e44c4741b8ce52687715dc82fdfaf23" title="Gets the unit&#39;s current health." alt="" coords="349,56,519,83"/>
+<area shape="rect" id="node5" href="$df/dd9/classUnit.html#a0062c5fab5677c6b47e1d881b4dcc53c" title="Gets the unit&#39;s damage value." alt="" coords="367,107,501,133"/>
+<area shape="rect" id="node6" href="$df/dd9/classUnit.html#a0497994e384db5c080ec78e9b645fa40" title="Gets the unit&#39;s name." alt="" coords="375,157,493,184"/>
+<area shape="rect" id="node7" href="$df/dd9/classUnit.html#a72e700f28797f2c1709e03b2b7828814" title="Returns true if the unit is controlled by the player." alt="" coords="375,208,493,235"/>
+<area shape="rect" id="node8" href="$d7/d24/classField.html#a726868d72ad77d531e0dcf0969b81091" title="Get the unit on this field." alt="" coords="379,259,489,285"/>
+<area shape="rect" id="node9" href="$df/dd9/classUnit.html#a4d3fd62e52d7c275c5a4b416b03e2998" title="Gets the unit&#39;s current will points." alt="" coords="383,309,485,336"/>
+<area shape="rect" id="node10" href="$df/dd9/classUnit.html#aaec88b40541cf3eed9e3ab4780fe937e" title="Sets the unit&#39;s health (alias for setCurrentHealth)." alt="" coords="374,360,494,387"/>
+<area shape="rect" id="node11" href="$d7/d24/classField.html#aac940692dbfe1437aba7efc3a8903ea8" title="Set the unit on this field." alt="" coords="380,411,488,437"/>
+<area shape="rect" id="node12" href="$df/dd9/classUnit.html#a207c7fe4b9d30af2446bb8af0a127c22" title="Sets the unit&#39;s will points." alt="" coords="383,461,485,488"/>
+</map>

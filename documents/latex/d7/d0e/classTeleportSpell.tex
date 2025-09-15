@@ -1,0 +1,211 @@
+\hypertarget{classTeleportSpell}{}\doxysection{Класс Teleport\+Spell}
+\label{classTeleportSpell}\index{TeleportSpell@{TeleportSpell}}
+
+
+\mbox{\hyperlink{classSpell}{Spell}} that teleports a unit to a new location (Teleport).  
+
+
+
+
+{\ttfamily \#include $<$teleportspell.\+h$>$}
+
+
+
+Граф наследования\+:Teleport\+Spell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{d9/dce/classTeleportSpell__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Teleport\+Spell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{d3/d20/classTeleportSpell__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTeleportSpell_a784bae362c665c217fab2e0beebd57d3}{Teleport\+Spell}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classTeleportSpell}{Teleport\+Spell}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTeleportSpell_a24439cbbf5fe52b30adc1bfef966398e}{$\sim$\+Teleport\+Spell}} ()=default
+\item 
+bool \mbox{\hyperlink{classTeleportSpell_ab1f9f7b9abbbd244adeebdef3310d85c}{cast}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&board, int x, int y) override
+\begin{DoxyCompactList}\small\item\em Casts the Teleport spell at the given coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Подробное описание}
+\mbox{\hyperlink{classSpell}{Spell}} that teleports a unit to a new location (Teleport). 
+
+См. определение в файле teleportspell.\+h строка 16
+
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classTeleportSpell_a784bae362c665c217fab2e0beebd57d3}\label{classTeleportSpell_a784bae362c665c217fab2e0beebd57d3}} 
+\index{TeleportSpell@{TeleportSpell}!TeleportSpell@{TeleportSpell}}
+\index{TeleportSpell@{TeleportSpell}!TeleportSpell@{TeleportSpell}}
+\doxysubsubsection{\texorpdfstring{TeleportSpell()}{TeleportSpell()}}
+{\footnotesize\ttfamily Teleport\+Spell\+::\+Teleport\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classTeleportSpell}{Teleport\+Spell}}. 
+
+
+
+См. определение в файле teleportspell.\+cpp строка 13
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                              : \mbox{\hyperlink{classSpell_a198d0b0f123fcd8cd0b2d5c7efd98b5d}{Spell}}(\textcolor{stringliteral}{"{}Teleport Spell"{}}, 6) \textcolor{comment}{// Name, Mana Cost (example cost)}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     \textcolor{comment}{// Constructor body if needed}}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTeleportSpell_a24439cbbf5fe52b30adc1bfef966398e}\label{classTeleportSpell_a24439cbbf5fe52b30adc1bfef966398e}} 
+\index{TeleportSpell@{TeleportSpell}!````~TeleportSpell@{$\sim$TeleportSpell}}
+\index{````~TeleportSpell@{$\sim$TeleportSpell}!TeleportSpell@{TeleportSpell}}
+\doxysubsubsection{\texorpdfstring{$\sim$TeleportSpell()}{~TeleportSpell()}}
+{\footnotesize\ttfamily virtual Teleport\+Spell\+::$\sim$\+Teleport\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classTeleportSpell_ab1f9f7b9abbbd244adeebdef3310d85c}\label{classTeleportSpell_ab1f9f7b9abbbd244adeebdef3310d85c}} 
+\index{TeleportSpell@{TeleportSpell}!cast@{cast}}
+\index{cast@{cast}!TeleportSpell@{TeleportSpell}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily bool Teleport\+Spell\+::cast (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$$>$ \&}]{board,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Casts the Teleport spell at the given coordinates. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em board} & The game board. \\
+\hline
+{\em x} & X coordinate of the target. \\
+\hline
+{\em y} & Y coordinate of the target. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if the spell was cast successfully, false otherwise. 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classSpell_adbff32f05577154a0db4606282d0151c}{Spell}}.
+
+
+
+См. определение в файле teleportspell.\+cpp строка 21
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     \textcolor{comment}{// Check if target coordinates are within board bounds}}
+\DoxyCodeLine{24     \textcolor{keywordtype}{size\_t} boardWidth = board.size();}
+\DoxyCodeLine{25     \textcolor{keywordtype}{size\_t} boardHeight = board[0].size();}
+\DoxyCodeLine{26     \textcolor{keywordflow}{if} (targetX < 0 || \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetX) >= boardWidth || targetY < 0 || \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(targetY) >= boardHeight)}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         std::cout << \textcolor{stringliteral}{"{}TeleportSpell: Target coordinates out of bounds!\(\backslash\)n"{}};}
+\DoxyCodeLine{29         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \mbox{\hyperlink{classField}{Field}}* targetField = board[targetX][targetY];}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{comment}{// Check if the destination is empty}}
+\DoxyCodeLine{35     \textcolor{keywordflow}{if} (targetField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}() != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         std::cout << \textcolor{stringliteral}{"{}TeleportSpell: Destination ("{}} << targetX << \textcolor{stringliteral}{"{},"{}} << targetY << \textcolor{stringliteral}{"{}) is occupied!\(\backslash\)n"{}};}
+\DoxyCodeLine{38         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{comment}{// Find a random friendly unit (assuming the spell is cast by the human player)}}
+\DoxyCodeLine{42     \textcolor{comment}{// A more robust implementation would pass the casting player to the spell.}}
+\DoxyCodeLine{43     \textcolor{comment}{// For now, let's assume the spell is cast by the player whose turn it is and is human.}}
+\DoxyCodeLine{44     \textcolor{comment}{// This requires finding the human player. This might need access to the game state or player list.}}
+\DoxyCodeLine{45     \textcolor{comment}{// Since the spell doesn't have direct access to the Player objects,}}
+\DoxyCodeLine{46     \textcolor{comment}{// the calling code (e.g., getPlayerCommands) needs to handle finding the unit to teleport}}
+\DoxyCodeLine{47     \textcolor{comment}{// and then potentially call a different version of cast or pass the unit.}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{comment}{// Given the current structure, let's iterate the board to find a human player unit.}}
+\DoxyCodeLine{50     \textcolor{comment}{// This is not ideal as it doesn't guarantee finding the *intended* unit,}}
+\DoxyCodeLine{51     \textcolor{comment}{// but it fits the cast(board, x, y) signature by using x,y as the destination.}}
+\DoxyCodeLine{52     \mbox{\hyperlink{classUnit}{Unit}}* unitToTeleport = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} unitCurrentX = -\/1, unitCurrentY = -\/1;}
+\DoxyCodeLine{54     std::vector<std::pair<int, int>> humanUnitCoords;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{comment}{// Find all human player units}}
+\DoxyCodeLine{57     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} y = 0; y < boardHeight; ++y) \{}
+\DoxyCodeLine{58         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} x = 0; x < boardWidth; ++x) \{}
+\DoxyCodeLine{59             \mbox{\hyperlink{classField}{Field}}* currentField = board[x][y];}
+\DoxyCodeLine{60             \mbox{\hyperlink{classUnit}{Unit}}* unit = currentField-\/>\mbox{\hyperlink{classField_a726868d72ad77d531e0dcf0969b81091}{getUnit}}();}
+\DoxyCodeLine{61             \textcolor{comment}{// Assuming human player units have getPlayer() == true}}
+\DoxyCodeLine{62             \textcolor{keywordflow}{if} (unit \&\& unit-\/>\mbox{\hyperlink{classUnit_a72e700f28797f2c1709e03b2b7828814}{getPlayer}}()) \{}
+\DoxyCodeLine{63                 humanUnitCoords.push\_back(\{\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(x), \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(y)\});}
+\DoxyCodeLine{64             \}}
+\DoxyCodeLine{65         \}}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \textcolor{keywordflow}{if} (humanUnitCoords.empty()) \{}
+\DoxyCodeLine{69         std::cout << \textcolor{stringliteral}{"{}TeleportSpell: No human units found to teleport!\(\backslash\)n"{}};}
+\DoxyCodeLine{70         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{comment}{// Pick a random human unit to teleport}}
+\DoxyCodeLine{74     \textcolor{keywordtype}{unsigned} seed = std::chrono::steady\_clock::now().time\_since\_epoch().count();}
+\DoxyCodeLine{75     std::default\_random\_engine rng(seed);}
+\DoxyCodeLine{76     std::shuffle(humanUnitCoords.begin(), humanUnitCoords.end(), rng);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     unitCurrentX = humanUnitCoords[0].first;}
+\DoxyCodeLine{79     unitCurrentY = humanUnitCoords[0].second;}
+\DoxyCodeLine{80     unitToTeleport = board[unitCurrentX][unitCurrentY]-\/>getUnit();}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{keywordflow}{if} (!unitToTeleport) \{}
+\DoxyCodeLine{83         \textcolor{comment}{// Should not happen if humanUnitCoords was not empty, but as a safeguard}}
+\DoxyCodeLine{84         std::cerr << \textcolor{stringliteral}{"{}TeleportSpell Error: Selected unit is null.\(\backslash\)n"{}};}
+\DoxyCodeLine{85         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{86     \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \textcolor{comment}{// Perform the teleportation}}
+\DoxyCodeLine{89     \textcolor{comment}{// Handle onLeave effect for the starting field}}
+\DoxyCodeLine{90     board[unitCurrentX][unitCurrentY]-\/>onLeave(unitToTeleport);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     targetField-\/>\mbox{\hyperlink{classField_aac940692dbfe1437aba7efc3a8903ea8}{setUnit}}(unitToTeleport); \textcolor{comment}{// Move the unit to the destination}}
+\DoxyCodeLine{93     board[unitCurrentX][unitCurrentY]-\/>setUnit(\textcolor{keyword}{nullptr}); \textcolor{comment}{// Remove the unit from the source}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     \textcolor{comment}{// Handle onEnter effect for the target field}}
+\DoxyCodeLine{96     targetField-\/>\mbox{\hyperlink{classField_af7bbcc952313d63e39ac2915ef92bbde}{onEnter}}(unitToTeleport);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98     std::cout << \textcolor{stringliteral}{"{}TeleportSpell: "{}} << unitToTeleport-\/>\mbox{\hyperlink{classUnit_a0497994e384db5c080ec78e9b645fa40}{getName}}() << \textcolor{stringliteral}{"{} teleported from ("{}} << unitCurrentX << \textcolor{stringliteral}{"{},"{}} << unitCurrentY << \textcolor{stringliteral}{"{}) to ("{}} << targetX << \textcolor{stringliteral}{"{},"{}} << targetY << \textcolor{stringliteral}{"{}).\(\backslash\)n"{}};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100     \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \textcolor{comment}{// Spell cast successfully}}
+\DoxyCodeLine{101 \}}
+
+\end{DoxyCode}
+
+
+Перекрестные ссылки Unit\+::get\+Name(), Unit\+::get\+Player(), Field\+::get\+Unit(), Field\+::on\+Enter() и Field\+::set\+Unit().
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{d7/d0e/classTeleportSpell_ab1f9f7b9abbbd244adeebdef3310d85c_cgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{teleportspell_8h}{teleportspell.\+h}}\item 
+\mbox{\hyperlink{teleportspell_8cpp}{teleportspell.\+cpp}}\end{DoxyCompactItemize}
